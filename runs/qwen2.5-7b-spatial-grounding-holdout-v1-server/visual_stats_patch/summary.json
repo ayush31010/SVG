@@ -1,0 +1,36 @@
+{
+  "architecture": "visual_stats_patch",
+  "by_family": {
+    "position": {
+      "cases": 27,
+      "completion_tokens": 1956,
+      "gold_patch_exact_rate": 0.4074074074074074,
+      "mean_failure_aware_mse": 0.009590211790055037,
+      "mean_model_latency_seconds": 16.335676257765886,
+      "mean_wall_seconds": 16.35502449989629,
+      "prompt_tokens": 90977,
+      "target_exact_rate": 0.4074074074074074,
+      "valid_output_rate": 1.0
+    },
+    "size": {
+      "cases": 12,
+      "completion_tokens": 828,
+      "gold_patch_exact_rate": 0.16666666666666666,
+      "mean_failure_aware_mse": 0.011922500445507467,
+      "mean_model_latency_seconds": 10.183504573748602,
+      "mean_wall_seconds": 10.191703491805432,
+      "prompt_tokens": 25856,
+      "target_exact_rate": 0.16666666666666666,
+      "valid_output_rate": 1.0
+    }
+  },
+  "cases": 39,
+  "completion_tokens": 2784,
+  "gold_patch_exact_rate": 0.3333333333333333,
+  "mean_failure_aware_mse": 0.010307839068655785,
+  "mean_model_latency_seconds": 14.442700354991338,
+  "mean_wall_seconds": 14.458618035868335,
+  "prompt_tokens": 116833,
+  "target_exact_rate": 0.3333333333333333,
+  "valid_output_rate": 1.0
+}

@@ -9,6 +9,8 @@ from svgpatchlab.types import ModelRequest, ModelResponse
 class ModelAdapter(ABC):
     """The only interface experiment code uses to call a model."""
 
+    supports_images: bool = False
+
     @abstractmethod
     def generate(self, request: ModelRequest) -> ModelResponse:
         raise NotImplementedError
@@ -25,6 +27,10 @@ class RecordingModelAdapter(ModelAdapter):
     def __init__(self, wrapped: ModelAdapter):
         self.wrapped = wrapped
         self.records: list[dict] = []
+
+    @property
+    def supports_images(self) -> bool:
+        return bool(getattr(self.wrapped, "supports_images", False))
 
     def generate(self, request: ModelRequest) -> ModelResponse:
         started = time.perf_counter()

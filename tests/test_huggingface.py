@@ -5,7 +5,9 @@ import unittest
 from types import SimpleNamespace
 from unittest.mock import patch
 
+from svgpatchlab.models.base import RecordingModelAdapter
 from svgpatchlab.models.huggingface import HuggingFaceAdapter
+from svgpatchlab.models.openai_compatible import OpenAICompatibleAdapter
 from svgpatchlab.types import ModelRequest
 
 
@@ -84,6 +86,83 @@ class HuggingFaceAdapterTests(unittest.TestCase):
         self.assertFalse(call_kwargs["clean_up_tokenization_spaces"])
         self.assertNotIn("max_new_tokens", call_kwargs)
         self.assertNotIn("do_sample", call_kwargs)
+
+    def test_text_generation_rejects_images_instead_of_silently_ignoring_them(self):
+        captured = {}
+
+        def fake_pipeline(task, **kwargs):
+            captured["pipeline"] = FakePipeline()
+            return captured["pipeline"]
+
+        fake_transformers = SimpleNamespace(
+            GenerationConfig=FakeGenerationConfig,
+            pipeline=fake_pipeline,
+        )
+        fake_torch = SimpleNamespace()
+
+        with patch.dict(
+            sys.modules,
+            {
+                "torch": fake_torch,
+                "transformers": fake_transformers,
+            },
+        ):
+            adapter = HuggingFaceAdapter(
+                {
+                    "model": "example/model",
+                    "task": "text-generation",
+                }
+            )
+
+        self.assertFalse(adapter.supports_images)
+        with self.assertRaisesRegex(RuntimeError, "image-text-to-text"):
+            adapter.generate(ModelRequest("prompt", images=("data:image/png;base64,AA==",)))
+
+    def test_image_text_pipeline_advertises_image_support(self):
+        def fake_pipeline(task, **kwargs):
+            return FakePipeline()
+
+        fake_transformers = SimpleNamespace(
+            GenerationConfig=FakeGenerationConfig,
+            pipeline=fake_pipeline,
+        )
+        fake_torch = SimpleNamespace()
+
+        with patch.dict(
+            sys.modules,
+            {
+                "torch": fake_torch,
+                "transformers": fake_transformers,
+            },
+        ):
+            adapter = HuggingFaceAdapter(
+                {
+                    "model": "example/vision-model",
+                    "task": "image-text-to-text",
+                }
+            )
+
+        self.assertTrue(adapter.supports_images)
+        self.assertTrue(RecordingModelAdapter(adapter).supports_images)
+
+    def test_openai_compatible_image_capability_tracks_endpoint_and_override(self):
+        chat = OpenAICompatibleAdapter(
+            {"model": "example", "endpoint": "chat_completions"}
+        )
+        completion = OpenAICompatibleAdapter(
+            {"model": "example", "endpoint": "completions"}
+        )
+        disabled = OpenAICompatibleAdapter(
+            {
+                "model": "example",
+                "endpoint": "chat_completions",
+                "supports_images": False,
+            }
+        )
+
+        self.assertTrue(chat.supports_images)
+        self.assertFalse(completion.supports_images)
+        self.assertFalse(disabled.supports_images)
 
 
 if __name__ == "__main__":

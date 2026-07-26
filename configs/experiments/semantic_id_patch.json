@@ -1,0 +1,35 @@
+{
+  "dataset": {
+    "root": "SVGEditBench",
+    "tasks": [
+      "change_color",
+      "set_contour",
+      "upside_down",
+      "transparency",
+      "crop_to_half"
+    ]
+  },
+  "architecture": {
+    "name": "semantic_id_patch",
+    "render_size": 192,
+    "max_candidates": 3,
+    "allow_counterfactual_fallback": true,
+    "qwen_completion": true,
+    "completion_min_transparent_area_pct": 0.25,
+    "completion_max_revealed_fraction": 0.1,
+    "completion_max_outside_mse": 0.01,
+    "completion_min_inside_change_mse": 0.001,
+    "completion_min_generated_change_mse": 0.0005,
+    "completion_max_attempts": 2
+  },
+  "model": {
+    "config_file": "../models/qwen2.5-7b-ollama.json"
+  },
+  "evaluation": {
+    "render": true,
+    "render_size": 72,
+    "save_outputs": true,
+    "progress": true,
+    "output_dir": "runs/semantic_id_patch"
+  }
+}

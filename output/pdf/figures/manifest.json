@@ -1,0 +1,87 @@
+{
+  "render_size": 512,
+  "attribution_source": "SVGEditBench/2_SetContour/query/1f324.txt",
+  "attribution_hidden_node": "n3",
+  "attribution_difference": {
+    "changed": true,
+    "changed_area_px": 67203,
+    "changed_area_pct": 25.636,
+    "bbox_px": [
+      113,
+      284,
+      399,
+      228
+    ],
+    "bbox_pct": [
+      22.07,
+      55.47,
+      77.93,
+      44.53
+    ],
+    "centroid_pct": [
+      62.67,
+      81.58
+    ],
+    "position": "bottom",
+    "render_size": [
+      512,
+      512
+    ],
+    "became_transparent_area_pct": 19.887,
+    "became_visible_area_pct": 0.0,
+    "repainted_or_revealed_area_pct": 5.729,
+    "alpha_changed_area_pct": 20.014,
+    "rgb_changed_area_pct": 25.636,
+    "transparent_hole_area_pct": 19.887,
+    "revealed_or_repainted_area_pct": 5.729,
+    "mean_rgba_delta": 0.7817,
+    "max_channel_delta": 1.0,
+    "components": [
+      {
+        "area_px": 67203,
+        "area_pct_canvas": 25.636,
+        "bbox_px": [
+          113,
+          284,
+          399,
+          228
+        ],
+        "centroid_pct": [
+          62.67,
+          81.58
+        ],
+        "position": "bottom",
+        "pixel_categories": {
+          "became_transparent": 52132,
+          "repainted_or_revealed": 15017,
+          "alpha_changed": 52465,
+          "rgb_changed": 67203
+        }
+      }
+    ],
+    "dominant_color_transitions": [
+      {
+        "from": "#f0f0f0@1.00",
+        "to": "transparent",
+        "pixels": 51638,
+        "pct_of_changed": 76.84
+      },
+      {
+        "from": "#f0f0f0@1.00",
+        "to": "#f0b030@1.00",
+        "pixels": 14383,
+        "pct_of_changed": 21.4
+      },
+      {
+        "from": "#f0d090@1.00",
+        "to": "#f0b030@1.00",
+        "pixels": 60,
+        "pct_of_changed": 0.09
+      }
+    ],
+    "ownership": null
+  },
+  "complete_deletion": "SVGEditBench source with n3 removed",
+  "incomplete_source": "tmp/qwen_completion_live_smoke.py::SOURCE",
+  "completed_output": "runs/qwen-completion-live-smoke/output.svg"
+}

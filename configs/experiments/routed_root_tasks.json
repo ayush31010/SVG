@@ -1,0 +1,19 @@
+{
+  "dataset": {
+    "root": "SVGEditBench",
+    "tasks": [
+      "upside_down",
+      "transparency",
+      "crop_to_half"
+    ]
+  },
+  "architecture": {
+    "name": "routed_strict_skeleton_patch"
+  },
+  "evaluation": {
+    "render": false,
+    "save_outputs": true,
+    "progress": true,
+    "output_dir": "runs/routed-root-task-router-v1"
+  }
+}

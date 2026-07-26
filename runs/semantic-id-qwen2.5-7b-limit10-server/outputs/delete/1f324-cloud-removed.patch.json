@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "operations": [
+    {
+      "op": "remove_element",
+      "targets": [
+        "n3"
+      ]
+    }
+  ]
+}

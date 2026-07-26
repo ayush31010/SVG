@@ -1,0 +1,36 @@
+{
+  "architecture": "skeleton_patch",
+  "by_family": {
+    "position": {
+      "cases": 27,
+      "completion_tokens": 2016,
+      "gold_patch_exact_rate": 0.07407407407407407,
+      "mean_failure_aware_mse": 0.014175989458130466,
+      "mean_model_latency_seconds": 13.179112278908077,
+      "mean_wall_seconds": 13.179711124144012,
+      "prompt_tokens": 71018,
+      "target_exact_rate": 0.07407407407407407,
+      "valid_output_rate": 1.0
+    },
+    "size": {
+      "cases": 12,
+      "completion_tokens": 852,
+      "gold_patch_exact_rate": 0.08333333333333333,
+      "mean_failure_aware_mse": 0.013605635186346868,
+      "mean_model_latency_seconds": 8.545801118540112,
+      "mean_wall_seconds": 8.546359160526967,
+      "prompt_tokens": 21386,
+      "target_exact_rate": 0.08333333333333333,
+      "valid_output_rate": 1.0
+    }
+  },
+  "cases": 39,
+  "completion_tokens": 2868,
+  "gold_patch_exact_rate": 0.07692307692307693,
+  "mean_failure_aware_mse": 0.014000495836043205,
+  "mean_model_latency_seconds": 11.753478075717934,
+  "mean_wall_seconds": 11.754064366107997,
+  "prompt_tokens": 92404,
+  "target_exact_rate": 0.07692307692307693,
+  "valid_output_rate": 1.0
+}

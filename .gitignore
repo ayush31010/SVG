@@ -11,3 +11,7 @@ build/
 
 # Avoid vendoring nested repository metadata if the benchmark clone is included.
 SVGEditBench/.git/
+
+# Local GitHub CLI device-auth helpers and logs (never publish)
+tmp/gh_auth*
+tmp/gh-auth*

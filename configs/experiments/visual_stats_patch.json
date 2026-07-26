@@ -1,0 +1,27 @@
+{
+  "dataset": {
+    "root": "SVGEditBench",
+    "tasks": [
+      "change_color",
+      "set_contour",
+      "upside_down",
+      "transparency",
+      "crop_to_half"
+    ]
+  },
+  "architecture": {
+    "name": "visual_stats_patch",
+    "cache_dir": ".cache/visual_stats",
+    "render_size": 64
+  },
+  "model": {
+    "config_file": "../models/qwen3.5-4b-openai.json"
+  },
+  "evaluation": {
+    "render": true,
+    "render_size": 72,
+    "save_outputs": true,
+    "progress": true,
+    "output_dir": "runs/visual_stats_patch"
+  }
+}

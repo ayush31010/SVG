@@ -1,0 +1,72 @@
+{
+  "architecture": "semantic_id_patch",
+  "architecture_options": {
+    "completion_max_attempts": 2,
+    "max_candidates": 3,
+    "qwen_completion": true,
+    "render_size": 192
+  },
+  "by_family": {
+    "complete_underlayer": {
+      "answer_render_success_rate": 1.0,
+      "cases": 4,
+      "completion_accept_rate": 0.0,
+      "completion_behavior_accuracy": 1.0,
+      "completion_tokens": 176,
+      "completion_trigger_rate": 0.0,
+      "mean_failure_aware_mse": 0.0,
+      "mean_model_calls": 2.0,
+      "mean_model_latency_seconds": 0.5778684345423244,
+      "mean_wall_seconds": 1.2331176309962757,
+      "prompt_tokens": 14883,
+      "target_exact_rate": 1.0,
+      "valid_output_rate": 1.0
+    },
+    "missing_underlayer": {
+      "answer_render_success_rate": 0.0,
+      "cases": 4,
+      "completion_accept_rate": 0.0,
+      "completion_behavior_accuracy": 0.0,
+      "completion_tokens": 457,
+      "completion_trigger_rate": 1.0,
+      "mean_failure_aware_mse": 0.018771634669974446,
+      "mean_model_calls": 4.0,
+      "mean_model_latency_seconds": 0.5907488511584233,
+      "mean_wall_seconds": 2.452086838253308,
+      "prompt_tokens": 25521,
+      "target_exact_rate": 1.0,
+      "valid_output_rate": 1.0
+    }
+  },
+  "design": {
+    "answer_mse_threshold": 0.0001,
+    "cases": 8,
+    "cases_by_family": {
+      "complete_underlayer": 4,
+      "missing_underlayer": 4
+    },
+    "complete_underlayer_requires_generator": false,
+    "expected_removed_target": "n3",
+    "missing_underlayer_requires_generator": true,
+    "one_unique_source_per_case": true,
+    "paired_geometry_variants": 4,
+    "reconstruction_target": "n1"
+  },
+  "format": "svgpatchlab.occlusion_deletion.v1",
+  "model_config": "configs/models/qwen2.5-3b-ollama-constrained.json",
+  "overall": {
+    "answer_render_success_rate": 0.5,
+    "cases": 8,
+    "completion_accept_rate": 0.0,
+    "completion_behavior_accuracy": 0.5,
+    "completion_tokens": 633,
+    "completion_trigger_rate": 0.5,
+    "mean_failure_aware_mse": 0.009385817334987223,
+    "mean_model_calls": 3.0,
+    "mean_model_latency_seconds": 0.586455378953057,
+    "mean_wall_seconds": 1.842602234624792,
+    "prompt_tokens": 40404,
+    "target_exact_rate": 1.0,
+    "valid_output_rate": 1.0
+  }
+}

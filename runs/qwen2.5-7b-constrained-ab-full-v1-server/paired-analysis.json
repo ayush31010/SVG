@@ -1,0 +1,418 @@
+{
+  "arms": [
+    "strict_skeleton_patch",
+    "strict_visual_stats_patch"
+  ],
+  "dataset_root": "SVGEditBench",
+  "groups": {
+    "grounding_tasks": {
+      "arms": {
+        "strict_skeleton_patch": {
+          "cases": 200,
+          "completion_tokens": 12105,
+          "gold_patch_exact_rate": 0.05,
+          "mean_failure_aware_mse": 0.012593291386510828,
+          "mean_model_latency_seconds": 1.074011824867921,
+          "mean_patch_precision": 0.13070833333333332,
+          "mean_patch_recall": 0.12625,
+          "mean_target_precision": 0.9680833333333334,
+          "mean_target_recall": 0.9128333333333333,
+          "prompt_tokens": 470333,
+          "target_exact_rate": 0.82,
+          "valid_output_rate": 1.0
+        },
+        "strict_visual_stats_patch": {
+          "cases": 200,
+          "completion_tokens": 12133,
+          "gold_patch_exact_rate": 0.015,
+          "mean_failure_aware_mse": 0.016453530500657506,
+          "mean_model_latency_seconds": 1.2000243404449429,
+          "mean_patch_precision": 0.0795625,
+          "mean_patch_recall": 0.07741666666666666,
+          "mean_target_precision": 0.9641249999999999,
+          "mean_target_recall": 0.8770833333333333,
+          "prompt_tokens": 598455,
+          "target_exact_rate": 0.765,
+          "valid_output_rate": 1.0
+        }
+      },
+      "paired": {
+        "failure_aware_mse": {
+          "skeleton_lower": 34,
+          "ties": 150,
+          "visual_lower": 16
+        },
+        "gold_patch_exact": {
+          "both_correct": 3,
+          "neither_correct": 190,
+          "skeleton_only_wins": 7,
+          "visual_only_wins": 0
+        },
+        "target_exact": {
+          "both_correct": 146,
+          "neither_correct": 29,
+          "skeleton_only_wins": 18,
+          "visual_only_wins": 7
+        }
+      }
+    },
+    "overall": {
+      "arms": {
+        "strict_skeleton_patch": {
+          "cases": 500,
+          "completion_tokens": 33792,
+          "gold_patch_exact_rate": 0.282,
+          "mean_failure_aware_mse": 0.33953428075593545,
+          "mean_model_latency_seconds": 1.1639818295114674,
+          "mean_patch_precision": 0.31535,
+          "mean_patch_recall": 0.3165,
+          "mean_target_precision": 0.7019222222222222,
+          "mean_target_recall": 0.6891333333333334,
+          "prompt_tokens": 1170922,
+          "target_exact_rate": 0.64,
+          "valid_output_rate": 0.666
+        },
+        "strict_visual_stats_patch": {
+          "cases": 500,
+          "completion_tokens": 33697,
+          "gold_patch_exact_rate": 0.256,
+          "mean_failure_aware_mse": 0.33762008886449624,
+          "mean_model_latency_seconds": 1.2729140194063076,
+          "mean_patch_precision": 0.2854916666666667,
+          "mean_patch_recall": 0.29096666666666665,
+          "mean_target_precision": 0.6918523809523809,
+          "mean_target_recall": 0.6728333333333334,
+          "prompt_tokens": 1491227,
+          "target_exact_rate": 0.604,
+          "valid_output_rate": 0.672
+        }
+      },
+      "paired": {
+        "failure_aware_mse": {
+          "skeleton_lower": 56,
+          "ties": 408,
+          "visual_lower": 36
+        },
+        "gold_patch_exact": {
+          "both_correct": 113,
+          "neither_correct": 344,
+          "skeleton_only_wins": 28,
+          "visual_only_wins": 15
+        },
+        "target_exact": {
+          "both_correct": 271,
+          "neither_correct": 149,
+          "skeleton_only_wins": 49,
+          "visual_only_wins": 31
+        }
+      }
+    },
+    "root_only_controls": {
+      "arms": {
+        "strict_skeleton_patch": {
+          "cases": 300,
+          "completion_tokens": 21687,
+          "gold_patch_exact_rate": 0.43666666666666665,
+          "mean_failure_aware_mse": 0.5574949403355519,
+          "mean_model_latency_seconds": 1.223961832607165,
+          "mean_patch_precision": 0.4384444444444444,
+          "mean_patch_recall": 0.44333333333333336,
+          "mean_target_precision": 0.5244814814814814,
+          "mean_target_recall": 0.54,
+          "prompt_tokens": 700589,
+          "target_exact_rate": 0.52,
+          "valid_output_rate": 0.44333333333333336
+        },
+        "strict_visual_stats_patch": {
+          "cases": 300,
+          "completion_tokens": 21564,
+          "gold_patch_exact_rate": 0.4166666666666667,
+          "mean_failure_aware_mse": 0.551731127773722,
+          "mean_model_latency_seconds": 1.321507138713884,
+          "mean_patch_precision": 0.42277777777777775,
+          "mean_patch_recall": 0.43333333333333335,
+          "mean_target_precision": 0.5103373015873016,
+          "mean_target_recall": 0.5366666666666666,
+          "prompt_tokens": 892772,
+          "target_exact_rate": 0.49666666666666665,
+          "valid_output_rate": 0.4533333333333333
+        }
+      },
+      "paired": {
+        "failure_aware_mse": {
+          "skeleton_lower": 22,
+          "ties": 258,
+          "visual_lower": 20
+        },
+        "gold_patch_exact": {
+          "both_correct": 110,
+          "neither_correct": 154,
+          "skeleton_only_wins": 21,
+          "visual_only_wins": 15
+        },
+        "target_exact": {
+          "both_correct": 125,
+          "neither_correct": 120,
+          "skeleton_only_wins": 31,
+          "visual_only_wins": 24
+        }
+      }
+    },
+    "task:change_color": {
+      "arms": {
+        "strict_skeleton_patch": {
+          "cases": 100,
+          "completion_tokens": 5557,
+          "gold_patch_exact_rate": 0.1,
+          "mean_failure_aware_mse": 0.0040129853993130385,
+          "mean_model_latency_seconds": 1.0218205124302768,
+          "mean_patch_precision": 0.11,
+          "mean_patch_recall": 0.1075,
+          "mean_target_precision": 0.9966666666666667,
+          "mean_target_recall": 0.9378333333333333,
+          "prompt_tokens": 235084,
+          "target_exact_rate": 0.87,
+          "valid_output_rate": 1.0
+        },
+        "strict_visual_stats_patch": {
+          "cases": 100,
+          "completion_tokens": 5520,
+          "gold_patch_exact_rate": 0.03,
+          "mean_failure_aware_mse": 0.009773832939536077,
+          "mean_model_latency_seconds": 1.1382275236491113,
+          "mean_patch_precision": 0.03,
+          "mean_patch_recall": 0.03,
+          "mean_target_precision": 1.0,
+          "mean_target_recall": 0.8853333333333333,
+          "prompt_tokens": 299145,
+          "target_exact_rate": 0.77,
+          "valid_output_rate": 1.0
+        }
+      },
+      "paired": {
+        "failure_aware_mse": {
+          "skeleton_lower": 17,
+          "ties": 79,
+          "visual_lower": 4
+        },
+        "gold_patch_exact": {
+          "both_correct": 3,
+          "neither_correct": 90,
+          "skeleton_only_wins": 7,
+          "visual_only_wins": 0
+        },
+        "target_exact": {
+          "both_correct": 75,
+          "neither_correct": 11,
+          "skeleton_only_wins": 12,
+          "visual_only_wins": 2
+        }
+      }
+    },
+    "task:crop_to_half": {
+      "arms": {
+        "strict_skeleton_patch": {
+          "cases": 100,
+          "completion_tokens": 7771,
+          "gold_patch_exact_rate": 0.31,
+          "mean_failure_aware_mse": 0.6815537163615226,
+          "mean_model_latency_seconds": 1.250109687745571,
+          "mean_patch_precision": 0.3133333333333333,
+          "mean_patch_recall": 0.32,
+          "mean_target_precision": 0.32333333333333336,
+          "mean_target_recall": 0.33,
+          "prompt_tokens": 233763,
+          "target_exact_rate": 0.32,
+          "valid_output_rate": 0.32
+        },
+        "strict_visual_stats_patch": {
+          "cases": 100,
+          "completion_tokens": 8494,
+          "gold_patch_exact_rate": 0.21,
+          "mean_failure_aware_mse": 0.7032324055582285,
+          "mean_model_latency_seconds": 1.453054676868487,
+          "mean_patch_precision": 0.21833333333333332,
+          "mean_patch_recall": 0.23,
+          "mean_target_precision": 0.34601190476190474,
+          "mean_target_recall": 0.4,
+          "prompt_tokens": 297824,
+          "target_exact_rate": 0.32,
+          "valid_output_rate": 0.31
+        }
+      },
+      "paired": {
+        "failure_aware_mse": {
+          "skeleton_lower": 17,
+          "ties": 72,
+          "visual_lower": 11
+        },
+        "gold_patch_exact": {
+          "both_correct": 15,
+          "neither_correct": 63,
+          "skeleton_only_wins": 16,
+          "visual_only_wins": 6
+        },
+        "target_exact": {
+          "both_correct": 20,
+          "neither_correct": 56,
+          "skeleton_only_wins": 12,
+          "visual_only_wins": 12
+        }
+      }
+    },
+    "task:set_contour": {
+      "arms": {
+        "strict_skeleton_patch": {
+          "cases": 100,
+          "completion_tokens": 6548,
+          "gold_patch_exact_rate": 0.0,
+          "mean_failure_aware_mse": 0.02117359737370862,
+          "mean_model_latency_seconds": 1.1262031373055652,
+          "mean_patch_precision": 0.15141666666666667,
+          "mean_patch_recall": 0.145,
+          "mean_target_precision": 0.9395,
+          "mean_target_recall": 0.8878333333333334,
+          "prompt_tokens": 235249,
+          "target_exact_rate": 0.77,
+          "valid_output_rate": 1.0
+        },
+        "strict_visual_stats_patch": {
+          "cases": 100,
+          "completion_tokens": 6613,
+          "gold_patch_exact_rate": 0.0,
+          "mean_failure_aware_mse": 0.023133228061778935,
+          "mean_model_latency_seconds": 1.2618211572407745,
+          "mean_patch_precision": 0.129125,
+          "mean_patch_recall": 0.12483333333333332,
+          "mean_target_precision": 0.92825,
+          "mean_target_recall": 0.8688333333333333,
+          "prompt_tokens": 299310,
+          "target_exact_rate": 0.76,
+          "valid_output_rate": 1.0
+        }
+      },
+      "paired": {
+        "failure_aware_mse": {
+          "skeleton_lower": 17,
+          "ties": 71,
+          "visual_lower": 12
+        },
+        "gold_patch_exact": {
+          "both_correct": 0,
+          "neither_correct": 100,
+          "skeleton_only_wins": 0,
+          "visual_only_wins": 0
+        },
+        "target_exact": {
+          "both_correct": 71,
+          "neither_correct": 18,
+          "skeleton_only_wins": 6,
+          "visual_only_wins": 5
+        }
+      }
+    },
+    "task:transparency": {
+      "arms": {
+        "strict_skeleton_patch": {
+          "cases": 100,
+          "completion_tokens": 7683,
+          "gold_patch_exact_rate": 0.03,
+          "mean_failure_aware_mse": 0.97,
+          "mean_model_latency_seconds": 1.3066892354562878,
+          "mean_patch_precision": 0.03,
+          "mean_patch_recall": 0.03,
+          "mean_target_precision": 0.2681111111111111,
+          "mean_target_recall": 0.3,
+          "prompt_tokens": 233463,
+          "target_exact_rate": 0.26,
+          "valid_output_rate": 0.03
+        },
+        "strict_visual_stats_patch": {
+          "cases": 100,
+          "completion_tokens": 6747,
+          "gold_patch_exact_rate": 0.07,
+          "mean_failure_aware_mse": 0.93,
+          "mean_model_latency_seconds": 1.2673939623194748,
+          "mean_patch_precision": 0.07333333333333333,
+          "mean_patch_recall": 0.08,
+          "mean_target_precision": 0.19833333333333333,
+          "mean_target_recall": 0.21,
+          "prompt_tokens": 297524,
+          "target_exact_rate": 0.19,
+          "valid_output_rate": 0.07
+        }
+      },
+      "paired": {
+        "failure_aware_mse": {
+          "skeleton_lower": 2,
+          "ties": 92,
+          "visual_lower": 6
+        },
+        "gold_patch_exact": {
+          "both_correct": 1,
+          "neither_correct": 91,
+          "skeleton_only_wins": 2,
+          "visual_only_wins": 6
+        },
+        "target_exact": {
+          "both_correct": 9,
+          "neither_correct": 64,
+          "skeleton_only_wins": 17,
+          "visual_only_wins": 10
+        }
+      }
+    },
+    "task:upside_down": {
+      "arms": {
+        "strict_skeleton_patch": {
+          "cases": 100,
+          "completion_tokens": 6233,
+          "gold_patch_exact_rate": 0.97,
+          "mean_failure_aware_mse": 0.02093110464513302,
+          "mean_model_latency_seconds": 1.115086574619636,
+          "mean_patch_precision": 0.972,
+          "mean_patch_recall": 0.98,
+          "mean_target_precision": 0.982,
+          "mean_target_recall": 0.99,
+          "prompt_tokens": 233363,
+          "target_exact_rate": 0.98,
+          "valid_output_rate": 0.98
+        },
+        "strict_visual_stats_patch": {
+          "cases": 100,
+          "completion_tokens": 6323,
+          "gold_patch_exact_rate": 0.97,
+          "mean_failure_aware_mse": 0.021960977762937546,
+          "mean_model_latency_seconds": 1.2440727769536897,
+          "mean_patch_precision": 0.9766666666666667,
+          "mean_patch_recall": 0.99,
+          "mean_target_precision": 0.9866666666666667,
+          "mean_target_recall": 1.0,
+          "prompt_tokens": 297424,
+          "target_exact_rate": 0.98,
+          "valid_output_rate": 0.98
+        }
+      },
+      "paired": {
+        "failure_aware_mse": {
+          "skeleton_lower": 3,
+          "ties": 94,
+          "visual_lower": 3
+        },
+        "gold_patch_exact": {
+          "both_correct": 94,
+          "neither_correct": 0,
+          "skeleton_only_wins": 3,
+          "visual_only_wins": 3
+        },
+        "target_exact": {
+          "both_correct": 96,
+          "neither_correct": 0,
+          "skeleton_only_wins": 2,
+          "visual_only_wins": 2
+        }
+      }
+    }
+  },
+  "root": "runs/qwen2.5-7b-constrained-ab-full-v1-server"
+}

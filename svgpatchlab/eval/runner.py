@@ -74,15 +74,26 @@ def run_evaluation(config: dict[str, Any]) -> dict[str, Any]:
     evaluation_config = config.get("evaluation", {})
 
     benchmark = SVGEditBench(dataset_config["root"])
-    architecture = create_architecture(architecture_config["name"])
-    model = RecordingModelAdapter(create_model(config.get("model")))
+    architecture_options = dict(architecture_config.get("options", {}))
+    architecture_options.update(
+        {
+            key: value
+            for key, value in architecture_config.items()
+            if key not in {"name", "options"}
+        }
+    )
+    architecture = create_architecture(
+        architecture_config["name"],
+        **architecture_options,
+    )
     render = bool(evaluation_config.get("render", True))
     render_size = int(evaluation_config.get("render_size", 72))
     save_outputs = bool(evaluation_config.get("save_outputs", False))
     progress = bool(evaluation_config.get("progress", False))
     output_dir = Path(evaluation_config.get("output_dir", "runs/latest"))
-    if render:
+    if render or architecture.requires_renderer:
         ensure_renderer()
+    model = RecordingModelAdapter(create_model(config.get("model")))
     output_dir.mkdir(parents=True, exist_ok=True)
     if save_outputs:
         (output_dir / "outputs").mkdir(exist_ok=True)
@@ -121,6 +132,7 @@ def run_evaluation(config: dict[str, Any]) -> dict[str, Any]:
                 "error": result.error,
                 "patch": result.patch.to_dict() if result.patch is not None else None,
                 "raw_responses": result.raw_responses,
+                "architecture_details": result.details,
                 "metrics": metrics,
             }
             if save_outputs and result.output_svg is not None:

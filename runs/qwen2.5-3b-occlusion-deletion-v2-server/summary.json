@@ -1,0 +1,72 @@
+{
+  "architecture": "semantic_id_patch",
+  "architecture_options": {
+    "completion_max_attempts": 2,
+    "max_candidates": 3,
+    "qwen_completion": true,
+    "render_size": 192
+  },
+  "by_family": {
+    "complete_underlayer": {
+      "answer_render_success_rate": 0.75,
+      "cases": 4,
+      "completion_accept_rate": 0.0,
+      "completion_behavior_accuracy": 1.0,
+      "completion_tokens": 194,
+      "completion_trigger_rate": 0.0,
+      "mean_failure_aware_mse": 0.25,
+      "mean_model_calls": 2.0,
+      "mean_model_latency_seconds": 1.0766483967308886,
+      "mean_wall_seconds": 2.227856954501476,
+      "prompt_tokens": 14883,
+      "target_exact_rate": 0.75,
+      "valid_output_rate": 0.75
+    },
+    "missing_underlayer": {
+      "answer_render_success_rate": 0.0,
+      "cases": 4,
+      "completion_accept_rate": 0.0,
+      "completion_behavior_accuracy": 0.0,
+      "completion_tokens": 176,
+      "completion_trigger_rate": 1.0,
+      "mean_failure_aware_mse": 0.018771634669974446,
+      "mean_model_calls": 2.0,
+      "mean_model_latency_seconds": 0.5530496186402161,
+      "mean_wall_seconds": 1.1891990772564895,
+      "prompt_tokens": 15299,
+      "target_exact_rate": 1.0,
+      "valid_output_rate": 1.0
+    }
+  },
+  "design": {
+    "answer_mse_threshold": 0.0001,
+    "cases": 8,
+    "cases_by_family": {
+      "complete_underlayer": 4,
+      "missing_underlayer": 4
+    },
+    "complete_underlayer_requires_generator": false,
+    "expected_removed_target": "n3",
+    "missing_underlayer_requires_generator": true,
+    "one_unique_source_per_case": true,
+    "paired_geometry_variants": 4,
+    "reconstruction_target": "n1"
+  },
+  "format": "svgpatchlab.occlusion_deletion.v1",
+  "model_config": "configs/models/qwen2.5-3b-ollama-constrained.json",
+  "overall": {
+    "answer_render_success_rate": 0.375,
+    "cases": 8,
+    "completion_accept_rate": 0.0,
+    "completion_behavior_accuracy": 0.5,
+    "completion_tokens": 370,
+    "completion_trigger_rate": 0.5,
+    "mean_failure_aware_mse": 0.13438581733498722,
+    "mean_model_calls": 2.0,
+    "mean_model_latency_seconds": 0.8148490076855524,
+    "mean_wall_seconds": 1.7085280158789828,
+    "prompt_tokens": 30182,
+    "target_exact_rate": 0.875,
+    "valid_output_rate": 0.875
+  }
+}

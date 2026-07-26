@@ -3,17 +3,29 @@ from __future__ import annotations
 import json
 
 from svgpatchlab.core import PatchPolicy, apply_patch, build_scene, parse_patch, validate_patch
+from svgpatchlab.core.patch import PATCH_SCHEMA_NAME, patch_json_schema
+from svgpatchlab.models.openai_compatible import PromptTruncatedError
 from svgpatchlab.eval.render import render_svg_data_url
 from svgpatchlab.models import ModelAdapter
 from svgpatchlab.types import ArchitectureResult, BenchmarkCase, ModelRequest
 
 from .base import Architecture
 from .prompts import patch_prompt
+from .root_tasks import compile_root_task_patch
 
 
 class PatchArchitecture(Architecture):
     context_mode = "skeleton"
     include_image = False
+    #: Send the patch JSON Schema with the request so a server that supports
+    #: constrained decoding cannot emit a different dialect.
+    constrain_output = False
+    #: Accept near-miss payloads (aliased operations key, bare operation list,
+    #: omitted version) instead of failing the case outright.
+    repair_output = False
+    #: Compile unambiguous whole-canvas benchmark tasks without asking the
+    #: model to rediscover the root target and fixed attribute transformation.
+    route_root_tasks = False
 
     def __init__(self, policy: PatchPolicy | None = None):
         self.policy = policy or PatchPolicy()
@@ -27,22 +39,52 @@ class PatchArchitecture(Architecture):
         return build_scene(case.source_svg)
 
     def run(self, case: BenchmarkCase, model: ModelAdapter) -> ArchitectureResult:
-        result = ArchitectureResult(model_calls=1)
+        result = ArchitectureResult()
         try:
             scene = self.scene_for(case)
+            if self.route_root_tasks:
+                routed_patch = compile_root_task_patch(case, scene)
+                if routed_patch is not None:
+                    validate_patch(
+                        routed_patch,
+                        scene,
+                        self.policy,
+                        task=case.task,
+                    )
+                    result.patch = routed_patch
+                    result.output_svg = apply_patch(case.source_svg, routed_patch)
+                    result.details["root_task_router"] = {
+                        "routed": True,
+                        "task": case.task,
+                        "model_bypassed": True,
+                    }
+                    return result
             context_name, context = self.context(case, scene)
-            images = (render_svg_data_url(case.source_svg),) if self.include_image else ()
+            images = (
+                (render_svg_data_url(case.source_svg),)
+                if self.include_image and model.supports_images
+                else ()
+            )
             response = model.generate(
                 ModelRequest(
                     patch_prompt(case.instruction, context_name, context),
                     images=images,
                     metadata={"request_id": case.case_id},
+                    response_schema=(
+                        patch_json_schema() if self.constrain_output else None
+                    ),
+                    response_schema_name=PATCH_SCHEMA_NAME,
                 )
             )
+            result.model_calls += 1
             result.raw_responses.append(response.text)
-            result.patch = parse_patch(response.text)
+            result.patch = parse_patch(response.text, repair=self.repair_output)
             validate_patch(result.patch, scene, self.policy, task=case.task)
             result.output_svg = apply_patch(case.source_svg, result.patch)
+        except PromptTruncatedError:
+            # A truncated prompt is a broken run, not a wrong answer. Let it
+            # abort loudly rather than being scored as a grounding failure.
+            raise
         except Exception as exc:
             result.error = f"{type(exc).__name__}: {exc}"
         return result
@@ -61,6 +103,7 @@ class SkeletonPatchArchitecture(PatchArchitecture):
 class VisualSkeletonPatchArchitecture(SkeletonPatchArchitecture):
     name = "visual_skeleton_patch"
     include_image = True
+    requires_renderer = True
 
 
 class VisualStatsPatchArchitecture(SkeletonPatchArchitecture):
@@ -73,6 +116,7 @@ class VisualStatsPatchArchitecture(SkeletonPatchArchitecture):
     """
 
     name = "visual_stats_patch"
+    requires_renderer = True
 
     def __init__(
         self,
@@ -91,6 +135,41 @@ class VisualStatsPatchArchitecture(SkeletonPatchArchitecture):
         return build_scene(case.source_svg, visual_stats=stats)
 
 
+class StrictSkeletonPatchArchitecture(SkeletonPatchArchitecture):
+    """skeleton_patch with schema-constrained decoding and response repair.
+
+    Separately named so the completed unconstrained matrix stays reproducible.
+    Pair with a model config whose structured_output is not "off"; without
+    server-side support the schema is ignored and only repair applies.
+    """
+
+    name = "strict_skeleton_patch"
+    constrain_output = True
+    repair_output = True
+
+
+class StrictVisualStatsPatchArchitecture(VisualStatsPatchArchitecture):
+    """visual_stats_patch under the same constrained-decoding treatment."""
+
+    name = "strict_visual_stats_patch"
+    constrain_output = True
+    repair_output = True
+
+
+class RoutedStrictSkeletonPatchArchitecture(StrictSkeletonPatchArchitecture):
+    """Strict skeleton patching with deterministic whole-canvas routing."""
+
+    name = "routed_strict_skeleton_patch"
+    route_root_tasks = True
+
+
+class RoutedStrictVisualStatsPatchArchitecture(StrictVisualStatsPatchArchitecture):
+    """Strict visual-stat patching with deterministic whole-canvas routing."""
+
+    name = "routed_strict_visual_stats_patch"
+    route_root_tasks = True
+
+
 class VisualGNNPatchArchitecture(Architecture):
     """Plan A: skeleton patch guided by GNN-based node pre-selection.
 
@@ -100,6 +179,7 @@ class VisualGNNPatchArchitecture(Architecture):
     """
 
     name = "visual_gnn_patch"
+    requires_renderer = True
 
     def __init__(
         self,
@@ -143,6 +223,10 @@ class VisualGNNPatchArchitecture(Architecture):
             result.patch = parse_patch(response.text)
             validate_patch(result.patch, scene, self.policy, task=case.task)
             result.output_svg = apply_patch(case.source_svg, result.patch)
+        except PromptTruncatedError:
+            # A truncated prompt is a broken run, not a wrong answer. Let it
+            # abort loudly rather than being scored as a grounding failure.
+            raise
         except Exception as exc:
             result.error = f"{type(exc).__name__}: {exc}"
         return result

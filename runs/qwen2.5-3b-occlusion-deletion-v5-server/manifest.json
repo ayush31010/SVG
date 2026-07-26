@@ -1,0 +1,99 @@
+{
+  "cases": [
+    {
+      "answer_sha256": "00ed338090e86e6ea765c989f7eb676c309e98d43b2937c6e1f87efe685b381a",
+      "case_id": "delete/complete_underlayer-orange-compact",
+      "completion_expected": false,
+      "expected_removed_target": "n3",
+      "family": "complete_underlayer",
+      "reconstruction_target": "n1",
+      "source_sha256": "be6649e26bfe47bd5d4ff8e91c78dd16092fff62a256dfbb26a616d7556e0141",
+      "variant": "orange-compact"
+    },
+    {
+      "answer_sha256": "7ec93975155f2c369f6df68e0cde806c2e025bf2a9e6c568a2a61ae7c1cf1847",
+      "case_id": "delete/complete_underlayer-gold-centered",
+      "completion_expected": false,
+      "expected_removed_target": "n3",
+      "family": "complete_underlayer",
+      "reconstruction_target": "n1",
+      "source_sha256": "4239ecdd8ac7d5d61e1433f9466497741f4c500758c55253d401efc330fdf9fc",
+      "variant": "gold-centered"
+    },
+    {
+      "answer_sha256": "c1498abe53268e73f5bd08986730c588959847421ddb2b677115b147de4c6508",
+      "case_id": "delete/complete_underlayer-coral-wide",
+      "completion_expected": false,
+      "expected_removed_target": "n3",
+      "family": "complete_underlayer",
+      "reconstruction_target": "n1",
+      "source_sha256": "dab60d4a4a0c7c835ba5f51bde62316e8973c1942ad4535977fbb50556e2adf2",
+      "variant": "coral-wide"
+    },
+    {
+      "answer_sha256": "e7ce04b7d8e0243be49c87adb66a248cea123c0ae3f97501b82def7c1f5d5f1b",
+      "case_id": "delete/complete_underlayer-green-small",
+      "completion_expected": false,
+      "expected_removed_target": "n3",
+      "family": "complete_underlayer",
+      "reconstruction_target": "n1",
+      "source_sha256": "2c5440c380e8beb50e38bdcfb6a7e509f4a3ca8f3b7e1f4cbfea3f810418be63",
+      "variant": "green-small"
+    },
+    {
+      "answer_sha256": "00ed338090e86e6ea765c989f7eb676c309e98d43b2937c6e1f87efe685b381a",
+      "case_id": "delete/missing_underlayer-orange-compact",
+      "completion_expected": true,
+      "expected_removed_target": "n3",
+      "family": "missing_underlayer",
+      "reconstruction_target": "n1",
+      "source_sha256": "ae673bec02f110b920db2d8164395e893f185a8a7745a0406ae83c797f7f669b",
+      "variant": "orange-compact"
+    },
+    {
+      "answer_sha256": "7ec93975155f2c369f6df68e0cde806c2e025bf2a9e6c568a2a61ae7c1cf1847",
+      "case_id": "delete/missing_underlayer-gold-centered",
+      "completion_expected": true,
+      "expected_removed_target": "n3",
+      "family": "missing_underlayer",
+      "reconstruction_target": "n1",
+      "source_sha256": "c021f52bfbf6f7b1626af5ded94376a2033e5b1eba5004e64ac3b9847e4c9243",
+      "variant": "gold-centered"
+    },
+    {
+      "answer_sha256": "c1498abe53268e73f5bd08986730c588959847421ddb2b677115b147de4c6508",
+      "case_id": "delete/missing_underlayer-coral-wide",
+      "completion_expected": true,
+      "expected_removed_target": "n3",
+      "family": "missing_underlayer",
+      "reconstruction_target": "n1",
+      "source_sha256": "ffc86e875279ef107f0238f0cc0628e016cc5625c3a1093a15e895f07ccfd79e",
+      "variant": "coral-wide"
+    },
+    {
+      "answer_sha256": "e7ce04b7d8e0243be49c87adb66a248cea123c0ae3f97501b82def7c1f5d5f1b",
+      "case_id": "delete/missing_underlayer-green-small",
+      "completion_expected": true,
+      "expected_removed_target": "n3",
+      "family": "missing_underlayer",
+      "reconstruction_target": "n1",
+      "source_sha256": "c01759cbb9f28ee3ee2dbbad3d2cfdf55ee856eabbb0a4a1b97b0ee079811847",
+      "variant": "green-small"
+    }
+  ],
+  "design": {
+    "answer_mse_threshold": 0.0001,
+    "cases": 8,
+    "cases_by_family": {
+      "complete_underlayer": 4,
+      "missing_underlayer": 4
+    },
+    "complete_underlayer_requires_generator": false,
+    "expected_removed_target": "n3",
+    "missing_underlayer_requires_generator": true,
+    "one_unique_source_per_case": true,
+    "paired_geometry_variants": 4,
+    "reconstruction_target": "n1"
+  },
+  "format": "svgpatchlab.occlusion_deletion.v1"
+}

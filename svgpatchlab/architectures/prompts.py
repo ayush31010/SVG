@@ -10,9 +10,9 @@ PATCH_PROMPT_TEMPLATE_DIR = Path(__file__).resolve().parents[1] / "prompt_templa
 PATCH_PROMPT_VERSION = 4
 PATCH_PROMPT_VERSIONS = (1, 2, 3, 4)
 
-# Active v3 is intentionally zero-shot. Tiny models copied concrete constants
-# from v2 examples, especially crop viewBox values, so the baseline prompt now
-# uses generic rules and formulas only.
+# The active prompt is intentionally zero-shot. Tiny models copied concrete
+# constants from v2 examples, especially crop viewBox values, so current
+# prompts use generic rules and formulas only.
 PATCH_EXAMPLES: tuple[dict, ...] = ()
 
 PATCH_V2_EXAMPLES = (
@@ -114,5 +114,50 @@ def patch_prompt(
     )
 
 
+def target_selection_prompt(
+    instruction: str,
+    context: str,
+    max_candidates: int = 3,
+    has_images: bool = False,
+    has_id_map: bool = False,
+) -> str:
+    if has_id_map:
+        image_guidance = (
+            "Image 1 is the normal SVG render. Image 2 is the element-ID render. "
+            "Each flat ID color maps to the node whose `visual.id_color` matches it."
+        )
+    elif has_images:
+        image_guidance = (
+            "Image 1 is the normal SVG render. A reliable element-ID image could "
+            "not be produced for this SVG, so use the image with the compact "
+            "counterfactual `visual` fields."
+        )
+    else:
+        image_guidance = (
+            "No images are attached. Ground the instruction using the compact "
+            "DOM and render-derived `visual` fields."
+        )
+    return _load_template("select_targets_v1.txt").substitute(
+        instruction=instruction,
+        context=context,
+        max_candidates=max_candidates,
+        image_guidance=image_guidance,
+    )
+
+
 def rewrite_prompt(instruction: str, svg: str) -> str:
     return _load_template("rewrite.txt").substitute(instruction=instruction, svg=svg)
+
+
+def qwen_completion_prompt(
+    instruction: str,
+    deleted_svg: str,
+    reconstruction_candidates: str,
+    evidence: str,
+) -> str:
+    return _load_template("qwen_completion_v1.txt").substitute(
+        instruction=instruction,
+        deleted_svg=deleted_svg,
+        reconstruction_candidates=reconstruction_candidates,
+        evidence=evidence,
+    )

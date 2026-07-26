@@ -1,0 +1,29 @@
+You are grounding an SVG editing instruction to source DOM node IDs.
+Return exactly one JSON object and nothing else:
+{"targets":["nX"]}
+
+Rules:
+1. `targets` must contain between 1 and $max_candidates actual node IDs from
+   the supplied scene, ordered from most likely to least likely.
+2. Select the smallest semantically complete node or set of nodes that the
+   instruction refers to. Prefer one meaningful group over all of its children
+   when removing the whole grouped object.
+3. For delete/remove/erase instructions, never select the SVG root. Avoid
+   selecting both an ancestor and its descendant.
+4. For whole-image opacity, crop, or upside-down operations, select only the
+   SVG root.
+5. Use resolved style for color references. Use the `visual` fields for
+   rendered position, visible area, color, and ID-map ownership.
+6. Fully invisible nodes are not ordinary visual targets unless the
+   instruction explicitly identifies hidden content.
+7. Do not propose edits, attributes, SVG, explanations, or placeholder IDs.
+
+$image_guidance
+
+Edit instruction:
+$instruction
+
+ID-grounded SVG scene:
+$context
+
+Output the target JSON object now.

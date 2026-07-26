@@ -35,6 +35,7 @@ class HuggingFaceAdapter(ModelAdapter):
             raise RuntimeError("install svgpatchlab[hf] to use the Hugging Face adapter") from exc
 
         self.task = str(config.get("task", "text-generation"))
+        self.supports_images = self.task == "image-text-to-text"
         kwargs: dict[str, Any] = {"model": str(config["model"])}
         for name in ("device", "device_map", "trust_remote_code"):
             if name in config:
@@ -85,6 +86,10 @@ class HuggingFaceAdapter(ModelAdapter):
             ]
             model_input: Any = [{"role": "user", "content": content}]
         else:
+            if request.images:
+                raise RuntimeError(
+                    "Hugging Face image inputs require task='image-text-to-text'"
+                )
             model_input = request.prompt
         result = self.pipeline(model_input, **self.pipeline_kwargs)
         generated = result[0]["generated_text"]
