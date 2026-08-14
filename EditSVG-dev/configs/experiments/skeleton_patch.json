@@ -1,0 +1,18 @@
+{
+  "dataset": {
+    "root": "SVGEditBench",
+    "tasks": ["change_color", "set_contour", "upside_down", "transparency", "crop_to_half"]
+  },
+  "architecture": {
+    "name": "skeleton_patch"
+  },
+  "model": {
+    "config_file": "../models/qwen3.5-4b-openai.json"
+  },
+  "evaluation": {
+    "render": false,
+    "render_size": 72,
+    "save_outputs": true,
+    "output_dir": "runs/skeleton_patch"
+  }
+}

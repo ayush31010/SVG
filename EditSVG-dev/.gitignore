@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+.venv-qwen/
+dist/
+build/
+*.egg-info/
+runs/
+
+# Avoid vendoring nested repository metadata if the benchmark clone is included.
+SVGEditBench/.git/

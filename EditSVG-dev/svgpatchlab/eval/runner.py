@@ -1,0 +1,165 @@
+from __future__ import annotations
+
+import json
+import statistics
+from collections import Counter, defaultdict
+from pathlib import Path
+from typing import Any
+
+from svgpatchlab.architectures import create_architecture
+from svgpatchlab.data import SVGEditBench
+from svgpatchlab.models import RecordingModelAdapter, create_model
+
+from .metrics import evaluate_output
+from .render import ensure_renderer
+
+
+def _mean(items: list[float]) -> float | None:
+    return statistics.fmean(items) if items else None
+
+
+def _summarize(records: list[dict[str, Any]]) -> dict[str, Any]:
+    def summarize_group(group: list[dict[str, Any]]) -> dict[str, Any]:
+        total = len(group)
+        valid = sum(bool(record["metrics"]["valid_output"]) for record in group)
+        exact = sum(bool(record["metrics"]["reference_structure_match"]) for record in group)
+        protected = sum(bool(record["metrics"]["protected_geometry_preserved"]) for record in group)
+        mse = [record["metrics"]["mse"] for record in group if record["metrics"].get("mse") is not None]
+        failure_mse = [
+            record["metrics"]["failure_aware_mse"]
+            for record in group
+            if record["metrics"].get("failure_aware_mse") is not None
+        ]
+        patch_exact_values = [
+            record["metrics"]["gold_patch_exact"]
+            for record in group
+            if record["metrics"].get("gold_patch_exact") is not None
+        ]
+        call_records = [call for record in group for call in record.get("model_call_details", [])]
+        latencies = [float(call["latency_seconds"]) for call in call_records]
+        usages = [call.get("metadata", {}).get("usage", {}) for call in call_records]
+        return {
+            "cases": total,
+            "valid_output_rate": valid / total if total else 0.0,
+            "reference_structure_match_rate": exact / total if total else 0.0,
+            "protected_geometry_rate": protected / total if total else 0.0,
+            "gold_patch_exact_rate": (
+                sum(bool(value) for value in patch_exact_values) / len(patch_exact_values)
+                if patch_exact_values
+                else None
+            ),
+            "mean_mse_on_rendered": _mean(mse),
+            "mean_failure_aware_mse": _mean(failure_mse),
+            "model_calls": len(call_records),
+            "mean_model_latency_seconds": _mean(latencies),
+            "prompt_tokens": sum(int(usage.get("prompt_tokens", 0)) for usage in usages),
+            "completion_tokens": sum(int(usage.get("completion_tokens", 0)) for usage in usages),
+        }
+
+    by_task: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for record in records:
+        by_task[record["task"]].append(record)
+    errors = Counter(record["error"] for record in records if record.get("error"))
+    return {
+        "overall": summarize_group(records),
+        "by_task": {task: summarize_group(group) for task, group in sorted(by_task.items())},
+        "errors": dict(errors),
+    }
+
+
+def run_evaluation(config: dict[str, Any]) -> dict[str, Any]:
+    dataset_config = config["dataset"]
+    architecture_config = config["architecture"]
+    evaluation_config = config.get("evaluation", {})
+
+    benchmark = SVGEditBench(dataset_config["root"])
+    architecture = create_architecture(architecture_config["name"], architecture_config)
+    model = RecordingModelAdapter(create_model(config.get("model")))
+    vision_context_config = architecture_config.get("vision_context", {})
+    vision_model = None
+    if vision_context_config.get("enabled"):
+        vision_model = RecordingModelAdapter(create_model(vision_context_config.get("model")))
+    render = bool(evaluation_config.get("render", True))
+    render_size = int(evaluation_config.get("render_size", 72))
+    save_outputs = bool(evaluation_config.get("save_outputs", False))
+    output_dir = Path(evaluation_config.get("output_dir", "runs/latest"))
+    if render:
+        ensure_renderer()
+    output_dir.mkdir(parents=True, exist_ok=True)
+    if save_outputs:
+        (output_dir / "outputs").mkdir(exist_ok=True)
+
+    tasks = dataset_config.get("tasks")
+    limit = dataset_config.get("limit")
+    limit_per_task = dataset_config.get("limit_per_task")
+    records: list[dict[str, Any]] = []
+    results_path = output_dir / "results.jsonl"
+    with results_path.open("w") as results_file:
+        for case in benchmark.iter_cases(
+            tasks=tasks,
+            limit=limit,
+            limit_per_task=limit_per_task,
+        ):
+            call_offset = len(model.records)
+            vision_call_offset = len(vision_model.records) if vision_model is not None else 0
+            result = architecture.run(case, model, vision_model=vision_model)
+            model_call_details = [
+                {**record, "role": "vision_context"}
+                for record in (
+                    vision_model.records[vision_call_offset:]
+                    if vision_model is not None
+                    else []
+                )
+            ]
+            model_call_details.extend(
+                {**record, "role": "patch"} for record in model.records[call_offset:]
+            )
+            metrics = evaluate_output(
+                case.source_svg,
+                case.answer_svg,
+                result.output_svg,
+                result.patch,
+                render=render,
+                render_size=render_size,
+            )
+            record = {
+                "case_id": case.case_id,
+                "task": case.task,
+                "emoji_id": case.emoji_id,
+                "architecture": architecture.name,
+                "model_calls": len(model_call_details),
+                "model_call_details": model_call_details,
+                "error": result.error,
+                "patch": result.patch.to_dict() if result.patch is not None else None,
+                "raw_responses": result.raw_responses,
+                "metrics": metrics,
+            }
+            if save_outputs and result.output_svg is not None:
+                output_path = output_dir / "outputs" / case.task
+                output_path.mkdir(exist_ok=True)
+                (output_path / f"{case.emoji_id}.svg").write_text(result.output_svg)
+            records.append(record)
+            results_file.write(json.dumps(record, sort_keys=True) + "\n")
+
+    public_model_config = dict(config.get("model", {"adapter": "none"}))
+    if "api_key" in public_model_config:
+        public_model_config["api_key"] = "<redacted>"
+    public_vision_model_config = None
+    if vision_context_config.get("enabled"):
+        public_vision_model_config = dict(vision_context_config.get("model", {}))
+        if "api_key" in public_vision_model_config:
+            public_vision_model_config["api_key"] = "<redacted>"
+    summary = {
+        "architecture": architecture.name,
+        "dataset": benchmark.summary(),
+        "model": public_model_config,
+        "vision_model": public_vision_model_config,
+        "evaluation": {
+            "render": render,
+            "render_size": render_size,
+            "results": str(results_path),
+        },
+        **_summarize(records),
+    }
+    (output_dir / "summary.json").write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n")
+    return summary

@@ -1,0 +1,30 @@
+{
+  "dataset": {
+    "root": "SVGEditBench",
+    "tasks": ["change_color", "set_contour", "upside_down", "transparency", "crop_to_half"],
+    "limit": 100
+  },
+  "architecture": {
+    "name": "skeleton_patch",
+    "vision_context": {
+      "enabled": true,
+      "max_nodes": 48,
+      "image_size": 384,
+      "min_visible_pixels": 12,
+      "include_root": false,
+      "cache_dir": "runs/vision_cache",
+      "model": {
+        "config_file": "../models/qwen2.5-vl-3b.json"
+      }
+    }
+  },
+  "model": {
+    "config_file": "../models/qwen3.5-4b-openai.json"
+  },
+  "evaluation": {
+    "render": false,
+    "render_size": 72,
+    "save_outputs": true,
+    "output_dir": "runs/skeleton_patch_vision"
+  }
+}

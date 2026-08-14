@@ -1,0 +1,3 @@
+[submodule "SVGEditBench"]
+	path = SVGEditBench
+	url = https://github.com/mti-lab/SVGEditBench.git
