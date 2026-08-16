@@ -1,0 +1,117 @@
+{
+  "architecture": "semantic_id_patch",
+  "by_task": {
+    "change_color": {
+      "cases": 1,
+      "completion_tokens": 0,
+      "gold_patch_exact_rate": 0.0,
+      "mean_failure_aware_mse": 0.0,
+      "mean_model_latency_seconds": 36.85862852819264,
+      "mean_mse_on_rendered": 0.0,
+      "model_calls": 1,
+      "prompt_tokens": 0,
+      "protected_geometry_rate": 1.0,
+      "reference_structure_match_rate": 0.0,
+      "valid_output_rate": 1.0
+    },
+    "crop_to_half": {
+      "cases": 1,
+      "completion_tokens": 0,
+      "gold_patch_exact_rate": 1.0,
+      "mean_failure_aware_mse": 0.0,
+      "mean_model_latency_seconds": null,
+      "mean_mse_on_rendered": 0.0,
+      "model_calls": 0,
+      "prompt_tokens": 0,
+      "protected_geometry_rate": 1.0,
+      "reference_structure_match_rate": 1.0,
+      "valid_output_rate": 1.0
+    },
+    "set_contour": {
+      "cases": 1,
+      "completion_tokens": 0,
+      "gold_patch_exact_rate": 0.0,
+      "mean_failure_aware_mse": 0.10862216353416443,
+      "mean_model_latency_seconds": 5.856992920860648,
+      "mean_mse_on_rendered": 0.10862216353416443,
+      "model_calls": 1,
+      "prompt_tokens": 0,
+      "protected_geometry_rate": 1.0,
+      "reference_structure_match_rate": 0.0,
+      "valid_output_rate": 1.0
+    },
+    "transparency": {
+      "cases": 1,
+      "completion_tokens": 0,
+      "gold_patch_exact_rate": 1.0,
+      "mean_failure_aware_mse": 0.0,
+      "mean_model_latency_seconds": null,
+      "mean_mse_on_rendered": 0.0,
+      "model_calls": 0,
+      "prompt_tokens": 0,
+      "protected_geometry_rate": 1.0,
+      "reference_structure_match_rate": 1.0,
+      "valid_output_rate": 1.0
+    },
+    "upside_down": {
+      "cases": 1,
+      "completion_tokens": 0,
+      "gold_patch_exact_rate": 1.0,
+      "mean_failure_aware_mse": 0.0,
+      "mean_model_latency_seconds": null,
+      "mean_mse_on_rendered": 0.0,
+      "model_calls": 0,
+      "prompt_tokens": 0,
+      "protected_geometry_rate": 1.0,
+      "reference_structure_match_rate": 1.0,
+      "valid_output_rate": 1.0
+    }
+  },
+  "dataset": {
+    "root": "SVGEditBench",
+    "tasks": {
+      "change_color": 100,
+      "compression": 100,
+      "crop_to_half": 100,
+      "set_contour": 100,
+      "transparency": 100,
+      "upside_down": 100
+    },
+    "total_cases": 600,
+    "unique_emojis": 100
+  },
+  "errors": {},
+  "evaluation": {
+    "render": true,
+    "render_size": 72,
+    "results": "runs/context-v3-runtime-smoke/results.jsonl"
+  },
+  "model": {
+    "adapter": "huggingface",
+    "adapter_response_schemas": [
+      "svgpatchlab_candidate_rerank_v1"
+    ],
+    "device_map": "auto",
+    "do_sample": false,
+    "dtype": "bfloat16",
+    "max_new_tokens": 512,
+    "model": "checkpoints/node-grounding-qwen2.5-vl-7b-context-v3",
+    "schema_max_new_tokens": {
+      "svgpatchlab_candidate_rerank_v1": 32
+    },
+    "task": "image-text-to-text"
+  },
+  "overall": {
+    "cases": 5,
+    "completion_tokens": 0,
+    "gold_patch_exact_rate": 0.6,
+    "mean_failure_aware_mse": 0.021724432706832886,
+    "mean_model_latency_seconds": 21.357810724526644,
+    "mean_mse_on_rendered": 0.021724432706832886,
+    "model_calls": 2,
+    "prompt_tokens": 0,
+    "protected_geometry_rate": 1.0,
+    "reference_structure_match_rate": 0.6,
+    "valid_output_rate": 1.0
+  }
+}

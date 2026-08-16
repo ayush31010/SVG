@@ -1,0 +1,19 @@
+{"gold": "{\"choices\":[\"E\"]}", "id": "change_color/1f477", "prediction": "{\"choices\":\"B\"}"}
+{"gold": "{\"choices\":[\"C\"]}", "id": "change_color/1f6e4", "prediction": "{\"choices\":[\"F\"]}"}
+{"gold": "{\"choices\":[\"C\",\"D\"]}", "id": "set_contour/1f40f", "prediction": "{\"choices\":\"E\"}"}
+{"gold": "{\"choices\":[\"E\"]}", "id": "change_color/1f996", "prediction": "{\"choices\":\"A\"}"}
+{"gold": "{\"choices\":[\"A\"]}", "id": "change_color/265f", "prediction": "{\"choices\": [\"A\"]}"}
+{"gold": "{\"choices\":[\"C\"]}", "id": "set_contour/1f996", "prediction": "{\"choices\":\"A\"}"}
+{"gold": "{\"choices\":[\"F\"]}", "id": "change_color/1f3dc", "prediction": "{\"choices\":\"A\"}"}
+{"gold": "{\"choices\":[\"C\",\"D\"]}", "id": "set_contour/1f3a5", "prediction": "{\"choices\":\"A\"}"}
+{"gold": "{\"choices\":[\"B\",\"C\",\"D\"]}", "id": "change_color/1f4fd", "prediction": "{\"choices\":\"A\"}"}
+{"gold": "{\"choices\":[\"B\"]}", "id": "set_contour/265f", "prediction": "{\"choices\": [\"A\"]}"}
+{"gold": "{\"choices\":[\"A\"]}", "id": "change_color/1f40f", "prediction": "{\"choices\":\"A\"}"}
+{"gold": "{\"choices\":[\"F\"]}", "id": "set_contour/1f6e4", "prediction": "{\"choices\":\"C\"}"}
+{"gold": "{\"choices\":[\"B\"]}", "id": "set_contour/1f387", "prediction": "{\"choices\":\"A\"}"}
+{"gold": "{\"choices\":[\"B\",\"F\"]}", "id": "change_color/1f3a5", "prediction": "{\"choices\":\"A\"}"}
+{"gold": "{\"choices\":[\"E\"]}", "id": "set_contour/1f424", "prediction": "{\"choices\":\"A\"}"}
+{"gold": "{\"choices\":[\"F\"]}", "id": "set_contour/1f477", "prediction": "{\"choices\": [\"E\"]}"}
+{"gold": "{\"choices\":[\"B\"]}", "id": "change_color/1f424", "prediction": "{\"choices\":\"B\"}"}
+{"gold": "{\"choices\":[\"F\"]}", "id": "set_contour/1f3dc", "prediction": "{\"choices\":\"A\"}"}
+{"gold": "{\"choices\":[\"A\",\"B\",\"D\"]}", "id": "set_contour/1f4fd", "prediction": "{\"choices\": [\"C\"]}"}

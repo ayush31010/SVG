@@ -1,0 +1,148 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/729 [00:00<?, ?it/s]Loading weights:   0%|          | 2/729 [00:00<01:01, 11.75it/s]Loading weights:   1%|▏         | 10/729 [00:00<00:17, 42.07it/s]Loading weights:   2%|▏         | 18/729 [00:00<00:12, 55.32it/s]Loading weights:   4%|▍         | 30/729 [00:00<00:09, 75.63it/s]Loading weights:   6%|▌         | 42/729 [00:00<00:07, 88.02it/s]Loading weights:   7%|▋         | 54/729 [00:00<00:07, 95.12it/s]Loading weights:   9%|▉         | 65/729 [00:00<00:06, 97.15it/s]Loading weights:  11%|█         | 78/729 [00:00<00:06, 104.24it/s]Loading weights:  12%|█▏        | 90/729 [00:01<00:06, 106.35it/s]Loading weights:  14%|█▍        | 101/729 [00:01<00:06, 104.29it/s]Loading weights:  16%|█▌        | 114/729 [00:01<00:05, 109.49it/s]Loading weights:  17%|█▋        | 126/729 [00:01<00:05, 109.23it/s]Loading weights:  19%|█▉        | 138/729 [00:01<00:05, 107.59it/s]Loading weights:  21%|██        | 150/729 [00:01<00:05, 106.31it/s]Loading weights:  22%|██▏       | 162/729 [00:01<00:05, 104.67it/s]Loading weights:  24%|██▍       | 174/729 [00:01<00:05, 103.45it/s]Loading weights:  26%|██▌       | 186/729 [00:01<00:05, 102.85it/s]Loading weights:  27%|██▋       | 198/729 [00:02<00:05, 103.23it/s]Loading weights:  29%|██▉       | 210/729 [00:02<00:05, 103.69it/s]Loading weights:  30%|███       | 222/729 [00:02<00:04, 104.89it/s]Loading weights:  32%|███▏      | 234/729 [00:02<00:04, 107.77it/s]Loading weights:  34%|███▍      | 250/729 [00:02<00:03, 121.68it/s]Loading weights:  36%|███▋      | 265/729 [00:02<00:03, 121.46it/s]Loading weights:  39%|███▊      | 281/729 [00:02<00:03, 126.62it/s]Loading weights:  40%|████      | 294/729 [00:02<00:03, 121.88it/s]Loading weights:  43%|████▎     | 312/729 [00:02<00:03, 137.43it/s]Loading weights:  45%|████▍     | 328/729 [00:03<00:02, 138.40it/s]Loading weights:  53%|█████▎    | 385/729 [00:03<00:01, 256.44it/s]Loading weights:  71%|███████   | 517/729 [00:03<00:00, 554.61it/s]Loading weights:  88%|████████▊ | 643/729 [00:03<00:00, 754.65it/s]Loading weights: 100%|██████████| 729/729 [00:03<00:00, 211.17it/s]
+{
+  "base_case_all_permutations_exact_rate": 0.3333333333333333,
+  "base_cases": 30,
+  "base_cases_all_permutations_exact": 10,
+  "by_gold_cardinality": {
+    "1": {
+      "cardinality_accuracy": 0.9743589743589743,
+      "exact_set_match_rate": 0.5256410256410257,
+      "examples": 78,
+      "micro_f1": 0.5324675324675324,
+      "micro_precision": 0.5394736842105263,
+      "micro_recall": 0.5256410256410257,
+      "top1_accuracy": 0.5256410256410257,
+      "valid_json_rate": 0.9743589743589743
+    },
+    "2": {
+      "cardinality_accuracy": 0.0,
+      "exact_set_match_rate": 0.0,
+      "examples": 12,
+      "micro_f1": 0.611111111111111,
+      "micro_precision": 0.9166666666666666,
+      "micro_recall": 0.4583333333333333,
+      "top1_accuracy": 0.9166666666666666,
+      "valid_json_rate": 1.0
+    }
+  },
+  "by_source_family": {
+    "svg_edit_bench": {
+      "base_case_all_permutations_exact_rate": 0.5,
+      "base_cases": 10,
+      "base_cases_all_permutations_exact": 5,
+      "by_gold_cardinality": {
+        "1": {
+          "cardinality_accuracy": 0.9166666666666666,
+          "exact_set_match_rate": 0.7916666666666666,
+          "examples": 24,
+          "micro_f1": 0.8260869565217391,
+          "micro_precision": 0.8636363636363636,
+          "micro_recall": 0.7916666666666666,
+          "top1_accuracy": 0.7916666666666666,
+          "valid_json_rate": 0.9166666666666666
+        },
+        "2": {
+          "cardinality_accuracy": 0.0,
+          "exact_set_match_rate": 0.0,
+          "examples": 6,
+          "micro_f1": 0.6666666666666666,
+          "micro_precision": 1.0,
+          "micro_recall": 0.5,
+          "top1_accuracy": 1.0,
+          "valid_json_rate": 1.0
+        }
+      },
+      "cardinality_accuracy": 0.7333333333333333,
+      "cardinality_correct": 22,
+      "exact_match": 19,
+      "exact_match_rate": 0.6333333333333333,
+      "exact_set_match": 19,
+      "exact_set_match_rate": 0.6333333333333333,
+      "examples": 30,
+      "micro_f1": 0.78125,
+      "micro_precision": 0.8928571428571429,
+      "micro_recall": 0.6944444444444444,
+      "permutation_consistency_rate": 0.7,
+      "permutation_consistent_groups": 7,
+      "permutation_groups": 10,
+      "top1_accuracy": 0.8333333333333334,
+      "top1_correct": 25,
+      "valid_json": 28,
+      "valid_json_rate": 0.9333333333333333
+    },
+    "synthetic_context": {
+      "base_case_all_permutations_exact_rate": 0.25,
+      "base_cases": 20,
+      "base_cases_all_permutations_exact": 5,
+      "by_gold_cardinality": {
+        "1": {
+          "cardinality_accuracy": 1.0,
+          "exact_set_match_rate": 0.4074074074074074,
+          "examples": 54,
+          "micro_f1": 0.4074074074074074,
+          "micro_precision": 0.4074074074074074,
+          "micro_recall": 0.4074074074074074,
+          "top1_accuracy": 0.4074074074074074,
+          "valid_json_rate": 1.0
+        },
+        "2": {
+          "cardinality_accuracy": 0.0,
+          "exact_set_match_rate": 0.0,
+          "examples": 6,
+          "micro_f1": 0.5555555555555556,
+          "micro_precision": 0.8333333333333334,
+          "micro_recall": 0.4166666666666667,
+          "top1_accuracy": 0.8333333333333334,
+          "valid_json_rate": 1.0
+        }
+      },
+      "cardinality_accuracy": 0.9,
+      "cardinality_correct": 54,
+      "exact_match": 22,
+      "exact_match_rate": 0.36666666666666664,
+      "exact_set_match": 22,
+      "exact_set_match_rate": 0.36666666666666664,
+      "examples": 60,
+      "micro_f1": 0.4285714285714286,
+      "micro_precision": 0.45,
+      "micro_recall": 0.4090909090909091,
+      "permutation_consistency_rate": 0.5,
+      "permutation_consistent_groups": 10,
+      "permutation_groups": 20,
+      "top1_accuracy": 0.45,
+      "top1_correct": 27,
+      "valid_json": 60,
+      "valid_json_rate": 1.0
+    }
+  },
+  "candidate_retrieval_coverage": {
+    "candidate_pool_audited_cases": 51,
+    "candidate_retrieval_coverage_of_targeted_cases": 1.0,
+    "candidate_retrieval_rate": 1.0,
+    "candidate_retrieved_cases": 51,
+    "cases_with_non_gold_distractor": 51,
+    "non_gold_distractor_rate": 1.0,
+    "retrieval_policy": "oracle_injected",
+    "source_cases": 51,
+    "targeted_cases": 51,
+    "written_base_cases": 51
+  },
+  "cardinality_accuracy": 0.8444444444444444,
+  "cardinality_correct": 76,
+  "exact_match": 41,
+  "exact_match_rate": 0.45555555555555555,
+  "exact_set_match": 41,
+  "exact_set_match_rate": 0.45555555555555555,
+  "examples": 90,
+  "micro_f1": 0.5473684210526317,
+  "micro_precision": 0.5909090909090909,
+  "micro_recall": 0.5098039215686274,
+  "permutation_consistency_rate": 0.5666666666666667,
+  "permutation_consistent_groups": 17,
+  "permutation_groups": 30,
+  "top1_accuracy": 0.5777777777777777,
+  "top1_correct": 52,
+  "valid_json": 88,
+  "valid_json_rate": 0.9777777777777777
+}

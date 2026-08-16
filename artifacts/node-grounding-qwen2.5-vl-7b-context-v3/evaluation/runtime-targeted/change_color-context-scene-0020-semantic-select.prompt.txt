@@ -1,0 +1,26 @@
+You are grounding an SVG edit instruction to a closed set of visual choices.
+Return exactly one JSON object and nothing else:
+{"choices":["A"]}
+
+Rules:
+1. You may use only labels from this allowed list: ["A","B","C","D","E","F"]
+2. Select between one and 4 choices. A visually singular object can require several choices when it is composed from several source elements; choose the smallest complete set.
+3. Each attached candidate card is labeled and contains a highlighted full-context panel, a fresh direct-from-SVG vector crop, and a binary ownership mask. Cards are ordered exactly as the allowed labels.
+Renderer-derived candidate geometry and structure (coordinates are normalized to the source canvas):
+A: {"bbox_normalized":[0.147321,0.116071,0.705357,0.808036],"center_normalized":[0.5,0.520089],"child_count":0,"depth":1,"descendant_count":0,"effective_opacity":1.0,"fill":"#F4C27A","painted_area_fraction":0.446309,"stroke":"none","tag":"ellipse"}
+B: {"bbox_normalized":[0.330357,0.392857,0.102679,0.107143],"center_normalized":[0.381696,0.446429],"child_count":0,"depth":1,"descendant_count":0,"effective_opacity":1.0,"fill":"#334155","painted_area_fraction":0.008709,"stroke":"none","tag":"circle"}
+C: {"bbox_normalized":[0.589286,0.392857,0.102679,0.107143],"center_normalized":[0.640625,0.446429],"child_count":0,"depth":1,"descendant_count":0,"effective_opacity":1.0,"fill":"#334155","painted_area_fraction":0.008689,"stroke":"none","tag":"circle"}
+D: {"bbox_normalized":[0.446429,0.486607,0.107143,0.125],"center_normalized":[0.5,0.549107],"child_count":0,"depth":1,"descendant_count":0,"effective_opacity":1.0,"fill":"#334155","painted_area_fraction":0.006896,"stroke":"none","tag":"polygon"}
+E: {"bbox_normalized":[0.388393,0.696429,0.223214,0.053571],"center_normalized":[0.5,0.723214],"child_count":0,"depth":1,"descendant_count":0,"effective_opacity":1.0,"fill":"#334155","painted_area_fraction":0.01148,"stroke":"none","tag":"rect"}
+F: {"bbox_normalized":[0.236607,0.098214,0.526786,0.125],"center_normalized":[0.5,0.160714],"child_count":0,"depth":1,"descendant_count":0,"effective_opacity":1.0,"fill":"#334155","painted_area_fraction":0.064892,"stroke":"none","tag":"rect"}
+4. Rank selected labels from most likely to least likely. Choose the smallest
+   semantically complete visual target or set of targets named by the edit.
+5. Use the candidate views, spatial position, shape, ownership mask, and the
+   renderer-derived metadata. Do not infer or emit DOM node IDs or SVG source.
+6. If the instruction is ambiguous, choose the single best supported label.
+7. Do not emit edits, attributes, SVG, explanations, or extra JSON fields.
+
+Edit instruction:
+Recolor the right-side eye of the face bright red.
+
+Output the closed-choice JSON object now.

@@ -130,12 +130,17 @@ class _ChromiumSVGRenderer:
                 f"--screenshot={output}",
                 source.as_uri(),
             ]
-            completed = subprocess.run(
-                command,
-                capture_output=True,
-                check=False,
-                timeout=30,
-            )
+            try:
+                completed = subprocess.run(
+                    command,
+                    capture_output=True,
+                    check=False,
+                    timeout=30,
+                )
+            except subprocess.TimeoutExpired as exc:
+                raise RendererUnavailable(
+                    "headless Chromium SVG rendering timed out"
+                ) from exc
             # On Windows the Chrome launcher can return just before its headless
             # child flushes the screenshot, even with an isolated profile.
             for _ in range(50):

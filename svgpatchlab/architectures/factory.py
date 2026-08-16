@@ -5,10 +5,12 @@ from typing import Any
 from .base import Architecture
 from .diagnostic import OraclePatchArchitecture, OracleTargetArchitecture, TwoStagePatchArchitecture
 from .patching import (
+    AnalyticStatsPatchArchitecture,
     FullContextPatchArchitecture,
     RoutedStrictSkeletonPatchArchitecture,
     RoutedStrictVisualStatsPatchArchitecture,
     SkeletonPatchArchitecture,
+    StrictAnalyticStatsPatchArchitecture,
     StrictSkeletonPatchArchitecture,
     StrictVisualStatsPatchArchitecture,
     VisualGNNPatchArchitecture,
@@ -28,6 +30,8 @@ ARCHITECTURES: dict[str, type[Architecture]] = {
     "skeleton_patch": SkeletonPatchArchitecture,
     "visual_skeleton_patch": VisualSkeletonPatchArchitecture,
     "visual_stats_patch": VisualStatsPatchArchitecture,
+    "analytic_stats_patch": AnalyticStatsPatchArchitecture,
+    "strict_analytic_stats_patch": StrictAnalyticStatsPatchArchitecture,
     "strict_skeleton_patch": StrictSkeletonPatchArchitecture,
     "strict_visual_stats_patch": StrictVisualStatsPatchArchitecture,
     "routed_strict_skeleton_patch": RoutedStrictSkeletonPatchArchitecture,

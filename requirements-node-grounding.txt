@@ -1,0 +1,12 @@
+-r requirements-eval.txt
+# Qwen2.5-VL is supported natively from Transformers 4.49 onward. Keep the
+# upper bound below the next major API break; the entry point handles the
+# TrainingArguments/dtype rename across 4.x and 5.x.
+transformers>=4.49,<6
+torch>=2.2
+torchvision>=0.17
+accelerate>=1.2,<2
+peft>=0.19.1,<1
+# Required only when the config keeps the default `"qlora": true`.
+bitsandbytes>=0.45,<1
+safetensors>=0.4

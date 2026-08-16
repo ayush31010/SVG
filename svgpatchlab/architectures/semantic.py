@@ -5,6 +5,7 @@ import io
 import json
 import re
 from collections import Counter
+from collections.abc import Callable
 from functools import lru_cache
 from typing import Any
 
@@ -27,7 +28,12 @@ from svgpatchlab.models import ModelAdapter
 from svgpatchlab.types import ArchitectureResult, BenchmarkCase, ModelRequest
 
 from .base import Architecture
-from .prompts import patch_prompt, qwen_completion_prompt, target_selection_prompt
+from .prompts import (
+    candidate_rerank_prompt,
+    patch_prompt,
+    qwen_completion_prompt,
+    target_selection_prompt,
+)
 from .root_tasks import compile_root_task_patch
 
 
@@ -44,6 +50,31 @@ TARGET_SELECTION_SCHEMA: dict[str, Any] = {
         }
     },
 }
+
+CANDIDATE_RERANK_SCHEMA_NAME = "svgpatchlab_candidate_rerank_v1"
+_CANDIDATE_CHOICE_LABELS = tuple("ABCDEF")
+_NON_VISUAL_CANDIDATE_TAGS = frozenset(
+    {
+        "defs",
+        "desc",
+        "filter",
+        "lineargradient",
+        "marker",
+        "mask",
+        "metadata",
+        "pattern",
+        "radialgradient",
+        "script",
+        "stop",
+        "style",
+        "symbol",
+        "title",
+    }
+)
+_HEX_COLOR = re.compile(
+    r"(?<![0-9A-Fa-f])#(?:[0-9A-Fa-f]{3}|[0-9A-Fa-f]{4}|"
+    r"[0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})(?![0-9A-Fa-f])"
+)
 
 COMPLETION_SCHEMA_NAME = "svgpatchlab_completion_v1"
 COMPLETION_SCHEMA: dict[str, Any] = {
@@ -90,6 +121,184 @@ DELETE_PATCH_SCHEMA: dict[str, Any] = {
 def _png_data_url(png: bytes) -> str:
     encoded = base64.b64encode(png).decode("ascii")
     return f"data:image/png;base64,{encoded}"
+
+
+def _candidate_rerank_schema(
+    choices: tuple[str, ...],
+    max_items: int,
+) -> dict[str, Any]:
+    """Return a strict schema whose values are only visible choice labels."""
+    if not choices:
+        raise ValueError("candidate reranking requires at least one choice")
+    if len(set(choices)) != len(choices):
+        raise ValueError("candidate reranking choices must be unique")
+    unknown = sorted(set(choices) - set(_CANDIDATE_CHOICE_LABELS))
+    if unknown:
+        raise ValueError("unsupported candidate choice labels: " + ", ".join(unknown))
+    if not 1 <= max_items <= len(choices):
+        raise ValueError("max_items must fit the candidate choices")
+    return {
+        "type": "object",
+        "additionalProperties": False,
+        "required": ["choices"],
+        "properties": {
+            "choices": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": max_items,
+                "uniqueItems": True,
+                "items": {"type": "string", "enum": list(choices)},
+            }
+        },
+    }
+
+
+def _selection_max_items(
+    instruction: str,
+    available_choices: int,
+    configured_max: int,
+) -> int:
+    """Cap choices without assuming one visual object maps to one DOM node."""
+    del instruction  # Wording cannot reveal how many source nodes form an object.
+    if available_choices < 1:
+        raise ValueError("available_choices must be positive")
+    if configured_max < 1:
+        raise ValueError("configured_max must be positive")
+    return min(available_choices, configured_max)
+
+
+def _visual_candidate_ids(
+    scene: dict[str, Any],
+    *,
+    forbid_root: bool,
+) -> tuple[str, ...]:
+    """List visual source nodes in DOM order without silently truncating.
+
+    Definitions and their descendants cannot be inspected as standalone visual
+    edit targets.  An oversized set is deliberately handled by the caller via
+    the legacy selector rather than dropping a potentially correct choice.
+    """
+    root_id = scene["root_id"]
+    blocked: set[str] = set()
+    candidates: list[str] = []
+    for node in scene["nodes"]:
+        node_id = node["id"]
+        parent = node.get("parent")
+        tag = str(node.get("tag", "")).lower()
+        if parent in blocked or tag in _NON_VISUAL_CANDIDATE_TAGS:
+            blocked.add(node_id)
+            continue
+        # Root-only tasks are compiled before this stage. A root tile would be
+        # a duplicate of the whole drawing and is not a useful visual choice.
+        if node_id == root_id:
+            continue
+        if node.get("visual", {}).get("visible") is False:
+            continue
+        candidates.append(node_id)
+    return tuple(candidates)
+
+
+def _normalise_hex_color(value: str) -> str | None:
+    match = _HEX_COLOR.fullmatch(value.strip())
+    if match is None:
+        return None
+    digits = match.group(0)[1:].lower()
+    if len(digits) in {3, 4}:
+        digits = "".join(character * 2 for character in digits)
+    return "#" + digits
+
+
+def _style_color_candidates(
+    scene: dict[str, Any],
+    candidate_ids: tuple[str, ...],
+    instruction: str,
+    limit: int,
+) -> tuple[str, ...]:
+    """Losslessly shortlist nodes when the instruction names source paint.
+
+    The first instruction color that occurs in the rendered scene is normally
+    the source color in SVGEditBench. If its complete matching set fits on one
+    contact sheet, retain that set. Otherwise return every candidate so the
+    caller takes the explicit oversized fallback rather than dropping targets.
+    """
+    instruction_colors = tuple(
+        dict.fromkeys(
+            color
+            for token in _HEX_COLOR.findall(instruction)
+            if (color := _normalise_hex_color(token)) is not None
+        )
+    )
+    if not instruction_colors:
+        return candidate_ids
+
+    nodes = {str(node["id"]): node for node in scene["nodes"]}
+    for instruction_color in instruction_colors:
+        matches: list[str] = []
+        for node_id in candidate_ids:
+            node = nodes[node_id]
+            colors: set[str] = set()
+            for container_name in ("attributes", "resolved_style"):
+                container = node.get(container_name, {})
+                if not isinstance(container, dict):
+                    continue
+                for attribute in ("fill", "stroke", "color", "stop-color"):
+                    raw = container.get(attribute)
+                    if isinstance(raw, str):
+                        normalized = _normalise_hex_color(raw)
+                        if normalized is not None:
+                            colors.add(normalized)
+            if instruction_color in colors:
+                matches.append(node_id)
+        if 1 <= len(matches) <= limit:
+            return tuple(matches)
+    return candidate_ids
+
+
+def _selected_candidate_choices(
+    response_text: str,
+    choice_to_target: dict[str, str],
+    scene: dict[str, Any],
+    max_candidates: int,
+    *,
+    forbid_root: bool,
+) -> tuple[str, ...]:
+    """Parse a fail-closed visual choice response and map it to DOM targets."""
+    if not choice_to_target:
+        raise PatchError("candidate choice mapping cannot be empty")
+    payload = extract_json_object(response_text)
+    extra_fields = sorted(set(payload) - {"choices"})
+    if extra_fields:
+        raise PatchError(
+            "candidate selection contains unexpected fields: "
+            + ", ".join(extra_fields)
+        )
+    raw_choices = payload.get("choices")
+    if not isinstance(raw_choices, list) or not raw_choices:
+        raise PatchError("candidate selection requires a nonempty 'choices' list")
+    if not all(isinstance(item, str) for item in raw_choices):
+        raise PatchError("candidate choices must be strings")
+    if len(raw_choices) > max_candidates:
+        raise PatchError(
+            f"candidate selection exceeds its {max_candidates}-choice limit"
+        )
+    if len(set(raw_choices)) != len(raw_choices):
+        raise PatchError("candidate selection contains duplicate choices")
+    unknown = sorted(set(raw_choices) - set(choice_to_target))
+    if unknown:
+        raise PatchError("candidate selection contains unknown choices: " + ", ".join(unknown))
+
+    raw_targets = [choice_to_target[choice] for choice in raw_choices]
+    selected = _selected_targets(
+        json.dumps({"targets": raw_targets}),
+        scene,
+        max_candidates,
+        forbid_root=forbid_root,
+    )
+    if len(selected) != len(raw_targets):
+        raise PatchError(
+            "candidate choices resolve to duplicate or ancestor-related targets"
+        )
+    return selected
 
 
 def _selected_targets(
@@ -817,6 +1026,13 @@ class SemanticIdPatchArchitecture(Architecture):
         self,
         render_size: int = 192,
         max_candidates: int = 3,
+        visual_candidate_rerank: bool = False,
+        require_visual_candidate_rerank: bool = False,
+        candidate_choice_limit: int = 6,
+        candidate_crop_padding: float = 0.15,
+        candidate_evidence_size: int = 256,
+        collapse_render_equivalent_candidates: bool = True,
+        candidate_contact_sheet_renderer: Callable[..., Any] | None = None,
         allow_counterfactual_fallback: bool = True,
         qwen_completion: bool = False,
         completion_min_transparent_area_pct: float = 0.25,
@@ -832,8 +1048,29 @@ class SemanticIdPatchArchitecture(Architecture):
             raise ValueError("render_size must be at least 32")
         if not 1 <= max_candidates <= 8:
             raise ValueError("max_candidates must be between 1 and 8")
+        if not 1 <= candidate_choice_limit <= len(_CANDIDATE_CHOICE_LABELS):
+            raise ValueError("candidate_choice_limit must be between 1 and 6")
+        if not 0.0 <= candidate_crop_padding <= 1.0:
+            raise ValueError("candidate_crop_padding must be between zero and one")
+        if candidate_evidence_size < 64:
+            raise ValueError("candidate_evidence_size must be at least 64")
+        if require_visual_candidate_rerank and not visual_candidate_rerank:
+            raise ValueError(
+                "require_visual_candidate_rerank requires visual_candidate_rerank"
+            )
         self.render_size = int(render_size)
         self.max_candidates = int(max_candidates)
+        self.visual_candidate_rerank = bool(visual_candidate_rerank)
+        self.require_visual_candidate_rerank = bool(
+            require_visual_candidate_rerank
+        )
+        self.candidate_choice_limit = int(candidate_choice_limit)
+        self.candidate_crop_padding = float(candidate_crop_padding)
+        self.candidate_evidence_size = int(candidate_evidence_size)
+        self.collapse_render_equivalent_candidates = bool(
+            collapse_render_equivalent_candidates
+        )
+        self.candidate_contact_sheet_renderer = candidate_contact_sheet_renderer
         self.allow_counterfactual_fallback = bool(allow_counterfactual_fallback)
         self.qwen_completion = bool(qwen_completion)
         self.completion_min_transparent_area_pct = float(
@@ -877,6 +1114,105 @@ class SemanticIdPatchArchitecture(Architecture):
             fallback=self.allow_counterfactual_fallback,
         )
 
+    def _candidate_contact_sheet(
+        self,
+        svg: str,
+        candidate_ids: tuple[str, ...],
+    ) -> tuple[
+        bytes,
+        dict[str, str],
+        tuple[str, ...],
+        dict[str, dict[str, Any]],
+        dict[str, tuple[str, ...]],
+    ]:
+        """Render high-fidelity evidence and collapse pixel-identical aliases."""
+        renderer = self.candidate_contact_sheet_renderer
+        if renderer is None:
+            from svgpatchlab.vision.candidate_views import (
+                render_candidate_evidence_sheet,
+            )
+
+            renderer = render_candidate_evidence_sheet
+
+        def render(ordered_ids: tuple[str, ...]):
+            labels = {
+                node_id: _CANDIDATE_CHOICE_LABELS[index]
+                for index, node_id in enumerate(ordered_ids)
+            }
+            kwargs: dict[str, Any] = {
+                "size": self.candidate_evidence_size,
+                "crop_padding": self.candidate_crop_padding,
+                "labels": labels,
+            }
+            # The injected legacy seam used by tests and downstream callers
+            # may still be a CandidateContactSheet renderer.
+            if self.candidate_contact_sheet_renderer is not None:
+                kwargs["show_node_ids"] = False
+            rendered = renderer(svg, ordered_ids, **kwargs)
+            png = getattr(rendered, "png", None)
+            returned_ids = tuple(getattr(rendered, "candidate_ids", ()))
+            returned_labels = dict(getattr(rendered, "labels", {}))
+            if not isinstance(png, bytes) or not png:
+                raise PatchError("candidate evidence sheet did not return PNG bytes")
+            if returned_ids != ordered_ids:
+                raise PatchError("candidate evidence sheet changed candidate order")
+            if returned_labels != labels:
+                raise PatchError("candidate evidence sheet changed candidate labels")
+            return rendered, png, labels
+
+        sheet, png, labels = render(candidate_ids)
+        evidence = tuple(getattr(sheet, "evidence", ()))
+        equivalence_aliases: dict[str, tuple[str, ...]] = {
+            node_id: (node_id,) for node_id in candidate_ids
+        }
+        if (
+            self.collapse_render_equivalent_candidates
+            and len(evidence) == len(candidate_ids)
+        ):
+            groups: dict[tuple[str, str], list[Any]] = {}
+            for item in evidence:
+                appearance = str(getattr(item, "appearance_digest", ""))
+                mask = str(getattr(item, "mask_digest", ""))
+                if not appearance or not mask:
+                    groups[("node", str(getattr(item, "node_id", "")))]=[item]
+                else:
+                    groups.setdefault((appearance, mask), []).append(item)
+            representatives: set[str] = set()
+            equivalence_aliases = {}
+            for items in groups.values():
+                representative = max(
+                    items,
+                    key=lambda item: (
+                        int(getattr(item, "metadata", {}).get("depth", -1)),
+                        -int(
+                            getattr(item, "metadata", {}).get(
+                                "descendant_count", 0
+                            )
+                        ),
+                    ),
+                )
+                representative_id = str(getattr(representative, "node_id"))
+                representatives.add(representative_id)
+                equivalence_aliases[representative_id] = tuple(
+                    str(getattr(item, "node_id")) for item in items
+                )
+            canonical_ids = tuple(
+                node_id for node_id in candidate_ids if node_id in representatives
+            )
+            if canonical_ids != candidate_ids:
+                sheet, png, labels = render(canonical_ids)
+                evidence = tuple(getattr(sheet, "evidence", ()))
+                candidate_ids = canonical_ids
+
+        metadata_by_choice: dict[str, dict[str, Any]] = {}
+        if len(evidence) == len(candidate_ids):
+            for item in evidence:
+                node_id = str(getattr(item, "node_id"))
+                metadata = getattr(item, "metadata", {})
+                if isinstance(metadata, dict):
+                    metadata_by_choice[labels[node_id]] = dict(metadata)
+        return png, labels, candidate_ids, metadata_by_choice, equivalence_aliases
+
     def run(self, case: BenchmarkCase, model: ModelAdapter) -> ArchitectureResult:
         result = ArchitectureResult()
         try:
@@ -897,7 +1233,25 @@ class SemanticIdPatchArchitecture(Architecture):
                         "task": case.task,
                         "model_bypassed": True,
                     }
+                    result.details["target_selection"] = {
+                        "mode": "root_task_router",
+                        "model_bypassed": True,
+                    }
                     return result
+
+            if (
+                self.require_visual_candidate_rerank
+                and not bool(model.supports_images)
+            ):
+                result.details["target_selection"] = {
+                    "mode": "visual_rerank_unavailable",
+                    "visual_rerank_required": True,
+                    "fallback_reason": "model_has_no_image_support",
+                }
+                raise PatchError(
+                    "visual candidate reranking is required but unavailable: "
+                    "model_has_no_image_support"
+                )
 
             visual_context = self._visual_context(case.source_svg)
             scene = build_scene(case.source_svg, visual_stats=visual_context.stats)
@@ -907,38 +1261,188 @@ class SemanticIdPatchArchitecture(Architecture):
             can_show_id_map = bool(
                 model.supports_images and visual_context.id_map is not None
             )
-            selection_images = (
-                (
-                    visual_context.normal_data_url,
-                    visual_context.id_data_url,
-                )
-                if can_show_id_map
-                else (
-                    (visual_context.normal_data_url,)
-                    if can_show_images
-                    else ()
-                )
-            )
-            # The type checker cannot infer that id_data_url is non-None from
-            # the id_map test above; filter defensively at the API boundary.
-            selection_images = tuple(
-                image for image in selection_images if image is not None
-            )
+            forbid_root = case.task == "delete"
+            choice_to_target: dict[str, str] | None = None
+            selection_max_items = self.max_candidates
+            selection_details: dict[str, Any] = {
+                "mode": "legacy_dom_ids",
+                "visual_rerank_required": self.require_visual_candidate_rerank,
+            }
+            # Install the live record before any selector work. If a required
+            # visual path is unavailable or later selection fails, callers can
+            # still audit the mode that was attempted instead of seeing an
+            # unlabelled generic architecture error.
+            result.details["target_selection"] = selection_details
 
-            selection_request = ModelRequest(
-                target_selection_prompt(
+            visual_candidate_ids: tuple[str, ...] = ()
+            use_visual_rerank = False
+            if self.visual_candidate_rerank and can_show_images:
+                visual_candidate_ids = _visual_candidate_ids(
+                    scene,
+                    forbid_root=forbid_root,
+                )
+                unfiltered_candidate_count = len(visual_candidate_ids)
+                visual_candidate_ids = _style_color_candidates(
+                    scene,
+                    visual_candidate_ids,
+                    case.instruction,
+                    self.candidate_choice_limit,
+                )
+                if len(visual_candidate_ids) < unfiltered_candidate_count:
+                    selection_details.update(
+                        {
+                            "prefilter": "explicit_style_color",
+                            "candidate_count_before_prefilter": unfiltered_candidate_count,
+                            "candidate_count_after_prefilter": len(visual_candidate_ids),
+                        }
+                    )
+                use_visual_rerank = bool(visual_candidate_ids) and (
+                    len(visual_candidate_ids) <= self.candidate_choice_limit
+                )
+                if not visual_candidate_ids:
+                    selection_details["fallback_reason"] = "no_visual_candidates"
+                elif len(visual_candidate_ids) > self.candidate_choice_limit:
+                    selection_details.update(
+                        {
+                            "fallback_reason": "candidate_count_exceeds_limit",
+                            "candidate_count": len(visual_candidate_ids),
+                            "candidate_choice_limit": self.candidate_choice_limit,
+                        }
+                    )
+            elif self.visual_candidate_rerank:
+                selection_details["fallback_reason"] = "model_has_no_image_support"
+
+            if self.require_visual_candidate_rerank and not use_visual_rerank:
+                reason = str(
+                    selection_details.get(
+                        "fallback_reason", "visual_candidate_rerank_unavailable"
+                    )
+                )
+                selection_details["mode"] = "visual_rerank_unavailable"
+                raise PatchError(
+                    "visual candidate reranking is required but unavailable: "
+                    + reason
+                )
+
+            if use_visual_rerank and len(visual_candidate_ids) == 1:
+                selected_target = visual_candidate_ids[0]
+                choices = ("A",)
+                choice_to_target = {"A": selected_target}
+                selection_max_items = 1
+                # These request fields are deliberately unused by the
+                # singleton bypass below, but keeping their closed schema here
+                # makes the branch contract explicit.
+                selection_prompt = ""
+                selection_images = ()
+                selection_schema = _candidate_rerank_schema(choices, 1)
+                selection_schema_name = CANDIDATE_RERANK_SCHEMA_NAME
+                selection_details.update(
+                    {
+                        "mode": "visual_singleton_auto",
+                        "cardinality": "exactly_one_available",
+                        "max_selections": 1,
+                        "candidate_choices": [
+                            {"choice": "A", "target": selected_target}
+                        ],
+                    }
+                )
+            elif use_visual_rerank:
+                (
+                    contact_sheet_png,
+                    target_to_choice,
+                    visual_candidate_ids,
+                    candidate_metadata,
+                    equivalence_aliases,
+                ) = self._candidate_contact_sheet(case.source_svg, visual_candidate_ids)
+                choices = tuple(
+                    target_to_choice[target] for target in visual_candidate_ids
+                )
+                choice_to_target = {
+                    choice: target for target, choice in target_to_choice.items()
+                }
+                selection_max_items = _selection_max_items(
+                    case.instruction,
+                    len(choices),
+                    self.max_candidates,
+                )
+                selection_schema = _candidate_rerank_schema(
+                    choices,
+                    selection_max_items,
+                )
+                selection_schema_name = CANDIDATE_RERANK_SCHEMA_NAME
+                collapsed = {
+                    target: aliases
+                    for target, aliases in equivalence_aliases.items()
+                    if len(aliases) > 1
+                }
+                if len(visual_candidate_ids) == 1:
+                    selection_prompt = ""
+                    selection_images = ()
+                    selection_details.update(
+                        {
+                            "mode": "visual_equivalence_singleton_auto",
+                            "cardinality": "one_render_equivalence_class",
+                            "max_selections": 1,
+                            "candidate_choices": [
+                                {
+                                    "choice": "A",
+                                    "target": visual_candidate_ids[0],
+                                }
+                            ],
+                            "render_equivalent_aliases": collapsed,
+                        }
+                    )
+                else:
+                    selection_prompt = candidate_rerank_prompt(
+                        case.instruction,
+                        choices,
+                        selection_max_items,
+                        candidate_metadata or None,
+                    )
+                    # One high-resolution sheet now contains direct vector
+                    # crops and ownership masks rather than enlarged raster
+                    # crops. The saved processor retains the matching pixel cap.
+                    selection_images = (_png_data_url(contact_sheet_png),)
+                    selection_details.update({
+                        "mode": "visual_closed_choice",
+                        "cardinality": "up_to_configured_max",
+                        "max_selections": selection_max_items,
+                        "candidate_evidence_size": self.candidate_evidence_size,
+                        "candidate_choices": [
+                            {
+                                "choice": target_to_choice[target],
+                                "target": target,
+                            }
+                            for target in visual_candidate_ids
+                        ],
+                        "render_equivalent_aliases": collapsed,
+                    })
+            else:
+                selection_prompt = target_selection_prompt(
                     case.instruction,
                     scene_text,
                     max_candidates=self.max_candidates,
                     has_images=can_show_images,
                     has_id_map=can_show_id_map,
-                ),
-                images=selection_images,
-                metadata={
-                    "request_id": f"{case.case_id}:semantic-select",
-                    "visual_context_method": visual_context.method,
-                },
-                response_schema={
+                )
+                selection_images = (
+                    (
+                        visual_context.normal_data_url,
+                        visual_context.id_data_url,
+                    )
+                    if can_show_id_map
+                    else (
+                        (visual_context.normal_data_url,)
+                        if can_show_images
+                        else ()
+                    )
+                )
+                # The type checker cannot infer that id_data_url is non-None
+                # from the id_map test above; filter at the API boundary.
+                selection_images = tuple(
+                    image for image in selection_images if image is not None
+                )
+                selection_schema = {
                     **TARGET_SELECTION_SCHEMA,
                     "properties": {
                         **TARGET_SELECTION_SCHEMA["properties"],
@@ -947,18 +1451,66 @@ class SemanticIdPatchArchitecture(Architecture):
                             "maxItems": self.max_candidates,
                         },
                     },
-                },
-                response_schema_name=TARGET_SELECTION_SCHEMA_NAME,
-            )
-            result.model_calls += 1
-            selection_response = model.generate(selection_request)
-            result.raw_responses.append(selection_response.text)
-            targets = _selected_targets(
-                selection_response.text,
-                scene,
-                self.max_candidates,
-                forbid_root=case.task == "delete",
-            )
+                }
+                selection_schema_name = TARGET_SELECTION_SCHEMA_NAME
+
+            if choice_to_target is not None and len(choice_to_target) == 1:
+                # There is nothing for a vision model to compare. Resolve the
+                # sole production candidate deterministically and reserve the
+                # model call for the actual patch.
+                selected_choice, selected_target = next(
+                    iter(choice_to_target.items())
+                )
+                targets = (selected_target,)
+                selection_details.update(
+                    {
+                        "mode": (
+                            "visual_equivalence_singleton_auto"
+                            if selection_details.get("mode")
+                            == "visual_equivalence_singleton_auto"
+                            else "visual_singleton_auto"
+                        ),
+                        "selected_choices": [selected_choice],
+                        "model_bypassed": True,
+                    }
+                )
+            else:
+                selection_request = ModelRequest(
+                    selection_prompt,
+                    images=selection_images,
+                    metadata={
+                        "request_id": f"{case.case_id}:semantic-select",
+                        "visual_context_method": visual_context.method,
+                        "selection_mode": selection_details["mode"],
+                    },
+                    response_schema=selection_schema,
+                    response_schema_name=selection_schema_name,
+                )
+                result.model_calls += 1
+                selection_response = model.generate(selection_request)
+                result.raw_responses.append(selection_response.text)
+                if choice_to_target is None:
+                    targets = _selected_targets(
+                        selection_response.text,
+                        scene,
+                        self.max_candidates,
+                        forbid_root=forbid_root,
+                    )
+                else:
+                    targets = _selected_candidate_choices(
+                        selection_response.text,
+                        choice_to_target,
+                        scene,
+                        selection_max_items,
+                        forbid_root=forbid_root,
+                    )
+                    target_to_choice = {
+                        target: choice
+                        for choice, target in choice_to_target.items()
+                    }
+                    selection_details["selected_choices"] = [
+                        target_to_choice[target] for target in targets
+                    ]
 
             preview_records: list[dict[str, Any]] = []
             preview_urls: list[str] = []
@@ -1043,7 +1595,7 @@ class SemanticIdPatchArchitecture(Architecture):
                     "Every final patch target must be one of shortlisted_targets."
                 ),
             }
-            result.details = {
+            result.details.update({
                 "selected_targets": list(targets),
                 "visual_context_method": visual_context.method,
                 "counterfactual_previews": preview_records,
@@ -1054,7 +1606,7 @@ class SemanticIdPatchArchitecture(Architecture):
                     "yellow": "alpha changed",
                     "dim_gray": "unchanged reference",
                 },
-            }
+            })
             patch_schema = (
                 DELETE_PATCH_SCHEMA
                 if case.task == "delete"

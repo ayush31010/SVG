@@ -1,0 +1,45 @@
+{
+  "architecture": "strict_skeleton_patch",
+  "by_family": {
+    "clean": {
+      "cases": 24,
+      "completion_tokens": 1824,
+      "decoy_selected_rate": null,
+      "gold_patch_exact_rate": 0.0,
+      "mean_failure_aware_mse": 0.009514464065432549,
+      "mean_model_latency_seconds": 3.9705986510865237,
+      "mean_wall_seconds": 3.971214939801333,
+      "model_calls": 24,
+      "prompt_tokens": 43356,
+      "target_exact_rate": 0.0,
+      "valid_output_rate": 1.0
+    },
+    "occluded": {
+      "cases": 24,
+      "completion_tokens": 1548,
+      "decoy_selected_rate": 0.041666666666666664,
+      "gold_patch_exact_rate": 0.0,
+      "mean_failure_aware_mse": 0.01644281076733023,
+      "mean_model_latency_seconds": 3.230289122904651,
+      "mean_wall_seconds": 3.2309649371406217,
+      "model_calls": 24,
+      "prompt_tokens": 47479,
+      "target_exact_rate": 0.0,
+      "valid_output_rate": 1.0
+    }
+  },
+  "format": "svgpatchlab.occluded_spatial_holdout.v2",
+  "overall": {
+    "cases": 48,
+    "completion_tokens": 3372,
+    "decoy_selected_rate": 0.041666666666666664,
+    "gold_patch_exact_rate": 0.0,
+    "mean_failure_aware_mse": 0.012978637416381389,
+    "mean_model_latency_seconds": 3.600443886995587,
+    "mean_wall_seconds": 3.6010899384709774,
+    "model_calls": 48,
+    "prompt_tokens": 90835,
+    "target_exact_rate": 0.0,
+    "valid_output_rate": 1.0
+  }
+}

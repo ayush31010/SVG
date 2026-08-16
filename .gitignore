@@ -15,3 +15,20 @@ SVGEditBench/.git/
 # Local GitHub CLI device-auth helpers and logs (never publish)
 tmp/gh_auth*
 tmp/gh-auth*
+
+# Trained adapter weights and bundled evidence images.  These are large and
+# opaque; the metrics, manifests, and provenance JSON beside them stay in git,
+# so a run stays auditable without carrying hundreds of megabytes of tensors.
+# Back the weights up outside the repository.
+*.safetensors
+artifacts/**/tokenizer.json
+artifacts/**/*.tar.gz
+
+# Local scratch: deploy bundles, staging copies of artifacts/, and PDF builds.
+tmp/context-v3-final/
+tmp/context-v3-final-artifact.tar.gz
+tmp/context_v3_deploy.tar.gz
+tmp/svg_node_grounding_deploy.tar.gz
+tmp/pdfs/baseline-report/
+tmp/pdfs/final-report-v2/
+tmp/remote_smoke_contact_sheet.png

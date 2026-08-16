@@ -94,7 +94,7 @@
     Render-Derived Node Context\\[2mm]
     for Grounded SVG Editing\par}
   \vspace{7mm}
-  {\Large A clean text-only A/B study of counterfactual visual tags\par}
+  {\Large A controlled text-only study of counterfactual visual tags\par}
   \vspace{10mm}
   \rule{\linewidth}{1.2pt}
   \vspace{8mm}
@@ -111,34 +111,33 @@
     Frozen model &
     Qwen 2.5 7B through Ollama, temperature 0, text input only.\\
     Current evidence &
-    Two completed 1,000-call A/B matrices over the same 100 source SVGs, one
-    unconstrained and one with schema-constrained decoding, plus a mediation
-    reanalysis, a truncation audit, an 8-instruction pilot, and a 39-source
-    controlled holdout.\\
+    Two completed 1,000-call A/B matrices over the same 100 source SVGs, a
+    mediation reanalysis, a truncation audit, a 39-source controlled holdout,
+    and a corrected 48-source three-arm occlusion-isolating holdout.\\
   \end{tabularx}
 
   \vfill
   \boxnote{blue}{
     \textbf{Core finding.}
-    The visual fields carried useful spatial signal in the controlled holdout,
-    but injecting them into every patch prompt did not transfer. The official
-    matrix first showed exact target selection falling from \textbf{56.4\%} to
-    \textbf{48.8\%}. Most of that gap proved to be instrumentation: the longer
-    prompts crossed a context limit \textbf{3.6\(\times\)} as often, and
-    schema-constrained decoding removes the format drift entirely. Re-run
-    constrained, both arms gain 8 to 12 points and the deficit is
-    \textbf{3.6 points} (\(p=0.057\)). A real \textbf{5.5-point} grounding
-    regression survives on the 200 node-grounding cases, concentrated in one
-    task. No instruction in this benchmark needs what the visual fields
-    supply, so measuring benefit requires a new held-out set.
+    Unconditional visual tags are not a safe default: after truncation and
+    format drift are removed, the official matrix retains a \textbf{5.5-point}
+    grounding cost on instructions that already identify targets by color.
+    The corrected holdout isolates the condition those tasks omit. On
+    non-overlapping clean cases, nominal analytic and render-derived context
+    are indistinguishable (9/24 versus 11/24 exact targets, \(p=0.625\)).
+    When compositing makes nominal geometry point to an invisible decoy,
+    analytic context scores 0/24 while render-derived context reaches
+    \textbf{9/24} (\(p=0.0039\)); exact gold patches are 0/24 versus
+    \textbf{6/24} (\(p=0.031\)). Rendering is therefore conditionally useful,
+    not universally useful.
   }
   \vfill
   {\large SVGPatchLab Project\par}
-  {\large 25 July 2026\par}
+  {\large 29 July 2026\par}
   \vspace{3mm}
-  {\small Status: completed official 500-case-per-arm matrix, pilot evaluation,
-  and expanded controlled holdout. The results establish task-conditional
-  behavior for this frozen model, not a publication-scale population claim.\par}
+  {\small Status: completed official matrices, corrected analytic ablation,
+  and renderer-verified occlusion holdout. The results identify a controlled
+  conditional mechanism for one frozen model, not a population-scale effect.\par}
 \end{titlepage}
 \hypersetup{pageanchor=true}
 
@@ -178,11 +177,13 @@ only treatment change is the attached \code{visual} field. This makes the
 experiment an interpretable A/B test of additional semantic grounding context,
 not a comparison between unrelated editing systems.
 
-The small diagnostic experiments show that the measurements contain usable
+The early diagnostic experiments show that the measurements contain usable
 information. The 10-case smoke improved exact targets from 70\% to 90\%; an
 8-instruction path-only pilot improved from 0\% to 75\%; and the 39-source
-controlled holdout improved exact targets from 7.7\% to 33.3\%. The holdout
-had 10 visual-only paired wins and no skeleton-only wins.
+controlled holdout improved exact targets from 7.7\% to 33.3\%. That holdout
+had 10 visual-only paired wins and no skeleton-only wins, but it did not
+separate nominal geometry from rendering because none of its candidates
+overlapped.
 
 The completed official matrix changes the system conclusion. Across 500
 matched cases per arm, exact target selection fell from 56.4\% to 48.8\%,
@@ -213,12 +214,23 @@ What survives is a genuine grounding cost, smaller than the headline and
 larger than the mediation estimate. On the 200 grounding cases, where both
 arms now reach 100\% valid output, the treatment loses 5.5 points across 18
 paired losses that are all well-formed patches aimed at the wrong node, and
-the effect is concentrated in \code{change_color}. Render-derived context
-should therefore be routed through a constrained, instruction-gated ranking
-stage rather than appended to every prompt, and constrained decoding should be
-the default for both arms. The benefit side remains unmeasured here, because
-no instruction in this benchmark asks for the position or size the visual
-fields describe.
+the effect is concentrated in \code{change_color}. Those tasks identify
+targets by fill color, which the ordinary skeleton already exposes.
+
+The corrected occlusion-isolating holdout supplies the missing counterfactual.
+It compares a skeleton, nominal analytic geometry, and hide-and-diff rendered
+geometry over 24 clean and 24 occluded sources. Every source is unique; target
+and decoy IDs are balanced within every spatial label; path lengths are fixed;
+and a renderer check fails closed unless analytic geometry names the invisible
+decoy while rendered geometry names the visible target. All 144 outputs were
+valid. On clean cases, analytic and rendered target accuracy was 37.5\% and
+45.8\% (\(p=0.625\)). On occluded cases it was 0\% and 37.5\%
+(\(p=0.0039\)); exact gold patches were 0\% and 25.0\% (\(p=0.031\)).
+
+The resulting policy is conditional. Render-derived context should be routed
+through a constrained, instruction-gated ranking stage when source geometry
+may be misleading, not appended to every prompt. Schema-constrained decoding
+should be the default for every arm.
 
 \section{Problem statement}
 
@@ -640,6 +652,45 @@ matched cases and 39 distinct source SVGs:
 Runtime validation fails closed if a target crosses its spatial bin, relative
 size order changes, path coordinates leak, or the active prompt differs from
 the frozen version.
+
+\subsection{Corrected analytic and occlusion-isolating holdout}
+\label{sec:occlusion-setup}
+
+The earlier two-arm holdout established that position words can help, but it
+could not answer the narrower question: does rasterization add information
+beyond geometry parsed from the SVG itself? A third architecture,
+\code{strict_analytic_stats_patch}, fills the same model-visible field names
+from nominal vector geometry. Compound paths are treated per subpath with
+ordinary \code{nonzero}/\code{evenodd} hole handling, and position uses the
+nominal filled-area centroid. The skeleton, analytic, and rendered arms all use
+the same frozen v4 prompt and schema-constrained decoder.
+
+The new v2 suite contains 48 unique source SVGs: 24 occluded and 24 clean,
+covering six spatial labels four times each. Every source has four
+pairwise-disjoint red candidates with equal protected path length. Target and
+decoy IDs are balanced over \code{n1} through \code{n4}, both globally and
+within every label. In an occluded case, a later gray compound path fully
+covers the nominally correct decoy and covers enough of a broad target to move
+the target's visible contribution into the named cell. In a clean case, all
+four candidates are disjoint and visible, and nominal and rendered position
+agree.
+
+Two gates run before any model call. Static validation rejects duplicate
+sources, unbalanced IDs, overlapping clean candidates, unequal
+\code{d.characters}, raw coordinate leakage, or a changed prompt template.
+The Linux renderer then checks all 48 actual measurements, accepting an
+occluded case only when analytic context uniquely names the invisible decoy
+and render-derived context uniquely names the visible target. All 24 occluded
+and all 24 clean cases passed with no verification problems.
+
+\boxnote{orange}{
+  \textbf{The exploratory v1 run is excluded from every result below.}
+  A post-run audit found fixed target/decoy IDs, duplicate sources,
+  label-correlated path lengths, and overlap inside the nominally clean
+  controls. Those artifacts are retained for provenance but cannot support the
+  causal claim. Version 2 was rebuilt and rerun rather than retroactively
+  repairing its summary.
+}
 
 \section{Results}
 
@@ -1121,6 +1172,79 @@ decoding also lifted \code{upside_down} from 65\% and 63\% to 98\% in both
 arms, because the schema makes the unimplemented \code{transform} operation
 unrepresentable and the model falls back to a legal one.
 
+\subsection{Occlusion crossover: nominal versus rendered geometry}
+\label{sec:occlusion-crossover}
+
+The corrected v2 suite completed 144 model calls: 48 matched cases in each of
+the skeleton, analytic, and rendered arms. Every output was valid. The primary
+metric is exact target set; exact gold patch additionally requires the correct
+operation and attributes.
+
+\begin{table}[H]
+\centering
+\caption{Corrected occlusion-isolating holdout. Each family has 24 unique
+source SVGs. Percentages use all-case denominators.}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+\textbf{Family} & \textbf{Metric} & \textbf{Skeleton} &
+\textbf{Analytic} & \textbf{Rendered}\\
+\midrule
+Clean & Exact target & 0/24 (0\%) & 9/24 (37.5\%) &
+  \good{11/24 (45.8\%)}\\
+ & Exact gold patch & 0/24 (0\%) & \good{9/24 (37.5\%)} &
+  8/24 (33.3\%)\\
+ & Valid output & 24/24 & 24/24 & 24/24\\
+\addlinespace
+Occluded & Exact target & 0/24 (0\%) & 0/24 (0\%) &
+  \good{9/24 (37.5\%)}\\
+ & Exact gold patch & 0/24 (0\%) & 0/24 (0\%) &
+  \good{6/24 (25.0\%)}\\
+ & Invisible decoy selected & 1/24 (4.2\%) & 8/24 (33.3\%) &
+  4/24 (16.7\%)\\
+ & Valid output & 24/24 & 24/24 & 24/24\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Paired rendered-versus-analytic outcomes. ``Analytic only'' and
+``rendered only'' count discordant exact outcomes on the same source.}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+\textbf{Family} & \textbf{Outcome} & \textbf{Analytic only} &
+\textbf{Rendered only} & \textbf{Two-sided \(p\)}\\
+\midrule
+Clean & Exact target & 1 & 3 & 0.625\\
+ & Exact gold patch & 4 & 3 & 1.000\\
+\addlinespace
+Occluded & Exact target & 0 & \good{9} & \good{0.003906}\\
+ & Exact gold patch & 0 & \good{6} & \good{0.03125}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The clean family is the negative control. Analytic and rendered context share
+eight target-correct cases and differ on only four; neither direction
+separates. Their exact gold-patch rates actually reverse by one case. This is
+the expected result when source geometry is faithful: rasterization adds no
+detectable target-selection advantage over the cheaper analytic description.
+
+The occluded family is the conditional positive result. Analytic context never
+selects the visible target exactly, while rendered context does so nine times,
+with nine rendered-only wins and no analytic-only wins. Six of those nine are
+also exact gold patches. Failure-aware MSE falls from 0.01257 to 0.00530. The
+analytic arm chooses the deliberately invisible decoy in eight cases, twice
+the rendered arm's four, but its other misses show that a misleading
+descriptor is not the only failure mode of this 7B planner.
+
+The skeleton scores zero throughout, which confirms that fixed-width paths,
+balanced IDs, and randomized case order removed the shortcuts exposed by the
+v1 audit. This result is a controlled existence and mechanism test. The 24
+sources per family are six parametric layouts repeated four times, under one
+model, prompt, seed, and arm order; the paired \(p\)-values describe this
+frozen suite and are not an effect-size estimate for natural authored SVGs.
+
 \section{Interpretation}
 
 \subsection{What the evidence supports}
@@ -1131,6 +1255,14 @@ names position or relative size, the controlled 39-source holdout improved
 exact targets by 25.6 points, with 10 visual-only wins and no skeleton-only
 wins. This establishes mechanism validity: the hide-and-compare payload can
 connect visual descriptors to stable node IDs.
+
+The corrected three-arm holdout identifies when rasterization itself matters.
+On clean, non-overlapping sources, analytic and rendered context are
+indistinguishable. When compositing makes nominal geometry uniquely name an
+invisible decoy and rendered geometry uniquely name the visible target,
+rendered context wins exact target selection 9 to 0 and exact gold patches
+6 to 0. The value of rendering is therefore conditional on source geometry
+being an unreliable description of visible contribution.
 
 The completed official matrix establishes a second, equally important result:
 the usefulness of the measurement does not imply that unconditional prompt
@@ -1170,6 +1302,15 @@ universal replacement for \code{skeleton_patch}. The four fields compete with
 operation constraints and patch-format instructions inside a limited 7B
 model's context. More context is not automatically better context.
 
+Nor does the v2 holdout estimate how often the useful condition occurs in
+natural artwork. Its verifier proves that every synthetic occluded case has
+the intended analytic/rendered contrast; it does not sample that contrast from
+a population. A separate measurement-disagreement audit on SVGEditBench found
+28 target-level position descriptor disagreements among 620 comparisons, but
+such disagreement alone cannot prove occlusion: stroke, clipping, filters,
+anti-aliasing, curve approximation, and compositing can all separate the two
+measurement systems.
+
 The current fields do not provide object names such as ``cloud,'' ``sun,'' or
 ``tree.'' They make words like ``small,'' ``red,'' and ``top-left'' groundable.
 Semantic object recognition still comes from tag/style clues, composition,
@@ -1208,6 +1349,17 @@ separately when the ID-buffer and guarded-ranking architectures are compared.
   candidates are generated red paths under one contour task and one prompt
   wording. It does not capture the object, compositing, and authoring diversity
   of real SVGs.
+  \item \textbf{Constructed occlusion crossover.} Version 2 has 48 unique
+  source strings, but only six parametric spatial layouts repeated four times
+  per family. The target/decoy contrast is guaranteed by construction, not
+  sampled from natural artwork. The run uses one model, seed, prompt, and fixed
+  arm order, so its paired tests establish a mechanism inside that suite rather
+  than a population effect.
+  \item \textbf{Exploratory v1 excluded.} Fixed target roles, duplicate
+  sources, unequal protected path lengths, and overlap in the nominally clean
+  controls were found only after the first exploratory run. Version 2 repairs
+  and verifies each defect, but the episode underscores why generated
+  benchmarks need fail-closed shortcut audits before inference.
   \item \textbf{The unconstrained matrix is not a clean instrument.} Its
   headline result combined three effects: context truncation that hit the
   longer-prompted arm 3.6 times as often, format drift toward RFC 6902, and a
@@ -1235,6 +1387,11 @@ separately when the ID-buffer and guarded-ranking architectures are compared.
   \item \textbf{Unique contribution, not full shape.} The difference mask
   describes pixels that change when a node is hidden. Covered regions are not
   recovered.
+  \item \textbf{Analytic geometry is an approximation.} Compound contours,
+  ordinary fill rules, transforms, and filled-area centroids are handled, but
+  self-intersections, overlapping descendants, strokes, CSS, clipping, masks,
+  filters, and raster anti-aliasing can still make nominal and rendered values
+  differ without occlusion.
   \item \textbf{Raster sensitivity.} Very small, faint, filtered, or
   anti-aliased features can fall below the measurement threshold at 64 pixels.
   \item \textbf{Renderer fidelity.} Filters, masks, blend modes, markers,
@@ -1254,18 +1411,19 @@ separately when the ID-buffer and guarded-ranking architectures are compared.
 
 \section{Next steps}
 
-The constrained re-run has completed, so the prerequisite is discharged and
-the list is reordered around what it left standing:
+The constrained re-run and the occlusion-isolating existence test have both
+completed. The remaining work is external validity and production routing:
 
 \begin{enumerate}
-  \item \textbf{Measure the hypothesis on instructions that can test it.} All
-  200 grounding instructions in this benchmark identify their target by fill
-  color, which the ordinary skeleton already carries, and the remaining 300
-  address the root. No case requires the position or size the visual fields
-  supply, so the treatment's ceiling here is a tie and its floor is the
-  27.4\% context cost now measured cleanly. A held-out set of natural
-  position- and size-naming instructions over real authored SVGs is the only
-  way to observe a benefit, and is now the blocking experiment;
+  \item \textbf{Replicate the conditional crossover on natural sources.}
+  Sample real authored SVGs in which an instruction names visible position,
+  independently annotate whether nominal geometry is misleading, and
+  counterbalance model, seed, prompt, and arm order. The synthetic v2 suite
+  establishes existence, not prevalence or a natural-data effect size;
+  \item \textbf{Build a routing signal.} Detect when an instruction actually
+  requires position/size and when source geometry may be unreliable, so the
+  planner pays the 27.4\% official-matrix context cost only when rendered
+  attribution can change the answer;
   \item \textbf{Diagnose \code{change_color}.} It carries essentially the
   whole surviving regression, 87\% to 77\%, while \code{set_contour} under an
   identical scene loses one point. Both arms reach 100\% valid output there,
@@ -1379,45 +1537,78 @@ python scripts/run_spatial_grounding_holdout.py \
   --seed 20260725
 \end{lstlisting}
 
+\subsection{Corrected occlusion-isolating holdout}
+
+Run the renderer-only gate first. It makes no model calls and must report 24
+verified cases in each family with an empty problem list:
+
+\begin{lstlisting}[style=compact,language={}]
+python scripts/run_occluded_spatial_holdout.py \
+  --model-config configs/models/qwen2.5-7b-ollama-constrained.json \
+  --output-root runs/occluded-spatial-holdout-v2-server \
+  --verify-only
+\end{lstlisting}
+
+Then use a fresh output directory for the immutable model run:
+
+\begin{lstlisting}[style=compact,language={}]
+python scripts/run_occluded_spatial_holdout.py \
+  --model-config configs/models/qwen2.5-7b-ollama-constrained.json \
+  --output-root runs/occluded-spatial-holdout-v2-server
+\end{lstlisting}
+
+The retained run contains 48 records per arm, 144 valid outputs, full prompts
+and responses, candidate and gold patches, per-case metrics, generated SVGs,
+\path{verification.json}, \path{manifest.json}, \path{summary.json}, and an
+atomic completion record. The local summary SHA-256 is:
+\par\smallskip\noindent
+\code{7ffef83604ce043d01e23ac5ca9515d80f1ed933d95f8ed50532b118451e87a6}.
+\par\smallskip\noindent
+The manifest freezes the source/answer hashes and payloads, balanced roles,
+case order, prompt-template hash, redacted model configuration, render sizes,
+and arm order.
+
 \section{Conclusion}
 
-Render-derived attribution is a useful measurement, but unconditional visual
-metadata injection is not the production solution. The controlled holdout
-proved that bbox, area, position, and color can recover spatial information
-hidden by the protected skeleton. The completed official matrix then showed
-that feeding those fields to every Qwen patch request reduced exact target
-selection from 56.4\% to 48.8\% and increased model cost. Two audits have
-since established that most of that gap was instrumentation rather than
-grounding.
+Render-derived attribution is a useful conditional measurement, but
+unconditional visual metadata injection is not the production solution. The
+official matrix initially appeared to reduce exact target selection from
+56.4\% to 48.8\%. A truncation audit showed that the longer treatment crossed
+a 4{,}096-token context limit 3.6 times as often and that every truncated call
+failed. Schema-constrained decoding then removed almost all format drift,
+leaving a smaller \(-3.6\)-point overall gap at \(p=0.057\).
 
-The longer treatment prompt crossed a 4{,}096-token context limit 3.6 times as
-often as the control's, and every truncated call failed outright. Excluding
-those cases, the same run reads \(-2.7\) points at \(p=0.294\). Re-running
-under schema-constrained decoding, unparseable responses fall from 103 to one,
-both arms gain 8 to 12 points of accuracy, failure-aware raster error drops by
-25\% and 31\%, and the remaining gap is \(-3.6\) points at \(p=0.057\).
+A genuine cost remains on instructions that do not need visual geometry. On
+the 200 official grounding cases, both constrained arms produce valid output
+for every case, yet unconditional visual tags lose 5.5 target points, with 18
+control-only against seven visual-only wins (\(p=0.043\)). The effect is
+concentrated in \code{change_color}, whose target is already identified by
+fill color in the ordinary skeleton.
 
-A real effect does survive, smaller than the headline and larger than the
-mediation estimate. On the 200 grounding cases, with both arms now at 100\%
-valid output, the treatment loses 5.5 points, and every one of those 18 paired
-losses is a well-formed patch aimed at the wrong node. The cost is
-concentrated in \code{change_color}; \code{set_contour} loses one point.
+The corrected v2 holdout establishes the missing benefit condition. With clean
+source geometry, analytic and rendered context do not separate: target
+accuracy is 9/24 versus 11/24, and exact gold patches are 9/24 versus 8/24.
+When compositing makes analytic geometry uniquely name an invisible decoy,
+analytic target accuracy falls to 0/24 while render-derived context reaches
+9/24 (\(p=0.0039\)); exact gold patches are 0/24 versus 6/24
+(\(p=0.031\)). The result survives balanced IDs, fixed path lengths, unique
+sources, disjoint clean controls, schema-constrained output, and fail-closed
+renderer verification.
 
-The recommended route remains a guarded pipeline: measure and cache
+This is an existence proof over six synthetic layouts, one model, one prompt,
+and one seed. It does not estimate the prevalence or effect size of misleading
+nominal geometry in natural SVGs. The defensible conclusion is narrower and
+more useful: render-derived attribution is redundant when source geometry is
+faithful, necessary in at least one controlled regime where compositing makes
+it misleading, and harmful as irrelevant context when appended
+indiscriminately.
+
+The recommended route is therefore a guarded pipeline: measure and cache
 attribution, invoke it only when the instruction requires ambiguous node
-selection, resolve candidate IDs with a constrained ranking stage, and pass the
-selected IDs to the ordinary patch planner, with root-only operations bypassing
-the visual payload. Constrained decoding should now be the default for every
-arm, since it improved the control as much as the treatment.
-
-The honest limit of this evidence is that the benchmark cannot reward the
-idea. Every grounding instruction here names its target by fill color, which
-the plain skeleton already carries, so the visual fields can only ever cost
-27.4\% more prompt context and never repay it. The 5.5-point loss is the price
-of irrelevant context, not evidence that render-derived attribution fails at
-what the holdout showed it can do. Establishing benefit requires instructions
-that name position or size on real authored SVGs, which is the next experiment
-rather than a robustness check.
+selection and source geometry may be unreliable, resolve candidate IDs with a
+constrained ranking stage, and pass only those IDs to the ordinary patch
+planner. Root-only operations bypass the visual payload. Schema-constrained
+decoding remains the default for every model arm.
 
 For the sun-cloud example, the decision is now precise. Use render-derived
 context to select and remove the cloud. If the full sun exists underneath, stop.

@@ -1,0 +1,361 @@
+{
+  "architecture_success_count": 5,
+  "case_count": 5,
+  "cases": [
+    {
+      "answer_sha256": "35f79e46ae434c89340763d1a0815b362a69d781c6e01a614108bdbcb102d7cc",
+      "archetype": "flower",
+      "architecture_error": null,
+      "architecture_success": true,
+      "case_id": "synthetic_context/0002-0",
+      "expected_targets": [
+        "n6"
+      ],
+      "group_id": "context-scene-0002",
+      "instruction": "Make the round center of the flower bright red.",
+      "model_calls": 2,
+      "output_svg": "synthetic_context-0002-0.output.svg",
+      "patch_adapter_active": false,
+      "predicted_choices": [
+        "F"
+      ],
+      "provenance_verified": true,
+      "raw_responses": [
+        "{\"choices\":[\"F\"]}",
+        "```json\n{\n  \"version\": 1,\n  \"operations\": [\n    {\n      \"op\": \"set_attributes\",\n      \"targets\": [\"n6\"],\n      \"attributes\": {\n        \"fill\": \"#FF0000\"\n      }\n    }\n  ]\n}\n```"
+      ],
+      "selected_targets": [
+        "n6"
+      ],
+      "selection": {
+        "candidate_choices": [
+          {
+            "choice": "A",
+            "target": "n1"
+          },
+          {
+            "choice": "B",
+            "target": "n2"
+          },
+          {
+            "choice": "C",
+            "target": "n3"
+          },
+          {
+            "choice": "D",
+            "target": "n4"
+          },
+          {
+            "choice": "E",
+            "target": "n5"
+          },
+          {
+            "choice": "F",
+            "target": "n6"
+          }
+        ],
+        "candidate_evidence_size": 224,
+        "cardinality": "up_to_configured_max",
+        "max_selections": 4,
+        "mode": "visual_closed_choice",
+        "render_equivalent_aliases": {},
+        "selected_choices": [
+          "F"
+        ],
+        "visual_rerank_required": true
+      },
+      "selection_path_proven": true,
+      "source_sha256": "2d383ee5f7dcb48a23dbbbff967c0b14daf5f7449d5b7a3c7dc515a2ebdc960c",
+      "strict_selection_json": true,
+      "target_exact": true
+    },
+    {
+      "answer_sha256": "f59a795d8bb767e0c7a4eb1b0b5d4c1ff8e5322d9c6aa6a467e05523c0b84472",
+      "archetype": "grid",
+      "architecture_error": null,
+      "architecture_success": true,
+      "case_id": "synthetic_context/0019-0",
+      "expected_targets": [
+        "n3"
+      ],
+      "group_id": "context-scene-0019",
+      "instruction": "Change the circle in the top-right corner to bright red.",
+      "model_calls": 2,
+      "output_svg": "synthetic_context-0019-0.output.svg",
+      "patch_adapter_active": false,
+      "predicted_choices": [
+        "C"
+      ],
+      "provenance_verified": true,
+      "raw_responses": [
+        "{\"choices\":[\"C\"]}",
+        "```json\n{\n  \"version\": 1,\n  \"operations\": [\n    {\n      \"op\": \"set_attributes\",\n      \"targets\": [\"n3\"],\n      \"attributes\": {\n        \"fill\": \"#FF0000\"\n      }\n    }\n  ]\n}\n```"
+      ],
+      "selected_targets": [
+        "n3"
+      ],
+      "selection": {
+        "candidate_choices": [
+          {
+            "choice": "A",
+            "target": "n1"
+          },
+          {
+            "choice": "B",
+            "target": "n2"
+          },
+          {
+            "choice": "C",
+            "target": "n3"
+          },
+          {
+            "choice": "D",
+            "target": "n4"
+          },
+          {
+            "choice": "E",
+            "target": "n5"
+          },
+          {
+            "choice": "F",
+            "target": "n6"
+          }
+        ],
+        "candidate_evidence_size": 224,
+        "cardinality": "up_to_configured_max",
+        "max_selections": 4,
+        "mode": "visual_closed_choice",
+        "render_equivalent_aliases": {},
+        "selected_choices": [
+          "C"
+        ],
+        "visual_rerank_required": true
+      },
+      "selection_path_proven": true,
+      "source_sha256": "3bea3c43aefa8131456c52afe3d28985d9afc55a5543ec7d3118d96ce45905d0",
+      "strict_selection_json": true,
+      "target_exact": true
+    },
+    {
+      "answer_sha256": "daf8133007285cf5722aae2a9ddd23ac10abaa81a7bc0439240899ab2aacb69b",
+      "archetype": "face",
+      "architecture_error": null,
+      "architecture_success": true,
+      "case_id": "synthetic_context/0020-0",
+      "expected_targets": [
+        "n3"
+      ],
+      "group_id": "context-scene-0020",
+      "instruction": "Recolor the right-side eye of the face bright red.",
+      "model_calls": 2,
+      "output_svg": "synthetic_context-0020-0.output.svg",
+      "patch_adapter_active": false,
+      "predicted_choices": [
+        "C"
+      ],
+      "provenance_verified": true,
+      "raw_responses": [
+        "{\"choices\":[\"C\"]}",
+        "```json\n{\n  \"version\": 1,\n  \"operations\": [\n    {\n      \"op\": \"set_attributes\",\n      \"targets\": [\"n3\"],\n      \"attributes\": {\n        \"fill\": \"#ff0000\"\n      }\n    }\n  ]\n}\n```"
+      ],
+      "selected_targets": [
+        "n3"
+      ],
+      "selection": {
+        "candidate_choices": [
+          {
+            "choice": "A",
+            "target": "n1"
+          },
+          {
+            "choice": "B",
+            "target": "n2"
+          },
+          {
+            "choice": "C",
+            "target": "n3"
+          },
+          {
+            "choice": "D",
+            "target": "n4"
+          },
+          {
+            "choice": "E",
+            "target": "n5"
+          },
+          {
+            "choice": "F",
+            "target": "n6"
+          }
+        ],
+        "candidate_evidence_size": 224,
+        "cardinality": "up_to_configured_max",
+        "max_selections": 4,
+        "mode": "visual_closed_choice",
+        "render_equivalent_aliases": {},
+        "selected_choices": [
+          "C"
+        ],
+        "visual_rerank_required": true
+      },
+      "selection_path_proven": true,
+      "source_sha256": "43d460feb61a9d9da815075a8dc1d5e742a0803fa4c036e486be4be8e2523f37",
+      "strict_selection_json": true,
+      "target_exact": true
+    },
+    {
+      "answer_sha256": "8ad32f527fc822e6159bc8264e60031ede450d3a1fdfad3c24faa6ff73fb5bf5",
+      "archetype": "robot",
+      "architecture_error": null,
+      "architecture_success": true,
+      "case_id": "synthetic_context/0049-0",
+      "expected_targets": [
+        "n6"
+      ],
+      "group_id": "context-scene-0049",
+      "instruction": "Change the robot's right wheel to bright red.",
+      "model_calls": 2,
+      "output_svg": "synthetic_context-0049-0.output.svg",
+      "patch_adapter_active": false,
+      "predicted_choices": [
+        "F"
+      ],
+      "provenance_verified": true,
+      "raw_responses": [
+        "{\"choices\":[\"F\"]}",
+        "```json\n{\n  \"version\": 1,\n  \"operations\": [\n    {\n      \"op\": \"set_attributes\",\n      \"targets\": [\"n6\"],\n      \"attributes\": {\n        \"fill\": \"#FF0000\"\n      }\n    }\n  ]\n}\n```"
+      ],
+      "selected_targets": [
+        "n6"
+      ],
+      "selection": {
+        "candidate_choices": [
+          {
+            "choice": "A",
+            "target": "n1"
+          },
+          {
+            "choice": "B",
+            "target": "n2"
+          },
+          {
+            "choice": "C",
+            "target": "n3"
+          },
+          {
+            "choice": "D",
+            "target": "n4"
+          },
+          {
+            "choice": "E",
+            "target": "n5"
+          },
+          {
+            "choice": "F",
+            "target": "n6"
+          }
+        ],
+        "candidate_evidence_size": 224,
+        "cardinality": "up_to_configured_max",
+        "max_selections": 4,
+        "mode": "visual_closed_choice",
+        "render_equivalent_aliases": {},
+        "selected_choices": [
+          "F"
+        ],
+        "visual_rerank_required": true
+      },
+      "selection_path_proven": true,
+      "source_sha256": "b7a28ee05b3c8d4169417b0d149bd08031584133526a18740d01f56ee14ad33a",
+      "strict_selection_json": true,
+      "target_exact": true
+    },
+    {
+      "answer_sha256": "57adb72b9c65efb5b7a7e2f6f95298f9adaeb12b169cb505a9828fe5bff7b529",
+      "archetype": "grid",
+      "architecture_error": null,
+      "architecture_success": true,
+      "case_id": "synthetic_context/0083-0",
+      "expected_targets": [
+        "n1",
+        "n4"
+      ],
+      "group_id": "context-scene-0083",
+      "instruction": "Make both circles in the left column bright red.",
+      "model_calls": 2,
+      "output_svg": "synthetic_context-0083-0.output.svg",
+      "patch_adapter_active": false,
+      "predicted_choices": [
+        "A",
+        "D"
+      ],
+      "provenance_verified": true,
+      "raw_responses": [
+        "{\"choices\":[\"A\",\"D\"]}",
+        "{\"version\": 1, \"operations\": [{\"op\": \"set_attributes\", \"targets\": [\"n1\", \"n4\"], \"attributes\": {\"fill\": \"#FF0000\"}}]}"
+      ],
+      "selected_targets": [
+        "n1",
+        "n4"
+      ],
+      "selection": {
+        "candidate_choices": [
+          {
+            "choice": "A",
+            "target": "n1"
+          },
+          {
+            "choice": "B",
+            "target": "n2"
+          },
+          {
+            "choice": "C",
+            "target": "n3"
+          },
+          {
+            "choice": "D",
+            "target": "n4"
+          },
+          {
+            "choice": "E",
+            "target": "n5"
+          },
+          {
+            "choice": "F",
+            "target": "n6"
+          }
+        ],
+        "candidate_evidence_size": 224,
+        "cardinality": "up_to_configured_max",
+        "max_selections": 4,
+        "mode": "visual_closed_choice",
+        "render_equivalent_aliases": {},
+        "selected_choices": [
+          "A",
+          "D"
+        ],
+        "visual_rerank_required": true
+      },
+      "selection_path_proven": true,
+      "source_sha256": "a7f734057faaf74df45666e00cf34b86eb6364ec81d078a4a28f4e84be1be892",
+      "strict_selection_json": true,
+      "target_exact": true
+    }
+  ],
+  "closed_choice_target_exact_count": 5,
+  "deployment_path_checks_pass": true,
+  "held_out_source": "data/node_grounding-context-v3/test.jsonl",
+  "model_selection_checks_pass": true,
+  "selected_case_ids": [
+    "synthetic_context/0002-0",
+    "synthetic_context/0019-0",
+    "synthetic_context/0020-0",
+    "synthetic_context/0049-0",
+    "synthetic_context/0083-0"
+  ],
+  "selection_adapter_active_for_all": true,
+  "selection_adapter_request_count": 5,
+  "selection_policy": "first eligible held-out case for each scene archetype, then the first eligible multi-target case",
+  "target_exact_count": 5,
+  "visual_closed_choice_count": 5
+}

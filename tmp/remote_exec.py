@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import os
 import sys
 
@@ -11,7 +12,21 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--host", required=True)
     parser.add_argument("--user", required=True)
-    parser.add_argument("--command", required=True)
+    command_group = parser.add_mutually_exclusive_group(required=True)
+    command_group.add_argument("--command")
+    command_group.add_argument("--command-b64")
+    command_group.add_argument(
+        "--download",
+        nargs=2,
+        action="append",
+        metavar=("REMOTE_PATH", "LOCAL_PATH"),
+    )
+    command_group.add_argument(
+        "--upload",
+        nargs=2,
+        action="append",
+        metavar=("LOCAL_PATH", "REMOTE_PATH"),
+    )
     args = parser.parse_args()
 
     password = os.environ.get("SVG_REMOTE_PASSWORD")
@@ -28,7 +43,25 @@ def main() -> int:
         banner_timeout=20,
         auth_timeout=20,
     )
-    _, stdout, stderr = client.exec_command(args.command)
+    if args.download:
+        with client.open_sftp() as sftp:
+            for remote_path, local_path in args.download:
+                sftp.get(remote_path, local_path)
+        client.close()
+        return 0
+    if args.upload:
+        with client.open_sftp() as sftp:
+            for local_path, remote_path in args.upload:
+                sftp.put(local_path, remote_path)
+        client.close()
+        return 0
+
+    command = (
+        base64.b64decode(args.command_b64).decode("utf-8")
+        if args.command_b64
+        else args.command
+    )
+    _, stdout, stderr = client.exec_command(command)
     stdout.channel.settimeout(None)
     out = stdout.read()
     err = stderr.read()

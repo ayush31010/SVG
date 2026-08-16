@@ -135,6 +135,36 @@ class VisualStatsPatchArchitecture(SkeletonPatchArchitecture):
         return build_scene(case.source_svg, visual_stats=stats)
 
 
+class AnalyticStatsPatchArchitecture(SkeletonPatchArchitecture):
+    """Ablation baseline: the same four fields, computed without rendering.
+
+    Attaches analytic geometry under the identical ``visual`` key, so the scene
+    the model reads is the same shape as the render-derived treatment's and the
+    only difference is where the numbers came from. Whatever separates this arm
+    from visual_stats_patch is the value of rasterizing, which for these fields
+    means knowing what is actually visible rather than what is nominally there.
+
+    Requires no renderer, and therefore no cairo.
+    """
+
+    name = "analytic_stats_patch"
+
+    def scene_for(self, case: BenchmarkCase) -> dict:
+        from svgpatchlab.core.geometry import node_analytic_stats
+
+        return build_scene(
+            case.source_svg, visual_stats=node_analytic_stats(case.source_svg)
+        )
+
+
+class StrictAnalyticStatsPatchArchitecture(AnalyticStatsPatchArchitecture):
+    """analytic_stats_patch under schema-constrained decoding."""
+
+    name = "strict_analytic_stats_patch"
+    constrain_output = True
+    repair_output = True
+
+
 class StrictSkeletonPatchArchitecture(SkeletonPatchArchitecture):
     """skeleton_patch with schema-constrained decoding and response repair.
 

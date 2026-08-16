@@ -1,0 +1,3461 @@
+{
+  "arm_order": [
+    "strict_skeleton_patch",
+    "strict_analytic_stats_patch",
+    "strict_visual_stats_patch"
+  ],
+  "case_count": 48,
+  "case_order": [
+    "set_contour/clean-v2-04-03-right",
+    "set_contour/occluded-v2-04-00-right",
+    "set_contour/clean-v2-05-03-left",
+    "set_contour/clean-v2-01-01-top-left",
+    "set_contour/clean-v2-02-00-bottom-right",
+    "set_contour/clean-v2-05-00-left",
+    "set_contour/occluded-v2-00-01-top-right",
+    "set_contour/clean-v2-04-00-right",
+    "set_contour/occluded-v2-01-01-top-left",
+    "set_contour/clean-v2-02-02-bottom-right",
+    "set_contour/occluded-v2-03-00-bottom-left",
+    "set_contour/clean-v2-05-01-left",
+    "set_contour/clean-v2-03-00-bottom-left",
+    "set_contour/occluded-v2-05-03-left",
+    "set_contour/clean-v2-02-01-bottom-right",
+    "set_contour/clean-v2-00-03-top-right",
+    "set_contour/clean-v2-05-02-left",
+    "set_contour/clean-v2-01-03-top-left",
+    "set_contour/occluded-v2-02-01-bottom-right",
+    "set_contour/occluded-v2-01-03-top-left",
+    "set_contour/occluded-v2-02-00-bottom-right",
+    "set_contour/clean-v2-04-01-right",
+    "set_contour/occluded-v2-04-03-right",
+    "set_contour/occluded-v2-02-03-bottom-right",
+    "set_contour/occluded-v2-03-02-bottom-left",
+    "set_contour/clean-v2-03-01-bottom-left",
+    "set_contour/clean-v2-00-01-top-right",
+    "set_contour/occluded-v2-01-02-top-left",
+    "set_contour/occluded-v2-00-02-top-right",
+    "set_contour/occluded-v2-03-03-bottom-left",
+    "set_contour/clean-v2-04-02-right",
+    "set_contour/occluded-v2-01-00-top-left",
+    "set_contour/occluded-v2-05-01-left",
+    "set_contour/occluded-v2-05-00-left",
+    "set_contour/clean-v2-03-02-bottom-left",
+    "set_contour/clean-v2-00-02-top-right",
+    "set_contour/occluded-v2-00-03-top-right",
+    "set_contour/clean-v2-02-03-bottom-right",
+    "set_contour/occluded-v2-04-02-right",
+    "set_contour/occluded-v2-00-00-top-right",
+    "set_contour/occluded-v2-03-01-bottom-left",
+    "set_contour/clean-v2-03-03-bottom-left",
+    "set_contour/occluded-v2-02-02-bottom-right",
+    "set_contour/clean-v2-01-02-top-left",
+    "set_contour/occluded-v2-04-01-right",
+    "set_contour/clean-v2-01-00-top-left",
+    "set_contour/clean-v2-00-00-top-right",
+    "set_contour/occluded-v2-05-02-left"
+  ],
+  "cases": [
+    {
+      "answer_sha256": "788a98e5c9d98cd973147cabf2546b29fdf1e68c12a50c3ccc12c19a637474df",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M078 046H088V054H078Z\"/><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          78,
+          46,
+          10,
+          8
+        ],
+        [
+          78,
+          22,
+          10,
+          8
+        ],
+        [
+          45,
+          22,
+          10,
+          8
+        ],
+        [
+          12,
+          22,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "target",
+        "filler-1",
+        "filler-2",
+        "filler-3"
+      ],
+      "case_id": "set_contour/clean-v2-04-03-right",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n1"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the right of the image.",
+      "instruction_sha256": "c9d0dc34ff46c93551c30a717554dec5779a37ad32e06230bcf8a182b68aa5bb",
+      "layout_index": 4,
+      "named_cell": "right",
+      "occluder_boxes": [],
+      "replicate": 3,
+      "source_sha256": "c9bfbf0f9934f14b73db47dbcec00433688b9fdbaa66992f2877bf7408969238",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/></svg>",
+      "target_node_id": "n1"
+    },
+    {
+      "answer_sha256": "11d2cd6d9af81186456422f2bf6aeb8c53d63aa6a04771376dacdada19f48628",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/><path fill=\"#d32f2f\" d=\"M074 056H088V064H074Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 043H090V053H010Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#37474f\" d=\"M008 041H066V055H008ZM072 054H090V066H072Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          12,
+          22,
+          10,
+          8
+        ],
+        [
+          74,
+          56,
+          14,
+          8
+        ],
+        [
+          10,
+          43,
+          80,
+          10
+        ],
+        [
+          78,
+          72,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "decoy",
+        "target",
+        "filler-2"
+      ],
+      "case_id": "set_contour/occluded-v2-04-00-right",
+      "decoy_node_id": "n2",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n3"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the right of the image.",
+      "instruction_sha256": "c9d0dc34ff46c93551c30a717554dec5779a37ad32e06230bcf8a182b68aa5bb",
+      "layout_index": 4,
+      "named_cell": "right",
+      "occluder_boxes": [
+        [
+          8,
+          41,
+          58,
+          14
+        ],
+        [
+          72,
+          54,
+          18,
+          12
+        ]
+      ],
+      "replicate": 0,
+      "source_sha256": "0e1c41ea9b27fbd3f693170d3ab5309c8038f8db5940f3a3a757375a6d3b6082",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/><path fill=\"#d32f2f\" d=\"M074 056H088V064H074Z\"/><path fill=\"#d32f2f\" d=\"M010 043H090V053H010Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#37474f\" d=\"M008 041H066V055H008ZM072 054H090V066H072Z\"/></svg>",
+      "target_node_id": "n3"
+    },
+    {
+      "answer_sha256": "885a2cbe2f4e905e59c0940395903be1d515597796b7ac630ebcb14b527881b2",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          78,
+          46,
+          10,
+          8
+        ],
+        [
+          45,
+          72,
+          10,
+          8
+        ],
+        [
+          12,
+          46,
+          10,
+          8
+        ],
+        [
+          45,
+          46,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "filler-2",
+        "target",
+        "filler-3"
+      ],
+      "case_id": "set_contour/clean-v2-05-03-left",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n3"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the left of the image.",
+      "instruction_sha256": "98736d6136503cc0fec80ed1529b23d2c492d38b84a295eae5abf83fff3d30a2",
+      "layout_index": 5,
+      "named_cell": "left",
+      "occluder_boxes": [],
+      "replicate": 3,
+      "source_sha256": "dcb29d607d3e5ce80ce218fc211631ee8dcc24c3e82bcab8192b981ed28c40c8",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/></svg>",
+      "target_node_id": "n3"
+    },
+    {
+      "answer_sha256": "acace5b6ac077f2c5767e6d925f30a27fc8411e26465d2c61abb9919ad84771b",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M012 022H022V030H012Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          45,
+          72,
+          10,
+          8
+        ],
+        [
+          78,
+          72,
+          10,
+          8
+        ],
+        [
+          12,
+          22,
+          10,
+          8
+        ],
+        [
+          45,
+          22,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "filler-2",
+        "target",
+        "filler-3"
+      ],
+      "case_id": "set_contour/clean-v2-01-01-top-left",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n3"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the top-left of the image.",
+      "instruction_sha256": "c09a8531dd36f5107714addb1040fa153ffb84aaf0b71904d0787815b9d0a868",
+      "layout_index": 1,
+      "named_cell": "top-left",
+      "occluder_boxes": [],
+      "replicate": 1,
+      "source_sha256": "15c89711188b920bab026e2a41971f35340802cc87e2459b03c7f99c2d9f5f07",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/></svg>",
+      "target_node_id": "n3"
+    },
+    {
+      "answer_sha256": "9b9d9d315afb60ecd7e32f1f4a29f78fd21b93360f03c5bedc52b1ed08c81c14",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          78,
+          22,
+          10,
+          8
+        ],
+        [
+          78,
+          72,
+          10,
+          8
+        ],
+        [
+          78,
+          46,
+          10,
+          8
+        ],
+        [
+          12,
+          22,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "target",
+        "filler-2",
+        "filler-3"
+      ],
+      "case_id": "set_contour/clean-v2-02-00-bottom-right",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n2"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the bottom-right of the image.",
+      "instruction_sha256": "9ed94e16577ba893a6e1cdddfdba1bba0cd6b2f844b7ed332138df19fb03a973",
+      "layout_index": 2,
+      "named_cell": "bottom-right",
+      "occluder_boxes": [],
+      "replicate": 0,
+      "source_sha256": "76069ec6289bb69b697f069258c85270f4f12368f3eb81fc4fd022ba70ef19d5",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/></svg>",
+      "target_node_id": "n2"
+    },
+    {
+      "answer_sha256": "490a8e3b6906c7d2aaf117df5cee92641b43413428e55e99b30f220f3bdab32b",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          12,
+          22,
+          10,
+          8
+        ],
+        [
+          12,
+          46,
+          10,
+          8
+        ],
+        [
+          78,
+          22,
+          10,
+          8
+        ],
+        [
+          45,
+          46,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "target",
+        "filler-2",
+        "filler-3"
+      ],
+      "case_id": "set_contour/clean-v2-05-00-left",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n2"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the left of the image.",
+      "instruction_sha256": "98736d6136503cc0fec80ed1529b23d2c492d38b84a295eae5abf83fff3d30a2",
+      "layout_index": 5,
+      "named_cell": "left",
+      "occluder_boxes": [],
+      "replicate": 0,
+      "source_sha256": "35db615d51cb54bd3c4e281f6f403fb71c8f5af70138c4fe821173ef33b28166",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/></svg>",
+      "target_node_id": "n2"
+    },
+    {
+      "answer_sha256": "f62a3d8dd5c3b82b234d32c4ab0bbaede7e995f198d4c4c2185765d10f791cb3",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/><path fill=\"#d32f2f\" d=\"M074 022H088V030H074Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 008H090V018H010Z\"/><path fill=\"#37474f\" d=\"M008 006H066V020H008ZM072 020H090V032H072Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          78,
+          72,
+          10,
+          8
+        ],
+        [
+          12,
+          22,
+          10,
+          8
+        ],
+        [
+          74,
+          22,
+          14,
+          8
+        ],
+        [
+          10,
+          8,
+          80,
+          10
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "filler-2",
+        "decoy",
+        "target"
+      ],
+      "case_id": "set_contour/occluded-v2-00-01-top-right",
+      "decoy_node_id": "n3",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n4"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the top-right of the image.",
+      "instruction_sha256": "bbe7d8f26b8b6572ff82937411bd38a8325051ca20c738b7bfe5090f72bb6ea9",
+      "layout_index": 0,
+      "named_cell": "top-right",
+      "occluder_boxes": [
+        [
+          8,
+          6,
+          58,
+          14
+        ],
+        [
+          72,
+          20,
+          18,
+          12
+        ]
+      ],
+      "replicate": 1,
+      "source_sha256": "78ed9aa95f5e90a6593b4a2a49896ae4e43707aab3399ed9322c841d53b751b1",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/><path fill=\"#d32f2f\" d=\"M074 022H088V030H074Z\"/><path fill=\"#d32f2f\" d=\"M010 008H090V018H010Z\"/><path fill=\"#37474f\" d=\"M008 006H066V020H008ZM072 020H090V032H072Z\"/></svg>",
+      "target_node_id": "n4"
+    },
+    {
+      "answer_sha256": "4df02a133f573282ef5b17e26a024afc422196989991172dacb2c80f77a838a9",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M078 046H088V054H078Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          78,
+          22,
+          10,
+          8
+        ],
+        [
+          45,
+          72,
+          10,
+          8
+        ],
+        [
+          12,
+          46,
+          10,
+          8
+        ],
+        [
+          78,
+          46,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "filler-2",
+        "filler-3",
+        "target"
+      ],
+      "case_id": "set_contour/clean-v2-04-00-right",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n4"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the right of the image.",
+      "instruction_sha256": "c9d0dc34ff46c93551c30a717554dec5779a37ad32e06230bcf8a182b68aa5bb",
+      "layout_index": 4,
+      "named_cell": "right",
+      "occluder_boxes": [],
+      "replicate": 0,
+      "source_sha256": "25f003a139f871086107053b641592aa680c3bef323bb641b883c95399b748d8",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/></svg>",
+      "target_node_id": "n4"
+    },
+    {
+      "answer_sha256": "7f58a03f51c701f5bf60fdb991d6d497e23f01d55c29f6cb487c510294575a08",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 008H090V018H010Z\"/><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/><path fill=\"#d32f2f\" d=\"M012 022H026V030H012Z\"/><path fill=\"#37474f\" d=\"M034 006H092V020H034ZM010 020H028V032H010Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          78,
+          22,
+          10,
+          8
+        ],
+        [
+          10,
+          8,
+          80,
+          10
+        ],
+        [
+          78,
+          46,
+          10,
+          8
+        ],
+        [
+          12,
+          22,
+          14,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "target",
+        "filler-2",
+        "decoy"
+      ],
+      "case_id": "set_contour/occluded-v2-01-01-top-left",
+      "decoy_node_id": "n4",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n2"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the top-left of the image.",
+      "instruction_sha256": "c09a8531dd36f5107714addb1040fa153ffb84aaf0b71904d0787815b9d0a868",
+      "layout_index": 1,
+      "named_cell": "top-left",
+      "occluder_boxes": [
+        [
+          34,
+          6,
+          58,
+          14
+        ],
+        [
+          10,
+          20,
+          18,
+          12
+        ]
+      ],
+      "replicate": 1,
+      "source_sha256": "0ec25e4f395cdd85e177601aa5516be40906453b3e96bbce260cf0f3911be5f2",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M010 008H090V018H010Z\"/><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/><path fill=\"#d32f2f\" d=\"M012 022H026V030H012Z\"/><path fill=\"#37474f\" d=\"M034 006H092V020H034ZM010 020H028V032H010Z\"/></svg>",
+      "target_node_id": "n2"
+    },
+    {
+      "answer_sha256": "2bcacfe0b026760b6e7096ce487b09b7f35283c7998a8aa64f322a6d66b7105d",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#d32f2f\" d=\"M012 072H022V080H012Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          78,
+          72,
+          10,
+          8
+        ],
+        [
+          45,
+          46,
+          10,
+          8
+        ],
+        [
+          12,
+          72,
+          10,
+          8
+        ],
+        [
+          45,
+          22,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "target",
+        "filler-1",
+        "filler-2",
+        "filler-3"
+      ],
+      "case_id": "set_contour/clean-v2-02-02-bottom-right",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n1"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the bottom-right of the image.",
+      "instruction_sha256": "9ed94e16577ba893a6e1cdddfdba1bba0cd6b2f844b7ed332138df19fb03a973",
+      "layout_index": 2,
+      "named_cell": "bottom-right",
+      "occluder_boxes": [],
+      "replicate": 2,
+      "source_sha256": "ad10db8b384bcd339344a6017538db63bb63bbb8a9ef806c2f4ba392d09c7938",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#d32f2f\" d=\"M012 072H022V080H012Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/></svg>",
+      "target_node_id": "n1"
+    },
+    {
+      "answer_sha256": "efc6cf00c5203f127240c9d0e62e113e4521e30a1a05a62182c0ec2ff184a86b",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M012 070H026V078H012Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 082H090V092H010Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#37474f\" d=\"M034 080H092V094H034ZM010 068H028V080H010Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          12,
+          70,
+          14,
+          8
+        ],
+        [
+          78,
+          72,
+          10,
+          8
+        ],
+        [
+          10,
+          82,
+          80,
+          10
+        ],
+        [
+          45,
+          22,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "decoy",
+        "filler-1",
+        "target",
+        "filler-2"
+      ],
+      "case_id": "set_contour/occluded-v2-03-00-bottom-left",
+      "decoy_node_id": "n1",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n3"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the bottom-left of the image.",
+      "instruction_sha256": "f92e1d863755b8172f93e4642da2cfa2e12e144e3e9a0b93cffb71855a251bce",
+      "layout_index": 3,
+      "named_cell": "bottom-left",
+      "occluder_boxes": [
+        [
+          34,
+          80,
+          58,
+          14
+        ],
+        [
+          10,
+          68,
+          18,
+          12
+        ]
+      ],
+      "replicate": 0,
+      "source_sha256": "37e25b76d5558d9bf8a5b95cc34c394bf9dff9c839b736102e9b371d7f879a18",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M012 070H026V078H012Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M010 082H090V092H010Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#37474f\" d=\"M034 080H092V094H034ZM010 068H028V080H010Z\"/></svg>",
+      "target_node_id": "n3"
+    },
+    {
+      "answer_sha256": "587f0306ba35cfc0404c2f12ff3ce911912051121bff0e61c24b6fc471c469a0",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M012 072H022V080H012Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          12,
+          46,
+          10,
+          8
+        ],
+        [
+          45,
+          46,
+          10,
+          8
+        ],
+        [
+          78,
+          72,
+          10,
+          8
+        ],
+        [
+          12,
+          72,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "target",
+        "filler-1",
+        "filler-2",
+        "filler-3"
+      ],
+      "case_id": "set_contour/clean-v2-05-01-left",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n1"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the left of the image.",
+      "instruction_sha256": "98736d6136503cc0fec80ed1529b23d2c492d38b84a295eae5abf83fff3d30a2",
+      "layout_index": 5,
+      "named_cell": "left",
+      "occluder_boxes": [],
+      "replicate": 1,
+      "source_sha256": "316c03780e84bd0c530380708f893c14eea85039bf287f8f30d8bc92c0dd6d45",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M012 072H022V080H012Z\"/></svg>",
+      "target_node_id": "n1"
+    },
+    {
+      "answer_sha256": "de0554ed259de275d37dfb6c523ae48ca421a5b56e1f211ff8b984dc1833b05e",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M012 072H022V080H012Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          78,
+          72,
+          10,
+          8
+        ],
+        [
+          12,
+          72,
+          10,
+          8
+        ],
+        [
+          45,
+          72,
+          10,
+          8
+        ],
+        [
+          78,
+          46,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "target",
+        "filler-2",
+        "filler-3"
+      ],
+      "case_id": "set_contour/clean-v2-03-00-bottom-left",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n2"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the bottom-left of the image.",
+      "instruction_sha256": "f92e1d863755b8172f93e4642da2cfa2e12e144e3e9a0b93cffb71855a251bce",
+      "layout_index": 3,
+      "named_cell": "bottom-left",
+      "occluder_boxes": [],
+      "replicate": 0,
+      "source_sha256": "430155a9493795cbf98debe39d859a054a18c2f62c9f93366e41fd5c751273ee",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M012 072H022V080H012Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/></svg>",
+      "target_node_id": "n2"
+    },
+    {
+      "answer_sha256": "b169f627cb228dfd6700dcb8de15e637d28ac40e31d7c962c7e336e9375d97db",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 043H090V053H010Z\"/><path fill=\"#d32f2f\" d=\"M012 072H022V080H012Z\"/><path fill=\"#d32f2f\" d=\"M012 056H026V064H012Z\"/><path fill=\"#37474f\" d=\"M034 041H092V055H034ZM010 054H028V066H010Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          78,
+          72,
+          10,
+          8
+        ],
+        [
+          10,
+          43,
+          80,
+          10
+        ],
+        [
+          12,
+          72,
+          10,
+          8
+        ],
+        [
+          12,
+          56,
+          14,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "target",
+        "filler-2",
+        "decoy"
+      ],
+      "case_id": "set_contour/occluded-v2-05-03-left",
+      "decoy_node_id": "n4",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n2"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the left of the image.",
+      "instruction_sha256": "98736d6136503cc0fec80ed1529b23d2c492d38b84a295eae5abf83fff3d30a2",
+      "layout_index": 5,
+      "named_cell": "left",
+      "occluder_boxes": [
+        [
+          34,
+          41,
+          58,
+          14
+        ],
+        [
+          10,
+          54,
+          18,
+          12
+        ]
+      ],
+      "replicate": 3,
+      "source_sha256": "500175efd0d56c790db567f7741e44b92f40560ee0bb92263b2f96913e893591",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M010 043H090V053H010Z\"/><path fill=\"#d32f2f\" d=\"M012 072H022V080H012Z\"/><path fill=\"#d32f2f\" d=\"M012 056H026V064H012Z\"/><path fill=\"#37474f\" d=\"M034 041H092V055H034ZM010 054H028V066H010Z\"/></svg>",
+      "target_node_id": "n2"
+    },
+    {
+      "answer_sha256": "80f4f79558641997c0cddcf0bfb8c4e5d5cbd41fbc73b6e1a7525ce98b23e758",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M012 072H022V080H012Z\"/><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M078 072H088V080H078Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          78,
+          22,
+          10,
+          8
+        ],
+        [
+          12,
+          72,
+          10,
+          8
+        ],
+        [
+          12,
+          22,
+          10,
+          8
+        ],
+        [
+          78,
+          72,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "filler-2",
+        "filler-3",
+        "target"
+      ],
+      "case_id": "set_contour/clean-v2-02-01-bottom-right",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n4"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the bottom-right of the image.",
+      "instruction_sha256": "9ed94e16577ba893a6e1cdddfdba1bba0cd6b2f844b7ed332138df19fb03a973",
+      "layout_index": 2,
+      "named_cell": "bottom-right",
+      "occluder_boxes": [],
+      "replicate": 1,
+      "source_sha256": "b853526cb28fef58f03cf118d459a117c160d8ab530173bd44fded80c3d0a826",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M012 072H022V080H012Z\"/><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/></svg>",
+      "target_node_id": "n4"
+    },
+    {
+      "answer_sha256": "6fbd58ab8b42cddcbb81bf981a3ee5f15d6f37307fbc88c44ca9f0b9a56a78ff",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M078 022H088V030H078Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          12,
+          46,
+          10,
+          8
+        ],
+        [
+          78,
+          72,
+          10,
+          8
+        ],
+        [
+          45,
+          22,
+          10,
+          8
+        ],
+        [
+          78,
+          22,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "filler-2",
+        "filler-3",
+        "target"
+      ],
+      "case_id": "set_contour/clean-v2-00-03-top-right",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n4"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the top-right of the image.",
+      "instruction_sha256": "bbe7d8f26b8b6572ff82937411bd38a8325051ca20c738b7bfe5090f72bb6ea9",
+      "layout_index": 0,
+      "named_cell": "top-right",
+      "occluder_boxes": [],
+      "replicate": 3,
+      "source_sha256": "6ca5ad327a87f3eb4d6813d9067c84420acb858fd5014e50981ac24b936c8233",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/></svg>",
+      "target_node_id": "n4"
+    },
+    {
+      "answer_sha256": "49cbf4e8861ad56b124dd331fb05ed4c54dc17938652885e683c385fcee0784f",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M012 072H022V080H012Z\"/><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M012 046H022V054H012Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          78,
+          72,
+          10,
+          8
+        ],
+        [
+          12,
+          72,
+          10,
+          8
+        ],
+        [
+          45,
+          46,
+          10,
+          8
+        ],
+        [
+          12,
+          46,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "filler-2",
+        "filler-3",
+        "target"
+      ],
+      "case_id": "set_contour/clean-v2-05-02-left",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n4"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the left of the image.",
+      "instruction_sha256": "98736d6136503cc0fec80ed1529b23d2c492d38b84a295eae5abf83fff3d30a2",
+      "layout_index": 5,
+      "named_cell": "left",
+      "occluder_boxes": [],
+      "replicate": 2,
+      "source_sha256": "1933ed5d1b489ba5c02b027812b5653fc8d55442fd5e48ac1ff9e6c003a4c89b",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M012 072H022V080H012Z\"/><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/></svg>",
+      "target_node_id": "n4"
+    },
+    {
+      "answer_sha256": "1bb72bfa03e6cbdfab2e905aaae95786653845b5436c62541516f761a1a72b13",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M012 022H022V030H012Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          45,
+          72,
+          10,
+          8
+        ],
+        [
+          12,
+          22,
+          10,
+          8
+        ],
+        [
+          78,
+          72,
+          10,
+          8
+        ],
+        [
+          45,
+          22,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "target",
+        "filler-2",
+        "filler-3"
+      ],
+      "case_id": "set_contour/clean-v2-01-03-top-left",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n2"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the top-left of the image.",
+      "instruction_sha256": "c09a8531dd36f5107714addb1040fa153ffb84aaf0b71904d0787815b9d0a868",
+      "layout_index": 1,
+      "named_cell": "top-left",
+      "occluder_boxes": [],
+      "replicate": 3,
+      "source_sha256": "5d02c4a3514e351b60079c8b2999855e6a7c22af1342674fd5fd05a32937c7c1",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/></svg>",
+      "target_node_id": "n2"
+    },
+    {
+      "answer_sha256": "93179f972a4a9eca01dd732cfd37d3565bf4a4098f7827624e191cf632308bda",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M074 070H088V078H074Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 082H090V092H010Z\"/><path fill=\"#37474f\" d=\"M008 080H066V094H008ZM072 068H090V080H072Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          74,
+          70,
+          14,
+          8
+        ],
+        [
+          45,
+          22,
+          10,
+          8
+        ],
+        [
+          78,
+          22,
+          10,
+          8
+        ],
+        [
+          10,
+          82,
+          80,
+          10
+        ]
+      ],
+      "candidate_roles": [
+        "decoy",
+        "filler-1",
+        "filler-2",
+        "target"
+      ],
+      "case_id": "set_contour/occluded-v2-02-01-bottom-right",
+      "decoy_node_id": "n1",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n4"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the bottom-right of the image.",
+      "instruction_sha256": "9ed94e16577ba893a6e1cdddfdba1bba0cd6b2f844b7ed332138df19fb03a973",
+      "layout_index": 2,
+      "named_cell": "bottom-right",
+      "occluder_boxes": [
+        [
+          8,
+          80,
+          58,
+          14
+        ],
+        [
+          72,
+          68,
+          18,
+          12
+        ]
+      ],
+      "replicate": 1,
+      "source_sha256": "0f77a7666c19049de44c034e31a24c333ee02835b451b9412d1429cfd5dab0a5",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M074 070H088V078H074Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M010 082H090V092H010Z\"/><path fill=\"#37474f\" d=\"M008 080H066V094H008ZM072 068H090V080H072Z\"/></svg>",
+      "target_node_id": "n4"
+    },
+    {
+      "answer_sha256": "81d8de3c669b2d2534998a6d496a0e9bdfe548785f9417efb184ce505a6a6651",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 008H090V018H010Z\"/><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" d=\"M012 022H026V030H012Z\"/><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/><path fill=\"#37474f\" d=\"M034 006H092V020H034ZM010 020H028V032H010Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          10,
+          8,
+          80,
+          10
+        ],
+        [
+          12,
+          46,
+          10,
+          8
+        ],
+        [
+          12,
+          22,
+          14,
+          8
+        ],
+        [
+          78,
+          46,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "target",
+        "filler-1",
+        "decoy",
+        "filler-2"
+      ],
+      "case_id": "set_contour/occluded-v2-01-03-top-left",
+      "decoy_node_id": "n3",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n1"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the top-left of the image.",
+      "instruction_sha256": "c09a8531dd36f5107714addb1040fa153ffb84aaf0b71904d0787815b9d0a868",
+      "layout_index": 1,
+      "named_cell": "top-left",
+      "occluder_boxes": [
+        [
+          34,
+          6,
+          58,
+          14
+        ],
+        [
+          10,
+          20,
+          18,
+          12
+        ]
+      ],
+      "replicate": 3,
+      "source_sha256": "b9e7b0f8d1ace7b9305b5d81cf7ddbdd226c37eb27bcdda7e4d58b0ba34fb8a6",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M010 008H090V018H010Z\"/><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" d=\"M012 022H026V030H012Z\"/><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/><path fill=\"#37474f\" d=\"M034 006H092V020H034ZM010 020H028V032H010Z\"/></svg>",
+      "target_node_id": "n1"
+    },
+    {
+      "answer_sha256": "9fe85cfe81ed10a68751657a3fa95d8979757a29b388b4c71f53fc2888c72707",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 082H090V092H010Z\"/><path fill=\"#d32f2f\" d=\"M074 070H088V078H074Z\"/><path fill=\"#37474f\" d=\"M008 080H066V094H008ZM072 068H090V080H072Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          45,
+          72,
+          10,
+          8
+        ],
+        [
+          45,
+          22,
+          10,
+          8
+        ],
+        [
+          10,
+          82,
+          80,
+          10
+        ],
+        [
+          74,
+          70,
+          14,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "filler-2",
+        "target",
+        "decoy"
+      ],
+      "case_id": "set_contour/occluded-v2-02-00-bottom-right",
+      "decoy_node_id": "n4",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n3"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the bottom-right of the image.",
+      "instruction_sha256": "9ed94e16577ba893a6e1cdddfdba1bba0cd6b2f844b7ed332138df19fb03a973",
+      "layout_index": 2,
+      "named_cell": "bottom-right",
+      "occluder_boxes": [
+        [
+          8,
+          80,
+          58,
+          14
+        ],
+        [
+          72,
+          68,
+          18,
+          12
+        ]
+      ],
+      "replicate": 0,
+      "source_sha256": "db7ea6ebdc19522e8110b0399f749a89d7b86eca7408648382315b178a087d66",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" d=\"M010 082H090V092H010Z\"/><path fill=\"#d32f2f\" d=\"M074 070H088V078H074Z\"/><path fill=\"#37474f\" d=\"M008 080H066V094H008ZM072 068H090V080H072Z\"/></svg>",
+      "target_node_id": "n3"
+    },
+    {
+      "answer_sha256": "5b22bbb43df9a48ff825dcbba6d591f8b3b9edeca21838f2162b8aed4e6521ce",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M078 046H088V054H078Z\"/><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          78,
+          72,
+          10,
+          8
+        ],
+        [
+          45,
+          72,
+          10,
+          8
+        ],
+        [
+          78,
+          46,
+          10,
+          8
+        ],
+        [
+          78,
+          22,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "filler-2",
+        "target",
+        "filler-3"
+      ],
+      "case_id": "set_contour/clean-v2-04-01-right",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n3"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the right of the image.",
+      "instruction_sha256": "c9d0dc34ff46c93551c30a717554dec5779a37ad32e06230bcf8a182b68aa5bb",
+      "layout_index": 4,
+      "named_cell": "right",
+      "occluder_boxes": [],
+      "replicate": 1,
+      "source_sha256": "ad1deff0eea2c812dcdab3f82dbf21c4cca75b3b768a996262854e3d21e2f434",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/></svg>",
+      "target_node_id": "n3"
+    },
+    {
+      "answer_sha256": "6a2d5f88bf37cba8cd70da2c9db774c4e07636be71a29be4cb632a1cbd9d2bfd",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M074 056H088V064H074Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 043H090V053H010Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#37474f\" d=\"M008 041H066V055H008ZM072 054H090V066H072Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          74,
+          56,
+          14,
+          8
+        ],
+        [
+          10,
+          43,
+          80,
+          10
+        ],
+        [
+          45,
+          72,
+          10,
+          8
+        ],
+        [
+          78,
+          72,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "decoy",
+        "target",
+        "filler-1",
+        "filler-2"
+      ],
+      "case_id": "set_contour/occluded-v2-04-03-right",
+      "decoy_node_id": "n1",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n2"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the right of the image.",
+      "instruction_sha256": "c9d0dc34ff46c93551c30a717554dec5779a37ad32e06230bcf8a182b68aa5bb",
+      "layout_index": 4,
+      "named_cell": "right",
+      "occluder_boxes": [
+        [
+          8,
+          41,
+          58,
+          14
+        ],
+        [
+          72,
+          54,
+          18,
+          12
+        ]
+      ],
+      "replicate": 3,
+      "source_sha256": "77846796935c5832b4da13c7852b5b40c46adc39e10ca8485ab775ce827ffe57",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M074 056H088V064H074Z\"/><path fill=\"#d32f2f\" d=\"M010 043H090V053H010Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#37474f\" d=\"M008 041H066V055H008ZM072 054H090V066H072Z\"/></svg>",
+      "target_node_id": "n2"
+    },
+    {
+      "answer_sha256": "0c7b53939ebbbccf8274513142b14c0f5ed38151d8c626c3bb874ba6025c0e57",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 082H090V092H010Z\"/><path fill=\"#d32f2f\" d=\"M074 070H088V078H074Z\"/><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#37474f\" d=\"M008 080H066V094H008ZM072 068H090V080H072Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          10,
+          82,
+          80,
+          10
+        ],
+        [
+          74,
+          70,
+          14,
+          8
+        ],
+        [
+          78,
+          46,
+          10,
+          8
+        ],
+        [
+          12,
+          46,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "target",
+        "decoy",
+        "filler-1",
+        "filler-2"
+      ],
+      "case_id": "set_contour/occluded-v2-02-03-bottom-right",
+      "decoy_node_id": "n2",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n1"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the bottom-right of the image.",
+      "instruction_sha256": "9ed94e16577ba893a6e1cdddfdba1bba0cd6b2f844b7ed332138df19fb03a973",
+      "layout_index": 2,
+      "named_cell": "bottom-right",
+      "occluder_boxes": [
+        [
+          8,
+          80,
+          58,
+          14
+        ],
+        [
+          72,
+          68,
+          18,
+          12
+        ]
+      ],
+      "replicate": 3,
+      "source_sha256": "d038b34e1372fde7e46b1f9ad9ce3e30d323aeb2b10975337499aafe58a1e368",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M010 082H090V092H010Z\"/><path fill=\"#d32f2f\" d=\"M074 070H088V078H074Z\"/><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#37474f\" d=\"M008 080H066V094H008ZM072 068H090V080H072Z\"/></svg>",
+      "target_node_id": "n1"
+    },
+    {
+      "answer_sha256": "3481d00a6440e42d56886ebe3780a52b78bade6daa3f1514db404fcc9e754501",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 082H090V092H010Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M012 070H026V078H012Z\"/><path fill=\"#37474f\" d=\"M034 080H092V094H034ZM010 068H028V080H010Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          12,
+          46,
+          10,
+          8
+        ],
+        [
+          10,
+          82,
+          80,
+          10
+        ],
+        [
+          78,
+          72,
+          10,
+          8
+        ],
+        [
+          12,
+          70,
+          14,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "target",
+        "filler-2",
+        "decoy"
+      ],
+      "case_id": "set_contour/occluded-v2-03-02-bottom-left",
+      "decoy_node_id": "n4",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n2"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the bottom-left of the image.",
+      "instruction_sha256": "f92e1d863755b8172f93e4642da2cfa2e12e144e3e9a0b93cffb71855a251bce",
+      "layout_index": 3,
+      "named_cell": "bottom-left",
+      "occluder_boxes": [
+        [
+          34,
+          80,
+          58,
+          14
+        ],
+        [
+          10,
+          68,
+          18,
+          12
+        ]
+      ],
+      "replicate": 2,
+      "source_sha256": "f7dc663b9d88c5b5135fcb4c0d82cde391a8bc546d0f6e2a4aa1f8bf7000e20e",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" d=\"M010 082H090V092H010Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M012 070H026V078H012Z\"/><path fill=\"#37474f\" d=\"M034 080H092V094H034ZM010 068H028V080H010Z\"/></svg>",
+      "target_node_id": "n2"
+    },
+    {
+      "answer_sha256": "0ebf44e759419ede1cbfc6c8955accb0e07a95c9580e1c066cea7c8dc4b6c12d",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M012 072H022V080H012Z\"/><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          45,
+          46,
+          10,
+          8
+        ],
+        [
+          78,
+          72,
+          10,
+          8
+        ],
+        [
+          12,
+          72,
+          10,
+          8
+        ],
+        [
+          12,
+          22,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "filler-2",
+        "target",
+        "filler-3"
+      ],
+      "case_id": "set_contour/clean-v2-03-01-bottom-left",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n3"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the bottom-left of the image.",
+      "instruction_sha256": "f92e1d863755b8172f93e4642da2cfa2e12e144e3e9a0b93cffb71855a251bce",
+      "layout_index": 3,
+      "named_cell": "bottom-left",
+      "occluder_boxes": [],
+      "replicate": 1,
+      "source_sha256": "ab6ace82d5e48d22bc628f09deabca10d0908eb5f2bcc7ab5c58583cfb1c1c2b",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M012 072H022V080H012Z\"/><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/></svg>",
+      "target_node_id": "n3"
+    },
+    {
+      "answer_sha256": "7d533c2bf1b1d41f9d8fa731dcf43f8f98545e0f38ee590707719aaa6b78ca78",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          45,
+          46,
+          10,
+          8
+        ],
+        [
+          78,
+          22,
+          10,
+          8
+        ],
+        [
+          12,
+          46,
+          10,
+          8
+        ],
+        [
+          12,
+          22,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "target",
+        "filler-2",
+        "filler-3"
+      ],
+      "case_id": "set_contour/clean-v2-00-01-top-right",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n2"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the top-right of the image.",
+      "instruction_sha256": "bbe7d8f26b8b6572ff82937411bd38a8325051ca20c738b7bfe5090f72bb6ea9",
+      "layout_index": 0,
+      "named_cell": "top-right",
+      "occluder_boxes": [],
+      "replicate": 1,
+      "source_sha256": "0848a44994b77fb27fcc6c0d5084cb978529f33f656f94084d82b44e96d3b99d",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/></svg>",
+      "target_node_id": "n2"
+    },
+    {
+      "answer_sha256": "fb6f4f6dc818ebbaed7222a78691791a1b7afa503a61390c5c63b3ec279d44dd",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M012 022H026V030H012Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 008H090V018H010Z\"/><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#37474f\" d=\"M034 006H092V020H034ZM010 020H028V032H010Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          12,
+          22,
+          14,
+          8
+        ],
+        [
+          45,
+          22,
+          10,
+          8
+        ],
+        [
+          10,
+          8,
+          80,
+          10
+        ],
+        [
+          78,
+          22,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "decoy",
+        "filler-1",
+        "target",
+        "filler-2"
+      ],
+      "case_id": "set_contour/occluded-v2-01-02-top-left",
+      "decoy_node_id": "n1",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n3"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the top-left of the image.",
+      "instruction_sha256": "c09a8531dd36f5107714addb1040fa153ffb84aaf0b71904d0787815b9d0a868",
+      "layout_index": 1,
+      "named_cell": "top-left",
+      "occluder_boxes": [
+        [
+          34,
+          6,
+          58,
+          14
+        ],
+        [
+          10,
+          20,
+          18,
+          12
+        ]
+      ],
+      "replicate": 2,
+      "source_sha256": "dfebc5e414b351d9c304a9490d31c471b495946dc084fe36e9327da6baa7367e",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M012 022H026V030H012Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" d=\"M010 008H090V018H010Z\"/><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#37474f\" d=\"M034 006H092V020H034ZM010 020H028V032H010Z\"/></svg>",
+      "target_node_id": "n3"
+    },
+    {
+      "answer_sha256": "3debb2ee5ada07b80ea7665f3a9a2a2a900f858bfcb1ff6ed0b7dd0df3ab9fa4",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M074 022H088V030H074Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 008H090V018H010Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#37474f\" d=\"M008 006H066V020H008ZM072 020H090V032H072Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          78,
+          72,
+          10,
+          8
+        ],
+        [
+          74,
+          22,
+          14,
+          8
+        ],
+        [
+          10,
+          8,
+          80,
+          10
+        ],
+        [
+          45,
+          72,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "decoy",
+        "target",
+        "filler-2"
+      ],
+      "case_id": "set_contour/occluded-v2-00-02-top-right",
+      "decoy_node_id": "n2",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n3"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the top-right of the image.",
+      "instruction_sha256": "bbe7d8f26b8b6572ff82937411bd38a8325051ca20c738b7bfe5090f72bb6ea9",
+      "layout_index": 0,
+      "named_cell": "top-right",
+      "occluder_boxes": [
+        [
+          8,
+          6,
+          58,
+          14
+        ],
+        [
+          72,
+          20,
+          18,
+          12
+        ]
+      ],
+      "replicate": 2,
+      "source_sha256": "ead82128caee7fac591ef2c9f298a2399b3f05dda23565efa8d2cd45e77452cc",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M074 022H088V030H074Z\"/><path fill=\"#d32f2f\" d=\"M010 008H090V018H010Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#37474f\" d=\"M008 006H066V020H008ZM072 020H090V032H072Z\"/></svg>",
+      "target_node_id": "n3"
+    },
+    {
+      "answer_sha256": "02d5d2ec627db4d7b5689be92bca75fddebb37f50bd2ab5e83d01b44add8a01e",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#d32f2f\" d=\"M012 070H026V078H012Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 082H090V092H010Z\"/><path fill=\"#37474f\" d=\"M034 080H092V094H034ZM010 068H028V080H010Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          45,
+          46,
+          10,
+          8
+        ],
+        [
+          12,
+          70,
+          14,
+          8
+        ],
+        [
+          45,
+          72,
+          10,
+          8
+        ],
+        [
+          10,
+          82,
+          80,
+          10
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "decoy",
+        "filler-2",
+        "target"
+      ],
+      "case_id": "set_contour/occluded-v2-03-03-bottom-left",
+      "decoy_node_id": "n2",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n4"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the bottom-left of the image.",
+      "instruction_sha256": "f92e1d863755b8172f93e4642da2cfa2e12e144e3e9a0b93cffb71855a251bce",
+      "layout_index": 3,
+      "named_cell": "bottom-left",
+      "occluder_boxes": [
+        [
+          34,
+          80,
+          58,
+          14
+        ],
+        [
+          10,
+          68,
+          18,
+          12
+        ]
+      ],
+      "replicate": 3,
+      "source_sha256": "cc073b23da82b58c0d4c83272a03f841ae2c911683f63c42af5b31088a75f390",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#d32f2f\" d=\"M012 070H026V078H012Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" d=\"M010 082H090V092H010Z\"/><path fill=\"#37474f\" d=\"M034 080H092V094H034ZM010 068H028V080H010Z\"/></svg>",
+      "target_node_id": "n4"
+    },
+    {
+      "answer_sha256": "2267093da6864efb45eb20135e9cd81ea3592f6e80d767327634ddcc31b3f269",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M078 046H088V054H078Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          12,
+          46,
+          10,
+          8
+        ],
+        [
+          78,
+          46,
+          10,
+          8
+        ],
+        [
+          45,
+          22,
+          10,
+          8
+        ],
+        [
+          78,
+          72,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "target",
+        "filler-2",
+        "filler-3"
+      ],
+      "case_id": "set_contour/clean-v2-04-02-right",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n2"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the right of the image.",
+      "instruction_sha256": "c9d0dc34ff46c93551c30a717554dec5779a37ad32e06230bcf8a182b68aa5bb",
+      "layout_index": 4,
+      "named_cell": "right",
+      "occluder_boxes": [],
+      "replicate": 2,
+      "source_sha256": "d274619f9cef4cab9befbd370aa25990bff5425506c2081ebc692c0d08c3331e",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/></svg>",
+      "target_node_id": "n2"
+    },
+    {
+      "answer_sha256": "7b88f3e9d800cdffeea431a75b6bb3a4da361281c6ae62799f718dd01594c864",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" d=\"M012 022H026V030H012Z\"/><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 008H090V018H010Z\"/><path fill=\"#37474f\" d=\"M034 006H092V020H034ZM010 020H028V032H010Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          45,
+          72,
+          10,
+          8
+        ],
+        [
+          12,
+          22,
+          14,
+          8
+        ],
+        [
+          12,
+          46,
+          10,
+          8
+        ],
+        [
+          10,
+          8,
+          80,
+          10
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "decoy",
+        "filler-2",
+        "target"
+      ],
+      "case_id": "set_contour/occluded-v2-01-00-top-left",
+      "decoy_node_id": "n2",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n4"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the top-left of the image.",
+      "instruction_sha256": "c09a8531dd36f5107714addb1040fa153ffb84aaf0b71904d0787815b9d0a868",
+      "layout_index": 1,
+      "named_cell": "top-left",
+      "occluder_boxes": [
+        [
+          34,
+          6,
+          58,
+          14
+        ],
+        [
+          10,
+          20,
+          18,
+          12
+        ]
+      ],
+      "replicate": 0,
+      "source_sha256": "aaf122b8c349c0b36c04cb86665949412a78ebbf7eff927ee146ed97302ea652",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" d=\"M012 022H026V030H012Z\"/><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" d=\"M010 008H090V018H010Z\"/><path fill=\"#37474f\" d=\"M034 006H092V020H034ZM010 020H028V032H010Z\"/></svg>",
+      "target_node_id": "n4"
+    },
+    {
+      "answer_sha256": "85cafa5b5a4fefc7c73d763cb4e5bd4ec74218928eca4396574f318fef45d41f",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" d=\"M012 056H026V064H012Z\"/><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 043H090V053H010Z\"/><path fill=\"#37474f\" d=\"M034 041H092V055H034ZM010 054H028V066H010Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          45,
+          22,
+          10,
+          8
+        ],
+        [
+          12,
+          56,
+          14,
+          8
+        ],
+        [
+          78,
+          22,
+          10,
+          8
+        ],
+        [
+          10,
+          43,
+          80,
+          10
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "decoy",
+        "filler-2",
+        "target"
+      ],
+      "case_id": "set_contour/occluded-v2-05-01-left",
+      "decoy_node_id": "n2",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n4"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the left of the image.",
+      "instruction_sha256": "98736d6136503cc0fec80ed1529b23d2c492d38b84a295eae5abf83fff3d30a2",
+      "layout_index": 5,
+      "named_cell": "left",
+      "occluder_boxes": [
+        [
+          34,
+          41,
+          58,
+          14
+        ],
+        [
+          10,
+          54,
+          18,
+          12
+        ]
+      ],
+      "replicate": 1,
+      "source_sha256": "db1b0919cdb617e79c550bad3a5eb2dfda429c0c9fbf101e54dab1c53a95fdea",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" d=\"M012 056H026V064H012Z\"/><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M010 043H090V053H010Z\"/><path fill=\"#37474f\" d=\"M034 041H092V055H034ZM010 054H028V066H010Z\"/></svg>",
+      "target_node_id": "n4"
+    },
+    {
+      "answer_sha256": "36330f183a871f7dceb13f00908dbc337d27aaeb4d29b7f1768b4e36b354a3be",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 043H090V053H010Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" d=\"M012 056H026V064H012Z\"/><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#37474f\" d=\"M034 041H092V055H034ZM010 054H028V066H010Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          10,
+          43,
+          80,
+          10
+        ],
+        [
+          45,
+          72,
+          10,
+          8
+        ],
+        [
+          12,
+          56,
+          14,
+          8
+        ],
+        [
+          78,
+          22,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "target",
+        "filler-1",
+        "decoy",
+        "filler-2"
+      ],
+      "case_id": "set_contour/occluded-v2-05-00-left",
+      "decoy_node_id": "n3",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n1"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the left of the image.",
+      "instruction_sha256": "98736d6136503cc0fec80ed1529b23d2c492d38b84a295eae5abf83fff3d30a2",
+      "layout_index": 5,
+      "named_cell": "left",
+      "occluder_boxes": [
+        [
+          34,
+          41,
+          58,
+          14
+        ],
+        [
+          10,
+          54,
+          18,
+          12
+        ]
+      ],
+      "replicate": 0,
+      "source_sha256": "0c2a731040a5eeb9d7477c9ff1b9097ec38b2d288633dc6cbc2cd42128e3860e",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M010 043H090V053H010Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" d=\"M012 056H026V064H012Z\"/><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#37474f\" d=\"M034 041H092V055H034ZM010 054H028V066H010Z\"/></svg>",
+      "target_node_id": "n1"
+    },
+    {
+      "answer_sha256": "dec3f1584a001f15a9185ff3c0924d652fcf966852c2cf1b21c79bab4334bc1c",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M012 072H022V080H012Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          45,
+          46,
+          10,
+          8
+        ],
+        [
+          78,
+          46,
+          10,
+          8
+        ],
+        [
+          45,
+          72,
+          10,
+          8
+        ],
+        [
+          12,
+          72,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "filler-2",
+        "filler-3",
+        "target"
+      ],
+      "case_id": "set_contour/clean-v2-03-02-bottom-left",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n4"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the bottom-left of the image.",
+      "instruction_sha256": "f92e1d863755b8172f93e4642da2cfa2e12e144e3e9a0b93cffb71855a251bce",
+      "layout_index": 3,
+      "named_cell": "bottom-left",
+      "occluder_boxes": [],
+      "replicate": 2,
+      "source_sha256": "2865e0a576367cc68c9612c8347964d62c5fd6d6f6fc0b5f84e74c2b5427dd4e",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" d=\"M012 072H022V080H012Z\"/></svg>",
+      "target_node_id": "n4"
+    },
+    {
+      "answer_sha256": "76e3eda941311014811830e76da0a7dc1ea4e526464cd0590337577006325ff5",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" d=\"M012 072H022V080H012Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          78,
+          22,
+          10,
+          8
+        ],
+        [
+          45,
+          22,
+          10,
+          8
+        ],
+        [
+          12,
+          72,
+          10,
+          8
+        ],
+        [
+          45,
+          72,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "target",
+        "filler-1",
+        "filler-2",
+        "filler-3"
+      ],
+      "case_id": "set_contour/clean-v2-00-02-top-right",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n1"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the top-right of the image.",
+      "instruction_sha256": "bbe7d8f26b8b6572ff82937411bd38a8325051ca20c738b7bfe5090f72bb6ea9",
+      "layout_index": 0,
+      "named_cell": "top-right",
+      "occluder_boxes": [],
+      "replicate": 2,
+      "source_sha256": "1e874ab5b14f71adcd9541fc020bf6a720d24c9322c5fb4ffd0417907fa70b55",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" d=\"M012 072H022V080H012Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/></svg>",
+      "target_node_id": "n1"
+    },
+    {
+      "answer_sha256": "d60f83d6af4b2f8422f216ee40c6f61b6c6392c4906442f6710f79c18d506dee",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M074 022H088V030H074Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 008H090V018H010Z\"/><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#d32f2f\" d=\"M012 072H022V080H012Z\"/><path fill=\"#37474f\" d=\"M008 006H066V020H008ZM072 020H090V032H072Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          74,
+          22,
+          14,
+          8
+        ],
+        [
+          10,
+          8,
+          80,
+          10
+        ],
+        [
+          45,
+          46,
+          10,
+          8
+        ],
+        [
+          12,
+          72,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "decoy",
+        "target",
+        "filler-1",
+        "filler-2"
+      ],
+      "case_id": "set_contour/occluded-v2-00-03-top-right",
+      "decoy_node_id": "n1",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n2"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the top-right of the image.",
+      "instruction_sha256": "bbe7d8f26b8b6572ff82937411bd38a8325051ca20c738b7bfe5090f72bb6ea9",
+      "layout_index": 0,
+      "named_cell": "top-right",
+      "occluder_boxes": [
+        [
+          8,
+          6,
+          58,
+          14
+        ],
+        [
+          72,
+          20,
+          18,
+          12
+        ]
+      ],
+      "replicate": 3,
+      "source_sha256": "6ae2185616e1599a729450b4e7ca8d9afcb720c3343509095873aa03c53b7a48",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M074 022H088V030H074Z\"/><path fill=\"#d32f2f\" d=\"M010 008H090V018H010Z\"/><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#d32f2f\" d=\"M012 072H022V080H012Z\"/><path fill=\"#37474f\" d=\"M008 006H066V020H008ZM072 020H090V032H072Z\"/></svg>",
+      "target_node_id": "n2"
+    },
+    {
+      "answer_sha256": "3bc65251f3ac9d8442681738fa580bdc74f592f60595f9da8e615e62bde741c2",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          78,
+          22,
+          10,
+          8
+        ],
+        [
+          45,
+          72,
+          10,
+          8
+        ],
+        [
+          78,
+          72,
+          10,
+          8
+        ],
+        [
+          45,
+          46,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "filler-2",
+        "target",
+        "filler-3"
+      ],
+      "case_id": "set_contour/clean-v2-02-03-bottom-right",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n3"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the bottom-right of the image.",
+      "instruction_sha256": "9ed94e16577ba893a6e1cdddfdba1bba0cd6b2f844b7ed332138df19fb03a973",
+      "layout_index": 2,
+      "named_cell": "bottom-right",
+      "occluder_boxes": [],
+      "replicate": 3,
+      "source_sha256": "6ae3ba2c57e154972a10ce774b3b857e27c3069a7ab6ecd2e9727cd9e97ecffa",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/></svg>",
+      "target_node_id": "n3"
+    },
+    {
+      "answer_sha256": "a5c71647f8e3c5297920cb4732b0827de79e933cfb9592a4f7f3325d7d9a765b",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 043H090V053H010Z\"/><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" d=\"M074 056H088V064H074Z\"/><path fill=\"#37474f\" d=\"M008 041H066V055H008ZM072 054H090V066H072Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          10,
+          43,
+          80,
+          10
+        ],
+        [
+          12,
+          22,
+          10,
+          8
+        ],
+        [
+          45,
+          22,
+          10,
+          8
+        ],
+        [
+          74,
+          56,
+          14,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "target",
+        "filler-1",
+        "filler-2",
+        "decoy"
+      ],
+      "case_id": "set_contour/occluded-v2-04-02-right",
+      "decoy_node_id": "n4",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n1"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the right of the image.",
+      "instruction_sha256": "c9d0dc34ff46c93551c30a717554dec5779a37ad32e06230bcf8a182b68aa5bb",
+      "layout_index": 4,
+      "named_cell": "right",
+      "occluder_boxes": [
+        [
+          8,
+          41,
+          58,
+          14
+        ],
+        [
+          72,
+          54,
+          18,
+          12
+        ]
+      ],
+      "replicate": 2,
+      "source_sha256": "c5b81f2c036b891bbdb046219e685dc4f3ef33a0099fc7e2788bd8e14ebd2f34",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M010 043H090V053H010Z\"/><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" d=\"M074 056H088V064H074Z\"/><path fill=\"#37474f\" d=\"M008 041H066V055H008ZM072 054H090V066H072Z\"/></svg>",
+      "target_node_id": "n1"
+    },
+    {
+      "answer_sha256": "3441177177b2381457b49c736c8eff28708ef5b350083aaf74aed99b20bd935c",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 008H090V018H010Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/><path fill=\"#d32f2f\" d=\"M074 022H088V030H074Z\"/><path fill=\"#37474f\" d=\"M008 006H066V020H008ZM072 020H090V032H072Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          10,
+          8,
+          80,
+          10
+        ],
+        [
+          78,
+          72,
+          10,
+          8
+        ],
+        [
+          12,
+          22,
+          10,
+          8
+        ],
+        [
+          74,
+          22,
+          14,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "target",
+        "filler-1",
+        "filler-2",
+        "decoy"
+      ],
+      "case_id": "set_contour/occluded-v2-00-00-top-right",
+      "decoy_node_id": "n4",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n1"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the top-right of the image.",
+      "instruction_sha256": "bbe7d8f26b8b6572ff82937411bd38a8325051ca20c738b7bfe5090f72bb6ea9",
+      "layout_index": 0,
+      "named_cell": "top-right",
+      "occluder_boxes": [
+        [
+          8,
+          6,
+          58,
+          14
+        ],
+        [
+          72,
+          20,
+          18,
+          12
+        ]
+      ],
+      "replicate": 0,
+      "source_sha256": "18f2ffd8f83dfe08934290b9a7454103ee64d5db1f01f974dda23286bf204fd7",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M010 008H090V018H010Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/><path fill=\"#d32f2f\" d=\"M074 022H088V030H074Z\"/><path fill=\"#37474f\" d=\"M008 006H066V020H008ZM072 020H090V032H072Z\"/></svg>",
+      "target_node_id": "n1"
+    },
+    {
+      "answer_sha256": "f87209c99c8290ec7830fc9aeac685e6cc1ac81a93e30ac9899b13e8a0a310c9",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 082H090V092H010Z\"/><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M012 070H026V078H012Z\"/><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#37474f\" d=\"M034 080H092V094H034ZM010 068H028V080H010Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          10,
+          82,
+          80,
+          10
+        ],
+        [
+          78,
+          22,
+          10,
+          8
+        ],
+        [
+          12,
+          70,
+          14,
+          8
+        ],
+        [
+          45,
+          46,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "target",
+        "filler-1",
+        "decoy",
+        "filler-2"
+      ],
+      "case_id": "set_contour/occluded-v2-03-01-bottom-left",
+      "decoy_node_id": "n3",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n1"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the bottom-left of the image.",
+      "instruction_sha256": "f92e1d863755b8172f93e4642da2cfa2e12e144e3e9a0b93cffb71855a251bce",
+      "layout_index": 3,
+      "named_cell": "bottom-left",
+      "occluder_boxes": [
+        [
+          34,
+          80,
+          58,
+          14
+        ],
+        [
+          10,
+          68,
+          18,
+          12
+        ]
+      ],
+      "replicate": 1,
+      "source_sha256": "bb11b0b46e77bf3e8350af33e2c3232c531fdc658e42fba752498c5d8103734b",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M010 082H090V092H010Z\"/><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M012 070H026V078H012Z\"/><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#37474f\" d=\"M034 080H092V094H034ZM010 068H028V080H010Z\"/></svg>",
+      "target_node_id": "n1"
+    },
+    {
+      "answer_sha256": "4deb9d28f8c9fb1365984eda22ae7354afccb045f5d5282010da1ccae516b41e",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M012 072H022V080H012Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          12,
+          72,
+          10,
+          8
+        ],
+        [
+          45,
+          22,
+          10,
+          8
+        ],
+        [
+          45,
+          46,
+          10,
+          8
+        ],
+        [
+          78,
+          72,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "target",
+        "filler-1",
+        "filler-2",
+        "filler-3"
+      ],
+      "case_id": "set_contour/clean-v2-03-03-bottom-left",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n1"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the bottom-left of the image.",
+      "instruction_sha256": "f92e1d863755b8172f93e4642da2cfa2e12e144e3e9a0b93cffb71855a251bce",
+      "layout_index": 3,
+      "named_cell": "bottom-left",
+      "occluder_boxes": [],
+      "replicate": 3,
+      "source_sha256": "0b8d6f6fba41d1229220f626ab9b590b5f08355301876fc182c068326847e004",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M012 072H022V080H012Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/></svg>",
+      "target_node_id": "n1"
+    },
+    {
+      "answer_sha256": "6608a0fae57f45786f5298941a194d6ce22b355bc7e6cef38addb8f6110d3299",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 082H090V092H010Z\"/><path fill=\"#d32f2f\" d=\"M074 070H088V078H074Z\"/><path fill=\"#d32f2f\" d=\"M012 072H022V080H012Z\"/><path fill=\"#37474f\" d=\"M008 080H066V094H008ZM072 068H090V080H072Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          78,
+          22,
+          10,
+          8
+        ],
+        [
+          10,
+          82,
+          80,
+          10
+        ],
+        [
+          74,
+          70,
+          14,
+          8
+        ],
+        [
+          12,
+          72,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "target",
+        "decoy",
+        "filler-2"
+      ],
+      "case_id": "set_contour/occluded-v2-02-02-bottom-right",
+      "decoy_node_id": "n3",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n2"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the bottom-right of the image.",
+      "instruction_sha256": "9ed94e16577ba893a6e1cdddfdba1bba0cd6b2f844b7ed332138df19fb03a973",
+      "layout_index": 2,
+      "named_cell": "bottom-right",
+      "occluder_boxes": [
+        [
+          8,
+          80,
+          58,
+          14
+        ],
+        [
+          72,
+          68,
+          18,
+          12
+        ]
+      ],
+      "replicate": 2,
+      "source_sha256": "a11855481cf8c7325bc59424e90dff54a757dd88c257a695a88a1632866a88ac",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M010 082H090V092H010Z\"/><path fill=\"#d32f2f\" d=\"M074 070H088V078H074Z\"/><path fill=\"#d32f2f\" d=\"M012 072H022V080H012Z\"/><path fill=\"#37474f\" d=\"M008 080H066V094H008ZM072 068H090V080H072Z\"/></svg>",
+      "target_node_id": "n2"
+    },
+    {
+      "answer_sha256": "7a704eb04ae8e2e67358c70d40181a088dcb680669200a9c2c019d4fb78d0b3b",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M012 022H022V030H012Z\"/><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          12,
+          22,
+          10,
+          8
+        ],
+        [
+          45,
+          46,
+          10,
+          8
+        ],
+        [
+          12,
+          46,
+          10,
+          8
+        ],
+        [
+          78,
+          46,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "target",
+        "filler-1",
+        "filler-2",
+        "filler-3"
+      ],
+      "case_id": "set_contour/clean-v2-01-02-top-left",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n1"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the top-left of the image.",
+      "instruction_sha256": "c09a8531dd36f5107714addb1040fa153ffb84aaf0b71904d0787815b9d0a868",
+      "layout_index": 1,
+      "named_cell": "top-left",
+      "occluder_boxes": [],
+      "replicate": 2,
+      "source_sha256": "16e214a42bc4291abe110409e74295a63bdcf6da0824cade0ec06287275f280b",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/><path fill=\"#d32f2f\" d=\"M045 046H055V054H045Z\"/><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/></svg>",
+      "target_node_id": "n1"
+    },
+    {
+      "answer_sha256": "df024490772c947252d957277c2955aea7cb52800feae9ae3c59feb7256cace7",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/><path fill=\"#d32f2f\" d=\"M074 056H088V064H074Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 043H090V053H010Z\"/><path fill=\"#37474f\" d=\"M008 041H066V055H008ZM072 054H090V066H072Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          78,
+          22,
+          10,
+          8
+        ],
+        [
+          12,
+          22,
+          10,
+          8
+        ],
+        [
+          74,
+          56,
+          14,
+          8
+        ],
+        [
+          10,
+          43,
+          80,
+          10
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "filler-2",
+        "decoy",
+        "target"
+      ],
+      "case_id": "set_contour/occluded-v2-04-01-right",
+      "decoy_node_id": "n3",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n4"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the right of the image.",
+      "instruction_sha256": "c9d0dc34ff46c93551c30a717554dec5779a37ad32e06230bcf8a182b68aa5bb",
+      "layout_index": 4,
+      "named_cell": "right",
+      "occluder_boxes": [
+        [
+          8,
+          41,
+          58,
+          14
+        ],
+        [
+          72,
+          54,
+          18,
+          12
+        ]
+      ],
+      "replicate": 1,
+      "source_sha256": "738aff915c8b82d9c71941c476c4755f0195a5cd8af4362e270b774a9dda6f11",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/><path fill=\"#d32f2f\" d=\"M074 056H088V064H074Z\"/><path fill=\"#d32f2f\" d=\"M010 043H090V053H010Z\"/><path fill=\"#37474f\" d=\"M008 041H066V055H008ZM072 054H090V066H072Z\"/></svg>",
+      "target_node_id": "n4"
+    },
+    {
+      "answer_sha256": "f21f7e399e14559940616eed551ba6b38209d330097a9d3521086a940dac3afa",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M012 022H022V030H012Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          45,
+          22,
+          10,
+          8
+        ],
+        [
+          78,
+          46,
+          10,
+          8
+        ],
+        [
+          45,
+          72,
+          10,
+          8
+        ],
+        [
+          12,
+          22,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "filler-2",
+        "filler-3",
+        "target"
+      ],
+      "case_id": "set_contour/clean-v2-01-00-top-left",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n4"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the top-left of the image.",
+      "instruction_sha256": "c09a8531dd36f5107714addb1040fa153ffb84aaf0b71904d0787815b9d0a868",
+      "layout_index": 1,
+      "named_cell": "top-left",
+      "occluder_boxes": [],
+      "replicate": 0,
+      "source_sha256": "d6e730c2720188e87092970a0dae9d8dd0f6e67eaf9cc23c94d83bd7804fe7ee",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/><path fill=\"#d32f2f\" d=\"M045 072H055V080H045Z\"/><path fill=\"#d32f2f\" d=\"M012 022H022V030H012Z\"/></svg>",
+      "target_node_id": "n4"
+    },
+    {
+      "answer_sha256": "a10d0cc6415aa994f0e120a0984c874ae403647dead8bdb02328111df9029995",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          12,
+          46,
+          10,
+          8
+        ],
+        [
+          78,
+          46,
+          10,
+          8
+        ],
+        [
+          78,
+          22,
+          10,
+          8
+        ],
+        [
+          78,
+          72,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "filler-1",
+        "filler-2",
+        "target",
+        "filler-3"
+      ],
+      "case_id": "set_contour/clean-v2-00-00-top-right",
+      "decoy_node_id": null,
+      "family": "clean",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n3"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the top-right of the image.",
+      "instruction_sha256": "bbe7d8f26b8b6572ff82937411bd38a8325051ca20c738b7bfe5090f72bb6ea9",
+      "layout_index": 0,
+      "named_cell": "top-right",
+      "occluder_boxes": [],
+      "replicate": 0,
+      "source_sha256": "4e6c1981a1fbbd4cfd81833e1b9de0ab01c0268b9dd7ddaed96c67f50b8a8afc",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M012 046H022V054H012Z\"/><path fill=\"#d32f2f\" d=\"M078 046H088V054H078Z\"/><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M078 072H088V080H078Z\"/></svg>",
+      "target_node_id": "n3"
+    },
+    {
+      "answer_sha256": "c4342baffc0f1557f655b0d82f9cd3582bef8b207c09041893375a45e6b07e27",
+      "answer_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M012 056H026V064H012Z\"/><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" stroke=\"#000000\" stroke-width=\"2\" d=\"M010 043H090V053H010Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#37474f\" d=\"M034 041H092V055H034ZM010 054H028V066H010Z\"/></svg>",
+      "candidate_boxes": [
+        [
+          12,
+          56,
+          14,
+          8
+        ],
+        [
+          78,
+          22,
+          10,
+          8
+        ],
+        [
+          10,
+          43,
+          80,
+          10
+        ],
+        [
+          45,
+          22,
+          10,
+          8
+        ]
+      ],
+      "candidate_roles": [
+        "decoy",
+        "filler-1",
+        "target",
+        "filler-2"
+      ],
+      "case_id": "set_contour/occluded-v2-05-02-left",
+      "decoy_node_id": "n1",
+      "family": "occluded",
+      "gold_patch": {
+        "operations": [
+          {
+            "attributes": {
+              "stroke": "#000000",
+              "stroke-width": "2"
+            },
+            "op": "set_attributes",
+            "targets": [
+              "n3"
+            ]
+          }
+        ],
+        "version": 1
+      },
+      "instruction": "The following code is the SVG code for a diagram. Please generate an SVG code that draws a black line around the red shape in the left of the image.",
+      "instruction_sha256": "98736d6136503cc0fec80ed1529b23d2c492d38b84a295eae5abf83fff3d30a2",
+      "layout_index": 5,
+      "named_cell": "left",
+      "occluder_boxes": [
+        [
+          34,
+          41,
+          58,
+          14
+        ],
+        [
+          10,
+          54,
+          18,
+          12
+        ]
+      ],
+      "replicate": 2,
+      "source_sha256": "9584d2957045168e3c53325009476b854b8c7d9da7e0d12c317c6e5b7ee3c364",
+      "source_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"#d32f2f\" d=\"M012 056H026V064H012Z\"/><path fill=\"#d32f2f\" d=\"M078 022H088V030H078Z\"/><path fill=\"#d32f2f\" d=\"M010 043H090V053H010Z\"/><path fill=\"#d32f2f\" d=\"M045 022H055V030H045Z\"/><path fill=\"#37474f\" d=\"M034 041H092V055H034ZM010 054H028V066H010Z\"/></svg>",
+      "target_node_id": "n3"
+    }
+  ],
+  "code": {
+    "git": {
+      "commit": null,
+      "tracked_worktree_dirty": null
+    },
+    "script": "scripts/run_occluded_spatial_holdout.py",
+    "script_sha256": "6b403a0917f84cfffe6508d76310bfc9f5680a16efb84ab11ecb8172f6c55ad1"
+  },
+  "created_at_utc": "2026-07-28T19:49:50.135283+00:00",
+  "design": {
+    "balanced_decoy_node_ids": true,
+    "balanced_ids_within_each_label": true,
+    "balanced_target_node_ids": true,
+    "candidate_pairwise_non_overlap": true,
+    "cases": 48,
+    "clean_has_no_occluder": true,
+    "clean_pairwise_non_overlap": true,
+    "equal_occluder_path_character_counts": true,
+    "equal_red_path_character_counts": true,
+    "families": {
+      "clean": 24,
+      "occluded": 24
+    },
+    "fixed_width_coordinates": true,
+    "occluder_path_characters": 42,
+    "one_unique_source_per_case": true,
+    "protected_path_sha256_only": true,
+    "raw_path_coordinates_hidden_from_model": true,
+    "red_path_characters": 21,
+    "unique_source_svgs": 48
+  },
+  "format": "svgpatchlab.occluded_spatial_holdout.v2",
+  "model_config": {
+    "path": "/home/trishita/svgpatchlab-semantic/configs/models/qwen2.5-7b-ollama-constrained.json",
+    "resolved_redacted": {
+      "adapter": "openai_compatible",
+      "base_url": "http://127.0.0.1:11434/v1",
+      "json_mode": false,
+      "max_tokens": "<redacted>",
+      "model": "qwen2.5:7b",
+      "structured_output": "response_format",
+      "supports_images": false,
+      "temperature": 0.0,
+      "timeout": 600
+    },
+    "sha256": "b925da25d659abf1b56afa3fb07cbc04935086d1a74352dca2dc49631abbf615"
+  },
+  "patch_prompt": {
+    "identifier": "svgpatchlab.patch.v4",
+    "template": "patch_v4.txt",
+    "template_sha256": "527126f8b2349f1fb1f0aa7920477319f47c93c47c77b15aaa21014e0f806dbc",
+    "version": 4
+  },
+  "rendering": {
+    "evaluation_render_size": 72,
+    "visual_stats_cache_format": "svgpatchlab.visual_stats.v2",
+    "visual_stats_render_size": 64
+  },
+  "seed": 20260726,
+  "unique_source_count": 48,
+  "verification": {
+    "clean_verified": 24,
+    "occluded_verified": 24,
+    "problems": []
+  }
+}

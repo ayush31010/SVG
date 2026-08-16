@@ -1,5 +1,12 @@
 # Visual Stats Patch: Clean A/B Pilot
 
+> **Status (29 July 2026): historical pilot note.** The official
+> schema-constrained matrices, analytic-geometry ablation, and corrected
+> occlusion-isolating v2 holdout were completed after this page was written.
+> Treat the “next experiment” section below as provenance for the pilot, not
+> current project status. The maintained synthesis is
+> [`output/pdf/render_derived_svg_node_context_report.pdf`](../output/pdf/render_derived_svg_node_context_report.pdf).
+
 ## Question
 
 Does attaching cached, render-derived `visual` fields to the ordinary SVG DOM

@@ -223,6 +223,51 @@ The holdout fails closed if path-coordinate cues leak into the skeleton, if
 position or size labels no longer match the render geometry, or if the active
 patch prompt differs from the frozen version recorded in its manifest.
 
+To isolate the value of rasterizing from the value of geometry itself, run the
+schema-constrained three-arm ablation. `strict_analytic_stats_patch` exposes
+the same compact field names as the render-derived arm, but computes nominal
+geometry directly from the SVG source:
+
+```bash
+python3 -m svgpatchlab.cli matrix \
+  --config configs/experiments/skeleton_patch.json \
+  --model-config configs/models/qwen2.5-7b-ollama-constrained.json \
+  --architectures \
+    strict_skeleton_patch \
+    strict_analytic_stats_patch \
+    strict_visual_stats_patch \
+  --render \
+  --output-root runs/qwen2.5-7b-analytic-ablation-v1
+```
+
+The occlusion-isolating v2 holdout then tests the regime in which nominal
+geometry is deliberately misleading. Verify all static and rendered
+invariants before making model calls:
+
+```bash
+python3 scripts/run_occluded_spatial_holdout.py \
+  --model-config configs/models/qwen2.5-7b-ollama-constrained.json \
+  --output-root runs/occluded-spatial-holdout-v2 \
+  --verify-only
+
+python3 scripts/run_occluded_spatial_holdout.py \
+  --model-config configs/models/qwen2.5-7b-ollama-constrained.json \
+  --output-root runs/occluded-spatial-holdout-v2
+```
+
+Version 2 uses 48 unique sources, balances target and decoy IDs within every
+spatial label, fixes all protected path lengths, keeps clean candidates
+pairwise disjoint, and reserves an immutable output root. Its manifest freezes
+the case order, source and answer hashes, model configuration, prompt hash,
+render sizes, arm order, and verification report.
+
+In the retained Qwen 2.5 7B run, all 144 outputs were valid. On clean cases,
+analytic and rendered target accuracy was 9/24 versus 11/24 (`p=0.625`). On
+occluded cases, analytic accuracy was 0/24 and rendered accuracy was 9/24
+(`p=0.003906`); exact gold patches were 0/24 versus 6/24 (`p=0.03125`).
+These are paired results for a controlled synthetic existence test, not an
+effect-size estimate for natural SVGs.
+
 ### Route deterministic whole-canvas edits
 
 The completed baseline architectures remain unchanged for reproducibility.
@@ -247,12 +292,17 @@ The pilot design, results, caveats, and next experiment are documented in
 `semantic_id_patch` implements a two-stage rendered-to-DOM grounding path for
 instructions such as "remove the small lens":
 
-1. Render the normal SVG and one flat-color element ownership map.
-2. Give the model compact per-node visual fields (`bbox`, visible area,
-   position, rendered color, and `id_color`). A vision-capable model also gets
-   both renders.
-3. Ask for at most three target node IDs.
-4. Hide and rerender only those candidates. Compare the full and hidden
+1. Render the SVG, derive per-node visual statistics, and enumerate lossless
+   visual candidates. A source-paint filter is used only when it preserves the
+   complete matching set.
+2. For a bounded candidate pool, render a labelled evidence card for each node:
+   highlighted full context, a fresh direct-from-SVG vector crop, and a binary
+   ownership mask. The prompt also receives normalized geometry and compact
+   structural/style fields keyed by the visible label.
+3. Ask the model for closed choices such as `{"choices":["B"]}`. DOM IDs stay
+   private and are restored only after constrained decoding. A singleton pool
+   is resolved deterministically without a model call.
+4. Hide and rerender only the selected nodes. Compare the full and hidden
    renders pixel-by-pixel to capture changed area and location, transparent
    holes, newly visible or revealed underlayers, RGB/alpha changes, connected
    components, dominant color transitions, and overlap with the selected
@@ -261,12 +311,13 @@ instructions such as "remove the small lens":
    heatmap. Give a text-only model the same evidence as structured JSON before
    it emits the constrained patch.
 
-The flat-SVG fast path costs two base renders plus one render per shortlisted
-candidate. The difference heatmap and statistics are computed from those
-existing pixels, so they add no SVG rasterization. Each evaluation record
-stores this evidence in `architecture_details.counterfactual_previews`.
-Complex compositing features automatically fall back to the existing
-counterfactual node analysis.
+The evidence renderer shares one full-context render, then performs three
+candidate-specific rasterizations to locate the node and render its contextual
+and isolated vector crops. This avoids magnifying a low-resolution bitmap for
+small elements. The difference heatmap and statistics reuse the later hidden
+previews. Each evaluation record stores selection evidence and
+`architecture_details.counterfactual_previews`. Oversized pools, missing image
+support, and complex compositing use explicit fallback paths.
 
 For deletion, the preset also enables a guarded lightweight-Qwen completion
 fallback. It is bypassed when hiding the selected node reveals an existing
@@ -311,6 +362,44 @@ architecture then uses only the compact visual statistics and counterfactual
 summaries. Local Hugging Face models receive images only when configured with
 `"task": "image-text-to-text"`.
 
+### Train and audit the context-v3 selector
+
+The context-v3 SFT path combines SVGEditBench-derived hard negatives with
+synthetic face, robot, flower, and spatial-grid scenes whose same-style nodes
+can be distinguished only by role, position, size, or relation. Candidate
+letters are deterministically permuted and repainted into separate evidence
+sheets. Validation and test require at least one non-gold distractor, and LoRA
+startup verifies trainable language-attention, vision-attention, and
+visual-projector families.
+
+```bash
+# Generate the grouped, permutation-aware v3 manifests and evidence sheets.
+python -m train.node_grounding_sft \
+  --config configs/train/node_grounding_context_h200.json \
+  --generate-data-only
+
+# Smoke test, then train.
+python -m train.node_grounding_sft \
+  --config configs/train/node_grounding_context_h200_smoke.json
+python -m train.node_grounding_sft \
+  --config configs/train/node_grounding_context_h200.json
+
+# Compare the untouched base model with the trained adapter.
+python -m train.node_grounding_sft \
+  --config configs/train/node_grounding_context_h200_base_eval.json \
+  --eval-only
+python -m train.node_grounding_sft \
+  --config configs/train/node_grounding_context_h200_eval.json \
+  --eval-only
+```
+
+Both evaluations run matched blank-image and blank-instruction ablations.
+No context-v3 result is claimed in this README; compare exact node sets,
+cardinality, source-family breakdowns, permutation consistency, retrieval
+coverage, and ablation drops from a completed paired run. See
+[`docs/NODE_GROUNDING_SFT.md`](docs/NODE_GROUNDING_SFT.md) for the data contract,
+artifact paths, and reporting protocol.
+
 The executor supports validated `remove_element` patches, but the bundled
 SVGEditBench clone does not yet contain a delete-task directory. Deletion
 grounding is therefore covered by the frozen occlusion/deletion suite and
@@ -322,6 +411,12 @@ Use the committed 100 SVGEditBench emoji IDs only for final testing. If SFT or
 LoRA is added, generate training and validation examples from other Twemoji
 files and split by emoji identity. Do not place different tasks for the same SVG
 across train and test.
+
+The context-v3 node-grounding preset uses an identity-disjoint development
+split of SVGEditBench plus synthetic context scenes. Its test split is useful
+for paired base-versus-adapter debugging, but it is not an official zero-shot
+SVGEditBench result. Keep the stricter external-corpus rule above for any final
+benchmark claim.
 
 Primary reported metrics should include:
 

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from collections.abc import Mapping
 from functools import lru_cache
 from pathlib import Path
 from string import Template
@@ -142,6 +143,74 @@ def target_selection_prompt(
         context=context,
         max_candidates=max_candidates,
         image_guidance=image_guidance,
+    )
+
+
+def candidate_rerank_prompt(
+    instruction: str,
+    choices: tuple[str, ...],
+    max_selections: int,
+    candidate_metadata: Mapping[str, Mapping[str, object]] | None = None,
+) -> str:
+    """Build the closed-choice prompt used by visual candidate reranking.
+
+    Node IDs intentionally never enter this prompt.  The contact sheet and the
+    response schema share short visual labels, and the architecture maps those
+    labels back to DOM IDs after constrained decoding.
+    """
+    if not choices:
+        raise ValueError("candidate reranking requires at least one choice")
+    if not 1 <= max_selections <= len(choices):
+        raise ValueError("max_selections must fit the available choices")
+    if max_selections == 1:
+        cardinality_guidance = "Select exactly one choice."
+    else:
+        cardinality_guidance = (
+            f"Select between one and {max_selections} choices. A visually "
+            "singular object can require several choices when it is composed "
+            "from several source elements; choose the smallest complete set."
+        )
+    metadata_lines: list[str] = []
+    if candidate_metadata:
+        if set(candidate_metadata) != set(choices):
+            raise ValueError("candidate metadata must cover every visual choice")
+        visible_fields = (
+            "tag",
+            "center_normalized",
+            "bbox_normalized",
+            "painted_area_fraction",
+            "depth",
+            "child_count",
+            "descendant_count",
+            "fill",
+            "stroke",
+            "effective_opacity",
+        )
+        for choice in choices:
+            values = {
+                field: candidate_metadata[choice].get(field)
+                for field in visible_fields
+                if field in candidate_metadata[choice]
+            }
+            metadata_lines.append(
+                f"{choice}: "
+                + json.dumps(values, separators=(",", ":"), sort_keys=True)
+            )
+    evidence_guidance = (
+        "Each attached candidate card is labeled and contains a highlighted "
+        "full-context panel, a fresh direct-from-SVG vector crop, and a binary "
+        "ownership mask. Cards are ordered exactly as the allowed labels."
+    )
+    if metadata_lines:
+        evidence_guidance += (
+            "\nRenderer-derived candidate geometry and structure (coordinates "
+            "are normalized to the source canvas):\n" + "\n".join(metadata_lines)
+        )
+    return _load_template("rerank_candidates_v1.txt").substitute(
+        instruction=instruction,
+        choices=json.dumps(list(choices), separators=(",", ":")),
+        cardinality_guidance=cardinality_guidance,
+        evidence_guidance=evidence_guidance,
     )
 
 

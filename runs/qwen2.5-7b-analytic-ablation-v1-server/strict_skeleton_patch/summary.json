@@ -1,0 +1,123 @@
+{
+  "architecture": "strict_skeleton_patch",
+  "by_task": {
+    "change_color": {
+      "cases": 100,
+      "completion_tokens": 5557,
+      "gold_patch_exact_rate": 0.1,
+      "mean_failure_aware_mse": 0.0040129853993130385,
+      "mean_model_latency_seconds": 1.6198358859471045,
+      "mean_mse_on_rendered": 0.0040129853993130385,
+      "model_calls": 100,
+      "prompt_tokens": 235084,
+      "protected_geometry_rate": 1.0,
+      "reference_structure_match_rate": 0.1,
+      "valid_output_rate": 1.0
+    },
+    "crop_to_half": {
+      "cases": 100,
+      "completion_tokens": 7771,
+      "gold_patch_exact_rate": 0.31,
+      "mean_failure_aware_mse": 0.6815537163615226,
+      "mean_model_latency_seconds": 1.9976876100990921,
+      "mean_mse_on_rendered": 0.004855363629758358,
+      "model_calls": 100,
+      "prompt_tokens": 233763,
+      "protected_geometry_rate": 0.32,
+      "reference_structure_match_rate": 0.31,
+      "valid_output_rate": 0.32
+    },
+    "set_contour": {
+      "cases": 100,
+      "completion_tokens": 6548,
+      "gold_patch_exact_rate": 0.0,
+      "mean_failure_aware_mse": 0.02117359737370862,
+      "mean_model_latency_seconds": 1.7073249053838664,
+      "mean_mse_on_rendered": 0.02117359737370862,
+      "model_calls": 100,
+      "prompt_tokens": 235249,
+      "protected_geometry_rate": 1.0,
+      "reference_structure_match_rate": 0.0,
+      "valid_output_rate": 1.0
+    },
+    "transparency": {
+      "cases": 100,
+      "completion_tokens": 7683,
+      "gold_patch_exact_rate": 0.03,
+      "mean_failure_aware_mse": 0.97,
+      "mean_model_latency_seconds": 1.9776850627246312,
+      "mean_mse_on_rendered": 0.0,
+      "model_calls": 100,
+      "prompt_tokens": 233463,
+      "protected_geometry_rate": 0.03,
+      "reference_structure_match_rate": 0.03,
+      "valid_output_rate": 0.03
+    },
+    "upside_down": {
+      "cases": 100,
+      "completion_tokens": 6233,
+      "gold_patch_exact_rate": 0.97,
+      "mean_failure_aware_mse": 0.02093110464513302,
+      "mean_model_latency_seconds": 1.7316935294866562,
+      "mean_mse_on_rendered": 0.000950106780747978,
+      "model_calls": 100,
+      "prompt_tokens": 233363,
+      "protected_geometry_rate": 0.98,
+      "reference_structure_match_rate": 0.97,
+      "valid_output_rate": 0.98
+    }
+  },
+  "dataset": {
+    "root": "SVGEditBench",
+    "tasks": {
+      "change_color": 100,
+      "compression": 100,
+      "crop_to_half": 100,
+      "set_contour": 100,
+      "transparency": 100,
+      "upside_down": 100
+    },
+    "total_cases": 600,
+    "unique_emojis": 100
+  },
+  "errors": {
+    "PatchError: attributes are invalid for crop_to_half: ['fill']": 1,
+    "PatchError: attributes are invalid for transparency: ['fill']": 27,
+    "PatchError: attributes are invalid for transparency: ['viewBox']": 23,
+    "PatchError: crop_to_half may only target the SVG root": 56,
+    "PatchError: crop_to_half only permits set_attributes operations": 11,
+    "PatchError: transparency may only target the SVG root": 28,
+    "PatchError: transparency only permits set_attributes operations": 19,
+    "PatchError: upside_down may only target the SVG root": 1,
+    "PatchError: upside_down only permits set_attributes operations": 1
+  },
+  "evaluation": {
+    "render": true,
+    "render_size": 72,
+    "results": "runs/qwen2.5-7b-analytic-ablation-v1-server/strict_skeleton_patch/results.jsonl"
+  },
+  "model": {
+    "adapter": "openai_compatible",
+    "base_url": "http://127.0.0.1:11434/v1",
+    "json_mode": false,
+    "max_tokens": 768,
+    "model": "qwen2.5:7b",
+    "structured_output": "response_format",
+    "supports_images": false,
+    "temperature": 0.0,
+    "timeout": 600
+  },
+  "overall": {
+    "cases": 500,
+    "completion_tokens": 33792,
+    "gold_patch_exact_rate": 0.282,
+    "mean_failure_aware_mse": 0.33953428075593545,
+    "mean_model_latency_seconds": 1.80684539872827,
+    "mean_mse_on_rendered": 0.008309730864767972,
+    "model_calls": 500,
+    "prompt_tokens": 1170922,
+    "protected_geometry_rate": 0.666,
+    "reference_structure_match_rate": 0.282,
+    "valid_output_rate": 0.666
+  }
+}

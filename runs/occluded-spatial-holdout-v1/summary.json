@@ -1,0 +1,53 @@
+{
+  "arms": {
+    "strict_analytic_stats_patch": {
+      "clean": {
+        "cases": 24,
+        "decoy_rate": 0.0,
+        "exact_rate": 0.2916666666666667,
+        "valid_rate": 1.0
+      },
+      "occluded": {
+        "cases": 24,
+        "decoy_rate": 0.625,
+        "exact_rate": 0.0,
+        "valid_rate": 1.0
+      }
+    },
+    "strict_skeleton_patch": {
+      "clean": {
+        "cases": 24,
+        "decoy_rate": 0.0,
+        "exact_rate": 0.0,
+        "valid_rate": 1.0
+      },
+      "occluded": {
+        "cases": 24,
+        "decoy_rate": 0.625,
+        "exact_rate": 0.0,
+        "valid_rate": 1.0
+      }
+    },
+    "strict_visual_stats_patch": {
+      "clean": {
+        "cases": 24,
+        "decoy_rate": 0.0,
+        "exact_rate": 0.3333333333333333,
+        "valid_rate": 1.0
+      },
+      "occluded": {
+        "cases": 24,
+        "decoy_rate": 0.20833333333333334,
+        "exact_rate": 0.625,
+        "valid_rate": 1.0
+      }
+    }
+  },
+  "format": "svgpatchlab.occluded_spatial_holdout.v1",
+  "seed": 20260726,
+  "verification": {
+    "clean_verified": 24,
+    "occluded_verified": 24,
+    "problems": []
+  }
+}
