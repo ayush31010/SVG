@@ -87,10 +87,54 @@
     "source/source-snapshot.tar.gz": "1a1d5b7b998e3bf06f866835e725a14addbd3b59f9b394e8ef66ccb0bf67f103",
     "TRAINING_SUMMARY.md": "997d258e5f856b2cb9bbe47efc2a6aa84871ab3ab9cd8969c16dcd1307cea533"
   },
+  "full_manifest_evaluation": {
+    "date": "2026-08-17",
+    "rows": 153,
+    "base_cases": 51,
+    "source_sha256_clusters": 20,
+    "max_eval_samples": null,
+    "hardware": {
+      "host": "10.71.9.40",
+      "gpu": "NVIDIA H100 NVL",
+      "cuda_visible_devices": "1"
+    },
+    "software": {
+      "python": "3.12.13",
+      "torch": "2.11.0+cu128",
+      "transformers": "5.15.0",
+      "peft": "0.20.0",
+      "accelerate": "1.14.0",
+      "safetensors": "0.8.0"
+    },
+    "adapter_sha256_verified_on_host": true,
+    "generations": 918,
+    "trained": {
+      "exact_set_match": 147,
+      "exact_set_match_rate": 0.9607843137254902,
+      "micro_f1": 0.968299711815562,
+      "base_cases_all_permutations_exact": 46,
+      "valid_json": 153
+    },
+    "base": {
+      "exact_set_match": 59,
+      "exact_set_match_rate": 0.38562091503267976,
+      "micro_f1": 0.4720496894409938,
+      "base_cases_all_permutations_exact": 11,
+      "valid_json": 148
+    },
+    "paired_base_case": {
+      "trained_only_correct": 35,
+      "base_only_correct": 0,
+      "two_sided_exact_sign_test_p": 5.820766091346741e-11
+    },
+    "identity_sha256": "89ce9980f7d90e0c2f9fd2df5992a590d278820493c7d7585ac8abfa6a2c5d5b",
+    "evidence": "evaluation/full-manifest/",
+    "note": "Supersedes the capped 90-row development slice. Trained exact-set moves 96.7% -> 96.1% and permutation consistency 90.0% -> 90.2%; the paired base-case gain rises from 63.3 to 68.6 points because the base model scores lower on the full manifest."
+  },
   "known_limitations": [
-    "The matched evaluation is a capped 30-case development slice, not all 51 test-manifest base cases.",
     "Candidate targets are oracle-injected before reranking; end-to-end candidate recall is not measured.",
-    "Synthetic context probes contribute 60 of 90 evaluation rows.",
-    "The original base-model Hub revision was not pinned."
+    "Synthetic context probes contribute 99 of 153 rows, and the 153 rows resolve to only 20 source-SHA-256 clusters, so they are not independent samples.",
+    "The original base-model Hub revision was not pinned.",
+    "This is not an official zero-shot SVGEditBench result."
   ]
 }

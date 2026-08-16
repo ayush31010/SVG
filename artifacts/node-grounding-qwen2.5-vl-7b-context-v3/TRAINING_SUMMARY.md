@@ -109,6 +109,47 @@ An independent audit reproduced every stored metric and confirmed identical
 row order, instructions, mappings, schemas, targets, label permutations, and
 source hashes between base and trained conditions.
 
+## Complete test manifest (2026-08-17)
+
+The capped slice above has since been superseded by an uncapped run over all
+51 written test base cases (153 rows x 3 label permutations), executed on an
+NVIDIA H100 NVL with the same pinned stack. **The capped slice was not
+flattering: the trained result holds, and the measured gain is larger.**
+
+| Metric | Base | Trained | Change |
+|---|---:|---:|---:|
+| Exact node set | 59/153 (38.6%) | 147/153 (96.1%) | +57.5 pp |
+| Micro-F1 | 47.2% | 96.8% | +49.6 pp |
+| Top-1 node | 76/153 (49.7%) | 148/153 (96.7%) | +47.1 pp |
+| Cardinality | 127/153 (83.0%) | 152/153 (99.3%) | +16.3 pp |
+| Strict JSON | 148/153 (96.7%) | 153/153 (100%) | +3.3 pp |
+| All permutations exact | 11/51 (21.6%) | 46/51 (90.2%) | +68.6 pp |
+| SVGEditBench-derived exact | 34/54 (63.0%) | 53/54 (98.1%) | +35.1 pp |
+| Synthetic-context exact | 25/99 (25.3%) | 94/99 (94.9%) | +69.6 pp |
+| Two-target exact | 0/21 (0.0%) | 20/21 (95.2%) | +95.2 pp |
+
+Against the earlier 90-row slice, trained exact-set moves 96.7% -> 96.1% and
+all-permutation consistency 90.0% -> 90.2%; both are unchanged within the
+resolution of the sample. The base model scores *lower* on the full manifest
+(41.1% -> 38.6%), so the paired base-case gain rises from 63.3 to 68.6 points.
+
+At the paired base-case level: 35 improvements, **0 regressions**, two-sided
+exact sign-test p = 5.82e-11. At the row level: 88 trained-only correct, 0
+base-only, p = 6.46e-27. Across the 20 source-SHA-256 clusters, base is fully
+correct on 3 and trained on 15, with 12 clusters improved and none regressed.
+
+Ablations on the full manifest agree with the slice: blanking the raster drops
+exact selection to 125/153 (81.7%, -14.4 pp) and blanking the instruction to
+5/153 (3.3%, -92.8 pp).
+
+Evidence is under `evaluation/full-manifest/`, including both conditions'
+per-row predictions, metrics, run logs, and `comparison-full.json`. Every
+ablation covered all 153 rows in both conditions (918 generations); the
+adapter's SHA-256 was verified on the evaluation host before the run.
+
+This remains a **conditional reranking** result: candidates are still
+oracle-injected, so end-to-end candidate retrieval is untouched by it.
+
 ## Ablations
 
 - Blank instruction: exact selection falls to 3/90 (3.3%), a 93.3-point drop.
@@ -156,9 +197,12 @@ and SHA-256 checksums.
 
 ## Claim boundaries
 
-- This is a matched held-out **development slice**, not the complete 51-case
-  test manifest and not an official zero-shot SVGEditBench result.
-- Synthetic probes account for 60/90 rows.
+- The complete 51-case test manifest has now been evaluated (see above), so
+  the development-slice caveat no longer applies to the headline number. This
+  is still not an official zero-shot SVGEditBench result.
+- Synthetic probes account for 99/153 rows on the full manifest, and the
+  153 rows resolve to only 20 source-SHA-256 clusters, so they are not
+  independent samples.
 - Candidate targets are oracle-injected before reranking; production candidate
   recall remains a separate problem.
 - The base Hugging Face model name is recorded, but an immutable Hub revision

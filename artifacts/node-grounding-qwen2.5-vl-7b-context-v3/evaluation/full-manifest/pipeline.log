@@ -1,0 +1,14 @@
+=== [1/6] unpack bundle ===
+=== [2/6] lay out repo ===
+test images: 153
+test rows:   153
+=== [3/6] verify adapter checksum ===
+expected dc497b620d9cc22d36b541c481e0097941caa12f6cb3aeb5fcbe8c131dfddc49
+actual   dc497b620d9cc22d36b541c481e0097941caa12f6cb3aeb5fcbe8c131dfddc49
+=== [4/6] base model over the full manifest ===
+base eval finished
+=== [5/6] trained adapter over the full manifest ===
+trained eval finished
+=== [6/6] matched comparison ===
+comparison written
+REMOTE_PIPELINE_DONE
