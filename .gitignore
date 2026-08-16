@@ -32,3 +32,5 @@ tmp/svg_node_grounding_deploy.tar.gz
 tmp/pdfs/baseline-report/
 tmp/pdfs/final-report-v2/
 tmp/remote_smoke_contact_sheet.png
+# Rebuildable from scripts/build_eval_bundle.py; carries adapter weights.
+tmp/node-grounding-eval-bundle.tar.gz
