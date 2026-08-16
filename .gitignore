@@ -34,3 +34,5 @@ tmp/pdfs/final-report-v2/
 tmp/remote_smoke_contact_sheet.png
 # Rebuildable from scripts/build_eval_bundle.py; carries adapter weights.
 tmp/node-grounding-eval-bundle.tar.gz
+# Rebuilt on every run of scripts/run_remote_census.py.
+tmp/identifiability-census-bundle.tar.gz

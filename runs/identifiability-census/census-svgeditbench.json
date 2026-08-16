@@ -1,0 +1,25 @@
+{
+  "corpus": "svgeditbench",
+  "counts": {
+    "identifiable": 2344,
+    "invisible": 27,
+    "render_equivalent": 0
+  },
+  "document_share_with_non_identifiable": 0.06333333333333334,
+  "documents_analysed": 300,
+  "documents_skipped": 0,
+  "documents_with_non_identifiable": 19,
+  "include_root": false,
+  "max_nodes": 60,
+  "node_share": {
+    "identifiable": 0.9886123998312948,
+    "invisible": 0.011387600168705188,
+    "render_equivalent": 0.0
+  },
+  "node_total": 2371,
+  "render_size": 128,
+  "sample_requested": 300,
+  "seed": 20260817,
+  "skipped_reasons": {},
+  "threshold": 0.02
+}

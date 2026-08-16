@@ -1,0 +1,1542 @@
+{
+  "1097:228 Incident": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 2,
+    "non_identifiable_share": 1.0
+  },
+  "1128:24gon rectangle grid": {
+    "counts": {
+      "identifiable": 3,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 3,
+    "non_identifiable_share": 0.0
+  },
+  "1154:25years": {
+    "counts": {
+      "identifiable": 4,
+      "invisible": 30,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 36,
+    "non_identifiable_share": 0.8888888888888888
+  },
+  "1202:2D Chess set - Knight": {
+    "counts": {
+      "identifiable": 6,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 6,
+    "non_identifiable_share": 0.0
+  },
+  "121:0 - 9 ! Handwritten 2": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 2,
+    "non_identifiable_share": 1.0
+  },
+  "1271:2 means easy": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 24,
+      "render_equivalent": 3
+    },
+    "equivalence_classes": 1,
+    "node_count": 27,
+    "non_identifiable_share": 1.0
+  },
+  "1292:2rightarrow": {
+    "counts": {
+      "identifiable": 4,
+      "invisible": 4,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 8,
+    "non_identifiable_share": 0.5
+  },
+  "1479:3D Bed, No background": {
+    "counts": {
+      "identifiable": 16,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 16,
+    "non_identifiable_share": 0.0
+  },
+  "1586:3D Isometric Red Bus": {
+    "counts": {
+      "identifiable": 23,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 25,
+    "non_identifiable_share": 0.08
+  },
+  "172:100 percent Satisfaction Guaranteed Brand": {
+    "counts": {
+      "identifiable": 37,
+      "invisible": 2,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 41,
+    "non_identifiable_share": 0.0975609756097561
+  },
+  "1776:3 looping arrows black": {
+    "counts": {
+      "identifiable": 4,
+      "invisible": 1,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 5,
+    "non_identifiable_share": 0.2
+  },
+  "1816:3 Underline Flourishes": {
+    "counts": {
+      "identifiable": 28,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 28,
+    "non_identifiable_share": 0.0
+  },
+  "1829:40% charged battery": {
+    "counts": {
+      "identifiable": 3,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 5,
+    "non_identifiable_share": 0.4
+  },
+  "1859:45225 Freebassel Petition Signers": {
+    "counts": {
+      "identifiable": 18,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 18,
+    "non_identifiable_share": 0.0
+  },
+  "1942:4 point beveled star": {
+    "counts": {
+      "identifiable": 9,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 9,
+    "non_identifiable_share": 0.0
+  },
+  "210:10 Luke 12:13-21 01": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 2,
+    "non_identifiable_share": 1.0
+  },
+  "213:10 Luke 12:13-21 04": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 2,
+    "non_identifiable_share": 1.0
+  },
+  "2263:5D Star 12": {
+    "counts": {
+      "identifiable": 1,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 1,
+    "non_identifiable_share": 0.0
+  },
+  "2274:5D Star 23": {
+    "counts": {
+      "identifiable": 1,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 1,
+    "non_identifiable_share": 0.0
+  },
+  "2284:5D Star 3": {
+    "counts": {
+      "identifiable": 1,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 1,
+    "non_identifiable_share": 0.0
+  },
+  "236:11 construction geodesic spheres recursive from tetrahedron": {
+    "counts": {
+      "identifiable": 10,
+      "invisible": 29,
+      "render_equivalent": 12
+    },
+    "equivalence_classes": 6,
+    "node_count": 51,
+    "non_identifiable_share": 0.803921568627451
+  },
+  "245:11 Numbers 14:22-33 03": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 2,
+    "non_identifiable_share": 1.0
+  },
+  "2637:70a017": {
+    "counts": {
+      "identifiable": 5,
+      "invisible": 22,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 27,
+    "non_identifiable_share": 0.8148148148148148
+  },
+  "2640:70a022": {
+    "counts": {
+      "identifiable": 3,
+      "invisible": 7,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 10,
+    "non_identifiable_share": 0.7
+  },
+  "2699:7 segment display - 5": {
+    "counts": {
+      "identifiable": 3,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 5,
+    "non_identifiable_share": 0.4
+  },
+  "2777:8 Ball": {
+    "counts": {
+      "identifiable": 6,
+      "invisible": 8,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 14,
+    "non_identifiable_share": 0.5714285714285714
+  },
+  "2785:8 Ball Rack": {
+    "counts": {
+      "identifiable": 17,
+      "invisible": 2,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 21,
+    "non_identifiable_share": 0.19047619047619047
+  },
+  "279:1295099237": {
+    "counts": {
+      "identifiable": 4,
+      "invisible": 6,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 10,
+    "non_identifiable_share": 0.6
+  },
+  "2844:90s woman": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 1,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 3,
+    "non_identifiable_share": 1.0
+  },
+  "2950:AAAAAWWWWWWYYYYYYEEEEEAAAAAA": {
+    "counts": {
+      "identifiable": 32,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 34,
+    "non_identifiable_share": 0.058823529411764705
+  },
+  "2953:AAA ": {
+    "counts": {
+      "identifiable": 3,
+      "invisible": 1,
+      "render_equivalent": 3
+    },
+    "equivalence_classes": 1,
+    "node_count": 7,
+    "non_identifiable_share": 0.5714285714285714
+  },
+  "2994:a balloon": {
+    "counts": {
+      "identifiable": 1,
+      "invisible": 6,
+      "render_equivalent": 4
+    },
+    "equivalence_classes": 2,
+    "node_count": 11,
+    "non_identifiable_share": 0.9090909090909091
+  },
+  "302:12 football rainbow": {
+    "counts": {
+      "identifiable": 12,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 12,
+    "non_identifiable_share": 0.0
+  },
+  "3257:Abstract Art 3": {
+    "counts": {
+      "identifiable": 34,
+      "invisible": 11,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 45,
+    "non_identifiable_share": 0.24444444444444444
+  },
+  "326:12 segment circle": {
+    "counts": {
+      "identifiable": 10,
+      "invisible": 1,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 11,
+    "non_identifiable_share": 0.09090909090909091
+  },
+  "3285:abstract background 1": {
+    "counts": {
+      "identifiable": 32,
+      "invisible": 4,
+      "render_equivalent": 4
+    },
+    "equivalence_classes": 1,
+    "node_count": 40,
+    "non_identifiable_share": 0.2
+  },
+  "3286:abstract background 2": {
+    "counts": {
+      "identifiable": 32,
+      "invisible": 2,
+      "render_equivalent": 4
+    },
+    "equivalence_classes": 1,
+    "node_count": 38,
+    "non_identifiable_share": 0.15789473684210525
+  },
+  "3535:Abstract": {
+    "counts": {
+      "identifiable": 5,
+      "invisible": 7,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 14,
+    "non_identifiable_share": 0.6428571428571429
+  },
+  "3558:Abstract design 117": {
+    "counts": {
+      "identifiable": 2,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 2,
+    "non_identifiable_share": 0.0
+  },
+  "3603:Abstract design 158": {
+    "counts": {
+      "identifiable": 51,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 51,
+    "non_identifiable_share": 0.0
+  },
+  "3607:Abstract design 161": {
+    "counts": {
+      "identifiable": 12,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 12,
+    "non_identifiable_share": 0.0
+  },
+  "3691:Abstract design 239": {
+    "counts": {
+      "identifiable": 46,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 46,
+    "non_identifiable_share": 0.0
+  },
+  "3714:Abstract design 261": {
+    "counts": {
+      "identifiable": 7,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 7,
+    "non_identifiable_share": 0.0
+  },
+  "3720:Abstract design 267": {
+    "counts": {
+      "identifiable": 2,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 2,
+    "non_identifiable_share": 0.0
+  },
+  "3834:Abstract design 99": {
+    "counts": {
+      "identifiable": 12,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 12,
+    "non_identifiable_share": 0.0
+  },
+  "3898:abstracted team mindfulness": {
+    "counts": {
+      "identifiable": 55,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 55,
+    "non_identifiable_share": 0.0
+  },
+  "3921:Abstract Family Landscape Silhouette": {
+    "counts": {
+      "identifiable": 11,
+      "invisible": 21,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 34,
+    "non_identifiable_share": 0.6764705882352942
+  },
+  "3957:Abstract Floral Hexagonal Pattern": {
+    "counts": {
+      "identifiable": 24,
+      "invisible": 1,
+      "render_equivalent": 3
+    },
+    "equivalence_classes": 1,
+    "node_count": 28,
+    "non_identifiable_share": 0.14285714285714285
+  },
+  "4042:Abstract flower 32": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 2,
+    "non_identifiable_share": 1.0
+  },
+  "4045:Abstract flower 35": {
+    "counts": {
+      "identifiable": 1,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 1,
+    "non_identifiable_share": 0.0
+  },
+  "4049:Abstract flower 39": {
+    "counts": {
+      "identifiable": 1,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 1,
+    "non_identifiable_share": 0.0
+  },
+  "4057:Abstract flower 44": {
+    "counts": {
+      "identifiable": 1,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 1,
+    "non_identifiable_share": 0.0
+  },
+  "4117:Abstract Freeform Frame": {
+    "counts": {
+      "identifiable": 5,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 5,
+    "non_identifiable_share": 0.0
+  },
+  "420:16 1 Samuel 13:6-14 01": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 2,
+    "non_identifiable_share": 1.0
+  },
+  "4235:Abstract heart 4 (colour)": {
+    "counts": {
+      "identifiable": 4,
+      "invisible": 5,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 9,
+    "non_identifiable_share": 0.5555555555555556
+  },
+  "430:#16": {
+    "counts": {
+      "identifiable": 5,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 5,
+    "non_identifiable_share": 0.0
+  },
+  "4314:Abstract Line Art Flourish Frame": {
+    "counts": {
+      "identifiable": 51,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 51,
+    "non_identifiable_share": 0.0
+  },
+  "4446:Abstract picture #9": {
+    "counts": {
+      "identifiable": 16,
+      "invisible": 1,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 17,
+    "non_identifiable_share": 0.058823529411764705
+  },
+  "4455:Abstract plant 10": {
+    "counts": {
+      "identifiable": 1,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 1,
+    "non_identifiable_share": 0.0
+  },
+  "4492:Abstract Prismatic Infinity Symbol V": {
+    "counts": {
+      "identifiable": 43,
+      "invisible": 1,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 46,
+    "non_identifiable_share": 0.06521739130434782
+  },
+  "4555:Abstract Silhouette Design": {
+    "counts": {
+      "identifiable": 10,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 10,
+    "non_identifiable_share": 0.0
+  },
+  "4602:Abstract stag": {
+    "counts": {
+      "identifiable": 1,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 1,
+    "non_identifiable_share": 0.0
+  },
+  "466:16 segment display - T": {
+    "counts": {
+      "identifiable": 3,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 5,
+    "non_identifiable_share": 0.4
+  },
+  "4689:Abstract Tile 16": {
+    "counts": {
+      "identifiable": 2,
+      "invisible": 11,
+      "render_equivalent": 4
+    },
+    "equivalence_classes": 1,
+    "node_count": 17,
+    "non_identifiable_share": 0.8823529411764706
+  },
+  "4935:Abstract Vortex 25": {
+    "counts": {
+      "identifiable": 10,
+      "invisible": 0,
+      "render_equivalent": 46
+    },
+    "equivalence_classes": 22,
+    "node_count": 56,
+    "non_identifiable_share": 0.8214285714285714
+  },
+  "5078:Abstract Waves Frame": {
+    "counts": {
+      "identifiable": 8,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 8,
+    "non_identifiable_share": 0.0
+  },
+  "5136:A\u00e7a\u00ed": {
+    "counts": {
+      "identifiable": 28,
+      "invisible": 9,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 37,
+    "non_identifiable_share": 0.24324324324324326
+  },
+  "5208:access point nicolas cle ": {
+    "counts": {
+      "identifiable": 11,
+      "invisible": 27,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 40,
+    "non_identifiable_share": 0.725
+  },
+  "5245:Ace flag": {
+    "counts": {
+      "identifiable": 5,
+      "invisible": 1,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 6,
+    "non_identifiable_share": 0.16666666666666666
+  },
+  "5287:Achernar": {
+    "counts": {
+      "identifiable": 2,
+      "invisible": 11,
+      "render_equivalent": 17
+    },
+    "equivalence_classes": 8,
+    "node_count": 30,
+    "non_identifiable_share": 0.9333333333333333
+  },
+  "5298:A Christmas Shopping Maze": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 16,
+      "render_equivalent": 5
+    },
+    "equivalence_classes": 2,
+    "node_count": 21,
+    "non_identifiable_share": 1.0
+  },
+  "5367:Acoustic guitar": {
+    "counts": {
+      "identifiable": 1,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 1,
+    "non_identifiable_share": 0.0
+  },
+  "5426:Action comics man and woman": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 1,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 3,
+    "non_identifiable_share": 1.0
+  },
+  "5439:Active Black Thumbs Up White Circle": {
+    "counts": {
+      "identifiable": 6,
+      "invisible": 1,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 7,
+    "non_identifiable_share": 0.14285714285714285
+  },
+  "5452:Actual Dog Footprint": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 1,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 3,
+    "non_identifiable_share": 1.0
+  },
+  "5750:Aegishjalmur (non-traced)": {
+    "counts": {
+      "identifiable": 42,
+      "invisible": 1,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 43,
+    "non_identifiable_share": 0.023255813953488372
+  },
+  "5884:African American Female Silhouette - Remix w/o Pick": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 1,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 3,
+    "non_identifiable_share": 1.0
+  },
+  "5910:African Businessman": {
+    "counts": {
+      "identifiable": 22,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 22,
+    "non_identifiable_share": 0.0
+  },
+  "5937:African Farmer": {
+    "counts": {
+      "identifiable": 49,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 49,
+    "non_identifiable_share": 0.0
+  },
+  "6017:African Phantasy": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 2,
+    "non_identifiable_share": 1.0
+  },
+  "6033:African Safari Scene": {
+    "counts": {
+      "identifiable": 2,
+      "invisible": 12,
+      "render_equivalent": 3
+    },
+    "equivalence_classes": 1,
+    "node_count": 17,
+    "non_identifiable_share": 0.8823529411764706
+  },
+  "611:1950s race car driver": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 1,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 3,
+    "non_identifiable_share": 1.0
+  },
+  "612:1950's Rambler Convertible - Colour Remix": {
+    "counts": {
+      "identifiable": 33,
+      "invisible": 21,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 56,
+    "non_identifiable_share": 0.4107142857142857
+  },
+  "615:1950's Vintage Dress Stand": {
+    "counts": {
+      "identifiable": 8,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 8,
+    "non_identifiable_share": 0.0
+  },
+  "6162:Afro Hair": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 2,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 4,
+    "non_identifiable_share": 1.0
+  },
+  "6207:A German Notebook": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 1,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 1,
+    "non_identifiable_share": 1.0
+  },
+  "6215:a Girl and her Sea Monster": {
+    "counts": {
+      "identifiable": 3,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 5,
+    "non_identifiable_share": 0.4
+  },
+  "6241:Agnes Jordan at Denham (remixed)": {
+    "counts": {
+      "identifiable": 4,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 4,
+    "non_identifiable_share": 0.0
+  },
+  "6247:Agnus Dei": {
+    "counts": {
+      "identifiable": 35,
+      "invisible": 1,
+      "render_equivalent": 5
+    },
+    "equivalence_classes": 2,
+    "node_count": 41,
+    "non_identifiable_share": 0.14634146341463414
+  },
+  "625:1960s Era Logo": {
+    "counts": {
+      "identifiable": 8,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 10,
+    "non_identifiable_share": 0.2
+  },
+  "6282:Aguila bicefala sinople, linguada y lampasada de gules": {
+    "counts": {
+      "identifiable": 15,
+      "invisible": 0,
+      "render_equivalent": 4
+    },
+    "equivalence_classes": 2,
+    "node_count": 19,
+    "non_identifiable_share": 0.21052631578947367
+  },
+  "6312:Ahimsa - Jainism": {
+    "counts": {
+      "identifiable": 39,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 39,
+    "non_identifiable_share": 0.0
+  },
+  "63:05 fullmoon openclipart 01": {
+    "counts": {
+      "identifiable": 4,
+      "invisible": 7,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 11,
+    "non_identifiable_share": 0.6363636363636364
+  },
+  "6499:Aiki Lab HackerSpace logo (PT Sans)": {
+    "counts": {
+      "identifiable": 15,
+      "invisible": 8,
+      "render_equivalent": 4
+    },
+    "equivalence_classes": 2,
+    "node_count": 27,
+    "non_identifiable_share": 0.4444444444444444
+  },
+  "6505:AI Maze Without Solution": {
+    "counts": {
+      "identifiable": 2,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 4,
+    "non_identifiable_share": 0.5
+  },
+  "6555:Aircraft": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 1,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 3,
+    "non_identifiable_share": 1.0
+  },
+  "6635:Airplane mode off - mode avion coup\u00e9": {
+    "counts": {
+      "identifiable": 1,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 3,
+    "non_identifiable_share": 0.6666666666666666
+  },
+  "6643:Airplane refixed": {
+    "counts": {
+      "identifiable": 1,
+      "invisible": 1,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 2,
+    "non_identifiable_share": 0.5
+  },
+  "6755:aka Vasarely": {
+    "counts": {
+      "identifiable": 24,
+      "invisible": 1,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 25,
+    "non_identifiable_share": 0.04
+  },
+  "6771:akira": {
+    "counts": {
+      "identifiable": 2,
+      "invisible": 3,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 7,
+    "non_identifiable_share": 0.7142857142857143
+  },
+  "6828:A Large Nirvana Maze": {
+    "counts": {
+      "identifiable": 1,
+      "invisible": 2,
+      "render_equivalent": 4
+    },
+    "equivalence_classes": 2,
+    "node_count": 7,
+    "non_identifiable_share": 0.8571428571428571
+  },
+  "6840:Alarm Clock": {
+    "counts": {
+      "identifiable": 3,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 5,
+    "non_identifiable_share": 0.4
+  },
+  "6848:Alarme incendie": {
+    "counts": {
+      "identifiable": 26,
+      "invisible": 19,
+      "render_equivalent": 3
+    },
+    "equivalence_classes": 1,
+    "node_count": 48,
+    "non_identifiable_share": 0.4583333333333333
+  },
+  "6864:Alaska State Outline with Flag Background": {
+    "counts": {
+      "identifiable": 1,
+      "invisible": 3,
+      "render_equivalent": 10
+    },
+    "equivalence_classes": 1,
+    "node_count": 14,
+    "non_identifiable_share": 0.9285714285714286
+  },
+  "694:1-Bit Stars": {
+    "counts": {
+      "identifiable": 6,
+      "invisible": 1,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 9,
+    "non_identifiable_share": 0.3333333333333333
+  },
+  "7022:Ale riendo": {
+    "counts": {
+      "identifiable": 15,
+      "invisible": 3,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 18,
+    "non_identifiable_share": 0.16666666666666666
+  },
+  "7141:AL Generated Dragon D": {
+    "counts": {
+      "identifiable": 24,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 24,
+    "non_identifiable_share": 0.0
+  },
+  "717:1 million electric bikes vs nuclear power plant": {
+    "counts": {
+      "identifiable": 24,
+      "invisible": 8,
+      "render_equivalent": 19
+    },
+    "equivalence_classes": 8,
+    "node_count": 51,
+    "non_identifiable_share": 0.5294117647058824
+  },
+  "7231:AL Generated Johann Wolfgang von Goethe Portrait 2": {
+    "counts": {
+      "identifiable": 46,
+      "invisible": 5,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 51,
+    "non_identifiable_share": 0.09803921568627451
+  },
+  "7322:AL Generated Tree By Geralt Vectorized": {
+    "counts": {
+      "identifiable": 1,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 1,
+    "non_identifiable_share": 0.0
+  },
+  "7373:Alian": {
+    "counts": {
+      "identifiable": 12,
+      "invisible": 3,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 15,
+    "non_identifiable_share": 0.2
+  },
+  "7390:alice 34": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 2,
+    "non_identifiable_share": 1.0
+  },
+  "7477:Alien Female": {
+    "counts": {
+      "identifiable": 18,
+      "invisible": 1,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 19,
+    "non_identifiable_share": 0.05263157894736842
+  },
+  "7523:ALIEN reloaded": {
+    "counts": {
+      "identifiable": 30,
+      "invisible": 5,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 37,
+    "non_identifiable_share": 0.1891891891891892
+  },
+  "7574:A Line drawing of a Rhino": {
+    "counts": {
+      "identifiable": 53,
+      "invisible": 1,
+      "render_equivalent": 4
+    },
+    "equivalence_classes": 1,
+    "node_count": 58,
+    "non_identifiable_share": 0.08620689655172414
+  },
+  "7630:Allan Kardec-01": {
+    "counts": {
+      "identifiable": 3,
+      "invisible": 0,
+      "render_equivalent": 4
+    },
+    "equivalence_classes": 2,
+    "node_count": 7,
+    "non_identifiable_share": 0.5714285714285714
+  },
+  "7729:Almond plant 1": {
+    "counts": {
+      "identifiable": 1,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 1,
+    "non_identifiable_share": 0.0
+  },
+  "7745:Aloha Shirt": {
+    "counts": {
+      "identifiable": 6,
+      "invisible": 3,
+      "render_equivalent": 4
+    },
+    "equivalence_classes": 1,
+    "node_count": 13,
+    "non_identifiable_share": 0.5384615384615384
+  },
+  "778:2014 S2-4 Vector Art 5": {
+    "counts": {
+      "identifiable": 19,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 19,
+    "non_identifiable_share": 0.0
+  },
+  "7798:Alphabet 12, letter P": {
+    "counts": {
+      "identifiable": 3,
+      "invisible": 7,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 12,
+    "non_identifiable_share": 0.75
+  },
+  "7829:Alphabet 13, letter U": {
+    "counts": {
+      "identifiable": 4,
+      "invisible": 18,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 22,
+    "non_identifiable_share": 0.8181818181818182
+  },
+  "7835:Alphabet 14": {
+    "counts": {
+      "identifiable": 27,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 27,
+    "non_identifiable_share": 0.0
+  },
+  "7964:Alpine Landscape Cliff Face Mountaineering 01b Al1": {
+    "counts": {
+      "identifiable": 6,
+      "invisible": 2,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 10,
+    "non_identifiable_share": 0.4
+  },
+  "7996:Alpine Landscape Cone Top Snow 01a Al1": {
+    "counts": {
+      "identifiable": 9,
+      "invisible": 13,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 22,
+    "non_identifiable_share": 0.5909090909090909
+  },
+  "8090:Alpine Landscape Snow Pinecluster 01a Al1": {
+    "counts": {
+      "identifiable": 4,
+      "invisible": 4,
+      "render_equivalent": 6
+    },
+    "equivalence_classes": 2,
+    "node_count": 14,
+    "non_identifiable_share": 0.7142857142857143
+  },
+  "8149:Alternate Leaf": {
+    "counts": {
+      "identifiable": 21,
+      "invisible": 8,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 29,
+    "non_identifiable_share": 0.27586206896551724
+  },
+  "8262:A masqued bard playing music": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 0,
+      "render_equivalent": 3
+    },
+    "equivalence_classes": 1,
+    "node_count": 3,
+    "non_identifiable_share": 1.0
+  },
+  "8269:amazing 30,60,90 triangle": {
+    "counts": {
+      "identifiable": 18,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 18,
+    "non_identifiable_share": 0.0
+  },
+  "8286:ambages - maze in Latin": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 2,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 4,
+    "non_identifiable_share": 1.0
+  },
+  "829:2017 card": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 1,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 1,
+    "non_identifiable_share": 1.0
+  },
+  "8313:Ambigram Hot ! Bitch": {
+    "counts": {
+      "identifiable": 3,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 3,
+    "non_identifiable_share": 0.0
+  },
+  "8319:Ambigramme Decaironman": {
+    "counts": {
+      "identifiable": 13,
+      "invisible": 2,
+      "render_equivalent": 4
+    },
+    "equivalence_classes": 2,
+    "node_count": 19,
+    "non_identifiable_share": 0.3157894736842105
+  },
+  "8353:Ambulance": {
+    "counts": {
+      "identifiable": 29,
+      "invisible": 2,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 31,
+    "non_identifiable_share": 0.06451612903225806
+  },
+  "8354:Ambulance": {
+    "counts": {
+      "identifiable": 31,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 31,
+    "non_identifiable_share": 0.0
+  },
+  "8359:Ambulance / Emergency Medical Services (EMS)": {
+    "counts": {
+      "identifiable": 19,
+      "invisible": 2,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 23,
+    "non_identifiable_share": 0.17391304347826086
+  },
+  "8367:AM Cat": {
+    "counts": {
+      "identifiable": 11,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 13,
+    "non_identifiable_share": 0.15384615384615385
+  },
+  "8369:am": {
+    "counts": {
+      "identifiable": 1,
+      "invisible": 16,
+      "render_equivalent": 10
+    },
+    "equivalence_classes": 3,
+    "node_count": 27,
+    "non_identifiable_share": 0.9629629629629629
+  },
+  "8383:America Badge Variation 2": {
+    "counts": {
+      "identifiable": 22,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 22,
+    "non_identifiable_share": 0.0
+  },
+  "8474:American Flag Peace Sign": {
+    "counts": {
+      "identifiable": 48,
+      "invisible": 7,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 57,
+    "non_identifiable_share": 0.15789473684210525
+  },
+  "8583:Amethyst Birthstone": {
+    "counts": {
+      "identifiable": 7,
+      "invisible": 24,
+      "render_equivalent": 5
+    },
+    "equivalence_classes": 2,
+    "node_count": 36,
+    "non_identifiable_share": 0.8055555555555556
+  },
+  "8688:Amud skull (grayscale)": {
+    "counts": {
+      "identifiable": 4,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 4,
+    "non_identifiable_share": 0.0
+  },
+  "8799:Anatomy 1": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 12,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 14,
+    "non_identifiable_share": 1.0
+  },
+  "8802:Anatomy Doodles - Neon Remix": {
+    "counts": {
+      "identifiable": 39,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 39,
+    "non_identifiable_share": 0.0
+  },
+  "8840:Ancient Arabian Motif": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 2,
+    "non_identifiable_share": 1.0
+  },
+  "8901:Ancient Mexican pyramid 2": {
+    "counts": {
+      "identifiable": 1,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 1,
+    "non_identifiable_share": 0.0
+  },
+  "9146:Android phone green": {
+    "counts": {
+      "identifiable": 2,
+      "invisible": 32,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 36,
+    "non_identifiable_share": 0.9444444444444444
+  },
+  "9148:Android Phone white": {
+    "counts": {
+      "identifiable": 2,
+      "invisible": 32,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 36,
+    "non_identifiable_share": 0.9444444444444444
+  },
+  "9321:Angel Silhouette": {
+    "counts": {
+      "identifiable": 1,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 1,
+    "non_identifiable_share": 0.0
+  },
+  "9392:angolo aureo 01": {
+    "counts": {
+      "identifiable": 33,
+      "invisible": 0,
+      "render_equivalent": 4
+    },
+    "equivalence_classes": 2,
+    "node_count": 37,
+    "non_identifiable_share": 0.10810810810810811
+  },
+  "9400:angolo aureo 09": {
+    "counts": {
+      "identifiable": 39,
+      "invisible": 3,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 44,
+    "non_identifiable_share": 0.11363636363636363
+  },
+  "9503:Angry Man": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 0,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 2,
+    "non_identifiable_share": 1.0
+  },
+  "9524:Angry Putin": {
+    "counts": {
+      "identifiable": 0,
+      "invisible": 1,
+      "render_equivalent": 2
+    },
+    "equivalence_classes": 1,
+    "node_count": 3,
+    "non_identifiable_share": 1.0
+  },
+  "9579:An HD Keyhole Mask, non-transparent": {
+    "counts": {
+      "identifiable": 3,
+      "invisible": 2,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 5,
+    "non_identifiable_share": 0.4
+  },
+  "9848:Animation application": {
+    "counts": {
+      "identifiable": 31,
+      "invisible": 0,
+      "render_equivalent": 0
+    },
+    "equivalence_classes": 0,
+    "node_count": 31,
+    "non_identifiable_share": 0.0
+  }
+}
