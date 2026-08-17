@@ -1,0 +1,273 @@
+{
+  "arms": [
+    "strict_skeleton_patch",
+    "strict_visual_stats_patch"
+  ],
+  "error_classes": {
+    "strict_skeleton_patch": {
+      "by_class": {
+        "PatchError: attributes are invalid for crop_to_half: [...]": 1,
+        "PatchError: attributes are invalid for transparency: [...]": 50,
+        "PatchError: crop_to_half may only target the SVG root": 56,
+        "PatchError: crop_to_half only permits set_attributes operations": 11,
+        "PatchError: transparency may only target the SVG root": 28,
+        "PatchError: transparency only permits set_attributes operations": 19,
+        "PatchError: upside_down may only target the SVG root": 1,
+        "PatchError: upside_down only permits set_attributes operations": 1
+      },
+      "no_patch_emitted": 0,
+      "total_errored": 167
+    },
+    "strict_visual_stats_patch": {
+      "by_class": {
+        "PatchError: attributes are invalid for crop_to_half: [...]": 1,
+        "PatchError: attributes are invalid for transparency: [...]": 35,
+        "PatchError: attributes are not allowlisted: [...]": 9,
+        "PatchError: crop_to_half may only target the SVG root": 52,
+        "PatchError: crop_to_half only permits set_attributes operations": 15,
+        "PatchError: transparency may only target the SVG root": 41,
+        "PatchError: transparency only permits set_attributes operations": 8,
+        "PatchError: unknown patch fields: [...]": 1,
+        "PatchError: upside_down may only target the SVG root": 1,
+        "PatchError: upside_down only permits set_attributes operations": 1
+      },
+      "no_patch_emitted": 1,
+      "total_errored": 164
+    }
+  },
+  "groups": {
+    "grounding": {
+      "arms": {
+        "strict_skeleton_patch": {
+          "target_exact_rate": 0.82,
+          "target_exact_rate_given_valid": 0.82,
+          "valid_output_rate": 1.0
+        },
+        "strict_visual_stats_patch": {
+          "target_exact_rate": 0.765,
+          "target_exact_rate_given_valid": 0.765,
+          "valid_output_rate": 1.0
+        }
+      },
+      "both_valid_subset": {
+        "cases": 200,
+        "sign_test_p": 0.043285250663757324,
+        "skeleton_only_wins": 18,
+        "skeleton_target_exact_rate": 0.82,
+        "visual_only_wins": 7,
+        "visual_target_exact_rate": 0.765
+      },
+      "cases": 200,
+      "skeleton_only_win_causes": {
+        "no_patch_emitted": 0,
+        "patch_but_invalid_svg": 0,
+        "total": 18,
+        "valid_patch_wrong_target": 18
+      }
+    },
+    "overall": {
+      "arms": {
+        "strict_skeleton_patch": {
+          "target_exact_rate": 0.64,
+          "target_exact_rate_given_valid": 0.8918918918918919,
+          "valid_output_rate": 0.666
+        },
+        "strict_visual_stats_patch": {
+          "target_exact_rate": 0.604,
+          "target_exact_rate_given_valid": 0.8601190476190477,
+          "valid_output_rate": 0.672
+        }
+      },
+      "both_valid_subset": {
+        "cases": 317,
+        "sign_test_p": 0.043285250663757324,
+        "skeleton_only_wins": 18,
+        "skeleton_target_exact_rate": 0.886435331230284,
+        "visual_only_wins": 7,
+        "visual_target_exact_rate": 0.8517350157728707
+      },
+      "cases": 500,
+      "skeleton_only_win_causes": {
+        "no_patch_emitted": 0,
+        "patch_but_invalid_svg": 31,
+        "total": 49,
+        "valid_patch_wrong_target": 18
+      }
+    },
+    "root_only": {
+      "arms": {
+        "strict_skeleton_patch": {
+          "target_exact_rate": 0.52,
+          "target_exact_rate_given_valid": 1.0,
+          "valid_output_rate": 0.44333333333333336
+        },
+        "strict_visual_stats_patch": {
+          "target_exact_rate": 0.49666666666666665,
+          "target_exact_rate_given_valid": 1.0,
+          "valid_output_rate": 0.4533333333333333
+        }
+      },
+      "both_valid_subset": {
+        "cases": 117,
+        "sign_test_p": 1.0,
+        "skeleton_only_wins": 0,
+        "skeleton_target_exact_rate": 1.0,
+        "visual_only_wins": 0,
+        "visual_target_exact_rate": 1.0
+      },
+      "cases": 300,
+      "skeleton_only_win_causes": {
+        "no_patch_emitted": 0,
+        "patch_but_invalid_svg": 31,
+        "total": 31,
+        "valid_patch_wrong_target": 0
+      }
+    },
+    "task:change_color": {
+      "arms": {
+        "strict_skeleton_patch": {
+          "target_exact_rate": 0.87,
+          "target_exact_rate_given_valid": 0.87,
+          "valid_output_rate": 1.0
+        },
+        "strict_visual_stats_patch": {
+          "target_exact_rate": 0.77,
+          "target_exact_rate_given_valid": 0.77,
+          "valid_output_rate": 1.0
+        }
+      },
+      "both_valid_subset": {
+        "cases": 100,
+        "sign_test_p": 0.012939453125,
+        "skeleton_only_wins": 12,
+        "skeleton_target_exact_rate": 0.87,
+        "visual_only_wins": 2,
+        "visual_target_exact_rate": 0.77
+      },
+      "cases": 100,
+      "skeleton_only_win_causes": {
+        "no_patch_emitted": 0,
+        "patch_but_invalid_svg": 0,
+        "total": 12,
+        "valid_patch_wrong_target": 12
+      }
+    },
+    "task:crop_to_half": {
+      "arms": {
+        "strict_skeleton_patch": {
+          "target_exact_rate": 0.32,
+          "target_exact_rate_given_valid": 1.0,
+          "valid_output_rate": 0.32
+        },
+        "strict_visual_stats_patch": {
+          "target_exact_rate": 0.32,
+          "target_exact_rate_given_valid": 1.0,
+          "valid_output_rate": 0.31
+        }
+      },
+      "both_valid_subset": {
+        "cases": 20,
+        "sign_test_p": 1.0,
+        "skeleton_only_wins": 0,
+        "skeleton_target_exact_rate": 1.0,
+        "visual_only_wins": 0,
+        "visual_target_exact_rate": 1.0
+      },
+      "cases": 100,
+      "skeleton_only_win_causes": {
+        "no_patch_emitted": 0,
+        "patch_but_invalid_svg": 12,
+        "total": 12,
+        "valid_patch_wrong_target": 0
+      }
+    },
+    "task:set_contour": {
+      "arms": {
+        "strict_skeleton_patch": {
+          "target_exact_rate": 0.77,
+          "target_exact_rate_given_valid": 0.77,
+          "valid_output_rate": 1.0
+        },
+        "strict_visual_stats_patch": {
+          "target_exact_rate": 0.76,
+          "target_exact_rate_given_valid": 0.76,
+          "valid_output_rate": 1.0
+        }
+      },
+      "both_valid_subset": {
+        "cases": 100,
+        "sign_test_p": 1.0,
+        "skeleton_only_wins": 6,
+        "skeleton_target_exact_rate": 0.77,
+        "visual_only_wins": 5,
+        "visual_target_exact_rate": 0.76
+      },
+      "cases": 100,
+      "skeleton_only_win_causes": {
+        "no_patch_emitted": 0,
+        "patch_but_invalid_svg": 0,
+        "total": 6,
+        "valid_patch_wrong_target": 6
+      }
+    },
+    "task:transparency": {
+      "arms": {
+        "strict_skeleton_patch": {
+          "target_exact_rate": 0.26,
+          "target_exact_rate_given_valid": 1.0,
+          "valid_output_rate": 0.03
+        },
+        "strict_visual_stats_patch": {
+          "target_exact_rate": 0.19,
+          "target_exact_rate_given_valid": 1.0,
+          "valid_output_rate": 0.07
+        }
+      },
+      "both_valid_subset": {
+        "cases": 1,
+        "sign_test_p": 1.0,
+        "skeleton_only_wins": 0,
+        "skeleton_target_exact_rate": 1.0,
+        "visual_only_wins": 0,
+        "visual_target_exact_rate": 1.0
+      },
+      "cases": 100,
+      "skeleton_only_win_causes": {
+        "no_patch_emitted": 0,
+        "patch_but_invalid_svg": 17,
+        "total": 17,
+        "valid_patch_wrong_target": 0
+      }
+    },
+    "task:upside_down": {
+      "arms": {
+        "strict_skeleton_patch": {
+          "target_exact_rate": 0.98,
+          "target_exact_rate_given_valid": 1.0,
+          "valid_output_rate": 0.98
+        },
+        "strict_visual_stats_patch": {
+          "target_exact_rate": 0.98,
+          "target_exact_rate_given_valid": 1.0,
+          "valid_output_rate": 0.98
+        }
+      },
+      "both_valid_subset": {
+        "cases": 96,
+        "sign_test_p": 1.0,
+        "skeleton_only_wins": 0,
+        "skeleton_target_exact_rate": 1.0,
+        "visual_only_wins": 0,
+        "visual_target_exact_rate": 1.0
+      },
+      "cases": 100,
+      "skeleton_only_win_causes": {
+        "no_patch_emitted": 0,
+        "patch_but_invalid_svg": 2,
+        "total": 2,
+        "valid_patch_wrong_target": 0
+      }
+    }
+  },
+  "root": "runs/qwen2.5-7b-constrained-ab-full-v1-server"
+}

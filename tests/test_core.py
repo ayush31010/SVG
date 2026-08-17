@@ -10,6 +10,7 @@ from svgpatchlab.architectures.prompts import (
     PATCH_PROMPT_VERSIONS,
     PATCH_V2_EXAMPLES,
     patch_prompt,
+    target_selection_prompt,
 )
 from svgpatchlab.core import apply_patch, build_scene, derive_patch, validate_patch
 from svgpatchlab.core.patch import Patch, PatchError, PatchOperation, parse_patch
@@ -115,6 +116,26 @@ class PromptTests(unittest.TestCase):
         self.assertNotIn('"viewBox": "0 0 18 36"', examples)
         self.assertNotIn("10 5 40 40", prompt)
         self.assertNotIn("0 0 18 36", prompt)
+
+    def test_target_selection_prompt_explains_id_grounding_for_both_model_types(self):
+        visual = target_selection_prompt(
+            "Remove the lens.",
+            '{"nodes":[{"id":"n2","visual":{"id_color":"#123456"}}]}',
+            max_candidates=2,
+            has_images=True,
+            has_id_map=True,
+        )
+        self.assertIn('{"targets":["nX"]}', visual)
+        self.assertIn("Image 1 is the normal SVG render", visual)
+        self.assertIn("between 1 and 2", visual)
+        self.assertIn("#123456", visual)
+
+        text_only = target_selection_prompt(
+            "Remove the lens.",
+            "{}",
+            has_images=False,
+        )
+        self.assertIn("No images are attached", text_only)
 
 
 if __name__ == "__main__":

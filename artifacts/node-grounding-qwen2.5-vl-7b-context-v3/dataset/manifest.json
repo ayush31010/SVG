@@ -1,0 +1,107 @@
+{
+  "bench_root": "SVGEditBench",
+  "candidate_count": 6,
+  "candidate_policy": "hard_negative",
+  "counts": {
+    "test": 153,
+    "train": 782,
+    "val": 122
+  },
+  "coverage": {
+    "by_split": {
+      "test": {
+        "candidate_pool_audited_cases": 51,
+        "candidate_retrieval_coverage_of_targeted_cases": 1.0,
+        "candidate_retrieval_rate": 1.0,
+        "candidate_retrieved_cases": 51,
+        "cases_with_non_gold_distractor": 51,
+        "non_gold_distractor_rate": 1.0,
+        "source_cases": 51,
+        "targeted_cases": 51,
+        "written_base_cases": 51
+      },
+      "train": {
+        "candidate_pool_audited_cases": 391,
+        "candidate_retrieval_coverage_of_targeted_cases": 0.9678217821782178,
+        "candidate_retrieval_rate": 1.0,
+        "candidate_retrieved_cases": 391,
+        "cases_with_non_gold_distractor": 389,
+        "non_gold_distractor_rate": 0.9948849104859335,
+        "source_cases": 404,
+        "targeted_cases": 404,
+        "written_base_cases": 391
+      },
+      "val": {
+        "candidate_pool_audited_cases": 42,
+        "candidate_retrieval_coverage_of_targeted_cases": 0.9333333333333333,
+        "candidate_retrieval_rate": 1.0,
+        "candidate_retrieved_cases": 42,
+        "cases_with_non_gold_distractor": 42,
+        "non_gold_distractor_rate": 1.0,
+        "permutation_space_capped_cases": 4,
+        "source_cases": 45,
+        "targeted_cases": 45,
+        "written_base_cases": 42
+      }
+    },
+    "retrieval_policy": "oracle_injected"
+  },
+  "crop_padding": 0.25,
+  "emoji_counts": {
+    "test": 20,
+    "train": 154,
+    "val": 19
+  },
+  "format": "svgpatchlab.node_grounding.v3",
+  "honest_eval_require_distractor": true,
+  "label_permutations": {
+    "test": 3,
+    "train": 2,
+    "val": 3
+  },
+  "label_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "choices": {
+        "items": {
+          "enum": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ],
+          "type": "string"
+        },
+        "maxItems": 4,
+        "minItems": 1,
+        "type": "array",
+        "uniqueItems": true
+      }
+    },
+    "required": [
+      "choices"
+    ],
+    "type": "object"
+  },
+  "max_targets": 4,
+  "output_dir": "data/node_grounding-context-v3",
+  "render_size": 224,
+  "seed": 20260816,
+  "shuffle_candidate_labels": true,
+  "skipped": {
+    "invalid_example": 12,
+    "too_many_targets": 4
+  },
+  "split_grouping": "emoji_identity_and_source_sha256_components",
+  "split_ratios": {
+    "test": 0.1,
+    "train": 0.8,
+    "val": 0.1
+  },
+  "tasks": [
+    "change_color",
+    "set_contour"
+  ]
+}

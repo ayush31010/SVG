@@ -1,0 +1,12 @@
+{
+  "completed_arms": [
+    "strict_skeleton_patch",
+    "strict_analytic_stats_patch",
+    "strict_visual_stats_patch"
+  ],
+  "completed_at_utc": "2026-07-28T19:58:28.210262+00:00",
+  "format": "svgpatchlab.occluded_spatial_holdout.v2",
+  "started_at_utc": "2026-07-28T19:49:50.135283+00:00",
+  "state": "complete",
+  "summary_sha256": "7ffef83604ce043d01e23ac5ca9515d80f1ed933d95f8ed50532b118451e87a6"
+}

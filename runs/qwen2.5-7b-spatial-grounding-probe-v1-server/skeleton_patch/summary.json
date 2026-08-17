@@ -1,0 +1,12 @@
+{
+  "architecture": "skeleton_patch",
+  "cases": 8,
+  "completion_tokens": 596,
+  "gold_patch_exact_rate": 0.0,
+  "mean_failure_aware_mse": 0.01007924834266305,
+  "mean_model_latency_seconds": 10.26864327932708,
+  "mean_wall_seconds": 10.269117901130812,
+  "prompt_tokens": 14272,
+  "target_exact_rate": 0.0,
+  "valid_output_rate": 1.0
+}

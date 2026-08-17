@@ -1,0 +1,40 @@
+{
+  "by_task": {
+    "change_color": {
+      "cases": 2,
+      "valid_output_rate": 1.0
+    },
+    "crop_to_half": {
+      "cases": 2,
+      "valid_output_rate": 1.0
+    },
+    "set_contour": {
+      "cases": 2,
+      "valid_output_rate": 0.5
+    },
+    "transparency": {
+      "cases": 2,
+      "valid_output_rate": 0.0
+    },
+    "upside_down": {
+      "cases": 2,
+      "valid_output_rate": 0.5
+    }
+  },
+  "errors": {
+    "all chain steps failed": 3,
+    "decompose: ValueError: decomposer returned invalid JSON: model response does not contain a valid JSON object": 1
+  },
+  "evaluation": {
+    "render": false,
+    "render_size": 72,
+    "results": "/kaggle/working/kaggle-plans-full/plan_c_chain/chain_results.jsonl"
+  },
+  "overall": {
+    "cases": 10,
+    "mean_failure_aware_mse": null,
+    "mean_step_precision": 0.6,
+    "mean_step_recall": 0.6,
+    "valid_output_rate": 0.6
+  }
+}

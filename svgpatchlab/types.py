@@ -25,6 +25,11 @@ class ModelRequest:
     prompt: str
     images: tuple[str, ...] = ()
     metadata: dict[str, Any] = field(default_factory=dict)
+    #: JSON Schema the response must satisfy. Adapters configured for
+    #: structured output send it to the server so decoding is constrained;
+    #: adapters without that support ignore it and the parser catches drift.
+    response_schema: dict[str, Any] | None = None
+    response_schema_name: str = "response"
 
 
 @dataclass(frozen=True)
@@ -38,5 +43,6 @@ class ArchitectureResult:
     output_svg: str | None = None
     patch: Any | None = None
     raw_responses: list[str] = field(default_factory=list)
+    details: dict[str, Any] = field(default_factory=dict)
     error: str | None = None
     model_calls: int = 0

@@ -1,16 +1,25 @@
 from __future__ import annotations
 
+from typing import Any
+
 from .base import Architecture
 from .diagnostic import OraclePatchArchitecture, OracleTargetArchitecture, TwoStagePatchArchitecture
 from .patching import (
+    AnalyticStatsPatchArchitecture,
     FullContextPatchArchitecture,
+    RoutedStrictSkeletonPatchArchitecture,
+    RoutedStrictVisualStatsPatchArchitecture,
     SkeletonPatchArchitecture,
+    StrictAnalyticStatsPatchArchitecture,
+    StrictSkeletonPatchArchitecture,
+    StrictVisualStatsPatchArchitecture,
     VisualGNNPatchArchitecture,
     VisualSkeletonPatchArchitecture,
     VisualStatsPatchArchitecture,
 )
 from .rewrite import FullRewriteArchitecture
 from .rules import RuleBasedPatchArchitecture
+from .semantic import SemanticIdPatchArchitecture
 
 
 ARCHITECTURES: dict[str, type[Architecture]] = {
@@ -21,14 +30,22 @@ ARCHITECTURES: dict[str, type[Architecture]] = {
     "skeleton_patch": SkeletonPatchArchitecture,
     "visual_skeleton_patch": VisualSkeletonPatchArchitecture,
     "visual_stats_patch": VisualStatsPatchArchitecture,
+    "analytic_stats_patch": AnalyticStatsPatchArchitecture,
+    "strict_analytic_stats_patch": StrictAnalyticStatsPatchArchitecture,
+    "strict_skeleton_patch": StrictSkeletonPatchArchitecture,
+    "strict_visual_stats_patch": StrictVisualStatsPatchArchitecture,
+    "routed_strict_skeleton_patch": RoutedStrictSkeletonPatchArchitecture,
+    "routed_strict_visual_stats_patch": RoutedStrictVisualStatsPatchArchitecture,
     "visual_gnn_patch": VisualGNNPatchArchitecture,
+    "semantic_id_patch": SemanticIdPatchArchitecture,
     "oracle_target_patch": OracleTargetArchitecture,
     "two_stage_patch": TwoStagePatchArchitecture,
 }
 
 
-def create_architecture(name: str) -> Architecture:
+def create_architecture(name: str, **options: Any) -> Architecture:
     try:
-        return ARCHITECTURES[name]()
+        architecture_type = ARCHITECTURES[name]
     except KeyError as exc:
         raise ValueError(f"unknown architecture: {name}") from exc
+    return architecture_type(**options)

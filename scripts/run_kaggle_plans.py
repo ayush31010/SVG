@@ -25,6 +25,12 @@ LOCALIZED_TASKS = (
     "transparency",
     "crop_to_half",
 )
+PLAN_A_ARCHITECTURES = (
+    "skeleton_patch",
+    "visual_stats_patch",
+    "semantic_id_patch",
+    "visual_skeleton_patch",
+)
 PLAN_B_TASKS = (*LOCALIZED_TASKS, "rotate", "flip", "delete")
 PLAN_B_ARCHITECTURES = (
     "oracle_patch",
@@ -116,7 +122,7 @@ def _run_plan_a(
     model_config: dict[str, Any],
 ) -> dict[str, Any]:
     tasks = list(LOCALIZED_TASKS)
-    architectures = ["visual_stats_patch", "visual_skeleton_patch"]
+    architectures = list(PLAN_A_ARCHITECTURES)
     if args.include_visual_gnn:
         architectures.append("visual_gnn_patch")
 

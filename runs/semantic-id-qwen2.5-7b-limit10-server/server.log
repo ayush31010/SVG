@@ -1,0 +1,64 @@
+[semantic_id_patch] starting evaluation
+[semantic_id_patch] 10 cases done, 4.3 min elapsed, last: change_color/1f3b1
+{
+  "architecture": "semantic_id_patch",
+  "by_task": {
+    "change_color": {
+      "cases": 10,
+      "completion_tokens": 1332,
+      "gold_patch_exact_rate": 0.0,
+      "mean_failure_aware_mse": 0.11581000005826354,
+      "mean_model_latency_seconds": 13.648854573477843,
+      "mean_mse_on_rendered": 0.017566666731403932,
+      "model_calls": 19,
+      "prompt_tokens": 42480,
+      "protected_geometry_rate": 0.9,
+      "reference_structure_match_rate": 0.0,
+      "valid_output_rate": 0.9
+    }
+  },
+  "dataset": {
+    "root": "SVGEditBench",
+    "tasks": {
+      "change_color": 100,
+      "compression": 100,
+      "crop_to_half": 100,
+      "set_contour": 100,
+      "transparency": 100,
+      "upside_down": 100
+    },
+    "total_cases": 600,
+    "unique_emojis": 100
+  },
+  "errors": {
+    "PatchError: target selection requires a nonempty 'targets' list": 1
+  },
+  "evaluation": {
+    "render": true,
+    "render_size": 72,
+    "results": "runs/semantic-id-qwen2.5-7b-limit10/results.jsonl"
+  },
+  "model": {
+    "adapter": "openai_compatible",
+    "base_url": "http://127.0.0.1:11434/v1",
+    "json_mode": false,
+    "max_tokens": 768,
+    "model": "qwen2.5:7b",
+    "supports_images": false,
+    "temperature": 0.0,
+    "timeout": 600
+  },
+  "overall": {
+    "cases": 10,
+    "completion_tokens": 1332,
+    "gold_patch_exact_rate": 0.0,
+    "mean_failure_aware_mse": 0.11581000005826354,
+    "mean_model_latency_seconds": 13.648854573477843,
+    "mean_mse_on_rendered": 0.017566666731403932,
+    "model_calls": 19,
+    "prompt_tokens": 42480,
+    "protected_geometry_rate": 0.9,
+    "reference_structure_match_rate": 0.0,
+    "valid_output_rate": 0.9
+  }
+}

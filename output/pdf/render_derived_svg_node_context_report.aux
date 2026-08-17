@@ -1,0 +1,83 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Executive summary}{2}{section.1}\protected@file@percent }
+\citation{layersvg}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Problem statement}{3}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Why SVG source alone is not always enough}{3}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Scope of this work}{3}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Relationship to LayerSVG}{3}{section.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces LayerSVG and the present system address adjacent stages.}}{3}{table.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Method}{4}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Counterfactual visual measurement}{4}{subsection.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Counterfactual attribution on the real SVGEditBench \texttt  {1f324} sun-cloud SVG. In the difference map, \textcolor {cyan}{cyan} marks pixels where the orange underlayer is revealed and \textcolor {red}{red} marks pixels that become transparent; unchanged content remains dim gray. The middle and right panels are measurement artifacts, not model edits.}}{4}{figure.1}\protected@file@percent }
+\newlabel{fig:counterfactual-attribution}{{1}{4}{Counterfactual attribution on the real SVGEditBench \code {1f324} sun-cloud SVG. In the difference map, \textcolor {cyan}{cyan} marks pixels where the orange underlayer is revealed and \textcolor {red}{red} marks pixels that become transparent; unchanged content remains dim gray. The middle and right panels are measurement artifacts, not model edits}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}What the model sees}{4}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Meaning of \texttt  {visible:false}}{5}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Three-hop implementation path}{5}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Recommended production strategy}{5}{subsection.4.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Recommended visual-attribution strategy for an SVG with \(N\) nodes.}}{5}{table.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Clean A/B boundary}{5}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Sun and cloud case study}{6}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Case A: the sun is structurally complete}{6}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Case B: the sun geometry is incomplete}{6}{subsection.6.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The deletion/completion decision rendered from retained SVG artifacts. The top row is the normal case: deletion alone is sufficient. In the bottom row, the source encodes only a half-sun; deletion exposes the missing region, so the guarded completion replaces the preserved sun candidate with a full circle.}}{7}{figure.2}\protected@file@percent }
+\newlabel{fig:sun-cloud-outcomes}{{2}{7}{The deletion/completion decision rendered from retained SVG artifacts. The top row is the normal case: deletion alone is sufficient. In the bottom row, the source encodes only a half-sun; deletion exposes the missing region, so the guarded completion replaces the preserved sun candidate with a full circle}{figure.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Experimental setup}{7}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Frozen model and rendering}{7}{subsection.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Metrics}{7}{subsection.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Official smoke}{8}{subsection.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Completed official matrix}{8}{subsection.7.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.5}Path-only spatial probe}{8}{subsection.7.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.6}Expanded 39-source holdout}{8}{subsection.7.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.7}Corrected analytic and occlusion-isolating holdout}{9}{subsection.7.7}\protected@file@percent }
+\newlabel{sec:occlusion-setup}{{7.7}{9}{Corrected analytic and occlusion-isolating holdout}{subsection.7.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Results}{9}{section.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Official 10-case matched smoke}{9}{subsection.8.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Official smoke results. Percentages are over 10 matched task cases from 2 unique source SVGs.}}{9}{table.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Completed 1,000-call official matrix}{10}{subsection.8.2}\protected@file@percent }
+\newlabel{sec:matrix}{{8.2}{10}{Completed 1,000-call official matrix}{subsection.8.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Completed official results over 500 matched cases per arm. Exact-patch rates use all-case denominators from the paired analyzer.}}{10}{table.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Official subgroup results. Grounding contains color and contour; root-only contains crop, transparency, and upside-down.}}{10}{table.5}\protected@file@percent }
+\newlabel{tab:subgroup}{{5}{10}{Official subgroup results. Grounding contains color and contour; root-only contains crop, transparency, and upside-down}{table.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Official task results; each task contains 100 paired cases.}}{10}{table.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Path-only spatial grounding probe}{11}{subsection.8.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Spatial probe results. Percentages are over 8 matched instructions from 2 unique layout SVGs.}}{11}{table.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}Expanded spatial and size holdout}{11}{subsection.8.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Expanded holdout results over 39 matched, distinct source SVGs.}}{11}{table.8}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Exact targets by held-out descriptor family.}}{11}{table.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}Prompt sensitivity}{12}{subsection.8.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.6}Mediation analysis: output validity versus grounding}{12}{subsection.8.6}\protected@file@percent }
+\newlabel{sec:mediation}{{8.6}{12}{Mediation analysis: output validity versus grounding}{subsection.8.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Exact-target selection reported marginally, then conditioned on valid output. Conditioning removes almost all of the deficit.}}{12}{table.10}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Paired target outcomes restricted to cases where both arms produced valid output.}}{12}{table.11}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Cause of each skeleton-only exact-target win.}}{13}{table.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.7}A context-window confound in the official matrix}{13}{subsection.8.7}\protected@file@percent }
+\newlabel{sec:truncation}{{8.7}{13}{A context-window confound in the official matrix}{subsection.8.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces The official matrix with truncated calls excluded.}}{14}{table.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.8}Constrained decoding re-run}{14}{subsection.8.8}\protected@file@percent }
+\newlabel{sec:constrained}{{8.8}{14}{Constrained decoding re-run}{subsection.8.8}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces Constrained re-run over 500 matched cases per arm, Qwen 2.5 7B through Ollama 0.32.3 with schema-constrained decoding.}}{14}{table.14}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces Constrained subgroup and task results.}}{14}{table.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.9}Occlusion crossover: nominal versus rendered geometry}{15}{subsection.8.9}\protected@file@percent }
+\newlabel{sec:occlusion-crossover}{{8.9}{15}{Occlusion crossover: nominal versus rendered geometry}{subsection.8.9}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces Corrected occlusion-isolating holdout. Each family has 24 unique source SVGs. Percentages use all-case denominators.}}{15}{table.16}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {17}{\ignorespaces Paired rendered-versus-analytic outcomes. ``Analytic only'' and ``rendered only'' count discordant exact outcomes on the same source.}}{15}{table.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9}Interpretation}{16}{section.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}What the evidence supports}{16}{subsection.9.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2}What the evidence does not support}{16}{subsection.9.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3}Efficiency}{16}{subsection.9.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {10}Limitations and failure modes}{17}{section.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {11}Next steps}{18}{section.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {12}Reproducibility}{18}{section.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.1}Official paired run}{18}{subsection.12.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.2}Paired analysis}{18}{subsection.12.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.3}Constrained decoding re-run}{18}{subsection.12.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.4}Validity-conditioned mediation analysis}{19}{subsection.12.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.5}Pilot spatial probe}{19}{subsection.12.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.6}Expanded held-out suite}{19}{subsection.12.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.7}Corrected occlusion-isolating holdout}{19}{subsection.12.7}\protected@file@percent }
+\bibcite{layersvg}{1}
+\@writefile{toc}{\contentsline {section}{\numberline {13}Conclusion}{20}{section.13}\protected@file@percent }
+\gdef \@abspage@last{21}

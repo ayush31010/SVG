@@ -1,0 +1,5 @@
+{"gold": "{\"choices\":[\"A\",\"B\"]}", "id": "set_contour/1f40f", "prediction": "{\"choices\": [\"A\"]}"}
+{"gold": "{\"choices\":[\"A\",\"B\"]}", "id": "set_contour/1f3a5", "prediction": "{\"choices\": [\"A\"]}"}
+{"gold": "{\"choices\":[\"A\",\"B\",\"C\"]}", "id": "change_color/1f4fd", "prediction": "{\"choices\":[\"B\"]}"}
+{"gold": "{\"choices\":[\"A\",\"B\"]}", "id": "change_color/1f3a5", "prediction": "{\"choices\":\"A\"}"}
+{"gold": "{\"choices\":[\"A\",\"B\",\"C\"]}", "id": "set_contour/1f4fd", "prediction": "{\"choices\": [\"A\"]}"}

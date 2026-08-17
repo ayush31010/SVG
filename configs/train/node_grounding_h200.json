@@ -1,0 +1,71 @@
+{
+  "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "bench_root": "SVGEditBench",
+  "data_dir": "data/node_grounding",
+  "training_output_dir": "checkpoints/node-grounding-qwen2.5-vl-7b-h200",
+  "tasks": [
+    "change_color",
+    "set_contour"
+  ],
+  "seed": 20260814,
+  "split_ratios": {
+    "train": 0.8,
+    "val": 0.1,
+    "test": 0.1
+  },
+  "candidate_count": 6,
+  "max_targets": 4,
+  "label_permutations": {
+    "train": 2,
+    "val": 2,
+    "test": 2
+  },
+  "shuffle_candidate_labels": true,
+  "honest_eval_require_distractor": true,
+  "render_size": 192,
+  "crop_padding": 0.15,
+  "min_pixels": 200704,
+  "max_pixels": 401408,
+  "max_seq_len": 1024,
+  "qlora": false,
+  "dtype": "bfloat16",
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "lora_target_module_patterns": {
+    "language_attention": [
+      "(?:^|\\.)(?:language_model|model)\\.layers\\.\\d+\\.self_attn\\.(?:q_proj|k_proj|v_proj|o_proj)$"
+    ],
+    "vision_attention": [
+      "(?:^|\\.)visual\\.blocks\\.\\d+\\.attn\\.(?:qkv|proj)$"
+    ],
+    "vision_projector": [
+      "(?:^|\\.)visual\\.merger\\.mlp\\.(?:0|2)$"
+    ]
+  },
+  "lora_required_module_families": [
+    "language_attention",
+    "vision_attention",
+    "vision_projector"
+  ],
+  "gradient_checkpointing": false,
+  "attn_implementation": "sdpa",
+  "batch_size": 4,
+  "eval_batch_size": 1,
+  "grad_accum": 1,
+  "learning_rate": 0.0002,
+  "lr_scheduler_type": "cosine",
+  "warmup_ratio": 0.05,
+  "weight_decay": 0.01,
+  "num_epochs": 5,
+  "logging_steps": 5,
+  "save_total_limit": 2,
+  "eval_max_new_tokens": 32,
+  "evaluation_ablations": [
+    "none",
+    "blank_image",
+    "blank_instruction"
+  ],
+  "dataloader_num_workers": 0,
+  "report_to": "none"
+}

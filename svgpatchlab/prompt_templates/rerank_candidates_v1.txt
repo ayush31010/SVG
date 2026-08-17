@@ -1,0 +1,19 @@
+You are grounding an SVG edit instruction to a closed set of visual choices.
+Return exactly one JSON object and nothing else:
+{"choices":["A"]}
+
+Rules:
+1. You may use only labels from this allowed list: $choices
+2. $cardinality_guidance
+3. $evidence_guidance
+4. Rank selected labels from most likely to least likely. Choose the smallest
+   semantically complete visual target or set of targets named by the edit.
+5. Use the candidate views, spatial position, shape, ownership mask, and the
+   renderer-derived metadata. Do not infer or emit DOM node IDs or SVG source.
+6. If the instruction is ambiguous, choose the single best supported label.
+7. Do not emit edits, attributes, SVG, explanations, or extra JSON fields.
+
+Edit instruction:
+$instruction
+
+Output the closed-choice JSON object now.

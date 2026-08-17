@@ -1,0 +1,12 @@
+{
+  "architecture": "visual_stats_patch",
+  "cases": 8,
+  "completion_tokens": 512,
+  "gold_patch_exact_rate": 0.75,
+  "mean_failure_aware_mse": 0.001752912881784141,
+  "mean_model_latency_seconds": 9.70817656593863,
+  "mean_wall_seconds": 9.710643762286054,
+  "prompt_tokens": 18920,
+  "target_exact_rate": 0.75,
+  "valid_output_rate": 1.0
+}

@@ -1,0 +1,21 @@
+{
+  "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "data_dir": "data/node_grounding-context-v3",
+  "training_output_dir": "checkpoints/node-grounding-qwen2.5-vl-7b-context-v3",
+  "evaluation_checkpoint": "base",
+  "evaluation_output_dir": "runs/node-grounding-context-v3-base-test-full",
+  "eval_split": "test",
+  "max_eval_samples": null,
+  "honest_eval_require_distractor": true,
+  "min_pixels": 401408,
+  "max_pixels": 1605632,
+  "qlora": false,
+  "dtype": "bfloat16",
+  "attn_implementation": "sdpa",
+  "eval_max_new_tokens": 32,
+  "evaluation_ablations": [
+    "none",
+    "blank_image",
+    "blank_instruction"
+  ]
+}

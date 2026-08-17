@@ -1,9 +1,16 @@
 from __future__ import annotations
 
+from collections import Counter
 from typing import Any
 
 from svgpatchlab.core.patch import Patch, derive_patch
-from svgpatchlab.core.xml import index_tree, local_name, normalized_tree, parse_svg
+from svgpatchlab.core.xml import (
+    index_tree,
+    local_name,
+    normalized_tree,
+    parse_svg,
+    protected_geometry,
+)
 
 from .render import image_mse
 
@@ -47,6 +54,8 @@ def _patch_signature(patch: Patch) -> set[tuple[str, str, str, str]]:
     signature: set[tuple[str, str, str, str]] = set()
     for operation in patch.operations:
         for target in operation.targets:
+            if operation.op == "remove_element":
+                signature.add((operation.op, target, "", ""))
             for name, value in operation.attributes:
                 signature.add((operation.op, target, name, value))
             for name in operation.names:
@@ -71,12 +80,36 @@ def patch_scores(candidate: Patch | None, gold: Patch) -> dict[str, Any]:
     }
 
 
+def _protected_geometry_counts(
+    nodes: list,
+) -> Counter[tuple[str, tuple[tuple[str, str], ...]]]:
+    geometry = protected_geometry(nodes[0].element)
+    return Counter(
+        (
+            local_name(node.element.tag),
+            tuple(sorted(geometry[node.node_id].items())),
+        )
+        for node in nodes
+        if node.node_id in geometry
+    )
+
+
 def structural_scores(source_svg: str, output_svg: str, answer_svg: str) -> dict[str, Any]:
     source = index_tree(parse_svg(source_svg))
     output = index_tree(parse_svg(output_svg))
     answer = parse_svg(answer_svg)
+    observed_patch = derive_patch(source_svg, output_svg)
+    protected_attributes = {"d", "points"}
+    protected_ok = not (
+        _protected_geometry_counts(output) - _protected_geometry_counts(source)
+    ) and all(
+        not (
+            (set(operation.attributes_dict) | set(operation.names))
+            & protected_attributes
+        )
+        for operation in observed_patch.operations
+    )
     changed_nodes = 0
-    protected_ok = len(source) == len(output)
 
     if len(source) == len(output):
         for before, after in zip(source, output):
@@ -86,16 +119,20 @@ def structural_scores(source_svg: str, output_svg: str, answer_svg: str) -> dict
                 or (before.element.text or "") != (after.element.text or "")
             ):
                 changed_nodes += 1
-            for attribute in ("d", "points"):
-                if before.element.attrib.get(attribute) != after.element.attrib.get(attribute):
-                    protected_ok = False
     else:
-        changed_nodes = max(len(source), len(output))
+        changed_nodes = len(
+            {
+                target
+                for operation in observed_patch.operations
+                for target in operation.targets
+            }
+        ) + max(0, len(output) - len(source))
 
     return {
         "changed_nodes": changed_nodes,
         "protected_geometry_preserved": protected_ok,
-        "reference_structure_match": normalized_tree(parse_svg(output_svg)) == normalized_tree(answer),
+        "reference_structure_match": normalized_tree(parse_svg(output_svg))
+        == normalized_tree(answer),
     }
 
 

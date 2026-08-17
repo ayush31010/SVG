@@ -1,0 +1,48 @@
+\contentsline {section}{\numberline {1}Executive summary}{2}{section.1}%
+\contentsline {section}{\numberline {2}Problem statement}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Why SVG source alone is not always enough}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Scope of this work}{3}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Relationship to LayerSVG}{3}{section.3}%
+\contentsline {section}{\numberline {4}Method}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Counterfactual visual measurement}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}What the model sees}{4}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Meaning of \texttt {visible:false}}{5}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Three-hop implementation path}{5}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Recommended production strategy}{5}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Clean A/B boundary}{5}{section.5}%
+\contentsline {section}{\numberline {6}Sun and cloud case study}{6}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Case A: the sun is structurally complete}{6}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Case B: the sun geometry is incomplete}{6}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Experimental setup}{7}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Frozen model and rendering}{7}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Metrics}{7}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Official smoke}{8}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Completed official matrix}{8}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Path-only spatial probe}{8}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Expanded 39-source holdout}{8}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}Corrected analytic and occlusion-isolating holdout}{9}{subsection.7.7}%
+\contentsline {section}{\numberline {8}Results}{9}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Official 10-case matched smoke}{9}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Completed 1,000-call official matrix}{10}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Path-only spatial grounding probe}{11}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Expanded spatial and size holdout}{11}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Prompt sensitivity}{12}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Mediation analysis: output validity versus grounding}{12}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.7}A context-window confound in the official matrix}{13}{subsection.8.7}%
+\contentsline {subsection}{\numberline {8.8}Constrained decoding re-run}{14}{subsection.8.8}%
+\contentsline {subsection}{\numberline {8.9}Occlusion crossover: nominal versus rendered geometry}{15}{subsection.8.9}%
+\contentsline {section}{\numberline {9}Interpretation}{16}{section.9}%
+\contentsline {subsection}{\numberline {9.1}What the evidence supports}{16}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}What the evidence does not support}{16}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Efficiency}{16}{subsection.9.3}%
+\contentsline {section}{\numberline {10}Limitations and failure modes}{17}{section.10}%
+\contentsline {section}{\numberline {11}Next steps}{18}{section.11}%
+\contentsline {section}{\numberline {12}Reproducibility}{18}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Official paired run}{18}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Paired analysis}{18}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Constrained decoding re-run}{18}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4}Validity-conditioned mediation analysis}{19}{subsection.12.4}%
+\contentsline {subsection}{\numberline {12.5}Pilot spatial probe}{19}{subsection.12.5}%
+\contentsline {subsection}{\numberline {12.6}Expanded held-out suite}{19}{subsection.12.6}%
+\contentsline {subsection}{\numberline {12.7}Corrected occlusion-isolating holdout}{19}{subsection.12.7}%
+\contentsline {section}{\numberline {13}Conclusion}{20}{section.13}%

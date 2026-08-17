@@ -1,0 +1,11 @@
+{
+  "adapter": "openai_compatible",
+  "base_url": "http://127.0.0.1:11434/v1",
+  "model": "qwen2.5vl:32b",
+  "temperature": 0.0,
+  "json_mode": false,
+  "structured_output": "response_format",
+  "max_tokens": 768,
+  "timeout": 600,
+  "supports_images": false
+}

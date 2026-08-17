@@ -1,0 +1,257 @@
+{
+  "skeleton_patch": {
+    "architecture": "skeleton_patch",
+    "by_task": {
+      "change_color": {
+        "cases": 100,
+        "completion_tokens": 6643,
+        "gold_patch_exact_rate": 0.11578947368421053,
+        "mean_failure_aware_mse": 0.05379465127349249,
+        "mean_model_latency_seconds": 11.030208883613813,
+        "mean_mse_on_rendered": 0.003994369761571043,
+        "model_calls": 100,
+        "prompt_tokens": 219126,
+        "protected_geometry_rate": 0.95,
+        "reference_structure_match_rate": 0.11,
+        "valid_output_rate": 0.95
+      },
+      "crop_to_half": {
+        "cases": 100,
+        "completion_tokens": 8551,
+        "gold_patch_exact_rate": 0.34782608695652173,
+        "mean_failure_aware_mse": 0.6715537163615227,
+        "mean_model_latency_seconds": 12.639692410614806,
+        "mean_mse_on_rendered": 0.004708231398553559,
+        "model_calls": 100,
+        "prompt_tokens": 217870,
+        "protected_geometry_rate": 0.33,
+        "reference_structure_match_rate": 0.32,
+        "valid_output_rate": 0.33
+      },
+      "set_contour": {
+        "cases": 100,
+        "completion_tokens": 7581,
+        "gold_patch_exact_rate": 0.0,
+        "mean_failure_aware_mse": 0.07381085011380492,
+        "mean_model_latency_seconds": 11.958971653145273,
+        "mean_mse_on_rendered": 0.0250640527513736,
+        "model_calls": 100,
+        "prompt_tokens": 219280,
+        "protected_geometry_rate": 0.95,
+        "reference_structure_match_rate": 0.0,
+        "valid_output_rate": 0.95
+      },
+      "transparency": {
+        "cases": 100,
+        "completion_tokens": 8869,
+        "gold_patch_exact_rate": 0.047058823529411764,
+        "mean_failure_aware_mse": 0.96,
+        "mean_model_latency_seconds": 12.831975180453155,
+        "mean_mse_on_rendered": 0.0,
+        "model_calls": 100,
+        "prompt_tokens": 217585,
+        "protected_geometry_rate": 0.04,
+        "reference_structure_match_rate": 0.04,
+        "valid_output_rate": 0.04
+      },
+      "upside_down": {
+        "cases": 100,
+        "completion_tokens": 8043,
+        "gold_patch_exact_rate": 0.5212765957446809,
+        "mean_failure_aware_mse": 0.51,
+        "mean_model_latency_seconds": 12.13585389134707,
+        "mean_mse_on_rendered": 0.0,
+        "model_calls": 100,
+        "prompt_tokens": 217490,
+        "protected_geometry_rate": 0.49,
+        "reference_structure_match_rate": 0.49,
+        "valid_output_rate": 0.49
+      }
+    },
+    "dataset": {
+      "root": "SVGEditBench",
+      "tasks": {
+        "change_color": 100,
+        "compression": 100,
+        "crop_to_half": 100,
+        "set_contour": 100,
+        "transparency": 100,
+        "upside_down": 100
+      },
+      "total_cases": 600,
+      "unique_emojis": 100
+    },
+    "errors": {
+      "PatchError: attributes are invalid for transparency: ['fill']": 28,
+      "PatchError: attributes are invalid for transparency: ['viewBox']": 20,
+      "PatchError: attributes are not allowlisted: ['fill-opacity']": 2,
+      "PatchError: crop_to_half may only target the SVG root": 59,
+      "PatchError: operation is not allowed: transform": 45,
+      "PatchError: remove_element requires patch version 2": 13,
+      "PatchError: transparency may only target the SVG root": 27,
+      "PatchError: transparency only permits set_attributes operations": 4,
+      "PatchError: unknown operation fields: ['transform']": 1,
+      "PatchError: unknown patch fields: ['fill']": 5,
+      "PatchError: unknown patch fields: ['from', 'op', 'path']": 10,
+      "PatchError: unknown patch fields: ['op', 'path', 'value']": 5,
+      "PatchError: unknown patch fields: ['op', 'path']": 5
+    },
+    "evaluation": {
+      "render": true,
+      "render_size": 72,
+      "results": "runs/qwen2.5-7b-visual-stats-ab-full-v1-server/skeleton_patch/results.jsonl"
+    },
+    "model": {
+      "adapter": "openai_compatible",
+      "base_url": "http://127.0.0.1:11434/v1",
+      "json_mode": false,
+      "max_tokens": 768,
+      "model": "qwen2.5:7b",
+      "supports_images": false,
+      "temperature": 0.0,
+      "timeout": 600
+    },
+    "overall": {
+      "cases": 500,
+      "completion_tokens": 39687,
+      "gold_patch_exact_rate": 0.20824295010845986,
+      "mean_failure_aware_mse": 0.453831843549764,
+      "mean_model_latency_seconds": 12.119340403834823,
+      "mean_mse_on_rendered": 0.010564933966963798,
+      "model_calls": 500,
+      "prompt_tokens": 1091351,
+      "protected_geometry_rate": 0.552,
+      "reference_structure_match_rate": 0.192,
+      "valid_output_rate": 0.552
+    }
+  },
+  "visual_stats_patch": {
+    "architecture": "visual_stats_patch",
+    "by_task": {
+      "change_color": {
+        "cases": 100,
+        "completion_tokens": 12265,
+        "gold_patch_exact_rate": 0.037037037037037035,
+        "mean_failure_aware_mse": 0.1990607321842981,
+        "mean_model_latency_seconds": 16.756100031975656,
+        "mean_mse_on_rendered": 0.011186089116417412,
+        "model_calls": 100,
+        "prompt_tokens": 243322,
+        "protected_geometry_rate": 0.81,
+        "reference_structure_match_rate": 0.03,
+        "valid_output_rate": 0.81
+      },
+      "crop_to_half": {
+        "cases": 100,
+        "completion_tokens": 14869,
+        "gold_patch_exact_rate": 0.2894736842105263,
+        "mean_failure_aware_mse": 0.6824642608314753,
+        "mean_model_latency_seconds": 19.048434680753854,
+        "mean_mse_on_rendered": 0.03777048736810684,
+        "model_calls": 100,
+        "prompt_tokens": 242245,
+        "protected_geometry_rate": 0.33,
+        "reference_structure_match_rate": 0.22,
+        "valid_output_rate": 0.33
+      },
+      "set_contour": {
+        "cases": 100,
+        "completion_tokens": 13140,
+        "gold_patch_exact_rate": 0.0,
+        "mean_failure_aware_mse": 0.21040648491121827,
+        "mean_model_latency_seconds": 17.587714350470343,
+        "mean_mse_on_rendered": 0.025193191248417637,
+        "model_calls": 100,
+        "prompt_tokens": 243455,
+        "protected_geometry_rate": 0.81,
+        "reference_structure_match_rate": 0.0,
+        "valid_output_rate": 0.81
+      },
+      "transparency": {
+        "cases": 100,
+        "completion_tokens": 13241,
+        "gold_patch_exact_rate": 0.15584415584415584,
+        "mean_failure_aware_mse": 0.88,
+        "mean_model_latency_seconds": 17.414845734934786,
+        "mean_mse_on_rendered": 0.0,
+        "model_calls": 100,
+        "prompt_tokens": 241999,
+        "protected_geometry_rate": 0.12,
+        "reference_structure_match_rate": 0.12,
+        "valid_output_rate": 0.12
+      },
+      "upside_down": {
+        "cases": 100,
+        "completion_tokens": 13252,
+        "gold_patch_exact_rate": 0.6341463414634146,
+        "mean_failure_aware_mse": 0.47118460193276407,
+        "mean_model_latency_seconds": 17.646645732941106,
+        "mean_mse_on_rendered": 0.0022350979863472705,
+        "model_calls": 100,
+        "prompt_tokens": 241917,
+        "protected_geometry_rate": 0.53,
+        "reference_structure_match_rate": 0.52,
+        "valid_output_rate": 0.53
+      }
+    },
+    "dataset": {
+      "root": "SVGEditBench",
+      "tasks": {
+        "change_color": 100,
+        "compression": 100,
+        "crop_to_half": 100,
+        "set_contour": 100,
+        "transparency": 100,
+        "upside_down": 100
+      },
+      "total_cases": 600,
+      "unique_emojis": 100
+    },
+    "errors": {
+      "PatchError: attributes are invalid for crop_to_half: ['transform']": 1,
+      "PatchError: attributes are invalid for transparency: ['fill']": 15,
+      "PatchError: attributes are invalid for transparency: ['viewBox']": 5,
+      "PatchError: attributes are not allowlisted: ['fill-opacity']": 4,
+      "PatchError: crop_to_half may only target the SVG root": 40,
+      "PatchError: operation is not allowed: transform": 28,
+      "PatchError: operation targets must be a list of node IDs": 1,
+      "PatchError: protected attributes cannot be changed: ['d']": 2,
+      "PatchError: remove_element requires patch version 2": 9,
+      "PatchError: transparency may only target the SVG root": 41,
+      "PatchError: unknown operation fields: ['id']": 1,
+      "PatchError: unknown patch fields: ['from', 'op', 'path']": 5,
+      "PatchError: unknown patch fields: ['op', 'path', 'value']": 65,
+      "PatchError: unknown patch fields: ['op', 'path']": 20,
+      "PatchError: unknown patch fields: ['patches']": 2,
+      "PatchError: upside_down may only target the SVG root": 1
+    },
+    "evaluation": {
+      "render": true,
+      "render_size": 72,
+      "results": "runs/qwen2.5-7b-visual-stats-ab-full-v1-server/visual_stats_patch/results.jsonl"
+    },
+    "model": {
+      "adapter": "openai_compatible",
+      "base_url": "http://127.0.0.1:11434/v1",
+      "json_mode": false,
+      "max_tokens": 768,
+      "model": "qwen2.5:7b",
+      "supports_images": false,
+      "temperature": 0.0,
+      "timeout": 600
+    },
+    "overall": {
+      "cases": 500,
+      "completion_tokens": 66767,
+      "gold_patch_exact_rate": 0.22418136020151133,
+      "mean_failure_aware_mse": 0.48862321597195113,
+      "mean_model_latency_seconds": 17.69074810621515,
+      "mean_mse_on_rendered": 0.016583107638367577,
+      "model_calls": 500,
+      "prompt_tokens": 1212938,
+      "protected_geometry_rate": 0.52,
+      "reference_structure_match_rate": 0.178,
+      "valid_output_rate": 0.52
+    }
+  }
+}

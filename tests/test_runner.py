@@ -6,11 +6,14 @@ import json
 import contextlib
 import io
 from pathlib import Path
+from unittest import mock
 
 from svgpatchlab.cli import main as cli_main
+from svgpatchlab.architectures.factory import ARCHITECTURES
 from svgpatchlab.eval.runner import run_evaluation
 from svgpatchlab.core import derive_patch
 from svgpatchlab.data import SVGEditBench
+from svgpatchlab.types import ArchitectureResult
 
 
 class RunnerTests(unittest.TestCase):
@@ -84,6 +87,53 @@ class RunnerTests(unittest.TestCase):
             self.assertEqual(exit_code, 0)
             self.assertTrue((output_dir / "chain_summary.json").exists())
             self.assertTrue((output_dir / "chain_results.jsonl").exists())
+
+    def test_architecture_configuration_fields_reach_constructor(self):
+        captured = {}
+
+        class ConfiguredArchitecture:
+            name = "configured_test"
+            requires_model = False
+            requires_renderer = False
+
+            def __init__(self, marker):
+                captured["marker"] = marker
+
+            def run(self, case, model):
+                patch = derive_patch(case.source_svg, case.answer_svg)
+                return ArchitectureResult(
+                    output_svg=case.answer_svg,
+                    patch=patch,
+                    details={"captured_context": True},
+                )
+
+        with tempfile.TemporaryDirectory() as directory, mock.patch.dict(
+            ARCHITECTURES,
+            {"configured_test": ConfiguredArchitecture},
+        ):
+            summary = run_evaluation(
+                {
+                    "dataset": {
+                        "root": "SVGEditBench",
+                        "tasks": ["change_color"],
+                        "limit": 1,
+                    },
+                    "architecture": {
+                        "name": "configured_test",
+                        "marker": "passed-through",
+                    },
+                    "model": {"adapter": "none"},
+                    "evaluation": {
+                        "render": False,
+                        "output_dir": directory,
+                    },
+                }
+            )
+            record = json.loads((Path(directory) / "results.jsonl").read_text())
+
+        self.assertEqual(captured["marker"], "passed-through")
+        self.assertEqual(summary["overall"]["cases"], 1)
+        self.assertEqual(record["architecture_details"], {"captured_context": True})
 
 
 if __name__ == "__main__":

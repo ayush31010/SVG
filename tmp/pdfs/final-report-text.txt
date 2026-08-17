@@ -1,0 +1,465 @@
+SVGPatchLab Technical Report
+Render-Derived Node Context
+for Grounded SVG Editing
+A clean text-only A/B study of counterfactual visual tags
+Research question
+Can a compact visual description attached to each SVG node help a language model
+select the node named by an editing instruction?
+Control
+DOM skeleton only (skeleton_patch).
+Treatment
+The identical skeleton plus cached per-node visual fields (visual_stats_patch).
+Frozen model
+Qwen 2.5 7B through Ollama, temperature 0, text input only.
+Current evidence
+A 10-case official smoke, an 8-instruction pilot, and a 39-source expanded spatial and
+size holdout.
+Core finding.On the 39-source path-only holdout, exact target selection rose from7.7%to33.3%. Ten sources
+were won only by the visual arm, none only by the skeleton arm. Position grounding improved more than relative-size
+grounding, identifying both a real benefit and the next model limitation.
+SVGPatchLab Project
+25 July 2026
+Status: implementation report, pilot evaluation, and expanded controlled holdout. The full official matrix is running; results
+are not yet a publication-scale claim.
+
+SVGPatchLab Technical Report Render-Derived Node Context
+Contents
+1 Executive summary 2
+2 Problem statement 2
+3 Relationship to LayerSVG 2
+4 Method 3
+5 Clean A/B boundary 5
+6 Sun and cloud case study 5
+7 Experimental setup 6
+8 Results 7
+9 Interpretation 9
+10 Limitations and failure modes 9
+11 Next steps 9
+12 Reproducibility 10
+13 Conclusion 10
+1
+
+SVGPatchLab Technical Report Render-Derived Node Context
+1 Executive summary
+The editing model must solve two distinct problems:
+1.Grounding:identify which SVG node corresponds to the object described by the user.
+2. Editing:apply a valid operation to that node, such as changing fill, adding a contour, or removing the element.
+An ordinary protected DOM skeleton exposes structure, tags, styles, and safe geometry summaries, but it
+intentionally replaces heavy path coordinates with hashes. A language model can therefore see that four nodes are
+red paths without knowing which one is at the top-left. The implemented treatment closes that gap by measuring
+each node’s visible contribution and adding a smallvisualobject to its existing JSON record.
+The node-hiding operation is a measurement trick, not the edit.A temporary copy of the SVG is rendered
+with one node hidden. The pixel difference from the full render describes that node. The temporary SVG is discarded.
+The model later emits a patch, and the executor applies that patch once to the original SVG.
+The control and treatment share the same model, prompt function, scene serialization, parser, validator, executor,
+dataset order, and evaluator. The only treatment change is the attachedvisual field. This makes the experiment
+an interpretable A/B test of additional semantic grounding context, not a comparison between unrelated editing
+systems.
+The official 10-case smoke test improved exact target selection from 70% to 90%, exact patch match from 20% to
+50%, and valid output from 60% to 90%. Its grounding subset was already easy for the baseline because the relevant
+rectangle and circle coordinates were visible. The stronger diagnostic is the path-only evidence. An 8-instruction
+pilot improved from 0% to 75%, and the expanded 39-source holdout improved exact targets and patches from 7.7%
+to 33.3%. The holdout had 10 visual-only paired wins and no skeleton-only wins, at a 26.4% prompt-token cost.
+2 Problem statement
+2.1 Why SVG source alone is not always enough
+SVG source is structured, but the structure is not equivalent to visual meaning. A node may be:
+•a path whose coordinates are intentionally hidden from the model;
+•nested under inherited styles and transforms;
+•partly or fully covered by a later-painted element;
+•one of several nodes with the same tag and color; or
+•visible only through a small, anti-aliased region.
+For an instruction such as “add an outline to the small red shape in the top-left,” a protected skeleton may expose
+four indistinguishable redpath nodes. DOM order is not a reliable spatial description. A whole rendered image
+tells the model what the composition looks like, but it does not establish a deterministic link from image pixels
+back to node IDs. The required context is thereforeper-node visual attribution.
+2.2 Scope of this work
+This report evaluates a lightweight method for selecting existing nodes. It does not claim to solve full semantic
+segmentation, raster-to-SVG generation, or arbitrary reconstruction of missing geometry. The principal question is:
+If every SVG node carries compact render-derived information about what it contributes, can a frozen
+text-only model ground natural-language editing instructions more accurately?
+3 Relationship to LayerSVG
+LayerSVG studies a different but adjacent problem: converting a raster image into complete, semantically separate,
+independently editable SVG layers [1]. Its top-down elimination pipeline selects foreground masks, inpaints regions
+2
+
+SVGPatchLab Technical Report Render-Derived Node Context
+hidden behind them, and then vectorizes the recovered layers. The paper emphasizes two properties that are
+directly relevant here:
+•edits should operate on semantically meaningful objects rather than isolated strokes; and
+•a lower layer should be complete, so moving or deleting an upper layer does not reveal a hole.
+Those principles clarify the boundary of our approach. Render-difference tags can identifywhich existing nodeis the
+cloud and how it appears. They cannot recover sun geometry that was never present in the source. LayerSVG uses
+generative inpainting while constructing editable layers; SVGPatchLab starts from an existing SVG and performs a
+surgical edit. For the latter, generation should be an exceptional completion step, not the default node-selection
+mechanism.
+LayerSVG also provides a useful efficiency precedent in its stroke-reduction analysis: it assigns a unique RGB
+identifier to each stroke, composites the layers, and counts which identifiers remain visible. SVGPatchLab already
+has a related ID-buffer implementation. For safe, opaque SVGs, one normal render and one unique-color render
+can recover leaf ownership, bbox, area, position, and observed color in a total of two rasterizations, independent of
+node count. Opacity, blending, filters, masks, and other unsupported effects route to the more general hide-and-diff
+method.
+Table 1: LayerSVG and the present system address adjacent stages.
+LayerSVG SVGPatchLab visual tags
+Input Raster image Existing SVG and edit instruction
+Primary goal Build semantic, complete layers Ground an instruction to existing node IDs
+Removal role Iterative layer decomposition plus inpainting Temporary counterfactual measurement
+Output Newly vectorized layered SVG Validated patch applied to original SVG
+Generation Central to hidden-region completion Optional and guarded for genuinely missing
+geometry
+4 Method
+4.1 Counterfactual visual measurement
+Let R(S)be a deterministic rasterization of SVGS, and letS\n i be a temporary copy in which nodeni is forced
+todisplay:none!important. For a pixelp, the contribution mask is
+Mi(p) =1[∥R(S)(p)−R(S\n i)(p)∥∞ >τ].
+The implementation uses a 64 by 64 transparent render for compact measurement. FromMi, it calculates:
+• bbox: the affected pixel bounds projected into SVG viewBox coordinates withpreserveAspectRatio letter-
+boxing accounted for;
+•area_pct: the percentage of the canvas affected by hiding;
+•position: a coarse spatial label derived from the contribution centroid, such as top-left, center, or bottom;
+•color: a quantized RGB mode over contributing pixels; and
+•visible: false when no unique pixel delta exceeds the threshold.
+All measurements are cached by SVG content, render parameters, and a versioned format key. A full SVG is
+rendered once and each eligible node is hidden and rendered once on a cold cache. Subsequent uses read the
+attached statistics from disk.
+4.2 What the model sees
+The heavy path coordinates remain protected. The new information is a compact field attached to the node that
+already has a stable ID:
+3
+
+SVGPatchLab Technical Report Render-Derived Node Context
+{
+"id": "n7",
+"parent": "n0",
+"tag": "path",
+"attributes": {"fill": "#ff0000"},
+"protected_geometry": {
+"d": {"sha256": "...", "characters": 20}
+},
+"resolved_style": {"fill": "#ff0000"},
+"visual": {
+"bbox": [5.0, 5.0, 10.0, 10.0],
+"area_pct": 1.0,
+"position": "top-left",
+"color": "#ff0000"
+}
+}
+The model receives the instruction and the JSON skeleton as text. It matches phrases such as “small,” “red,” and
+“top-left” to the fields, emits a patch targetingn7 with stroke #000000, and the existing validator and executor
+apply that patch to the unmodified source.
+4.3 Meaning ofvisible:false
+visible:false means only that hiding the node caused no measurable unique pixel contribution at the selected
+resolution and threshold. It is useful as weak negative evidence, but it is not proof that the node is semantically
+irrelevant or fully occluded. The same observation can arise when:
+•an identical-colored overlayer masks the change;
+•the visual effect is below the raster threshold;
+•the node is extremely small or faint; or
+•a renderer does not reproduce an SVG feature faithfully.
+4.4 Three-hop implementation path
+Measure
+get_or_compute(svg)→full and node-hidden renders produce
+cached statistics
+Attach
+build_scene(svg,
+visual_stats=stats)
+→each node receives itsvisualfield
+Use
+json.dumps(scene)plus instruction→model patch, validation, and execution on
+the original SVG
+4.5 Recommended production strategy
+The most efficient robust design is a hybrid, not a universal use of either method:
+Table 2: Recommended visual-attribution strategy for an SVG withNnodes.
+Path Render cost Use when Role
+Unique-color ID
+buffer
+2 total Opaque, supported, leaf-oriented
+SVG
+Fast default attribution
+Hide and compareN+ 1cold,
+cached
+afterward
+Complex compositing, group
+semantics, or unsupported features
+Faithful fallback and audit
+Generator
+completion
+Model call only
+after deletion
+trigger
+Required geometry is absent, not
+merely covered
+Reconstruct missing underlayer
+The current reported A/B intentionally retains the hide-and-diff treatment to keep its meaning fixed across all pilot
+results. The ID-buffer fast path should be introduced as a separately named treatment and tested for descriptor
+equivalence before it replaces the slower cache fill in production.
+4
+
+SVGPatchLab Technical Report Render-Derived Node Context
+5 Clean A/B boundary
+The treatment architecture inherits from the control and overrides onlyscene_for(). Both arms use:
+•the same prompt template and JSON serialization;
+•the same Qwen 2.5 7B model configuration and deterministic temperature;
+•no image input, including when the adapter advertises image support;
+•the same patch parser, policy, validator, and executor;
+•the same cases in the same order; and
+•the same structural and raster evaluators.
+Regression tests stripvisual from the treatment scene and assert exact equality with the control scene. They also
+assert identical request metadata, absence of image payloads, and identical SVG output when the model response
+is held fixed. Consequently, observed differences can be attributed to the additional text fields, subject to normal
+nondeterminism in the serving stack.
+Excluded comparison. visual_skeleton_patch sends a whole rendered image and is not the treatment evaluated
+here. Including it would change both input modality and architecture, destroying the one-variable A/B boundary.
+6 Sun and cloud case study
+The sun-cloud example separates node grounding from geometry completion.
+6.1 Case A: the sun is structurally complete
+If the SVG contains a full sun circle painted below a cloud, the correct edit is simplyremove_element(cloud).
+The hidden part of the sun already exists; normal SVG painter order reveals it after cloud removal. A generator is
+unnecessary and could damage unrelated geometry.
+6.2 Case B: the sun geometry is incomplete
+If the sun was flattened, clipped, merged with the cloud, or authored only as a visible crescent, removal exposes a
+hole. The node selector can still identify the cloud, but the existing source does not contain enough geometry to
+restore the missing region. This is where a small generator can be useful.
+The implemented completion path is deliberately conservative:
+1. select candidate nodes using per-node semantic and visual context;
+2. apply the requested deletion;
+3. trigger completion only when deletion creates a sufficiently large transparent hole rather than revealing a valid
+underlayer;
+4. ask Qwen to replace one preserved reconstruction candidate with one SVG element; and
+5. accept the candidate only if it preserves the canvas, contains no unsafe SVG features, does not restore the
+deleted element, changes the intended region, and stays below an outside-region error threshold.
+In the live smoke artifact, the final stored SVG contains a completed circle centered at (18, 18), with radius 10 and
+fill #FFAC33. The accepted attempt reported outside-region MSE 0.00178 against a maximum of 0.01, while its
+inside-region and generated-change checks exceeded their minimum thresholds. This is a useful mechanism check,
+not yet a quantitative completion benchmark.
+5
+
+SVGPatchLab Technical Report Render-Derived Node Context
+7 Experimental setup
+7.1 Frozen model and rendering
+Model
+Qwen 2.5 7B served by Ollama through an OpenAI-compatible adapter
+Sampling
+Temperature 0, maximum 768 completion tokens
+Input modality
+Text only for both A/B arms
+Visual-stat render
+64 by 64 pixels, transparent background
+Evaluation render
+72 by 72 pixels
+Server validation
+36 relevant tests passed with the Linux Cairo renderer
+7.2 Metrics
+The primary grounding metric is exact equality between the set of target node IDs in the predicted patch and the
+gold target set. Additional metrics are:
+•target precision and recall;
+• exact equality with the gold patch signature, including operation, target set, and attributes, rather than
+byte-for-byte JSON equality;
+•valid SVG output rate;
+• failure-aware raster mean squared error (MSE), where lower is better and a missing, invalid, or unrenderable
+output receives 1.0;
+•paired wins and losses on the same case; and
+•prompt-token and model-latency cost.
+7.3 Official smoke
+The official smoke uses 10 matched SVGEditBench task cases: two each from color change, contour, upside-down,
+transparency, and crop. These cases reuse two unique source SVGs across five instructions, so they are not 10
+independent visual samples. The smoke checks compatibility across the normal task mix, but only four task cases
+are node-grounding tasks.
+7.4 Path-only spatial probe
+The probe was constructed to remove baseline shortcuts:
+•four nodes are allpathelements with the same red fill;
+•each protecteddstring has the same character count;
+•coordinates are exposed only as opaque hashes;
+•two unique DOM layouts permute the mapping between node order and position; and
+•each instruction selects one of the four corners.
+This probe directly asks whether the treatment exposes spatial information unavailable in the control context.
+6
+
+SVGPatchLab Technical Report Render-Derived Node Context
+7.5 Expanded 39-source holdout
+The expanded suite removes the pilot’s source-reuse weakness. It contains 39 matched cases and 39 distinct source
+SVGs:
+• 27 position cases cover all nine labels in the 3 by 3 spatial grid, with three independently generated sources per
+label;
+•12 size cases cover smallest, second-smallest, second-largest, and largest, again with three sources per label;
+• every source uses a distinct deterministic DOM permutation, balanced target-node indices, small coordinate
+jitter, and aspect variation;
+• all candidates remain same-fillpath nodes, raw coordinates are SHA-only, and every protected path string has
+the same character count; and
+• a manifest freezes seed 20260725, prompt v4, the prompt-template hash, source and answer hashes, and the
+expected target for every case.
+Runtime validation fails closed if a target crosses its spatial bin, relative size order changes, path coordinates leak,
+or the active prompt differs from the frozen version.
+8 Results
+8.1 Official 10-case matched smoke
+Table 3: Official smoke results. Percentages are over 10 matched task cases from 2 unique source SVGs.
+Metric Skeleton + visual tags Change
+Exact target set 70%90%+20 points
+Exact patch 20%50%+30 points
+Valid output 60%90%+30 points
+Mean failure-aware MSE 0.40580.1002-75.3%
+Prompt tokens 17,694 21,279 +20.3%
+Mean model latency 9.42 s 9.99 s +6.1%
+For exact targets there were two visual-only wins, no skeleton-only wins, seven cases correct in both arms, and one
+correct in neither. For exact patches there were three visual-only wins and no skeleton-only wins. Failure-aware
+MSE favored the visual arm on four cases, the skeleton arm on none, with six ties.
+This result is encouraging but not a strong grounding test: the four official color and contour cases had 100% exact
+target selection in both arms because their rectangle and circle coordinates were visible in the ordinary skeleton.
+8.2 Path-only spatial grounding probe
+Table 4: Spatial probe results. Percentages are over 8 matched instructions from 2 unique layout SVGs.
+Metric Skeleton + visual
+tags
+Change
+Exact target set 0%75%+75 points
+Exact patch 0%75%+75 points
+Valid output 100% 100% no change
+Mean failure-aware MSE 0.010080.00175-82.6%
+Prompt tokens 14,272 17,224 +20.7%
+Mean model latency 10.27 s9.60 s-6.5%
+7
+
+SVGPatchLab Technical Report Render-Derived Node Context
+Six instructions were visual-only target wins, none were skeleton-only wins, and both arms missed two. A naive
+instruction-level sign test would givep = 0.03125, but that calculation is not an inferential result because the
+instructions are clustered within only two layout SVGs. The result is therefore reported as mechanism evidence; a
+larger held-out set of independently generated sources is required for uncertainty estimates.
+8.3 Expanded spatial and size holdout
+Table 5: Expanded holdout results over 39 matched, distinct source SVGs.
+Metric Skeleton + visual tags Change
+Exact target set 7.7%33.3%+25.6 points
+Exact patch 7.7%33.3%+25.6 points
+Mean target precision 14.7%40.3%+25.5 points
+Mean target recall 48.7%69.2%+20.5 points
+Valid output 100% 100% no change
+Mean failure-aware MSE 0.014000.01031-26.4%
+Prompt tokens 92,404 116,833 +26.4%
+Mean model latency 11.75 s 14.44 s +22.9%
+Table 6: Exact targets by held-out descriptor family.
+Family Skeleton + visual
+tags
+Visual-
+only wins
+Position, 27 sources 2/27 (7.4%)11/27
+(40.7%)
+9
+Relative size, 12 sources 1/12 (8.3%)2/12
+(16.7%)
+1
+Overall, 39 sources 3/39 (7.7%)13/39
+(33.3%)
+10
+Across exact targets, 10 sources were visual-only wins, none were skeleton-only wins, three were correct in both
+arms, and 26 were correct in neither. An exact two-sided McNemar/sign test on the 10 discordant pairs gives
+p = 0.001953. Position alone had nine visual-only and no skeleton-only wins (p = 0.003906); size had only one and
+zero (p = 1.0). These tests establish directional consistency on this controlled suite, not an effect size for natural
+SVGs. Raster error was lower for the visual arm on 14 sources, lower for the skeleton arm on four, and tied on 21.
+The residual errors are informative. All outputs were valid, so the remaining problem is grounding behavior rather
+than patch execution. All 78 patches used the correct operation, stroke color, and stroke width. Of 26 visual-arm
+target errors, 10 selected every candidate, five selected a partial multi-node set, and 11 selected one wrong path.
+The wrong singleton was always the residual defaultn2 or n5. The generic contour rule still competes with spatial
+and relative-size modifiers. Visual metadata helps substantially, especially for position, but a four-field tag does
+not by itself make a 7B patch planner a reliable ranking model.
+The latency increase is descriptive only because the arms ran sequentially and were not counterbalanced. Prompt
+tokens are the clean cost measurement.
+8.4 Prompt sensitivity
+A shared experimental prompt explicitly instructed the model to combine visual descriptors conjunctively. The
+retained spatial-v2 artifact shows that it raised the blind spatial baseline from 0% to 37.5%, while the treatment
+remained at 75%. A transient official check degraded treatment behavior, but that run artifact was not retained
+and no numerical claim is made from it. The experimental prompt was rejected; prompt v4 remains the frozen
+default.
+8
+
+SVGPatchLab Technical Report Render-Derived Node Context
+9 Interpretation
+9.1 What the evidence supports
+The clean A/B supports a narrow causal claim: adding per-node render-derived position, extent, area, and color to
+an otherwise unchanged text prompt can improve target-node selection when path geometry is protected. On 39
+distinct held-out sources, exact targets rose by 25.6 points, with 10 visual-only wins and no skeleton-only wins.
+Exact-target direction, mean precision and recall, and raster error all agree.
+9.2 What the evidence does not support
+The current fields do not provide object names such as “cloud,” “sun,” or “tree.” They make words like “small,”
+“red,” and “top-left” groundable. Semantic object recognition still comes from tag/style clues, composition, future
+learned labels, or a separate vision-language stage. Likewise, counterfactual rendering measures visible contribution,
+not the complete amodal shape of an occluded object. The 33.3% held-out exact rate also shows that metadata
+availability is not equivalent to reliable model use.
+9.3 Efficiency
+The treatment increased prompt size by approximately 20% in both pilots and 26.4% on the larger nine-node
+holdout scenes. Model latency did not move consistently across the pilots and increased 22.9% on the holdout.
+The arms were executed sequentially rather than randomized or counterbalanced, so this is not a causal latency
+comparison. Token count is the reliable model-cost signal.
+Rendering cost is front-loaded and cacheable. For repeated instructions on the same SVG, the warm-cache cost is
+a JSON lookup rather than a fresh render per node. Cold-cache and warm-cache preprocessing time should be
+reported separately in the expanded evaluation.
+10 Limitations and failure modes
+1. Small and clustered pilots.Ten official task cases reuse two unique sources, while eight pilot instructions
+reuse two layout SVGs. The 39-source holdout fixes source reuse but remains modest.
+2. Synthetic holdout.Its ambiguity is controlled, but all candidates are generated red paths under one contour
+task and one prompt wording. It does not capture the object, compositing, and authoring diversity of real
+SVGs.
+3. Unique contribution, not full shape.The difference mask describes pixels that change when a node is
+hidden. Covered regions are not recovered.
+4. Raster sensitivity.Very small, faint, filtered, or anti-aliased features can fall below the measurement threshold
+at 64 pixels.
+5. Renderer fidelity.Filters, masks, blend modes, markers, external resources, and fonts can vary across
+renderers.
+6. Groups and ownership.Hiding a group can measure the union of descendants, while hiding one leaf measures
+only that leaf. Prompts must not confuse containment with semantic identity.
+7. No learned object labels.Nodes with similar color, area, and position remain ambiguous when the instruction
+names an object class.
+8. Generation risk.A completion model can hallucinate, duplicate, or shift geometry. It must remain
+trigger-gated and validator-gated.
+9. Incomplete system provenance.The holdout manifest records the seed, prompt hash, source hashes, and
+expected targets, but hardware, git commit, cache state, and server load still need automatic capture.
+11 Next steps
+The next evaluation should preserve the clean A/B boundary while increasing coverage:
+9
+
+SVGPatchLab Technical Report Render-Derived Node Context
+1. complete and analyze the launched 500-task-case official matrix per arm, totaling 1,000 Qwen calls over 100
+unique source SVGs;
+2. separate target ranking from patch planning so a generic same-color contour rule cannot over-select nodes after
+a spatial modifier identifies one object;
+3. test explicit ordinal fields such as size rank and numeric centroid in a new, separately named treatment;
+4. benchmark the two-render ID-buffer fast path against hide-and-diff for descriptor equivalence, preprocessing
+speed, and unsupported-feature fallback;
+5. extend the holdout to partial overlap, visibility controls, groups, and real authored path shapes; and
+6. construct a deletion/completion benchmark with known complete and incomplete underlayers, recording
+cold-cache and warm-cache timing.
+12 Reproducibility
+12.1 Official paired run
+python -m svgpatchlab.cli matrix \
+--config configs/experiments/skeleton_patch.json \
+--model-config configs/models/qwen2.5-7b-ollama.json \
+--architectures skeleton_patch visual_stats_patch \
+--render \
+--output-root runs/qwen2.5-7b-visual-stats-ab-full-v1
+12.2 Paired analysis
+python scripts/analyze_visual_stats_ab.py \
+--root runs/qwen2.5-7b-visual-stats-ab-full-v1 \
+--dataset-root SVGEditBench
+12.3 Pilot spatial probe
+python scripts/run_spatial_grounding_probe.py \
+--model-config configs/models/qwen2.5-7b-ollama.json \
+--output-root runs/qwen2.5-7b-spatial-grounding-probe-v1
+12.4 Expanded held-out suite
+python scripts/run_spatial_grounding_holdout.py \
+--model-config configs/models/qwen2.5-7b-ollama.json \
+--output-root runs/qwen2.5-7b-spatial-grounding-holdout-v1 \
+--seed 20260725
+13 Conclusion
+The most efficient current route to context-aware SVG node selection is not to ask a generator to redraw every
+candidate and not to send an unlinked whole image. It is to compute a reusable attribution record once, attach it
+to stable node IDs, and let the existing patch model operate normally. On the stronger 39-source holdout, that
+addition raised exact target selection from 7.7% to 33.3%, with 10 visual-only paired wins and no skeleton-only
+wins. The same result also exposes the next bottleneck: Qwen often over-selects same-color paths, and relative-size
+reasoning remains much weaker than position grounding.
+For the sun-cloud example, the decision is now precise. Use render-derived context to select and remove the cloud.
+If the full sun exists underneath, stop. Only when deletion reveals genuinely missing geometry should the guarded
+Qwen completion path reconstruct the preserved sun node.
+10
+
+SVGPatchLab Technical Report Render-Derived Node Context
+References
+[1] Xuancheng Liu, Teng Hu, Ran Yi, Chenyang Shi, Wenbo Li, Yu-Kun Lai, and Paul L. Rosin.LayerSVG:
+Layer-wise Semantic Editable Scalable Vector Graphics Synthesis. ICLR 2026 withdrawn submission, submitted
+15 September 2025. https://openreview.net/forum?id=4lEZLpXKkq. The supplied PDF is the anonymous
+double-blind manuscript.
+11

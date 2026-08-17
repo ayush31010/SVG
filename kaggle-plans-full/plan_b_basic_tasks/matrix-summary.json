@@ -1,0 +1,720 @@
+{
+  "_metadata": {
+    "missing_extended_tasks": [
+      "rotate",
+      "flip",
+      "delete"
+    ],
+    "tasks": [
+      "change_color",
+      "set_contour",
+      "upside_down",
+      "transparency",
+      "crop_to_half"
+    ]
+  },
+  "full_context_patch": {
+    "seconds": 161.23000189100003,
+    "status": "ok",
+    "summary": {
+      "architecture": "full_context_patch",
+      "by_task": {
+        "change_color": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 0.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": 18.661558082000283,
+          "mean_mse_on_rendered": null,
+          "model_calls": 2,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 0.5,
+          "reference_structure_match_rate": 0.0,
+          "valid_output_rate": 0.5
+        },
+        "crop_to_half": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 0.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": 15.27980886350042,
+          "mean_mse_on_rendered": null,
+          "model_calls": 2,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 0.5,
+          "reference_structure_match_rate": 0.0,
+          "valid_output_rate": 0.5
+        },
+        "set_contour": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 0.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": 15.562142310999661,
+          "mean_mse_on_rendered": null,
+          "model_calls": 2,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 0.5,
+          "reference_structure_match_rate": 0.0,
+          "valid_output_rate": 0.5
+        },
+        "transparency": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 0.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": 10.526744979999876,
+          "mean_mse_on_rendered": null,
+          "model_calls": 2,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 0.0,
+          "reference_structure_match_rate": 0.0,
+          "valid_output_rate": 0.0
+        },
+        "upside_down": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 0.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": 15.666519991500536,
+          "mean_mse_on_rendered": null,
+          "model_calls": 2,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 0.0,
+          "reference_structure_match_rate": 0.0,
+          "valid_output_rate": 0.0
+        }
+      },
+      "dataset": {
+        "root": "SVGEditBench",
+        "tasks": {
+          "change_color": 100,
+          "compression": 100,
+          "crop_to_half": 100,
+          "set_contour": 100,
+          "transparency": 100,
+          "upside_down": 100
+        },
+        "total_cases": 600,
+        "unique_emojis": 100
+      },
+      "errors": {
+        "PatchError: attributes are invalid for upside_down: ['fill']": 1,
+        "PatchError: attributes are not allowlisted: ['fill-opacity']": 1,
+        "PatchError: model response does not contain a valid JSON object": 2,
+        "PatchError: unknown patch fields: ['attributes', 'op', 'targets']": 2,
+        "PatchError: unknown target IDs: n11": 1
+      },
+      "evaluation": {
+        "render": false,
+        "render_size": 72,
+        "results": "/kaggle/working/kaggle-plans-full/plan_b_basic_tasks/full_context_patch/results.jsonl"
+      },
+      "model": {
+        "adapter": "huggingface",
+        "device_map": "auto",
+        "do_sample": true,
+        "dtype": "float16",
+        "max_new_tokens": 256,
+        "model": "Qwen/Qwen3.5-4B",
+        "quantization": "4bit",
+        "task": "text-generation",
+        "temperature": 0.7
+      },
+      "overall": {
+        "cases": 10,
+        "completion_tokens": 0,
+        "gold_patch_exact_rate": 0.0,
+        "mean_failure_aware_mse": null,
+        "mean_model_latency_seconds": 15.139354845600156,
+        "mean_mse_on_rendered": null,
+        "model_calls": 10,
+        "prompt_tokens": 0,
+        "protected_geometry_rate": 0.3,
+        "reference_structure_match_rate": 0.0,
+        "valid_output_rate": 0.3
+      }
+    }
+  },
+  "oracle_patch": {
+    "seconds": 0.162727124000412,
+    "status": "ok",
+    "summary": {
+      "architecture": "oracle_patch",
+      "by_task": {
+        "change_color": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 1.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": null,
+          "mean_mse_on_rendered": null,
+          "model_calls": 0,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 1.0,
+          "reference_structure_match_rate": 1.0,
+          "valid_output_rate": 1.0
+        },
+        "crop_to_half": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 1.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": null,
+          "mean_mse_on_rendered": null,
+          "model_calls": 0,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 1.0,
+          "reference_structure_match_rate": 1.0,
+          "valid_output_rate": 1.0
+        },
+        "set_contour": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 1.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": null,
+          "mean_mse_on_rendered": null,
+          "model_calls": 0,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 1.0,
+          "reference_structure_match_rate": 1.0,
+          "valid_output_rate": 1.0
+        },
+        "transparency": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 1.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": null,
+          "mean_mse_on_rendered": null,
+          "model_calls": 0,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 1.0,
+          "reference_structure_match_rate": 1.0,
+          "valid_output_rate": 1.0
+        },
+        "upside_down": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 1.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": null,
+          "mean_mse_on_rendered": null,
+          "model_calls": 0,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 1.0,
+          "reference_structure_match_rate": 1.0,
+          "valid_output_rate": 1.0
+        }
+      },
+      "dataset": {
+        "root": "SVGEditBench",
+        "tasks": {
+          "change_color": 100,
+          "compression": 100,
+          "crop_to_half": 100,
+          "set_contour": 100,
+          "transparency": 100,
+          "upside_down": 100
+        },
+        "total_cases": 600,
+        "unique_emojis": 100
+      },
+      "errors": {},
+      "evaluation": {
+        "render": false,
+        "render_size": 72,
+        "results": "/kaggle/working/kaggle-plans-full/plan_b_basic_tasks/oracle_patch/results.jsonl"
+      },
+      "model": {
+        "adapter": "none"
+      },
+      "overall": {
+        "cases": 10,
+        "completion_tokens": 0,
+        "gold_patch_exact_rate": 1.0,
+        "mean_failure_aware_mse": null,
+        "mean_model_latency_seconds": null,
+        "mean_mse_on_rendered": null,
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "protected_geometry_rate": 1.0,
+        "reference_structure_match_rate": 1.0,
+        "valid_output_rate": 1.0
+      }
+    }
+  },
+  "oracle_target_patch": {
+    "seconds": 183.49911728700044,
+    "status": "ok",
+    "summary": {
+      "architecture": "oracle_target_patch",
+      "by_task": {
+        "change_color": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 1.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": 18.730673733000003,
+          "mean_mse_on_rendered": null,
+          "model_calls": 2,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 0.5,
+          "reference_structure_match_rate": 0.5,
+          "valid_output_rate": 0.5
+        },
+        "crop_to_half": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 0.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": 11.711371239000073,
+          "mean_mse_on_rendered": null,
+          "model_calls": 2,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 0.5,
+          "reference_structure_match_rate": 0.0,
+          "valid_output_rate": 0.5
+        },
+        "set_contour": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 1.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": 10.188169001999995,
+          "mean_mse_on_rendered": null,
+          "model_calls": 2,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 1.0,
+          "reference_structure_match_rate": 1.0,
+          "valid_output_rate": 1.0
+        },
+        "transparency": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 1.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": 18.877224489499895,
+          "mean_mse_on_rendered": null,
+          "model_calls": 2,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 0.5,
+          "reference_structure_match_rate": 0.5,
+          "valid_output_rate": 0.5
+        },
+        "upside_down": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": null,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": 27.61357028449993,
+          "mean_mse_on_rendered": null,
+          "model_calls": 2,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 0.0,
+          "reference_structure_match_rate": 0.0,
+          "valid_output_rate": 0.0
+        }
+      },
+      "dataset": {
+        "root": "SVGEditBench",
+        "tasks": {
+          "change_color": 100,
+          "compression": 100,
+          "crop_to_half": 100,
+          "set_contour": 100,
+          "transparency": 100,
+          "upside_down": 100
+        },
+        "total_cases": 600,
+        "unique_emojis": 100
+      },
+      "errors": {
+        "PatchError: crop_to_half only permits set_attributes operations": 1,
+        "PatchError: model response does not contain a valid JSON object": 4
+      },
+      "evaluation": {
+        "render": false,
+        "render_size": 72,
+        "results": "/kaggle/working/kaggle-plans-full/plan_b_basic_tasks/oracle_target_patch/results.jsonl"
+      },
+      "model": {
+        "adapter": "huggingface",
+        "device_map": "auto",
+        "do_sample": true,
+        "dtype": "float16",
+        "max_new_tokens": 256,
+        "model": "Qwen/Qwen3.5-4B",
+        "quantization": "4bit",
+        "task": "text-generation",
+        "temperature": 0.7
+      },
+      "overall": {
+        "cases": 10,
+        "completion_tokens": 0,
+        "gold_patch_exact_rate": 0.6666666666666666,
+        "mean_failure_aware_mse": null,
+        "mean_model_latency_seconds": 17.42420174959998,
+        "mean_mse_on_rendered": null,
+        "model_calls": 10,
+        "prompt_tokens": 0,
+        "protected_geometry_rate": 0.5,
+        "reference_structure_match_rate": 0.4,
+        "valid_output_rate": 0.5
+      }
+    }
+  },
+  "rule_based_patch": {
+    "seconds": 0.16205771899967658,
+    "status": "ok",
+    "summary": {
+      "architecture": "rule_based_patch",
+      "by_task": {
+        "change_color": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 1.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": null,
+          "mean_mse_on_rendered": null,
+          "model_calls": 0,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 1.0,
+          "reference_structure_match_rate": 1.0,
+          "valid_output_rate": 1.0
+        },
+        "crop_to_half": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 1.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": null,
+          "mean_mse_on_rendered": null,
+          "model_calls": 0,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 1.0,
+          "reference_structure_match_rate": 1.0,
+          "valid_output_rate": 1.0
+        },
+        "set_contour": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 1.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": null,
+          "mean_mse_on_rendered": null,
+          "model_calls": 0,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 1.0,
+          "reference_structure_match_rate": 1.0,
+          "valid_output_rate": 1.0
+        },
+        "transparency": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 1.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": null,
+          "mean_mse_on_rendered": null,
+          "model_calls": 0,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 1.0,
+          "reference_structure_match_rate": 1.0,
+          "valid_output_rate": 1.0
+        },
+        "upside_down": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 1.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": null,
+          "mean_mse_on_rendered": null,
+          "model_calls": 0,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 1.0,
+          "reference_structure_match_rate": 1.0,
+          "valid_output_rate": 1.0
+        }
+      },
+      "dataset": {
+        "root": "SVGEditBench",
+        "tasks": {
+          "change_color": 100,
+          "compression": 100,
+          "crop_to_half": 100,
+          "set_contour": 100,
+          "transparency": 100,
+          "upside_down": 100
+        },
+        "total_cases": 600,
+        "unique_emojis": 100
+      },
+      "errors": {},
+      "evaluation": {
+        "render": false,
+        "render_size": 72,
+        "results": "/kaggle/working/kaggle-plans-full/plan_b_basic_tasks/rule_based_patch/results.jsonl"
+      },
+      "model": {
+        "adapter": "none"
+      },
+      "overall": {
+        "cases": 10,
+        "completion_tokens": 0,
+        "gold_patch_exact_rate": 1.0,
+        "mean_failure_aware_mse": null,
+        "mean_model_latency_seconds": null,
+        "mean_mse_on_rendered": null,
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "protected_geometry_rate": 1.0,
+        "reference_structure_match_rate": 1.0,
+        "valid_output_rate": 1.0
+      }
+    }
+  },
+  "skeleton_patch": {
+    "seconds": 185.14394394699957,
+    "status": "ok",
+    "summary": {
+      "architecture": "skeleton_patch",
+      "by_task": {
+        "change_color": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 0.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": 17.76962916399998,
+          "mean_mse_on_rendered": null,
+          "model_calls": 2,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 0.5,
+          "reference_structure_match_rate": 0.0,
+          "valid_output_rate": 0.5
+        },
+        "crop_to_half": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 1.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": 17.988699485500092,
+          "mean_mse_on_rendered": null,
+          "model_calls": 2,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 0.5,
+          "reference_structure_match_rate": 0.5,
+          "valid_output_rate": 0.5
+        },
+        "set_contour": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": null,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": 27.04390585400006,
+          "mean_mse_on_rendered": null,
+          "model_calls": 2,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 0.0,
+          "reference_structure_match_rate": 0.0,
+          "valid_output_rate": 0.0
+        },
+        "transparency": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 0.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": 17.86404358200025,
+          "mean_mse_on_rendered": null,
+          "model_calls": 2,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 0.0,
+          "reference_structure_match_rate": 0.0,
+          "valid_output_rate": 0.0
+        },
+        "upside_down": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 0.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": 7.3640774730001795,
+          "mean_mse_on_rendered": null,
+          "model_calls": 2,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 0.0,
+          "reference_structure_match_rate": 0.0,
+          "valid_output_rate": 0.0
+        }
+      },
+      "dataset": {
+        "root": "SVGEditBench",
+        "tasks": {
+          "change_color": 100,
+          "compression": 100,
+          "crop_to_half": 100,
+          "set_contour": 100,
+          "transparency": 100,
+          "upside_down": 100
+        },
+        "total_cases": 600,
+        "unique_emojis": 100
+      },
+      "errors": {
+        "PatchError: model response does not contain a valid JSON object": 5,
+        "PatchError: transparency may only target the SVG root": 1,
+        "PatchError: upside_down only permits set_attributes operations": 2
+      },
+      "evaluation": {
+        "render": false,
+        "render_size": 72,
+        "results": "/kaggle/working/kaggle-plans-full/plan_b_basic_tasks/skeleton_patch/results.jsonl"
+      },
+      "model": {
+        "adapter": "huggingface",
+        "device_map": "auto",
+        "do_sample": true,
+        "dtype": "float16",
+        "max_new_tokens": 256,
+        "model": "Qwen/Qwen3.5-4B",
+        "quantization": "4bit",
+        "task": "text-generation",
+        "temperature": 0.7
+      },
+      "overall": {
+        "cases": 10,
+        "completion_tokens": 0,
+        "gold_patch_exact_rate": 0.2,
+        "mean_failure_aware_mse": null,
+        "mean_model_latency_seconds": 17.60607111170011,
+        "mean_mse_on_rendered": null,
+        "model_calls": 10,
+        "prompt_tokens": 0,
+        "protected_geometry_rate": 0.2,
+        "reference_structure_match_rate": 0.1,
+        "valid_output_rate": 0.2
+      }
+    }
+  },
+  "two_stage_patch": {
+    "seconds": 319.41880145100004,
+    "status": "ok",
+    "summary": {
+      "architecture": "two_stage_patch",
+      "by_task": {
+        "change_color": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": null,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": 26.90159431133361,
+          "mean_mse_on_rendered": null,
+          "model_calls": 3,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 0.0,
+          "reference_structure_match_rate": 0.0,
+          "valid_output_rate": 0.0
+        },
+        "crop_to_half": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 0.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": 13.441011184999752,
+          "mean_mse_on_rendered": null,
+          "model_calls": 4,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 0.5,
+          "reference_structure_match_rate": 0.0,
+          "valid_output_rate": 0.5
+        },
+        "set_contour": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 0.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": 11.896089774749726,
+          "mean_mse_on_rendered": null,
+          "model_calls": 4,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 0.5,
+          "reference_structure_match_rate": 0.0,
+          "valid_output_rate": 0.5
+        },
+        "transparency": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 0.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": 14.716061752500309,
+          "mean_mse_on_rendered": null,
+          "model_calls": 4,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 0.0,
+          "reference_structure_match_rate": 0.0,
+          "valid_output_rate": 0.0
+        },
+        "upside_down": {
+          "cases": 2,
+          "completion_tokens": 0,
+          "gold_patch_exact_rate": 0.0,
+          "mean_failure_aware_mse": null,
+          "mean_model_latency_seconds": 17.37350775925006,
+          "mean_mse_on_rendered": null,
+          "model_calls": 4,
+          "prompt_tokens": 0,
+          "protected_geometry_rate": 0.0,
+          "reference_structure_match_rate": 0.0,
+          "valid_output_rate": 0.0
+        }
+      },
+      "dataset": {
+        "root": "SVGEditBench",
+        "tasks": {
+          "change_color": 100,
+          "compression": 100,
+          "crop_to_half": 100,
+          "set_contour": 100,
+          "transparency": 100,
+          "upside_down": 100
+        },
+        "total_cases": 600,
+        "unique_emojis": 100
+      },
+      "errors": {
+        "PatchError: attributes are invalid for set_contour: ['fill']": 1,
+        "PatchError: model response does not contain a valid JSON object": 5,
+        "PatchError: transparency may only target the SVG root": 1,
+        "PatchError: upside_down may only target the SVG root": 1
+      },
+      "evaluation": {
+        "render": false,
+        "render_size": 72,
+        "results": "/kaggle/working/kaggle-plans-full/plan_b_basic_tasks/two_stage_patch/results.jsonl"
+      },
+      "model": {
+        "adapter": "huggingface",
+        "device_map": "auto",
+        "do_sample": true,
+        "dtype": "float16",
+        "max_new_tokens": 256,
+        "model": "Qwen/Qwen3.5-4B",
+        "quantization": "4bit",
+        "task": "text-generation",
+        "temperature": 0.7
+      },
+      "overall": {
+        "cases": 10,
+        "completion_tokens": 0,
+        "gold_patch_exact_rate": 0.0,
+        "mean_failure_aware_mse": null,
+        "mean_model_latency_seconds": 16.337445516842116,
+        "mean_mse_on_rendered": null,
+        "model_calls": 19,
+        "prompt_tokens": 0,
+        "protected_geometry_rate": 0.2,
+        "reference_structure_match_rate": 0.0,
+        "valid_output_rate": 0.2
+      }
+    }
+  }
+}

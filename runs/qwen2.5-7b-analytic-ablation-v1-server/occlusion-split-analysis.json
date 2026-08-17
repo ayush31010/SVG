@@ -1,0 +1,107 @@
+{
+  "arms": [
+    "strict_skeleton_patch",
+    "strict_analytic_stats_patch",
+    "strict_visual_stats_patch"
+  ],
+  "control": "strict_skeleton_patch",
+  "groups": {
+    "grounding_occluded": {
+      "arms": {
+        "strict_analytic_stats_patch": {
+          "target_exact_rate": 0.7333333333333333
+        },
+        "strict_skeleton_patch": {
+          "target_exact_rate": 0.7833333333333333
+        },
+        "strict_visual_stats_patch": {
+          "target_exact_rate": 0.7333333333333333
+        }
+      },
+      "cases": 60,
+      "rendered_vs_analytic": {
+        "analytic_only_wins": 3,
+        "rendered_only_wins": 3,
+        "sign_test_p": 1.0
+      }
+    },
+    "grounding_unoccluded": {
+      "arms": {
+        "strict_analytic_stats_patch": {
+          "target_exact_rate": 0.8
+        },
+        "strict_skeleton_patch": {
+          "target_exact_rate": 0.8357142857142857
+        },
+        "strict_visual_stats_patch": {
+          "target_exact_rate": 0.7785714285714286
+        }
+      },
+      "cases": 140,
+      "rendered_vs_analytic": {
+        "analytic_only_wins": 6,
+        "rendered_only_wins": 3,
+        "sign_test_p": 0.5078125
+      }
+    },
+    "occluded_target": {
+      "arms": {
+        "strict_analytic_stats_patch": {
+          "target_exact_rate": 0.5294117647058824
+        },
+        "strict_skeleton_patch": {
+          "target_exact_rate": 0.5816993464052288
+        },
+        "strict_visual_stats_patch": {
+          "target_exact_rate": 0.5359477124183006
+        }
+      },
+      "cases": 153,
+      "rendered_vs_analytic": {
+        "analytic_only_wins": 6,
+        "rendered_only_wins": 7,
+        "sign_test_p": 1.0
+      }
+    },
+    "overall": {
+      "arms": {
+        "strict_analytic_stats_patch": {
+          "target_exact_rate": 0.6
+        },
+        "strict_skeleton_patch": {
+          "target_exact_rate": 0.64
+        },
+        "strict_visual_stats_patch": {
+          "target_exact_rate": 0.604
+        }
+      },
+      "cases": 500,
+      "rendered_vs_analytic": {
+        "analytic_only_wins": 28,
+        "rendered_only_wins": 30,
+        "sign_test_p": 0.8956832138895903
+      }
+    },
+    "unoccluded_target": {
+      "arms": {
+        "strict_analytic_stats_patch": {
+          "target_exact_rate": 0.6311239193083573
+        },
+        "strict_skeleton_patch": {
+          "target_exact_rate": 0.6657060518731989
+        },
+        "strict_visual_stats_patch": {
+          "target_exact_rate": 0.6340057636887608
+        }
+      },
+      "cases": 347,
+      "rendered_vs_analytic": {
+        "analytic_only_wins": 22,
+        "rendered_only_wins": 23,
+        "sign_test_p": 1.0
+      }
+    }
+  },
+  "occlusion_threshold": 0.25,
+  "root": "runs/qwen2.5-7b-analytic-ablation-v1-server"
+}

@@ -1,0 +1,211 @@
+{
+  "artifact": "node-grounding-qwen2.5-vl-7b-context-v3",
+  "created_date": "2026-08-16",
+  "evaluation_definition": {
+    "name": "matched held-out development slice",
+    "rows": 90,
+    "base_cases": 30,
+    "label_permutations_per_case": 3,
+    "source_sha256_clusters": 18,
+    "manifest_written_test_base_cases": 51,
+    "max_eval_samples": 90,
+    "source_families": {
+      "svg_edit_bench_rows": 30,
+      "synthetic_context_rows": 60
+    },
+    "identity_sha256": "0c7738b8ca249a94693ad635251e126911f70ee456c0fea846e0f297b790e530",
+    "identity_fields": [
+      "id",
+      "base_id",
+      "choice_to_node",
+      "gold",
+      "target_choices",
+      "source_family",
+      "image",
+      "instruction",
+      "label_permutation_index",
+      "max_selections",
+      "response_schema",
+      "source_sha256"
+    ],
+    "candidate_policy": "oracle_injected",
+    "candidate_policy_note": "Targets are injected before reranking. These scores measure conditional closed-choice grounding, not end-to-end candidate retrieval."
+  },
+  "base": {
+    "valid_json": {
+      "correct": 89,
+      "total": 90,
+      "rate": 0.9888888888888889
+    },
+    "exact_set": {
+      "correct": 37,
+      "total": 90,
+      "rate": 0.4111111111111111
+    },
+    "micro_f1": 0.49214659685863876,
+    "top1": {
+      "correct": 47,
+      "total": 90,
+      "rate": 0.5222222222222223
+    },
+    "cardinality": {
+      "correct": 77,
+      "total": 90,
+      "rate": 0.8555555555555555
+    },
+    "all_permutations_exact": {
+      "correct": 8,
+      "total": 30,
+      "rate": 0.26666666666666666
+    },
+    "permutation_consistency": {
+      "correct": 8,
+      "total": 30,
+      "rate": 0.26666666666666666
+    },
+    "source_family_exact_set": {
+      "svg_edit_bench": {
+        "correct": 23,
+        "total": 30,
+        "rate": 0.7666666666666667
+      },
+      "synthetic_context": {
+        "correct": 14,
+        "total": 60,
+        "rate": 0.23333333333333334
+      }
+    },
+    "gold_cardinality_exact_set": {
+      "one": {
+        "correct": 37,
+        "total": 78,
+        "rate": 0.47435897435897434
+      },
+      "two": {
+        "correct": 0,
+        "total": 12,
+        "rate": 0.0
+      }
+    }
+  },
+  "trained": {
+    "valid_json": {
+      "correct": 90,
+      "total": 90,
+      "rate": 1.0
+    },
+    "exact_set": {
+      "correct": 87,
+      "total": 90,
+      "rate": 0.9666666666666667
+    },
+    "micro_f1": 0.9753694581280787,
+    "top1": {
+      "correct": 88,
+      "total": 90,
+      "rate": 0.9777777777777777
+    },
+    "cardinality": {
+      "correct": 89,
+      "total": 90,
+      "rate": 0.9888888888888889
+    },
+    "all_permutations_exact": {
+      "correct": 27,
+      "total": 30,
+      "rate": 0.9
+    },
+    "permutation_consistency": {
+      "correct": 27,
+      "total": 30,
+      "rate": 0.9
+    },
+    "source_family_exact_set": {
+      "svg_edit_bench": {
+        "correct": 29,
+        "total": 30,
+        "rate": 0.9666666666666667
+      },
+      "synthetic_context": {
+        "correct": 58,
+        "total": 60,
+        "rate": 0.9666666666666667
+      }
+    },
+    "gold_cardinality_exact_set": {
+      "one": {
+        "correct": 76,
+        "total": 78,
+        "rate": 0.9743589743589743
+      },
+      "two": {
+        "correct": 11,
+        "total": 12,
+        "rate": 0.9166666666666666
+      }
+    }
+  },
+  "paired": {
+    "row_exact_set": {
+      "both_correct": 37,
+      "trained_only_correct": 50,
+      "base_only_correct": 0,
+      "neither_correct": 3,
+      "gain_percentage_points": 55.55555555555556,
+      "two_sided_exact_sign_test_p": 1.7763568394002505e-15,
+      "independence_note": "Rows are correlated label permutations; use the base-case analysis as primary."
+    },
+    "base_case_all_permutations_exact": {
+      "both_correct": 8,
+      "trained_only_correct": 19,
+      "base_only_correct": 0,
+      "neither_correct": 3,
+      "gain_percentage_points": 63.333333333333336,
+      "two_sided_exact_sign_test_p": 3.814697265625e-06
+    },
+    "source_cluster_all_rows_exact": {
+      "base_correct": 4,
+      "trained_correct": 15,
+      "clusters": 18,
+      "trained_only_correct": 11,
+      "base_only_correct": 0
+    }
+  },
+  "trained_ablations": {
+    "blank_image": {
+      "description": "Raster pixels removed; label-keyed tag, geometry, style, area, depth, and structure metadata retained.",
+      "exact_set": {
+        "correct": 72,
+        "total": 90,
+        "rate": 0.8,
+        "drop_percentage_points": 16.666666666666664
+      },
+      "micro_f1": 0.8155339805825242,
+      "all_permutations_exact": {
+        "correct": 19,
+        "total": 30,
+        "rate": 0.6333333333333333,
+        "drop_percentage_points": 26.666666666666668
+      }
+    },
+    "blank_instruction": {
+      "exact_set": {
+        "correct": 3,
+        "total": 90,
+        "rate": 0.03333333333333333,
+        "drop_percentage_points": 93.33333333333333
+      },
+      "micro_f1": 0.23157894736842105,
+      "valid_json": {
+        "correct": 57,
+        "total": 90,
+        "rate": 0.6333333333333333
+      },
+      "all_permutations_exact": {
+        "correct": 0,
+        "total": 30,
+        "rate": 0.0
+      }
+    }
+  }
+}

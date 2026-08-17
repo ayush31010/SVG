@@ -1,0 +1,438 @@
+You are an SVG patch planner using protocol svgpatchlab.patch.v4.
+Return exactly one JSON object and nothing else. Do not output SVG, XML,
+Markdown, analysis, or commentary.
+
+Required output shape:
+- one JSON object
+- top-level integer field: version = 1 (or 2 when using remove_element)
+- top-level array field: operations
+- each operation has:
+  - op: one of "set_attributes", "remove_attributes", "remove_element"
+  - for set_attributes / remove_attributes:
+    - targets: array of actual node IDs from the context
+    - attributes (set_attributes): SVG attribute key-value pairs
+    - names (remove_attributes): list of attribute names to delete
+  - for remove_element:
+    - targets: array of node IDs to remove entirely from the tree
+    - version at top level must be 2
+
+Strict JSON rules:
+1. The top-level object may contain only `version` and `operations`.
+2. Every edit must be an object inside the `operations` array.
+3. Never put `op`, `targets`, or `attributes` at the top level.
+4. Do not output SVG code or XML.
+5. Do not output placeholder words. Every target must be a real node ID
+   found in the actual context. Never target n0 for remove_element.
+6. Do not modify path data (`d`) or polygon coordinate data (`points`).
+
+Planning checklist:
+1. Read the actual instruction and context. Infer the task type from
+   the instruction words, not from memory or prior examples.
+2. Use only node IDs that appear in the actual context.
+3. Make the smallest patch that performs the requested edit.
+4. Never insert new shapes unless the instruction explicitly asks to add one.
+
+Generic SVG edit rules:
+
+Color/recolor/fill changes:
+  * Find nodes whose direct `fill` or resolved `fill` equals OLD_COLOR.
+  * Set only `fill` to NEW_COLOR on those nodes.
+  * Do not set opacity, stroke, transform, or viewBox.
+  * Do not target n0 unless n0 itself has the OLD_COLOR fill.
+
+Outline/contour/border changes:
+  * Target nodes whose direct or resolved `fill` equals the named color.
+  * Set `stroke` and `stroke-width`.
+  * Preserve existing `fill`; do not recolor.
+
+Transparency/opacity changes:
+  * Target exactly n0. Set `opacity` only.
+
+Crop/trim/keep-half changes:
+  * Target exactly n0. Modify only `viewBox`.
+  * If viewBox is `x y w h`:
+    - keep left half:   x y w/2 h
+    - keep right half:  x+w/2 y w/2 h
+    - keep top half:    x y w h/2
+    - keep bottom half: x y+h/2 w h/2
+  * Output computed numeric values, not formulas.
+
+Upside-down / vertical flip (whole image):
+  * Target exactly n0. Set only `transform`.
+  * If viewBox is `x y w h` and y is 0: translate(0,h) scale(1,-1)
+
+Rotate changes:
+  * Target the indicated node(s). Set only `transform`.
+  * Use rotate(angle,cx,cy) where cx,cy is the visual center of the node.
+    If the center is unknown, use the SVG canvas center (w/2, h/2).
+  * Example: rotate(45,18,18) for a 45-degree rotation around (18,18).
+
+Flip (horizontal or vertical, scoped):
+  * Target the indicated node(s) or n0 for whole-image flip. Set only `transform`.
+  * Horizontal flip of a node at canvas width W: translate(W,0) scale(-1,1)
+  * Vertical flip of a node at canvas height H: translate(0,H) scale(1,-1)
+
+Delete / remove element changes:
+  * ONLY use "remove_element" when the instruction explicitly says to delete,
+    remove, or erase a specific element. Never use it for color, opacity,
+    transform, crop, or contour edits.
+  * Set version to 2 at the top level.
+  * Never target n0. Never remove an ancestor of a node you want to keep.
+  * Example: {"version":2,"operations":[{"op":"remove_element","targets":["n5"]}]}
+
+Compute every target, color, number, and attribute value from the actual
+instruction and actual context below.
+
+Actual edit instruction:
+Change the robot's right wheel to bright red.
+
+Actual ID-grounded target shortlist and hide-and-rerender checks:
+{
+  "counterfactual_previews": [
+    {
+      "difference": {
+        "alpha_changed_area_pct": 1.82,
+        "bbox_pct": [
+          56.77,
+          72.92,
+          18.23,
+          18.23
+        ],
+        "bbox_px": [
+          109,
+          140,
+          35,
+          35
+        ],
+        "became_transparent_area_pct": 1.723,
+        "became_visible_area_pct": 0.0,
+        "centroid_pct": [
+          65.99,
+          82.06
+        ],
+        "changed": true,
+        "changed_area_pct": 2.699,
+        "changed_area_px": 995,
+        "components": [
+          {
+            "area_pct_canvas": 2.699,
+            "area_px": 995,
+            "bbox_px": [
+              109,
+              140,
+              35,
+              35
+            ],
+            "centroid_pct": [
+              65.99,
+              82.06
+            ],
+            "pixel_categories": {
+              "alpha_changed": 671,
+              "became_transparent": 635,
+              "repainted_or_revealed": 352,
+              "rgb_changed": 995
+            },
+            "position": "bottom"
+          }
+        ],
+        "dominant_color_transitions": [
+          {
+            "from": "#3070f0@1.00",
+            "pct_of_changed": 56.78,
+            "pixels": 565,
+            "to": "transparent"
+          },
+          {
+            "from": "#3070f0@1.00",
+            "pct_of_changed": 29.05,
+            "pixels": 289,
+            "to": "#90b0b0@1.00"
+          },
+          {
+            "from": "#3070f0@1.00",
+            "pct_of_changed": 2.21,
+            "pixels": 22,
+            "to": "#90b0b0@0.60"
+          }
+        ],
+        "max_channel_delta": 1.0,
+        "mean_rgba_delta": 0.4641,
+        "ownership": {
+          "changed_pixels_owned_by_target_pct": 95.678,
+          "visible_target_area_px": 952,
+          "visible_target_pixels_changed_pct": 100.0
+        },
+        "position": "bottom",
+        "render_size": [
+          192,
+          192
+        ],
+        "repainted_or_revealed_area_pct": 0.955,
+        "revealed_or_repainted_area_pct": 0.955,
+        "rgb_changed_area_pct": 2.699,
+        "transparent_hole_area_pct": 1.723
+      },
+      "difference_map_image_index": 3,
+      "target": "n6",
+      "target_context": {
+        "attributes": {
+          "cx": "66",
+          "cy": "82",
+          "fill": "#2563EB",
+          "r": "9"
+        },
+        "resolved_style": {
+          "fill": "#2563EB"
+        },
+        "tag": "circle",
+        "visual": {
+          "area_pct": 2.58,
+          "bbox": [
+            56.77,
+            73.44,
+            18.23,
+            17.71
+          ],
+          "color": "#2563eb",
+          "id_color": "#53844f",
+          "position": "bottom"
+        }
+      },
+      "without_candidate_image_index": 2
+    }
+  ],
+  "image_order": [
+    {
+      "index": 1,
+      "kind": "original"
+    },
+    {
+      "index": 2,
+      "kind": "without_candidate",
+      "target": "n6"
+    },
+    {
+      "index": 3,
+      "kind": "difference_map",
+      "legend": {
+        "cyan": "underlayer revealed or repainted",
+        "dim_gray": "unchanged reference",
+        "green": "became visible",
+        "red": "became transparent",
+        "yellow": "alpha changed"
+      },
+      "target": "n6"
+    }
+  ],
+  "scene": {
+    "format": "svgpatchlab.scene.v1",
+    "node_count": 7,
+    "nodes": [
+      {
+        "attributes": {
+          "viewBox": "0 0 100 100"
+        },
+        "child_index": 0,
+        "depth": 0,
+        "id": "n0",
+        "parent": null,
+        "tag": "svg",
+        "visual": {
+          "area_pct": 32.0,
+          "bbox": [
+            25.0,
+            15.62,
+            50.0,
+            75.52
+          ],
+          "color": "#94a3b8",
+          "position": "center"
+        }
+      },
+      {
+        "attributes": {
+          "fill": "#94A3B8",
+          "height": "42",
+          "rx": "6",
+          "width": "50",
+          "x": "25",
+          "y": "38"
+        },
+        "child_index": 0,
+        "depth": 1,
+        "id": "n1",
+        "parent": "n0",
+        "resolved_style": {
+          "fill": "#94A3B8"
+        },
+        "tag": "rect",
+        "visual": {
+          "area_pct": 15.61,
+          "bbox": [
+            25.0,
+            38.02,
+            50.0,
+            42.19
+          ],
+          "color": "#94a3b8",
+          "id_color": "#3c6ef2",
+          "position": "center"
+        }
+      },
+      {
+        "attributes": {
+          "fill": "#CBD5E1",
+          "height": "31",
+          "rx": "7",
+          "width": "38",
+          "x": "31",
+          "y": "16"
+        },
+        "child_index": 1,
+        "depth": 1,
+        "id": "n2",
+        "parent": "n0",
+        "resolved_style": {
+          "fill": "#CBD5E1"
+        },
+        "tag": "rect",
+        "visual": {
+          "area_pct": 9.79,
+          "bbox": [
+            30.73,
+            15.62,
+            38.54,
+            31.25
+          ],
+          "color": "#cbd5e1",
+          "id_color": "#daa66b",
+          "position": "top"
+        }
+      },
+      {
+        "attributes": {
+          "cx": "43.747768841925044",
+          "cy": "29.086892507953767",
+          "fill": "#2563EB",
+          "r": "5"
+        },
+        "child_index": 2,
+        "depth": 1,
+        "id": "n3",
+        "parent": "n0",
+        "resolved_style": {
+          "fill": "#2563EB"
+        },
+        "tag": "circle",
+        "visual": {
+          "area_pct": 0.72,
+          "bbox": [
+            39.06,
+            24.48,
+            9.38,
+            9.38
+          ],
+          "color": "#2563eb",
+          "id_color": "#78dde4",
+          "position": "top"
+        }
+      },
+      {
+        "attributes": {
+          "cx": "59.747768841925044",
+          "cy": "29.086892507953767",
+          "fill": "#2563EB",
+          "r": "5"
+        },
+        "child_index": 3,
+        "depth": 1,
+        "id": "n4",
+        "parent": "n0",
+        "resolved_style": {
+          "fill": "#2563EB"
+        },
+        "tag": "circle",
+        "visual": {
+          "area_pct": 0.71,
+          "bbox": [
+            55.21,
+            24.48,
+            9.38,
+            9.38
+          ],
+          "color": "#2563eb",
+          "id_color": "#17155d",
+          "position": "top"
+        }
+      },
+      {
+        "attributes": {
+          "cx": "34",
+          "cy": "82",
+          "fill": "#2563EB",
+          "r": "9"
+        },
+        "child_index": 4,
+        "depth": 1,
+        "id": "n5",
+        "parent": "n0",
+        "resolved_style": {
+          "fill": "#2563EB"
+        },
+        "tag": "circle",
+        "visual": {
+          "area_pct": 2.58,
+          "bbox": [
+            25.0,
+            73.44,
+            18.23,
+            17.71
+          ],
+          "color": "#2563eb",
+          "id_color": "#b54cd6",
+          "position": "bottom"
+        }
+      },
+      {
+        "attributes": {
+          "cx": "66",
+          "cy": "82",
+          "fill": "#2563EB",
+          "r": "9"
+        },
+        "child_index": 5,
+        "depth": 1,
+        "id": "n6",
+        "parent": "n0",
+        "resolved_style": {
+          "fill": "#2563EB"
+        },
+        "tag": "circle",
+        "visual": {
+          "area_pct": 2.58,
+          "bbox": [
+            56.77,
+            73.44,
+            18.23,
+            17.71
+          ],
+          "color": "#2563eb",
+          "id_color": "#53844f",
+          "position": "bottom"
+        }
+      }
+    ],
+    "root_id": "n0"
+  },
+  "selection_constraint": "Every final patch target must be one of shortlisted_targets.",
+  "shortlisted_targets": [
+    "n6"
+  ],
+  "visual_context": {
+    "method": "id_buffer",
+    "unsupported_features": []
+  }
+}
+
+Output the JSON patch object now.

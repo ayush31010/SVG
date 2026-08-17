@@ -112,33 +112,202 @@ class Patch:
 
 _JSON_FENCE = re.compile(r"```(?:json)?\s*(.*?)\s*```", re.DOTALL | re.IGNORECASE)
 
+_OPERATIONS_ALIASES = ("operations", "patches", "ops")
+_OPERATION_KEYS = {"op", "targets", "attributes", "names", "parent", "after", "element"}
 
-def extract_json_object(text: str) -> dict[str, Any]:
+PATCH_SCHEMA_NAME = "svgpatchlab_patch_v1"
+
+#: JSON Schema for the patch format, for servers that support constrained
+#: decoding. Kept beside the parser so the two cannot drift: every property
+#: here is accepted by Patch.from_dict, and additionalProperties is false at
+#: both levels so a response cannot carry RFC 6902 fields such as path, value,
+#: or from. Per-operation requirements (set_attributes needs attributes, and so
+#: on) stay in validate_patch: the schema's job is to make the wrong dialect
+#: unrepresentable, not to restate the policy.
+PATCH_JSON_SCHEMA: dict[str, Any] = {
+    "type": "object",
+    "additionalProperties": False,
+    "required": ["version", "operations"],
+    "properties": {
+        "version": {"type": "integer", "enum": [1, 2]},
+        "operations": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "anyOf": [
+                    {
+                        # The three operations that address existing nodes.
+                        # targets is required: leaving it optional lets a model
+                        # emit a legally-shaped operation that names no node,
+                        # which was observed against Ollama 0.32.3.
+                        "type": "object",
+                        "additionalProperties": False,
+                        "required": ["op", "targets"],
+                        "properties": {
+                            "op": {
+                                "type": "string",
+                                "enum": [
+                                    "set_attributes",
+                                    "remove_attributes",
+                                    "remove_element",
+                                ],
+                            },
+                            "targets": {
+                                "type": "array",
+                                "minItems": 1,
+                                "items": {"type": "string", "pattern": "^n[0-9]+$"},
+                            },
+                            "attributes": {
+                                "type": "object",
+                                "additionalProperties": {
+                                    "type": ["string", "number"],
+                                },
+                            },
+                            "names": {"type": "array", "items": {"type": "string"}},
+                        },
+                    },
+                    {
+                        # insert_primitive addresses a parent instead.
+                        "type": "object",
+                        "additionalProperties": False,
+                        "required": ["op", "parent", "element"],
+                        "properties": {
+                            "op": {"type": "string", "enum": ["insert_primitive"]},
+                            "parent": {"type": "string", "pattern": "^n[0-9]+$"},
+                            "after": {"type": "string", "pattern": "^n[0-9]+$"},
+                            "element": {"type": "string"},
+                            "attributes": {
+                                "type": "object",
+                                "additionalProperties": {
+                                    "type": ["string", "number"],
+                                },
+                            },
+                        },
+                    },
+                ]
+            },
+        },
+    },
+}
+
+
+def patch_json_schema() -> dict[str, Any]:
+    """Return a deep copy of the patch schema, safe for callers to mutate."""
+    return json.loads(json.dumps(PATCH_JSON_SCHEMA))
+
+
+def _iter_json_values(text: str):
+    """Yield every JSON value the response plausibly intends, best first.
+
+    Fenced blocks come before the raw text, and whole-string parses come before
+    embedded ones, so a model that explains itself and then answers is read as
+    having answered.
+    """
     candidates = [match.group(1) for match in _JSON_FENCE.finditer(text)]
     candidates.append(text)
     decoder = json.JSONDecoder()
     for candidate in candidates:
-        stripped = candidate.strip()
         try:
-            value = json.loads(stripped)
-            if isinstance(value, dict):
-                return value
+            yield json.loads(candidate.strip())
         except json.JSONDecodeError:
             pass
+    for candidate in candidates:
         for index, character in enumerate(candidate):
-            if character != "{":
+            if character not in "{[":
                 continue
             try:
                 value, _ = decoder.raw_decode(candidate[index:])
             except json.JSONDecodeError:
                 continue
-            if isinstance(value, dict):
-                return value
+            yield value
+
+
+def _looks_like_operation(value: Any) -> bool:
+    return (
+        isinstance(value, dict)
+        and isinstance(value.get("op"), str)
+        and bool(set(value) & {"targets", "attributes", "names"})
+        and not set(value) - _OPERATION_KEYS
+    )
+
+
+def repair_patch_payload(value: Any) -> dict[str, Any]:
+    """Normalize near-miss payloads into the documented patch shape.
+
+    Only unambiguous rewrites are performed: renaming a known alias of
+    ``operations``, wrapping a bare list of well-formed operations, and raising
+    an omitted or contradicted ``version`` to the minimum the operations
+    require. RFC 6902 payloads are left alone, because their ``path`` strings
+    address several different tree shapes across responses and translating them
+    would be guesswork rather than repair.
+    """
+    if isinstance(value, list) and value and all(_looks_like_operation(x) for x in value):
+        value = {"operations": value}
+    if not isinstance(value, dict):
+        return value
+
+    repaired = dict(value)
+    if "operations" not in repaired:
+        for alias in _OPERATIONS_ALIASES[1:]:
+            if isinstance(repaired.get(alias), list):
+                repaired["operations"] = repaired.pop(alias)
+                break
+
+    operations = repaired.get("operations")
+    if isinstance(operations, list) and any(
+        isinstance(item, dict) and item.get("op") == "remove_element"
+        for item in operations
+    ):
+        if not isinstance(repaired.get("version"), int) or repaired["version"] < 2:
+            repaired["version"] = 2
+    return repaired
+
+
+def extract_json_object(text: str) -> dict[str, Any]:
+    for value in _iter_json_values(text):
+        if isinstance(value, dict):
+            return value
     raise PatchError("model response does not contain a valid JSON object")
 
 
-def parse_patch(text: str) -> Patch:
-    return Patch.from_dict(extract_json_object(text))
+def parse_patch(text: str, repair: bool = False) -> Patch:
+    """Parse a model response into a Patch.
+
+    With ``repair=False`` the first JSON object found must already be a valid
+    patch. With ``repair=True`` every candidate value in the response is tried,
+    each is normalized by :func:`repair_patch_payload`, and the first one that
+    parses wins; the strict error is re-raised if none do.
+    """
+    if not repair:
+        return Patch.from_dict(extract_json_object(text))
+
+    first_error: PatchError | None = None
+    saw_object = False
+    for value in _iter_json_values(text):
+        candidate = repair_patch_payload(value)
+        if not isinstance(candidate, dict):
+            continue
+        saw_object = True
+        try:
+            return Patch.from_dict(candidate)
+        except PatchError as exc:
+            if first_error is None:
+                first_error = exc
+    if not saw_object:
+        raise PatchError("model response does not contain a valid JSON object")
+    raise first_error  # type: ignore[misc]
+
+
+def _subtree_signature(element: Any) -> tuple:
+    text = element.text or ""
+    if not text.strip():
+        text = ""
+    return (
+        element.tag,
+        tuple(sorted(element.attrib.items())),
+        text,
+        tuple(_subtree_signature(child) for child in element),
+    )
 
 
 def _diff_elements(
@@ -168,23 +337,69 @@ def _diff_elements(
 
     orig_children = list(orig_elem)
     ans_children = list(ans_elem)
-    ans_used = [False] * len(ans_children)
-    for orig_child in orig_children:
-        orig_tag = local_name(orig_child.tag)
-        matched = None
+    matched_answers: dict[int, int] = {}
+    ans_used: set[int] = set()
+
+    # Match unchanged siblings first. This is essential for deletion patches:
+    # positional tag-only matching would otherwise pair the element before a
+    # deletion with the element after it and report protected-geometry edits
+    # plus deletion of the wrong final sibling.
+    original_signatures = [_subtree_signature(child) for child in orig_children]
+    answer_signatures = [_subtree_signature(child) for child in ans_children]
+    for i, orig_child in enumerate(orig_children):
         for j, ans_child in enumerate(ans_children):
-            if ans_used[j]:
-                continue
-            if local_name(ans_child.tag) == orig_tag:
-                ans_used[j] = True
-                matched = ans_child
+            if (
+                j not in ans_used
+                and local_name(ans_child.tag) == local_name(orig_child.tag)
+                and answer_signatures[j] == original_signatures[i]
+            ):
+                matched_answers[i] = j
+                ans_used.add(j)
                 break
-        if matched is None:
+
+    # Explicit SVG IDs are the next strongest identity signal for edited
+    # elements whose subtree fingerprint necessarily changed.
+    for i, orig_child in enumerate(orig_children):
+        if i in matched_answers:
+            continue
+        explicit_id = orig_child.attrib.get("id")
+        if explicit_id is None:
+            continue
+        for j, ans_child in enumerate(ans_children):
+            if (
+                j not in ans_used
+                and local_name(ans_child.tag) == local_name(orig_child.tag)
+                and ans_child.attrib.get("id") == explicit_id
+            ):
+                matched_answers[i] = j
+                ans_used.add(j)
+                break
+
+    # Fall back to same-tag order for ordinary attribute edits.
+    for i, orig_child in enumerate(orig_children):
+        if i in matched_answers:
+            continue
+        for j, ans_child in enumerate(ans_children):
+            if j not in ans_used and local_name(ans_child.tag) == local_name(orig_child.tag):
+                matched_answers[i] = j
+                ans_used.add(j)
+                break
+
+    for i, orig_child in enumerate(orig_children):
+        matched_index = matched_answers.get(i)
+        if matched_index is None:
             child_id = id_map.get(id(orig_child))
             if child_id:
                 remove_elements.append(child_id)
         else:
-            _diff_elements(orig_child, matched, id_map, set_groups, remove_groups, remove_elements)
+            _diff_elements(
+                orig_child,
+                ans_children[matched_index],
+                id_map,
+                set_groups,
+                remove_groups,
+                remove_elements,
+            )
 
 
 def derive_patch(original_svg: str, answer_svg: str) -> Patch:

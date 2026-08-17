@@ -1,0 +1,12 @@
+{
+  "exact_match": 2,
+  "exact_match_rate": 0.4,
+  "examples": 5,
+  "micro_f1": 0.8235294117647058,
+  "micro_precision": 1.0,
+  "micro_recall": 0.7,
+  "top1_accuracy": 1.0,
+  "top1_correct": 5,
+  "valid_json": 5,
+  "valid_json_rate": 1.0
+}

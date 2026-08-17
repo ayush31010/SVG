@@ -1,0 +1,13 @@
+{
+  "matched_modules": {
+    "language_attention": 112,
+    "vision_attention": 64,
+    "vision_projector": 2
+  },
+  "target_module_count": 178,
+  "trainable_lora_parameters": {
+    "language_attention": 224,
+    "vision_attention": 128,
+    "vision_projector": 4
+  }
+}

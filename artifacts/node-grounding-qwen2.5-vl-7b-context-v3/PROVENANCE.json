@@ -1,0 +1,140 @@
+{
+  "artifact": "node-grounding-qwen2.5-vl-7b-context-v3",
+  "created_date": "2026-08-16",
+  "base_model": {
+    "name": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "revision": null,
+    "revision_note": "The original run did not pin or log an immutable Hugging Face Hub revision."
+  },
+  "hardware": {
+    "host": "tatsumaki.ri.cmu.edu",
+    "gpu": "NVIDIA H200",
+    "gpu_memory_mib": 143771,
+    "training_physical_gpu_index": 2,
+    "targeted_runtime_smoke_physical_gpu_index": 1,
+    "driver": "570.133.20"
+  },
+  "software": {
+    "python": "3.13.15",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.15.0",
+    "peft": "0.20.0",
+    "accelerate": "1.14.0",
+    "safetensors": "0.8.0",
+    "cairosvg": "2.9.0",
+    "pillow": "12.3.0"
+  },
+  "training": {
+    "epochs": 2,
+    "optimizer_steps": 200,
+    "runtime_seconds": 2005,
+    "best_epoch": 1,
+    "best_validation_loss": 0.004494694992899895,
+    "final_validation_loss": 0.00781943928450346,
+    "trainable_parameters": 14327808,
+    "all_parameters": 8306494464,
+    "trainable_fraction": 0.001725,
+    "train_rows": 400,
+    "validation_rows": 89
+  },
+  "dataset": {
+    "format": "svgpatchlab.node_grounding.v3",
+    "seed": 20260816,
+    "rows": {
+      "train": 782,
+      "validation": 122,
+      "test": 153
+    },
+    "image_count": 1057,
+    "split_grouping": "emoji_identity_and_source_sha256_components",
+    "candidate_policy": "oracle_injected"
+  },
+  "held_out_development_slice": {
+    "rows": 90,
+    "base_cases": 30,
+    "source_sha256_clusters": 18,
+    "evaluation_identity_sha256": "0c7738b8ca249a94693ad635251e126911f70ee456c0fea846e0f297b790e530"
+  },
+  "verification": {
+    "local_unit_tests": {
+      "passed": 234,
+      "skipped": 9,
+      "failed": 0
+    },
+    "targeted_runtime": {
+      "cases": 5,
+      "visual_closed_choice": 5,
+      "strict_json": 5,
+      "exact_node_set": 5,
+      "architecture_success": 5,
+      "deployment_path_checks_pass": true,
+      "model_selection_checks_pass": true
+    }
+  },
+  "key_file_sha256": {
+    "adapter/adapter_model.safetensors": "dc497b620d9cc22d36b541c481e0097941caa12f6cb3aeb5fcbe8c131dfddc49",
+    "adapter-epoch1/adapter_model.safetensors": "dc497b620d9cc22d36b541c481e0097941caa12f6cb3aeb5fcbe8c131dfddc49",
+    "adapter-epoch2/adapter_model.safetensors": "8ce2dc578330ee3aad5eb2ee4814d66490695d57c094a77af2aa9cdad108b52a",
+    "adapter/lora_module_report.json": "7f2184fe65174c8115a5a10d055ebdeadc82e4986bf80a5e343ca6795f10044e",
+    "dataset/manifest.json": "f7ec4f3a154bc4cb8d8c76e55c5542c47448b410b49c6cee0bc04351fc6a6e2b",
+    "dataset/evidence-images.tar.gz": "9b0bdab6f137da0cc2a237c33439d4a5f1d02fbe5bc2e272c70dd8356f843eee",
+    "evaluation/base/test_metrics.json": "a2c313e0daec89de736c9f0af0528dfebe54e18d4c19e98b3468bc98c426e2dd",
+    "evaluation/trained/test_metrics.json": "de7a4dc623b34cb8f3c8143f41b350730b3ebba78742e1bfdde14c7925dbf6c0",
+    "evaluation/runtime-generic/summary.json": "792a175ce3f546615df77b7bccd0bd11964aaf2967ea4d87ff542387dba764cc",
+    "evaluation/runtime-targeted/summary.json": "6470a74578b14ae2fde0c817e9fbadd6e57ac2503f8ca0c7488b37e61a6de518",
+    "evaluation/comparison.json": "e7682c5078b28252a53b5304c1dcea5d864caca2ca31c06dc724f59e5e287540",
+    "run/node_grounding_context_h200.json": "9165b9434ea15787d4d6f250806a8ab87f5305961d00df8ec5372fecc55bd2ff",
+    "source/source-snapshot.tar.gz": "1a1d5b7b998e3bf06f866835e725a14addbd3b59f9b394e8ef66ccb0bf67f103",
+    "TRAINING_SUMMARY.md": "997d258e5f856b2cb9bbe47efc2a6aa84871ab3ab9cd8969c16dcd1307cea533"
+  },
+  "full_manifest_evaluation": {
+    "date": "2026-08-17",
+    "rows": 153,
+    "base_cases": 51,
+    "source_sha256_clusters": 20,
+    "max_eval_samples": null,
+    "hardware": {
+      "host": "10.71.9.40",
+      "gpu": "NVIDIA H100 NVL",
+      "cuda_visible_devices": "1"
+    },
+    "software": {
+      "python": "3.12.13",
+      "torch": "2.11.0+cu128",
+      "transformers": "5.15.0",
+      "peft": "0.20.0",
+      "accelerate": "1.14.0",
+      "safetensors": "0.8.0"
+    },
+    "adapter_sha256_verified_on_host": true,
+    "generations": 918,
+    "trained": {
+      "exact_set_match": 147,
+      "exact_set_match_rate": 0.9607843137254902,
+      "micro_f1": 0.968299711815562,
+      "base_cases_all_permutations_exact": 46,
+      "valid_json": 153
+    },
+    "base": {
+      "exact_set_match": 59,
+      "exact_set_match_rate": 0.38562091503267976,
+      "micro_f1": 0.4720496894409938,
+      "base_cases_all_permutations_exact": 11,
+      "valid_json": 148
+    },
+    "paired_base_case": {
+      "trained_only_correct": 35,
+      "base_only_correct": 0,
+      "two_sided_exact_sign_test_p": 5.820766091346741e-11
+    },
+    "identity_sha256": "89ce9980f7d90e0c2f9fd2df5992a590d278820493c7d7585ac8abfa6a2c5d5b",
+    "evidence": "evaluation/full-manifest/",
+    "note": "Supersedes the capped 90-row development slice. Trained exact-set moves 96.7% -> 96.1% and permutation consistency 90.0% -> 90.2%; the paired base-case gain rises from 63.3 to 68.6 points because the base model scores lower on the full manifest."
+  },
+  "known_limitations": [
+    "Candidate targets are oracle-injected before reranking; end-to-end candidate recall is not measured.",
+    "Synthetic context probes contribute 99 of 153 rows, and the 153 rows resolve to only 20 source-SHA-256 clusters, so they are not independent samples.",
+    "The original base-model Hub revision was not pinned.",
+    "This is not an official zero-shot SVGEditBench result."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "architecture": "strict_analytic_stats_patch",
+  "by_family": {
+    "clean": {
+      "cases": 24,
+      "completion_tokens": 1692,
+      "decoy_selected_rate": null,
+      "gold_patch_exact_rate": 0.375,
+      "mean_failure_aware_mse": 0.004706293887769182,
+      "mean_model_latency_seconds": 3.623543931161597,
+      "mean_wall_seconds": 3.6271827711025253,
+      "model_calls": 24,
+      "prompt_tokens": 51537,
+      "target_exact_rate": 0.375,
+      "valid_output_rate": 1.0
+    },
+    "occluded": {
+      "cases": 24,
+      "completion_tokens": 1576,
+      "decoy_selected_rate": 0.3333333333333333,
+      "gold_patch_exact_rate": 0.0,
+      "mean_failure_aware_mse": 0.012571471200014154,
+      "mean_model_latency_seconds": 3.4916857415810227,
+      "mean_wall_seconds": 3.496320338890655,
+      "model_calls": 24,
+      "prompt_tokens": 57432,
+      "target_exact_rate": 0.0,
+      "valid_output_rate": 1.0
+    }
+  },
+  "format": "svgpatchlab.occluded_spatial_holdout.v2",
+  "overall": {
+    "cases": 48,
+    "completion_tokens": 3268,
+    "decoy_selected_rate": 0.3333333333333333,
+    "gold_patch_exact_rate": 0.1875,
+    "mean_failure_aware_mse": 0.008638882543891668,
+    "mean_model_latency_seconds": 3.5576148363713096,
+    "mean_wall_seconds": 3.56175155499659,
+    "model_calls": 48,
+    "prompt_tokens": 108969,
+    "target_exact_rate": 0.1875,
+    "valid_output_rate": 1.0
+  }
+}

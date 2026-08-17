@@ -76,6 +76,7 @@ def validate_patch(
         raise PatchError("patch exceeds operation limit")
     node_ids = {node["id"] for node in scene["nodes"]}
     task_attributes = TASK_ALLOWED_ATTRIBUTES.get(task) if task else None
+    removal_targets: set[str] = set()
 
     for operation in patch.operations:
         if operation.op not in policy.allowed_operations:
@@ -92,6 +93,31 @@ def validate_patch(
             raise PatchError(f"unknown target IDs: {', '.join(unknown)}")
 
         if operation.op == "remove_element":
+            if patch.version != 2:
+                raise PatchError("remove_element requires patch version 2")
+            if not operation.targets:
+                raise PatchError("remove_element requires targets")
+            unexpected_fields = (
+                bool(operation.attributes)
+                or bool(operation.names)
+                or operation.parent is not None
+                or operation.after is not None
+                or operation.element is not None
+            )
+            if unexpected_fields:
+                raise PatchError("remove_element only accepts targets")
+            duplicate_targets = removal_targets & set(operation.targets)
+            if len(set(operation.targets)) != len(operation.targets):
+                duplicate_targets |= {
+                    target
+                    for target in operation.targets
+                    if operation.targets.count(target) > 1
+                }
+            if duplicate_targets:
+                raise PatchError(
+                    f"remove_element targets must be unique: {sorted(duplicate_targets)}"
+                )
+            removal_targets.update(operation.targets)
             root_id = scene["root_id"]
             for target in operation.targets:
                 if target == root_id:

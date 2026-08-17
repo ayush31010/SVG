@@ -1,0 +1,62 @@
+{
+  "bench_root": "SVGEditBench",
+  "candidate_count": 6,
+  "candidate_policy": "production",
+  "counts": {
+    "test": 5,
+    "train": 52,
+    "val": 5
+  },
+  "crop_padding": 0.15,
+  "emoji_counts": {
+    "test": 4,
+    "train": 36,
+    "val": 3
+  },
+  "format": "svgpatchlab.node_grounding.v2",
+  "label_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "choices": {
+        "items": {
+          "enum": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ],
+          "type": "string"
+        },
+        "maxItems": 4,
+        "minItems": 1,
+        "type": "array",
+        "uniqueItems": true
+      }
+    },
+    "required": [
+      "choices"
+    ],
+    "type": "object"
+  },
+  "max_targets": 4,
+  "output_dir": "data/node_grounding-runtime",
+  "render_size": 192,
+  "seed": 20260814,
+  "skipped": {
+    "production_cardinality_ineligible": 1,
+    "production_missing_gold_targets": 1,
+    "production_oversized_pool": 7,
+    "production_singleton_pool": 129
+  },
+  "split_ratios": {
+    "test": 0.1,
+    "train": 0.8,
+    "val": 0.1
+  },
+  "tasks": [
+    "change_color",
+    "set_contour"
+  ]
+}

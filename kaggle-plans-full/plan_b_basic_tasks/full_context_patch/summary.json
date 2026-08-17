@@ -1,0 +1,119 @@
+{
+  "architecture": "full_context_patch",
+  "by_task": {
+    "change_color": {
+      "cases": 2,
+      "completion_tokens": 0,
+      "gold_patch_exact_rate": 0.0,
+      "mean_failure_aware_mse": null,
+      "mean_model_latency_seconds": 18.661558082000283,
+      "mean_mse_on_rendered": null,
+      "model_calls": 2,
+      "prompt_tokens": 0,
+      "protected_geometry_rate": 0.5,
+      "reference_structure_match_rate": 0.0,
+      "valid_output_rate": 0.5
+    },
+    "crop_to_half": {
+      "cases": 2,
+      "completion_tokens": 0,
+      "gold_patch_exact_rate": 0.0,
+      "mean_failure_aware_mse": null,
+      "mean_model_latency_seconds": 15.27980886350042,
+      "mean_mse_on_rendered": null,
+      "model_calls": 2,
+      "prompt_tokens": 0,
+      "protected_geometry_rate": 0.5,
+      "reference_structure_match_rate": 0.0,
+      "valid_output_rate": 0.5
+    },
+    "set_contour": {
+      "cases": 2,
+      "completion_tokens": 0,
+      "gold_patch_exact_rate": 0.0,
+      "mean_failure_aware_mse": null,
+      "mean_model_latency_seconds": 15.562142310999661,
+      "mean_mse_on_rendered": null,
+      "model_calls": 2,
+      "prompt_tokens": 0,
+      "protected_geometry_rate": 0.5,
+      "reference_structure_match_rate": 0.0,
+      "valid_output_rate": 0.5
+    },
+    "transparency": {
+      "cases": 2,
+      "completion_tokens": 0,
+      "gold_patch_exact_rate": 0.0,
+      "mean_failure_aware_mse": null,
+      "mean_model_latency_seconds": 10.526744979999876,
+      "mean_mse_on_rendered": null,
+      "model_calls": 2,
+      "prompt_tokens": 0,
+      "protected_geometry_rate": 0.0,
+      "reference_structure_match_rate": 0.0,
+      "valid_output_rate": 0.0
+    },
+    "upside_down": {
+      "cases": 2,
+      "completion_tokens": 0,
+      "gold_patch_exact_rate": 0.0,
+      "mean_failure_aware_mse": null,
+      "mean_model_latency_seconds": 15.666519991500536,
+      "mean_mse_on_rendered": null,
+      "model_calls": 2,
+      "prompt_tokens": 0,
+      "protected_geometry_rate": 0.0,
+      "reference_structure_match_rate": 0.0,
+      "valid_output_rate": 0.0
+    }
+  },
+  "dataset": {
+    "root": "SVGEditBench",
+    "tasks": {
+      "change_color": 100,
+      "compression": 100,
+      "crop_to_half": 100,
+      "set_contour": 100,
+      "transparency": 100,
+      "upside_down": 100
+    },
+    "total_cases": 600,
+    "unique_emojis": 100
+  },
+  "errors": {
+    "PatchError: attributes are invalid for upside_down: ['fill']": 1,
+    "PatchError: attributes are not allowlisted: ['fill-opacity']": 1,
+    "PatchError: model response does not contain a valid JSON object": 2,
+    "PatchError: unknown patch fields: ['attributes', 'op', 'targets']": 2,
+    "PatchError: unknown target IDs: n11": 1
+  },
+  "evaluation": {
+    "render": false,
+    "render_size": 72,
+    "results": "/kaggle/working/kaggle-plans-full/plan_b_basic_tasks/full_context_patch/results.jsonl"
+  },
+  "model": {
+    "adapter": "huggingface",
+    "device_map": "auto",
+    "do_sample": true,
+    "dtype": "float16",
+    "max_new_tokens": 256,
+    "model": "Qwen/Qwen3.5-4B",
+    "quantization": "4bit",
+    "task": "text-generation",
+    "temperature": 0.7
+  },
+  "overall": {
+    "cases": 10,
+    "completion_tokens": 0,
+    "gold_patch_exact_rate": 0.0,
+    "mean_failure_aware_mse": null,
+    "mean_model_latency_seconds": 15.139354845600156,
+    "mean_mse_on_rendered": null,
+    "model_calls": 10,
+    "prompt_tokens": 0,
+    "protected_geometry_rate": 0.3,
+    "reference_structure_match_rate": 0.0,
+    "valid_output_rate": 0.3
+  }
+}

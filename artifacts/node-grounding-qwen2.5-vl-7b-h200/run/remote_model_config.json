@@ -1,0 +1,15 @@
+{
+  "adapter": "huggingface",
+  "model": "/home/aneeshl/svg-node-grounding-qwen2.5-vl-7b-h200/adapter",
+  "task": "image-text-to-text",
+  "device_map": "auto",
+  "dtype": "bfloat16",
+  "adapter_response_schemas": [
+    "svgpatchlab_candidate_rerank_v1"
+  ],
+  "schema_max_new_tokens": {
+    "svgpatchlab_candidate_rerank_v1": 32
+  },
+  "do_sample": false,
+  "max_new_tokens": 512
+}

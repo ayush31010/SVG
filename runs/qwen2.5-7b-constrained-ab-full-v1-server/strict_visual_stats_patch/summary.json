@@ -1,0 +1,125 @@
+{
+  "architecture": "strict_visual_stats_patch",
+  "by_task": {
+    "change_color": {
+      "cases": 100,
+      "completion_tokens": 5520,
+      "gold_patch_exact_rate": 0.03,
+      "mean_failure_aware_mse": 0.009773832939536077,
+      "mean_model_latency_seconds": 1.1382275236491113,
+      "mean_mse_on_rendered": 0.009773832939536077,
+      "model_calls": 100,
+      "prompt_tokens": 299145,
+      "protected_geometry_rate": 1.0,
+      "reference_structure_match_rate": 0.03,
+      "valid_output_rate": 1.0
+    },
+    "crop_to_half": {
+      "cases": 100,
+      "completion_tokens": 8494,
+      "gold_patch_exact_rate": 0.21212121212121213,
+      "mean_failure_aware_mse": 0.7032324055582285,
+      "mean_model_latency_seconds": 1.453054676868487,
+      "mean_mse_on_rendered": 0.042685179220091914,
+      "model_calls": 100,
+      "prompt_tokens": 297824,
+      "protected_geometry_rate": 0.31,
+      "reference_structure_match_rate": 0.21,
+      "valid_output_rate": 0.31
+    },
+    "set_contour": {
+      "cases": 100,
+      "completion_tokens": 6613,
+      "gold_patch_exact_rate": 0.0,
+      "mean_failure_aware_mse": 0.023133228061778935,
+      "mean_model_latency_seconds": 1.2618211572407745,
+      "mean_mse_on_rendered": 0.023133228061778935,
+      "model_calls": 100,
+      "prompt_tokens": 299310,
+      "protected_geometry_rate": 1.0,
+      "reference_structure_match_rate": 0.0,
+      "valid_output_rate": 1.0
+    },
+    "transparency": {
+      "cases": 100,
+      "completion_tokens": 6747,
+      "gold_patch_exact_rate": 0.07,
+      "mean_failure_aware_mse": 0.93,
+      "mean_model_latency_seconds": 1.2673939623194748,
+      "mean_mse_on_rendered": 0.0,
+      "model_calls": 100,
+      "prompt_tokens": 297524,
+      "protected_geometry_rate": 0.07,
+      "reference_structure_match_rate": 0.07,
+      "valid_output_rate": 0.07
+    },
+    "upside_down": {
+      "cases": 100,
+      "completion_tokens": 6323,
+      "gold_patch_exact_rate": 0.97,
+      "mean_failure_aware_mse": 0.021960977762937546,
+      "mean_model_latency_seconds": 1.2440727769536897,
+      "mean_mse_on_rendered": 0.00200099771728321,
+      "model_calls": 100,
+      "prompt_tokens": 297424,
+      "protected_geometry_rate": 0.98,
+      "reference_structure_match_rate": 0.97,
+      "valid_output_rate": 0.98
+    }
+  },
+  "dataset": {
+    "root": "SVGEditBench",
+    "tasks": {
+      "change_color": 100,
+      "compression": 100,
+      "crop_to_half": 100,
+      "set_contour": 100,
+      "transparency": 100,
+      "upside_down": 100
+    },
+    "total_cases": 600,
+    "unique_emojis": 100
+  },
+  "errors": {
+    "PatchError: attributes are invalid for crop_to_half: ['transform']": 1,
+    "PatchError: attributes are invalid for transparency: ['fill']": 24,
+    "PatchError: attributes are invalid for transparency: ['viewBox']": 11,
+    "PatchError: attributes are not allowlisted: ['fill-opacity']": 9,
+    "PatchError: crop_to_half may only target the SVG root": 52,
+    "PatchError: crop_to_half only permits set_attributes operations": 15,
+    "PatchError: transparency may only target the SVG root": 41,
+    "PatchError: transparency only permits set_attributes operations": 8,
+    "PatchError: unknown patch fields: ['attributes', 'op', 'targets']": 1,
+    "PatchError: upside_down may only target the SVG root": 1,
+    "PatchError: upside_down only permits set_attributes operations": 1
+  },
+  "evaluation": {
+    "render": true,
+    "render_size": 72,
+    "results": "runs/qwen2.5-7b-constrained-ab-full-v1-server/strict_visual_stats_patch/results.jsonl"
+  },
+  "model": {
+    "adapter": "openai_compatible",
+    "base_url": "http://127.0.0.1:11434/v1",
+    "json_mode": false,
+    "max_tokens": 768,
+    "model": "qwen2.5:7b",
+    "structured_output": "response_format",
+    "supports_images": false,
+    "temperature": 0.0,
+    "timeout": 600
+  },
+  "overall": {
+    "cases": 500,
+    "completion_tokens": 33697,
+    "gold_patch_exact_rate": 0.2565130260521042,
+    "mean_failure_aware_mse": 0.33762008886449624,
+    "mean_model_latency_seconds": 1.2729140194063076,
+    "mean_mse_on_rendered": 0.014315608429309836,
+    "model_calls": 500,
+    "prompt_tokens": 1491227,
+    "protected_geometry_rate": 0.672,
+    "reference_structure_match_rate": 0.256,
+    "valid_output_rate": 0.672
+  }
+}

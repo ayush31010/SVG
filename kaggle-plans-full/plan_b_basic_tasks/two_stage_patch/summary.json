@@ -1,0 +1,118 @@
+{
+  "architecture": "two_stage_patch",
+  "by_task": {
+    "change_color": {
+      "cases": 2,
+      "completion_tokens": 0,
+      "gold_patch_exact_rate": null,
+      "mean_failure_aware_mse": null,
+      "mean_model_latency_seconds": 26.90159431133361,
+      "mean_mse_on_rendered": null,
+      "model_calls": 3,
+      "prompt_tokens": 0,
+      "protected_geometry_rate": 0.0,
+      "reference_structure_match_rate": 0.0,
+      "valid_output_rate": 0.0
+    },
+    "crop_to_half": {
+      "cases": 2,
+      "completion_tokens": 0,
+      "gold_patch_exact_rate": 0.0,
+      "mean_failure_aware_mse": null,
+      "mean_model_latency_seconds": 13.441011184999752,
+      "mean_mse_on_rendered": null,
+      "model_calls": 4,
+      "prompt_tokens": 0,
+      "protected_geometry_rate": 0.5,
+      "reference_structure_match_rate": 0.0,
+      "valid_output_rate": 0.5
+    },
+    "set_contour": {
+      "cases": 2,
+      "completion_tokens": 0,
+      "gold_patch_exact_rate": 0.0,
+      "mean_failure_aware_mse": null,
+      "mean_model_latency_seconds": 11.896089774749726,
+      "mean_mse_on_rendered": null,
+      "model_calls": 4,
+      "prompt_tokens": 0,
+      "protected_geometry_rate": 0.5,
+      "reference_structure_match_rate": 0.0,
+      "valid_output_rate": 0.5
+    },
+    "transparency": {
+      "cases": 2,
+      "completion_tokens": 0,
+      "gold_patch_exact_rate": 0.0,
+      "mean_failure_aware_mse": null,
+      "mean_model_latency_seconds": 14.716061752500309,
+      "mean_mse_on_rendered": null,
+      "model_calls": 4,
+      "prompt_tokens": 0,
+      "protected_geometry_rate": 0.0,
+      "reference_structure_match_rate": 0.0,
+      "valid_output_rate": 0.0
+    },
+    "upside_down": {
+      "cases": 2,
+      "completion_tokens": 0,
+      "gold_patch_exact_rate": 0.0,
+      "mean_failure_aware_mse": null,
+      "mean_model_latency_seconds": 17.37350775925006,
+      "mean_mse_on_rendered": null,
+      "model_calls": 4,
+      "prompt_tokens": 0,
+      "protected_geometry_rate": 0.0,
+      "reference_structure_match_rate": 0.0,
+      "valid_output_rate": 0.0
+    }
+  },
+  "dataset": {
+    "root": "SVGEditBench",
+    "tasks": {
+      "change_color": 100,
+      "compression": 100,
+      "crop_to_half": 100,
+      "set_contour": 100,
+      "transparency": 100,
+      "upside_down": 100
+    },
+    "total_cases": 600,
+    "unique_emojis": 100
+  },
+  "errors": {
+    "PatchError: attributes are invalid for set_contour: ['fill']": 1,
+    "PatchError: model response does not contain a valid JSON object": 5,
+    "PatchError: transparency may only target the SVG root": 1,
+    "PatchError: upside_down may only target the SVG root": 1
+  },
+  "evaluation": {
+    "render": false,
+    "render_size": 72,
+    "results": "/kaggle/working/kaggle-plans-full/plan_b_basic_tasks/two_stage_patch/results.jsonl"
+  },
+  "model": {
+    "adapter": "huggingface",
+    "device_map": "auto",
+    "do_sample": true,
+    "dtype": "float16",
+    "max_new_tokens": 256,
+    "model": "Qwen/Qwen3.5-4B",
+    "quantization": "4bit",
+    "task": "text-generation",
+    "temperature": 0.7
+  },
+  "overall": {
+    "cases": 10,
+    "completion_tokens": 0,
+    "gold_patch_exact_rate": 0.0,
+    "mean_failure_aware_mse": null,
+    "mean_model_latency_seconds": 16.337445516842116,
+    "mean_mse_on_rendered": null,
+    "model_calls": 19,
+    "prompt_tokens": 0,
+    "protected_geometry_rate": 0.2,
+    "reference_structure_match_rate": 0.0,
+    "valid_output_rate": 0.2
+  }
+}

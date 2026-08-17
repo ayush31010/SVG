@@ -1,0 +1,42 @@
+{
+  "arms": {
+    "skeleton_patch": {
+      "architecture": "skeleton_patch",
+      "cases": 8,
+      "completion_tokens": 596,
+      "gold_patch_exact_rate": 0.0,
+      "mean_failure_aware_mse": 0.01007924834266305,
+      "mean_model_latency_seconds": 10.26864327932708,
+      "mean_wall_seconds": 10.269117901130812,
+      "prompt_tokens": 14272,
+      "target_exact_rate": 0.0,
+      "valid_output_rate": 1.0
+    },
+    "visual_stats_patch": {
+      "architecture": "visual_stats_patch",
+      "cases": 8,
+      "completion_tokens": 512,
+      "gold_patch_exact_rate": 0.75,
+      "mean_failure_aware_mse": 0.001752912881784141,
+      "mean_model_latency_seconds": 9.600047061481746,
+      "mean_wall_seconds": 9.602585517714033,
+      "prompt_tokens": 17224,
+      "target_exact_rate": 0.75,
+      "valid_output_rate": 1.0
+    }
+  },
+  "design": {
+    "cases": 8,
+    "equal_path_character_counts": true,
+    "layouts": 2,
+    "path_coordinates_hidden_from_model": true,
+    "same_fill": "#ff0000",
+    "same_tag": "path"
+  },
+  "paired": {
+    "both_target_correct": 0,
+    "neither_target_correct": 2,
+    "skeleton_only_target_wins": 0,
+    "visual_only_target_wins": 6
+  }
+}

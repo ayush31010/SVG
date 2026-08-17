@@ -1,0 +1,203 @@
+{
+  "arms": {
+    "skeleton_patch": {
+      "architecture": "skeleton_patch",
+      "by_family": {
+        "position": {
+          "cases": 27,
+          "completion_tokens": 2016,
+          "gold_patch_exact_rate": 0.07407407407407407,
+          "mean_failure_aware_mse": 0.014175989458130466,
+          "mean_model_latency_seconds": 13.179112278908077,
+          "mean_wall_seconds": 13.179711124144012,
+          "prompt_tokens": 71018,
+          "target_exact_rate": 0.07407407407407407,
+          "valid_output_rate": 1.0
+        },
+        "size": {
+          "cases": 12,
+          "completion_tokens": 852,
+          "gold_patch_exact_rate": 0.08333333333333333,
+          "mean_failure_aware_mse": 0.013605635186346868,
+          "mean_model_latency_seconds": 8.545801118540112,
+          "mean_wall_seconds": 8.546359160526967,
+          "prompt_tokens": 21386,
+          "target_exact_rate": 0.08333333333333333,
+          "valid_output_rate": 1.0
+        }
+      },
+      "cases": 39,
+      "completion_tokens": 2868,
+      "gold_patch_exact_rate": 0.07692307692307693,
+      "mean_failure_aware_mse": 0.014000495836043205,
+      "mean_model_latency_seconds": 11.753478075717934,
+      "mean_wall_seconds": 11.754064366107997,
+      "prompt_tokens": 92404,
+      "target_exact_rate": 0.07692307692307693,
+      "valid_output_rate": 1.0
+    },
+    "visual_stats_patch": {
+      "architecture": "visual_stats_patch",
+      "by_family": {
+        "position": {
+          "cases": 27,
+          "completion_tokens": 1956,
+          "gold_patch_exact_rate": 0.4074074074074074,
+          "mean_failure_aware_mse": 0.009590211790055037,
+          "mean_model_latency_seconds": 16.335676257765886,
+          "mean_wall_seconds": 16.35502449989629,
+          "prompt_tokens": 90977,
+          "target_exact_rate": 0.4074074074074074,
+          "valid_output_rate": 1.0
+        },
+        "size": {
+          "cases": 12,
+          "completion_tokens": 828,
+          "gold_patch_exact_rate": 0.16666666666666666,
+          "mean_failure_aware_mse": 0.011922500445507467,
+          "mean_model_latency_seconds": 10.183504573748602,
+          "mean_wall_seconds": 10.191703491805432,
+          "prompt_tokens": 25856,
+          "target_exact_rate": 0.16666666666666666,
+          "valid_output_rate": 1.0
+        }
+      },
+      "cases": 39,
+      "completion_tokens": 2784,
+      "gold_patch_exact_rate": 0.3333333333333333,
+      "mean_failure_aware_mse": 0.010307839068655785,
+      "mean_model_latency_seconds": 14.442700354991338,
+      "mean_wall_seconds": 14.458618035868335,
+      "prompt_tokens": 116833,
+      "target_exact_rate": 0.3333333333333333,
+      "valid_output_rate": 1.0
+    }
+  },
+  "design": {
+    "arm_order": [
+      "skeleton_patch",
+      "visual_stats_patch"
+    ],
+    "aspect_variation_present": true,
+    "balanced_target_node_indices": true,
+    "cases": 39,
+    "cases_by_family": {
+      "position": 27,
+      "size": 12
+    },
+    "coordinate_jitter_units": 2,
+    "deterministic_case_specific_dom_order": true,
+    "equal_path_character_counts": true,
+    "evaluation_render_size": 72,
+    "one_unique_source_per_case": true,
+    "path_characters": 16,
+    "position_descriptors": [
+      "top-left",
+      "top",
+      "top-right",
+      "left",
+      "center",
+      "right",
+      "bottom-left",
+      "bottom",
+      "bottom-right"
+    ],
+    "position_replicates_per_descriptor": 3,
+    "protected_path_sha256_only": true,
+    "raw_path_coordinates_hidden_from_model": true,
+    "relative_size_ranking_verified": true,
+    "same_fill": "#ff0000",
+    "same_tag": "path",
+    "size_descriptors": [
+      "smallest",
+      "second-smallest",
+      "second-largest",
+      "largest"
+    ],
+    "size_replicates_per_descriptor": 3,
+    "unique_dom_order_within_each_family": true,
+    "unique_path_hashes_within_each_source": true,
+    "unique_source_svgs": 39,
+    "visual_stats_render_size": 64,
+    "within_position_bin_jitter_verified": true
+  },
+  "format": "svgpatchlab.spatial_grounding_holdout.v1",
+  "model_config": "configs/models/qwen2.5-7b-ollama.json",
+  "paired": {
+    "by_family": {
+      "position": {
+        "cases": 27,
+        "failure_aware_mse": {
+          "mean_visual_minus_skeleton": -0.004585777668075429,
+          "missing_pairs": 0,
+          "skeleton_lower": 4,
+          "ties": 11,
+          "visual_lower": 12
+        },
+        "gold_patch_exact": {
+          "both_correct": 2,
+          "neither_correct": 16,
+          "skeleton_only_wins": 0,
+          "visual_only_wins": 9
+        },
+        "target_exact": {
+          "both_correct": 2,
+          "neither_correct": 16,
+          "skeleton_only_wins": 0,
+          "visual_only_wins": 9
+        }
+      },
+      "size": {
+        "cases": 12,
+        "failure_aware_mse": {
+          "mean_visual_minus_skeleton": -0.001683134740839402,
+          "missing_pairs": 0,
+          "skeleton_lower": 0,
+          "ties": 10,
+          "visual_lower": 2
+        },
+        "gold_patch_exact": {
+          "both_correct": 1,
+          "neither_correct": 10,
+          "skeleton_only_wins": 0,
+          "visual_only_wins": 1
+        },
+        "target_exact": {
+          "both_correct": 1,
+          "neither_correct": 10,
+          "skeleton_only_wins": 0,
+          "visual_only_wins": 1
+        }
+      }
+    },
+    "overall": {
+      "cases": 39,
+      "failure_aware_mse": {
+        "mean_visual_minus_skeleton": -0.003692656767387421,
+        "missing_pairs": 0,
+        "skeleton_lower": 4,
+        "ties": 21,
+        "visual_lower": 14
+      },
+      "gold_patch_exact": {
+        "both_correct": 3,
+        "neither_correct": 26,
+        "skeleton_only_wins": 0,
+        "visual_only_wins": 10
+      },
+      "target_exact": {
+        "both_correct": 3,
+        "neither_correct": 26,
+        "skeleton_only_wins": 0,
+        "visual_only_wins": 10
+      }
+    }
+  },
+  "patch_prompt": {
+    "identifier": "svgpatchlab.patch.v4",
+    "template": "patch_v4.txt",
+    "template_sha256": "527126f8b2349f1fb1f0aa7920477319f47c93c47c77b15aaa21014e0f806dbc",
+    "version": 4
+  },
+  "seed": 20260725
+}

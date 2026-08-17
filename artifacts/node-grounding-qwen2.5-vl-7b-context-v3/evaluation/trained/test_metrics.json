@@ -1,0 +1,590 @@
+{
+  "ablation_exact_set_drops": {
+    "blank_image": 0.16666666666666663,
+    "blank_instruction": 0.9333333333333333
+  },
+  "ablations": {
+    "blank_image": {
+      "base_case_all_permutations_exact_rate": 0.6333333333333333,
+      "base_cases": 30,
+      "base_cases_all_permutations_exact": 19,
+      "by_gold_cardinality": {
+        "1": {
+          "cardinality_accuracy": 0.9743589743589743,
+          "exact_set_match_rate": 0.7692307692307693,
+          "examples": 78,
+          "micro_f1": 0.7594936708860761,
+          "micro_precision": 0.75,
+          "micro_recall": 0.7692307692307693,
+          "top1_accuracy": 0.7692307692307693,
+          "valid_json_rate": 1.0
+        },
+        "2": {
+          "cardinality_accuracy": 1.0,
+          "exact_set_match_rate": 1.0,
+          "examples": 12,
+          "micro_f1": 1.0,
+          "micro_precision": 1.0,
+          "micro_recall": 1.0,
+          "top1_accuracy": 1.0,
+          "valid_json_rate": 1.0
+        }
+      },
+      "by_source_family": {
+        "svg_edit_bench": {
+          "base_case_all_permutations_exact_rate": 1.0,
+          "base_cases": 10,
+          "base_cases_all_permutations_exact": 10,
+          "by_gold_cardinality": {
+            "1": {
+              "cardinality_accuracy": 1.0,
+              "exact_set_match_rate": 1.0,
+              "examples": 24,
+              "micro_f1": 1.0,
+              "micro_precision": 1.0,
+              "micro_recall": 1.0,
+              "top1_accuracy": 1.0,
+              "valid_json_rate": 1.0
+            },
+            "2": {
+              "cardinality_accuracy": 1.0,
+              "exact_set_match_rate": 1.0,
+              "examples": 6,
+              "micro_f1": 1.0,
+              "micro_precision": 1.0,
+              "micro_recall": 1.0,
+              "top1_accuracy": 1.0,
+              "valid_json_rate": 1.0
+            }
+          },
+          "cardinality_accuracy": 1.0,
+          "cardinality_correct": 30,
+          "exact_match": 30,
+          "exact_match_rate": 1.0,
+          "exact_set_match": 30,
+          "exact_set_match_rate": 1.0,
+          "examples": 30,
+          "micro_f1": 1.0,
+          "micro_precision": 1.0,
+          "micro_recall": 1.0,
+          "permutation_consistency_rate": 1.0,
+          "permutation_consistent_groups": 10,
+          "permutation_groups": 10,
+          "top1_accuracy": 1.0,
+          "top1_correct": 30,
+          "valid_json": 30,
+          "valid_json_rate": 1.0
+        },
+        "synthetic_context": {
+          "base_case_all_permutations_exact_rate": 0.45,
+          "base_cases": 20,
+          "base_cases_all_permutations_exact": 9,
+          "by_gold_cardinality": {
+            "1": {
+              "cardinality_accuracy": 0.9629629629629629,
+              "exact_set_match_rate": 0.6666666666666666,
+              "examples": 54,
+              "micro_f1": 0.6545454545454545,
+              "micro_precision": 0.6428571428571429,
+              "micro_recall": 0.6666666666666666,
+              "top1_accuracy": 0.6666666666666666,
+              "valid_json_rate": 1.0
+            },
+            "2": {
+              "cardinality_accuracy": 1.0,
+              "exact_set_match_rate": 1.0,
+              "examples": 6,
+              "micro_f1": 1.0,
+              "micro_precision": 1.0,
+              "micro_recall": 1.0,
+              "top1_accuracy": 1.0,
+              "valid_json_rate": 1.0
+            }
+          },
+          "cardinality_accuracy": 0.9666666666666667,
+          "cardinality_correct": 58,
+          "exact_match": 42,
+          "exact_match_rate": 0.7,
+          "exact_set_match": 42,
+          "exact_set_match_rate": 0.7,
+          "examples": 60,
+          "micro_f1": 0.7164179104477613,
+          "micro_precision": 0.7058823529411765,
+          "micro_recall": 0.7272727272727273,
+          "permutation_consistency_rate": 0.5,
+          "permutation_consistent_groups": 10,
+          "permutation_groups": 20,
+          "top1_accuracy": 0.7,
+          "top1_correct": 42,
+          "valid_json": 60,
+          "valid_json_rate": 1.0
+        }
+      },
+      "candidate_retrieval_coverage": {
+        "candidate_pool_audited_cases": 51,
+        "candidate_retrieval_coverage_of_targeted_cases": 1.0,
+        "candidate_retrieval_rate": 1.0,
+        "candidate_retrieved_cases": 51,
+        "cases_with_non_gold_distractor": 51,
+        "non_gold_distractor_rate": 1.0,
+        "retrieval_policy": "oracle_injected",
+        "source_cases": 51,
+        "targeted_cases": 51,
+        "written_base_cases": 51
+      },
+      "cardinality_accuracy": 0.9777777777777777,
+      "cardinality_correct": 88,
+      "exact_match": 72,
+      "exact_match_rate": 0.8,
+      "exact_set_match": 72,
+      "exact_set_match_rate": 0.8,
+      "examples": 90,
+      "micro_f1": 0.8155339805825242,
+      "micro_precision": 0.8076923076923077,
+      "micro_recall": 0.8235294117647058,
+      "permutation_consistency_rate": 0.6666666666666666,
+      "permutation_consistent_groups": 20,
+      "permutation_groups": 30,
+      "top1_accuracy": 0.8,
+      "top1_correct": 72,
+      "valid_json": 90,
+      "valid_json_rate": 1.0
+    },
+    "blank_instruction": {
+      "base_case_all_permutations_exact_rate": 0.0,
+      "base_cases": 30,
+      "base_cases_all_permutations_exact": 0,
+      "by_gold_cardinality": {
+        "1": {
+          "cardinality_accuracy": 0.0,
+          "exact_set_match_rate": 0.0,
+          "examples": 78,
+          "micro_f1": 0.1572052401746725,
+          "micro_precision": 0.11920529801324503,
+          "micro_recall": 0.23076923076923078,
+          "top1_accuracy": 0.07692307692307693,
+          "valid_json_rate": 0.5897435897435898
+        },
+        "2": {
+          "cardinality_accuracy": 0.5,
+          "exact_set_match_rate": 0.25,
+          "examples": 12,
+          "micro_f1": 0.5357142857142857,
+          "micro_precision": 0.46875,
+          "micro_recall": 0.625,
+          "top1_accuracy": 0.4166666666666667,
+          "valid_json_rate": 0.9166666666666666
+        }
+      },
+      "by_source_family": {
+        "svg_edit_bench": {
+          "base_case_all_permutations_exact_rate": 0.0,
+          "base_cases": 10,
+          "base_cases_all_permutations_exact": 0,
+          "by_gold_cardinality": {
+            "1": {
+              "cardinality_accuracy": 0.0,
+              "exact_set_match_rate": 0.0,
+              "examples": 24,
+              "micro_f1": 0.19047619047619044,
+              "micro_precision": 0.13333333333333333,
+              "micro_recall": 0.3333333333333333,
+              "top1_accuracy": 0.25,
+              "valid_json_rate": 0.8333333333333334
+            },
+            "2": {
+              "cardinality_accuracy": 0.8333333333333334,
+              "exact_set_match_rate": 0.3333333333333333,
+              "examples": 6,
+              "micro_f1": 0.4615384615384615,
+              "micro_precision": 0.42857142857142855,
+              "micro_recall": 0.5,
+              "top1_accuracy": 0.5,
+              "valid_json_rate": 1.0
+            }
+          },
+          "cardinality_accuracy": 0.16666666666666666,
+          "cardinality_correct": 5,
+          "exact_match": 2,
+          "exact_match_rate": 0.06666666666666667,
+          "exact_set_match": 2,
+          "exact_set_match_rate": 0.06666666666666667,
+          "examples": 30,
+          "micro_f1": 0.2545454545454546,
+          "micro_precision": 0.1891891891891892,
+          "micro_recall": 0.3888888888888889,
+          "permutation_consistency_rate": 0.2,
+          "permutation_consistent_groups": 2,
+          "permutation_groups": 10,
+          "top1_accuracy": 0.3,
+          "top1_correct": 9,
+          "valid_json": 26,
+          "valid_json_rate": 0.8666666666666667
+        },
+        "synthetic_context": {
+          "base_case_all_permutations_exact_rate": 0.0,
+          "base_cases": 20,
+          "base_cases_all_permutations_exact": 0,
+          "by_gold_cardinality": {
+            "1": {
+              "cardinality_accuracy": 0.0,
+              "exact_set_match_rate": 0.0,
+              "examples": 54,
+              "micro_f1": 0.13793103448275862,
+              "micro_precision": 0.10989010989010989,
+              "micro_recall": 0.18518518518518517,
+              "top1_accuracy": 0.0,
+              "valid_json_rate": 0.48148148148148145
+            },
+            "2": {
+              "cardinality_accuracy": 0.16666666666666666,
+              "exact_set_match_rate": 0.16666666666666666,
+              "examples": 6,
+              "micro_f1": 0.6,
+              "micro_precision": 0.5,
+              "micro_recall": 0.75,
+              "top1_accuracy": 0.3333333333333333,
+              "valid_json_rate": 0.8333333333333334
+            }
+          },
+          "cardinality_accuracy": 0.016666666666666666,
+          "cardinality_correct": 1,
+          "exact_match": 1,
+          "exact_match_rate": 0.016666666666666666,
+          "exact_set_match": 1,
+          "exact_set_match_rate": 0.016666666666666666,
+          "examples": 60,
+          "micro_f1": 0.21714285714285714,
+          "micro_precision": 0.1743119266055046,
+          "micro_recall": 0.2878787878787879,
+          "permutation_consistency_rate": 0.1,
+          "permutation_consistent_groups": 2,
+          "permutation_groups": 20,
+          "top1_accuracy": 0.03333333333333333,
+          "top1_correct": 2,
+          "valid_json": 31,
+          "valid_json_rate": 0.5166666666666667
+        }
+      },
+      "candidate_retrieval_coverage": {
+        "candidate_pool_audited_cases": 51,
+        "candidate_retrieval_coverage_of_targeted_cases": 1.0,
+        "candidate_retrieval_rate": 1.0,
+        "candidate_retrieved_cases": 51,
+        "cases_with_non_gold_distractor": 51,
+        "non_gold_distractor_rate": 1.0,
+        "retrieval_policy": "oracle_injected",
+        "source_cases": 51,
+        "targeted_cases": 51,
+        "written_base_cases": 51
+      },
+      "cardinality_accuracy": 0.06666666666666667,
+      "cardinality_correct": 6,
+      "exact_match": 3,
+      "exact_match_rate": 0.03333333333333333,
+      "exact_set_match": 3,
+      "exact_set_match_rate": 0.03333333333333333,
+      "examples": 90,
+      "micro_f1": 0.23157894736842105,
+      "micro_precision": 0.18032786885245902,
+      "micro_recall": 0.3235294117647059,
+      "permutation_consistency_rate": 0.13333333333333333,
+      "permutation_consistent_groups": 4,
+      "permutation_groups": 30,
+      "top1_accuracy": 0.12222222222222222,
+      "top1_correct": 11,
+      "valid_json": 57,
+      "valid_json_rate": 0.6333333333333333
+    },
+    "none": {
+      "base_case_all_permutations_exact_rate": 0.9,
+      "base_cases": 30,
+      "base_cases_all_permutations_exact": 27,
+      "by_gold_cardinality": {
+        "1": {
+          "cardinality_accuracy": 1.0,
+          "exact_set_match_rate": 0.9743589743589743,
+          "examples": 78,
+          "micro_f1": 0.9743589743589743,
+          "micro_precision": 0.9743589743589743,
+          "micro_recall": 0.9743589743589743,
+          "top1_accuracy": 0.9743589743589743,
+          "valid_json_rate": 1.0
+        },
+        "2": {
+          "cardinality_accuracy": 0.9166666666666666,
+          "exact_set_match_rate": 0.9166666666666666,
+          "examples": 12,
+          "micro_f1": 0.9787234042553191,
+          "micro_precision": 1.0,
+          "micro_recall": 0.9583333333333334,
+          "top1_accuracy": 1.0,
+          "valid_json_rate": 1.0
+        }
+      },
+      "by_source_family": {
+        "svg_edit_bench": {
+          "base_case_all_permutations_exact_rate": 0.9,
+          "base_cases": 10,
+          "base_cases_all_permutations_exact": 9,
+          "by_gold_cardinality": {
+            "1": {
+              "cardinality_accuracy": 1.0,
+              "exact_set_match_rate": 1.0,
+              "examples": 24,
+              "micro_f1": 1.0,
+              "micro_precision": 1.0,
+              "micro_recall": 1.0,
+              "top1_accuracy": 1.0,
+              "valid_json_rate": 1.0
+            },
+            "2": {
+              "cardinality_accuracy": 0.8333333333333334,
+              "exact_set_match_rate": 0.8333333333333334,
+              "examples": 6,
+              "micro_f1": 0.9565217391304348,
+              "micro_precision": 1.0,
+              "micro_recall": 0.9166666666666666,
+              "top1_accuracy": 1.0,
+              "valid_json_rate": 1.0
+            }
+          },
+          "cardinality_accuracy": 0.9666666666666667,
+          "cardinality_correct": 29,
+          "exact_match": 29,
+          "exact_match_rate": 0.9666666666666667,
+          "exact_set_match": 29,
+          "exact_set_match_rate": 0.9666666666666667,
+          "examples": 30,
+          "micro_f1": 0.9859154929577464,
+          "micro_precision": 1.0,
+          "micro_recall": 0.9722222222222222,
+          "permutation_consistency_rate": 0.9,
+          "permutation_consistent_groups": 9,
+          "permutation_groups": 10,
+          "top1_accuracy": 1.0,
+          "top1_correct": 30,
+          "valid_json": 30,
+          "valid_json_rate": 1.0
+        },
+        "synthetic_context": {
+          "base_case_all_permutations_exact_rate": 0.9,
+          "base_cases": 20,
+          "base_cases_all_permutations_exact": 18,
+          "by_gold_cardinality": {
+            "1": {
+              "cardinality_accuracy": 1.0,
+              "exact_set_match_rate": 0.9629629629629629,
+              "examples": 54,
+              "micro_f1": 0.9629629629629629,
+              "micro_precision": 0.9629629629629629,
+              "micro_recall": 0.9629629629629629,
+              "top1_accuracy": 0.9629629629629629,
+              "valid_json_rate": 1.0
+            },
+            "2": {
+              "cardinality_accuracy": 1.0,
+              "exact_set_match_rate": 1.0,
+              "examples": 6,
+              "micro_f1": 1.0,
+              "micro_precision": 1.0,
+              "micro_recall": 1.0,
+              "top1_accuracy": 1.0,
+              "valid_json_rate": 1.0
+            }
+          },
+          "cardinality_accuracy": 1.0,
+          "cardinality_correct": 60,
+          "exact_match": 58,
+          "exact_match_rate": 0.9666666666666667,
+          "exact_set_match": 58,
+          "exact_set_match_rate": 0.9666666666666667,
+          "examples": 60,
+          "micro_f1": 0.9696969696969697,
+          "micro_precision": 0.9696969696969697,
+          "micro_recall": 0.9696969696969697,
+          "permutation_consistency_rate": 0.9,
+          "permutation_consistent_groups": 18,
+          "permutation_groups": 20,
+          "top1_accuracy": 0.9666666666666667,
+          "top1_correct": 58,
+          "valid_json": 60,
+          "valid_json_rate": 1.0
+        }
+      },
+      "candidate_retrieval_coverage": {
+        "candidate_pool_audited_cases": 51,
+        "candidate_retrieval_coverage_of_targeted_cases": 1.0,
+        "candidate_retrieval_rate": 1.0,
+        "candidate_retrieved_cases": 51,
+        "cases_with_non_gold_distractor": 51,
+        "non_gold_distractor_rate": 1.0,
+        "retrieval_policy": "oracle_injected",
+        "source_cases": 51,
+        "targeted_cases": 51,
+        "written_base_cases": 51
+      },
+      "cardinality_accuracy": 0.9888888888888889,
+      "cardinality_correct": 89,
+      "exact_match": 87,
+      "exact_match_rate": 0.9666666666666667,
+      "exact_set_match": 87,
+      "exact_set_match_rate": 0.9666666666666667,
+      "examples": 90,
+      "micro_f1": 0.9753694581280787,
+      "micro_precision": 0.9801980198019802,
+      "micro_recall": 0.9705882352941176,
+      "permutation_consistency_rate": 0.9,
+      "permutation_consistent_groups": 27,
+      "permutation_groups": 30,
+      "top1_accuracy": 0.9777777777777777,
+      "top1_correct": 88,
+      "valid_json": 90,
+      "valid_json_rate": 1.0
+    }
+  },
+  "base_case_all_permutations_exact_rate": 0.9,
+  "base_cases": 30,
+  "base_cases_all_permutations_exact": 27,
+  "by_gold_cardinality": {
+    "1": {
+      "cardinality_accuracy": 1.0,
+      "exact_set_match_rate": 0.9743589743589743,
+      "examples": 78,
+      "micro_f1": 0.9743589743589743,
+      "micro_precision": 0.9743589743589743,
+      "micro_recall": 0.9743589743589743,
+      "top1_accuracy": 0.9743589743589743,
+      "valid_json_rate": 1.0
+    },
+    "2": {
+      "cardinality_accuracy": 0.9166666666666666,
+      "exact_set_match_rate": 0.9166666666666666,
+      "examples": 12,
+      "micro_f1": 0.9787234042553191,
+      "micro_precision": 1.0,
+      "micro_recall": 0.9583333333333334,
+      "top1_accuracy": 1.0,
+      "valid_json_rate": 1.0
+    }
+  },
+  "by_source_family": {
+    "svg_edit_bench": {
+      "base_case_all_permutations_exact_rate": 0.9,
+      "base_cases": 10,
+      "base_cases_all_permutations_exact": 9,
+      "by_gold_cardinality": {
+        "1": {
+          "cardinality_accuracy": 1.0,
+          "exact_set_match_rate": 1.0,
+          "examples": 24,
+          "micro_f1": 1.0,
+          "micro_precision": 1.0,
+          "micro_recall": 1.0,
+          "top1_accuracy": 1.0,
+          "valid_json_rate": 1.0
+        },
+        "2": {
+          "cardinality_accuracy": 0.8333333333333334,
+          "exact_set_match_rate": 0.8333333333333334,
+          "examples": 6,
+          "micro_f1": 0.9565217391304348,
+          "micro_precision": 1.0,
+          "micro_recall": 0.9166666666666666,
+          "top1_accuracy": 1.0,
+          "valid_json_rate": 1.0
+        }
+      },
+      "cardinality_accuracy": 0.9666666666666667,
+      "cardinality_correct": 29,
+      "exact_match": 29,
+      "exact_match_rate": 0.9666666666666667,
+      "exact_set_match": 29,
+      "exact_set_match_rate": 0.9666666666666667,
+      "examples": 30,
+      "micro_f1": 0.9859154929577464,
+      "micro_precision": 1.0,
+      "micro_recall": 0.9722222222222222,
+      "permutation_consistency_rate": 0.9,
+      "permutation_consistent_groups": 9,
+      "permutation_groups": 10,
+      "top1_accuracy": 1.0,
+      "top1_correct": 30,
+      "valid_json": 30,
+      "valid_json_rate": 1.0
+    },
+    "synthetic_context": {
+      "base_case_all_permutations_exact_rate": 0.9,
+      "base_cases": 20,
+      "base_cases_all_permutations_exact": 18,
+      "by_gold_cardinality": {
+        "1": {
+          "cardinality_accuracy": 1.0,
+          "exact_set_match_rate": 0.9629629629629629,
+          "examples": 54,
+          "micro_f1": 0.9629629629629629,
+          "micro_precision": 0.9629629629629629,
+          "micro_recall": 0.9629629629629629,
+          "top1_accuracy": 0.9629629629629629,
+          "valid_json_rate": 1.0
+        },
+        "2": {
+          "cardinality_accuracy": 1.0,
+          "exact_set_match_rate": 1.0,
+          "examples": 6,
+          "micro_f1": 1.0,
+          "micro_precision": 1.0,
+          "micro_recall": 1.0,
+          "top1_accuracy": 1.0,
+          "valid_json_rate": 1.0
+        }
+      },
+      "cardinality_accuracy": 1.0,
+      "cardinality_correct": 60,
+      "exact_match": 58,
+      "exact_match_rate": 0.9666666666666667,
+      "exact_set_match": 58,
+      "exact_set_match_rate": 0.9666666666666667,
+      "examples": 60,
+      "micro_f1": 0.9696969696969697,
+      "micro_precision": 0.9696969696969697,
+      "micro_recall": 0.9696969696969697,
+      "permutation_consistency_rate": 0.9,
+      "permutation_consistent_groups": 18,
+      "permutation_groups": 20,
+      "top1_accuracy": 0.9666666666666667,
+      "top1_correct": 58,
+      "valid_json": 60,
+      "valid_json_rate": 1.0
+    }
+  },
+  "candidate_retrieval_coverage": {
+    "candidate_pool_audited_cases": 51,
+    "candidate_retrieval_coverage_of_targeted_cases": 1.0,
+    "candidate_retrieval_rate": 1.0,
+    "candidate_retrieved_cases": 51,
+    "cases_with_non_gold_distractor": 51,
+    "non_gold_distractor_rate": 1.0,
+    "retrieval_policy": "oracle_injected",
+    "source_cases": 51,
+    "targeted_cases": 51,
+    "written_base_cases": 51
+  },
+  "cardinality_accuracy": 0.9888888888888889,
+  "cardinality_correct": 89,
+  "exact_match": 87,
+  "exact_match_rate": 0.9666666666666667,
+  "exact_set_match": 87,
+  "exact_set_match_rate": 0.9666666666666667,
+  "examples": 90,
+  "micro_f1": 0.9753694581280787,
+  "micro_precision": 0.9801980198019802,
+  "micro_recall": 0.9705882352941176,
+  "permutation_consistency_rate": 0.9,
+  "permutation_consistent_groups": 27,
+  "permutation_groups": 30,
+  "top1_accuracy": 0.9777777777777777,
+  "top1_correct": 88,
+  "valid_json": 90,
+  "valid_json_rate": 1.0
+}
