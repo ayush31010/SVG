@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    149,
+    213,
+    54,
+    118
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "rays",
+    "central point"
+  ],
+  "role": "part",
+  "summary": "Yellow rays emanating from a central point",
+  "visible_pixels": 2664
+}

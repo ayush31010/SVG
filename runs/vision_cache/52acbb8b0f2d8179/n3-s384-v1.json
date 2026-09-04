@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    42,
+    32,
+    299,
+    266
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "face",
+    "mouth"
+  ],
+  "role": "object",
+  "summary": "Dog face",
+  "visible_pixels": 64202
+}

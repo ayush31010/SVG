@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    96,
+    96,
+    192,
+    192
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "wheel"
+  ],
+  "role": "object",
+  "summary": "Wheel",
+  "visible_pixels": 29289
+}

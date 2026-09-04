@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    104,
+    150,
+    263,
+    120
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "handle"
+  ],
+  "role": "object",
+  "summary": "Red rectangular shape with blue circular ends",
+  "visible_pixels": 3212
+}

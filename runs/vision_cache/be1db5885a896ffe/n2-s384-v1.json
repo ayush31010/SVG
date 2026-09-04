@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    42,
+    42,
+    300,
+    300
+  ],
+  "confidence": 0.95,
+  "labels": [
+    "hand"
+  ],
+  "role": "part",
+  "summary": "clock hand",
+  "visible_pixels": 70615
+}

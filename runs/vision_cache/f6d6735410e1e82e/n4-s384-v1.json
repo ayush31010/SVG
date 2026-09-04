@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    0,
+    268,
+    384,
+    116
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "cactus",
+    "sun"
+  ],
+  "role": "object",
+  "summary": "Cactus with a yellow sun",
+  "visible_pixels": 38228
+}

@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    10,
+    277,
+    236,
+    43
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "background",
+    "highlight"
+  ],
+  "role": "background",
+  "summary": "Red rectangle with white number '24'",
+  "visible_pixels": 10148
+}

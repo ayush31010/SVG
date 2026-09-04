@@ -1,0 +1,17 @@
+{
+  "bbox": [
+    0,
+    0,
+    384,
+    384
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "face",
+    "eye",
+    "mouth"
+  ],
+  "role": "object",
+  "summary": "Smiling face emoji",
+  "visible_pixels": 116509
+}

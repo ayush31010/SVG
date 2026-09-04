@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    6,
+    6,
+    372,
+    372
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "shape"
+  ],
+  "role": "object",
+  "summary": "orange diamond",
+  "visible_pixels": 73912
+}

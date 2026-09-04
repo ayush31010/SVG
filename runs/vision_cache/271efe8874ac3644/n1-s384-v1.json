@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    202,
+    96,
+    22,
+    118
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "roof"
+  ],
+  "role": "object",
+  "summary": "Path representing the roof of the vehicle",
+  "visible_pixels": 2596
+}

@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    28,
+    7,
+    328,
+    327
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "sun",
+    "building"
+  ],
+  "role": "background",
+  "summary": "Sun with buildings in the background",
+  "visible_pixels": 60831
+}

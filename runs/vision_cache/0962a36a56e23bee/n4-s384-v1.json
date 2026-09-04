@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    149,
+    288,
+    86,
+    75
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "hat"
+  ],
+  "role": "outline",
+  "summary": "construction worker's hat",
+  "visible_pixels": 4713
+}

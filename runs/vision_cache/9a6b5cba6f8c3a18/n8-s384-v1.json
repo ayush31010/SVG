@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    330,
+    245,
+    22,
+    22
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "earring"
+  ],
+  "role": "background",
+  "summary": "Small circle representing an earring",
+  "visible_pixels": 396
+}

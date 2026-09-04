@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    0,
+    58,
+    67,
+    172
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "handle"
+  ],
+  "role": "handle",
+  "summary": "beer mug handle",
+  "visible_pixels": 6976
+}

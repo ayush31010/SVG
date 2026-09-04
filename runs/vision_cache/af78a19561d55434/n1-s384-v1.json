@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    53,
+    288,
+    278,
+    96
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "shirt"
+  ],
+  "role": "background",
+  "summary": "A small rectangular section of an orange shirt",
+  "visible_pixels": 25948
+}

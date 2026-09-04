@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    0,
+    161,
+    384,
+    42
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "track"
+  ],
+  "role": "background",
+  "summary": "Railroad track",
+  "visible_pixels": 7126
+}

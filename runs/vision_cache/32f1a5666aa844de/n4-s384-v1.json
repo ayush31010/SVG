@@ -1,0 +1,17 @@
+{
+  "bbox": [
+    53,
+    64,
+    278,
+    240
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "eye",
+    "eyebrow",
+    "mouth"
+  ],
+  "role": "object",
+  "summary": "Path representing facial features",
+  "visible_pixels": 8930
+}

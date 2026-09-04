@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    172,
+    40,
+    48,
+    74
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "footprint"
+  ],
+  "role": "background",
+  "summary": "Footprint",
+  "visible_pixels": 2475
+}

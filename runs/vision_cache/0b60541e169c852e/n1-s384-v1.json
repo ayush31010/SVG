@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    10,
+    117,
+    364,
+    150
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "rectangle",
+    "striped"
+  ],
+  "role": "background",
+  "summary": "A light blue rectangular shape with vertical black stripes on either side.",
+  "visible_pixels": 48300
+}

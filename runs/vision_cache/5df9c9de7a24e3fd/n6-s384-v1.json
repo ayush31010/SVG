@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    0,
+    0,
+    224,
+    235
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "starburst"
+  ],
+  "role": "part",
+  "summary": "Orange starburst",
+  "visible_pixels": 24070
+}

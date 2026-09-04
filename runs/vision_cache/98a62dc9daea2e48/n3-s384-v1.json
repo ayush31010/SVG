@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    42,
+    192,
+    108,
+    192
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "ribbon",
+    "bow"
+  ],
+  "role": "part",
+  "summary": "Yellow ribbon bow on heart",
+  "visible_pixels": 17980
+}

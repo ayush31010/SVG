@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    160,
+    138,
+    32,
+    33
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "eye"
+  ],
+  "role": "part",
+  "summary": "Small circle representing a part of the fish's body",
+  "visible_pixels": 860
+}

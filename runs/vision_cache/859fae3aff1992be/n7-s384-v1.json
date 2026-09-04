@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    5,
+    74,
+    361,
+    225
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "tail",
+    "wing"
+  ],
+  "role": "part",
+  "summary": "Helicopter tail section",
+  "visible_pixels": 56321
+}

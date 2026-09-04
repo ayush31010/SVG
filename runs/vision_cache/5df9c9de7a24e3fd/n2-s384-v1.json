@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    117,
+    96,
+    214,
+    214
+  ],
+  "confidence": 0.95,
+  "labels": [
+    "eye"
+  ],
+  "role": "object",
+  "summary": "circle representing part of the camera icon",
+  "visible_pixels": 36140
+}

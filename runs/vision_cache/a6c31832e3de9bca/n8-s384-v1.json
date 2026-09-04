@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    188,
+    231,
+    116,
+    125
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "mug"
+  ],
+  "role": "object",
+  "summary": "beer mug",
+  "visible_pixels": 7249
+}

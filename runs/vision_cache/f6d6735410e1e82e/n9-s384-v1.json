@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    339,
+    278,
+    15,
+    15
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "cactus"
+  ],
+  "role": "part",
+  "summary": "Small green circle",
+  "visible_pixels": 170
+}

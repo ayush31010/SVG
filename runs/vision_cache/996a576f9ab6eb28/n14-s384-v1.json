@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    231,
+    177,
+    102,
+    128
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "torso"
+  ],
+  "role": "background",
+  "summary": "body part",
+  "visible_pixels": 10286
+}

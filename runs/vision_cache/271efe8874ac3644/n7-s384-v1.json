@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    53,
+    194,
+    331,
+    158
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "body"
+  ],
+  "role": "background",
+  "summary": "green vehicle body",
+  "visible_pixels": 26304
+}

@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    0,
+    101,
+    384,
+    283
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "piggy bank"
+  ],
+  "role": "object",
+  "summary": "piggy bank",
+  "visible_pixels": 70483
+}

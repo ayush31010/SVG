@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    160,
+    208,
+    64,
+    48
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "nose"
+  ],
+  "role": "background",
+  "summary": "Red nose",
+  "visible_pixels": 2491
+}

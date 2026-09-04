@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    165,
+    223,
+    22,
+    23
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "eye"
+  ],
+  "role": "eye",
+  "summary": "Eye",
+  "visible_pixels": 420
+}

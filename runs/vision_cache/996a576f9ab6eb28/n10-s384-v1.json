@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    40,
+    8,
+    113,
+    47
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "leaf"
+  ],
+  "role": "background",
+  "summary": "Two black leaves",
+  "visible_pixels": 2519
+}

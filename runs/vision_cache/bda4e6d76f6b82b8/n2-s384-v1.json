@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    21,
+    138,
+    107,
+    108
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "cheek",
+    "blush"
+  ],
+  "role": "background",
+  "summary": "Smiley face with blush cheeks",
+  "visible_pixels": 9123
+}

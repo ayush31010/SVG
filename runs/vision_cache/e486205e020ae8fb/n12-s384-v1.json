@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    96,
+    288,
+    64,
+    22
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "number",
+    "digit"
+  ],
+  "role": "letter",
+  "summary": "Number 24",
+  "visible_pixels": 1408
+}

@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    0,
+    32,
+    384,
+    349
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "body"
+  ],
+  "role": "object",
+  "summary": "Elephant body",
+  "visible_pixels": 108690
+}

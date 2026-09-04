@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    224,
+    149,
+    43,
+    65
+  ],
+  "confidence": 0.8,
+  "labels": [
+    "eye"
+  ],
+  "role": "part",
+  "summary": "Small ellipse representing part of a monkey's face",
+  "visible_pixels": 2242
+}

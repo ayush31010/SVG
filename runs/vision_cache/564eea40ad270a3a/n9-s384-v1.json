@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    202,
+    213,
+    22,
+    22
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "eye"
+  ],
+  "role": "object",
+  "summary": "Small circle representing a fish's eye",
+  "visible_pixels": 396
+}

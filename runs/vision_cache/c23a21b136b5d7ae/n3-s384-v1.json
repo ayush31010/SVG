@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    18,
+    27,
+    348,
+    91
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "ear"
+  ],
+  "role": "part",
+  "summary": "Ear of a cat emoji",
+  "visible_pixels": 7058
+}

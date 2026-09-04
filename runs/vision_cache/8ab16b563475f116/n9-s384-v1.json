@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    83,
+    140,
+    134,
+    155
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "eye"
+  ],
+  "role": "background",
+  "summary": "Yellow spiral on sheep's head",
+  "visible_pixels": 13223
+}

@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    24,
+    104,
+    325,
+    166
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "background",
+    "text"
+  ],
+  "role": "background",
+  "summary": "blue square with 'UP!' text",
+  "visible_pixels": 27650
+}

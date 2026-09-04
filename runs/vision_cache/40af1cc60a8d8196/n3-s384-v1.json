@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    213,
+    35,
+    129,
+    72
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "cloud"
+  ],
+  "role": "object",
+  "summary": "Cloud",
+  "visible_pixels": 6858
+}

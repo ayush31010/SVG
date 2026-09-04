@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    71,
+    145,
+    58,
+    65
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "hand"
+  ],
+  "role": "hand",
+  "summary": "Hand",
+  "visible_pixels": 3027
+}

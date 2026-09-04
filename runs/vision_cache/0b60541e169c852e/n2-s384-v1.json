@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    10,
+    64,
+    364,
+    256
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "stroke",
+    "fill"
+  ],
+  "role": "outline",
+  "summary": "Path with black stroke and white fill",
+  "visible_pixels": 45824
+}

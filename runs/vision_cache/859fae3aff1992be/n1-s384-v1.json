@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    88,
+    277,
+    107,
+    54
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "rotor"
+  ],
+  "role": "part",
+  "summary": "helicopter rotor",
+  "visible_pixels": 2376
+}

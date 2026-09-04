@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    238,
+    82,
+    61,
+    61
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "eye",
+    "handle"
+  ],
+  "role": "object",
+  "summary": "Path with blue circular elements",
+  "visible_pixels": 1013
+}

@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    0,
+    0,
+    384,
+    384
+  ],
+  "confidence": 1.0,
+  "labels": [
+    "circle"
+  ],
+  "role": "object",
+  "summary": "Orange circle with magenta border",
+  "visible_pixels": 116509
+}

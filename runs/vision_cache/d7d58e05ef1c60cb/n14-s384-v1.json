@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    301,
+    90,
+    78,
+    294
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "hand",
+    "monkey face"
+  ],
+  "role": "hand",
+  "summary": "Hand holding a monkey face",
+  "visible_pixels": 18259
+}

@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    74,
+    181,
+    44,
+    43
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "eye"
+  ],
+  "role": "object",
+  "summary": "small circle",
+  "visible_pixels": 1509
+}

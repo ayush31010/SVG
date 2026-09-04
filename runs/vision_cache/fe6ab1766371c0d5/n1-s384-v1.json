@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    21,
+    137,
+    78,
+    55
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "beak"
+  ],
+  "role": "part",
+  "summary": "Chick's beak",
+  "visible_pixels": 3105
+}

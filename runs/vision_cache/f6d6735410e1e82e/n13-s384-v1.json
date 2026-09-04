@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    157,
+    204,
+    14,
+    14
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "node"
+  ],
+  "role": "object",
+  "summary": "Small green circle",
+  "visible_pixels": 168
+}

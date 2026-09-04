@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    299,
+    143,
+    61,
+    61
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "wheel"
+  ],
+  "role": "part",
+  "summary": "highlighted part of a wheel",
+  "visible_pixels": 2812
+}

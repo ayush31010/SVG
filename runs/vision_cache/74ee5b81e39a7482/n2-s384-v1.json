@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    0,
+    0,
+    183,
+    384
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "half"
+  ],
+  "role": "object",
+  "summary": "Half of a moon",
+  "visible_pixels": 24674
+}

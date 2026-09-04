@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    245,
+    202,
+    33,
+    33
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "spot"
+  ],
+  "role": "part",
+  "summary": "Small circle representing a spot on the fish.",
+  "visible_pixels": 865
+}

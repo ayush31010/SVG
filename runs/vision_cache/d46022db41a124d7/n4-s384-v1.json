@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    149,
+    32,
+    150,
+    32
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "handle"
+  ],
+  "role": "object",
+  "summary": "faucet",
+  "visible_pixels": 3771
+}

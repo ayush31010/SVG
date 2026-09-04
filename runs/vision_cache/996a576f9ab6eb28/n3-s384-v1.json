@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    50,
+    177,
+    101,
+    128
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "tank top"
+  ],
+  "role": "background",
+  "summary": "black tank top",
+  "visible_pixels": 10265
+}

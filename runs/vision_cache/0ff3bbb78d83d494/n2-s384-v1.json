@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    90,
+    169,
+    23,
+    23
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "eye",
+    "ear"
+  ],
+  "role": "part",
+  "summary": "pig face",
+  "visible_pixels": 437
+}

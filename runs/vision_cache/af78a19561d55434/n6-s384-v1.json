@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    181,
+    234,
+    22,
+    22
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "eye"
+  ],
+  "role": "part",
+  "summary": "Small circle representing a part of the character's head.",
+  "visible_pixels": 396
+}

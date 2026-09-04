@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    5,
+    90,
+    78,
+    294
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "face",
+    "ears"
+  ],
+  "role": "object",
+  "summary": "Monkey face with hands covering ears",
+  "visible_pixels": 18263
+}

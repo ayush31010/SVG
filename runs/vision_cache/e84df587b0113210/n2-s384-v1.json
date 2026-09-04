@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    189,
+    77,
+    195,
+    230
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "hand",
+    "glove"
+  ],
+  "role": "hand",
+  "summary": "Hand gesture",
+  "visible_pixels": 26194
+}

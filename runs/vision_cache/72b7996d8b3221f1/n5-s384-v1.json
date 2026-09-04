@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    154,
+    13,
+    68,
+    74
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "face"
+  ],
+  "role": "background",
+  "summary": "Yellow circle representing the face of a person",
+  "visible_pixels": 3964
+}

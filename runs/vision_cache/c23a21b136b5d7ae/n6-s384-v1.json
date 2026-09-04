@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    75,
+    257,
+    234,
+    95
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "mouth"
+  ],
+  "role": "part",
+  "summary": "Smiling cat face",
+  "visible_pixels": 15395
+}

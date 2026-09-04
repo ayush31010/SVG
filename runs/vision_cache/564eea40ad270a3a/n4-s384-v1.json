@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    320,
+    138,
+    62,
+    97
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "tail fin"
+  ],
+  "role": "part",
+  "summary": "highlighted tail fin",
+  "visible_pixels": 4296
+}

@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    106,
+    74,
+    97,
+    54
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "section"
+  ],
+  "role": "background",
+  "summary": "orange section of folder",
+  "visible_pixels": 4150
+}

@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    252,
+    100,
+    61,
+    19
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "head",
+    "shoulders"
+  ],
+  "role": "object",
+  "summary": "Path representing a character's head and shoulders",
+  "visible_pixels": 423
+}

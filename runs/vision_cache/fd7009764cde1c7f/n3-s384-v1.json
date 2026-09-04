@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    28,
+    70,
+    340,
+    282
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "stripe"
+  ],
+  "role": "background",
+  "summary": "diagonal stripe",
+  "visible_pixels": 21792
+}

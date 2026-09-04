@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    202,
+    256,
+    64,
+    54
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "eye",
+    "body"
+  ],
+  "role": "part",
+  "summary": "Part of a fish",
+  "visible_pixels": 2347
+}

@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    258,
+    42,
+    84,
+    84
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "eye"
+  ],
+  "role": "part",
+  "summary": "highlighted part of a bomb",
+  "visible_pixels": 2867
+}

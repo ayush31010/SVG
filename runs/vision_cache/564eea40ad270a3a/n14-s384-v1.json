@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    0,
+    170,
+    35,
+    26
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "body"
+  ],
+  "role": "object",
+  "summary": "fish body",
+  "visible_pixels": 665
+}

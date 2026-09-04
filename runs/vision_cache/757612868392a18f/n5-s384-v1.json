@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    202,
+    224,
+    129,
+    75
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "house",
+    "cliff"
+  ],
+  "role": "object",
+  "summary": "Red house on cliff",
+  "visible_pixels": 9652
+}

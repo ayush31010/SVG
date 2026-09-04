@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    67,
+    11,
+    250,
+    117
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "chest"
+  ],
+  "role": "background",
+  "summary": "Chest area of a tank top",
+  "visible_pixels": 21780
+}

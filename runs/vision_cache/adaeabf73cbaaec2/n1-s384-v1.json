@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    149,
+    352,
+    86,
+    32
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "circle",
+    "shadow"
+  ],
+  "role": "object",
+  "summary": "Red circle with gray shadow",
+  "visible_pixels": 2244
+}

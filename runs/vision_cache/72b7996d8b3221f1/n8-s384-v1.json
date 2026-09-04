@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    171,
+    85,
+    75,
+    139
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "shirt"
+  ],
+  "role": "background",
+  "summary": "Orange shirt",
+  "visible_pixels": 8747
+}

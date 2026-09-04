@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    170,
+    0,
+    44,
+    224
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "line"
+  ],
+  "role": "outline",
+  "summary": "vertical line",
+  "visible_pixels": 9669
+}

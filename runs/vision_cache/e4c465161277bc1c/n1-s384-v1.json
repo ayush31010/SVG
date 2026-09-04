@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    0,
+    32,
+    384,
+    320
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "treble clef"
+  ],
+  "role": "object",
+  "summary": "Treble clef",
+  "visible_pixels": 55680
+}

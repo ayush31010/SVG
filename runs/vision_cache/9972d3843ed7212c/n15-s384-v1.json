@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    23,
+    312,
+    52,
+    52
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "path"
+  ],
+  "role": "object",
+  "summary": "Path with white fill",
+  "visible_pixels": 2086
+}

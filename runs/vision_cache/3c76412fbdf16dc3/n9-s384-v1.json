@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    88,
+    231,
+    62,
+    62
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "rectangle",
+    "end cap"
+  ],
+  "role": "background",
+  "summary": "Red rectangular shape with blue circular ends",
+  "visible_pixels": 1007
+}

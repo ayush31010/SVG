@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    67,
+    48,
+    22,
+    22
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "head"
+  ],
+  "role": "head",
+  "summary": "Camel head",
+  "visible_pixels": 398
+}

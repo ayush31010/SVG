@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    181,
+    341,
+    22,
+    43
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "helmet"
+  ],
+  "role": "outline",
+  "summary": "construction worker's helmet",
+  "visible_pixels": 836
+}

@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    330,
+    85,
+    33,
+    33
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "highlight"
+  ],
+  "role": "highlight",
+  "summary": "Small circle representing a highlight",
+  "visible_pixels": 865
+}

@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    153,
+    0,
+    84,
+    44
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "hair"
+  ],
+  "role": "background",
+  "summary": "Hair of the monkey",
+  "visible_pixels": 2031
+}

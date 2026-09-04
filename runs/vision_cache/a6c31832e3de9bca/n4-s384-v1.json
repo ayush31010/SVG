@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    57,
+    10,
+    182,
+    88
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "snow cap",
+    "beer mug"
+  ],
+  "role": "background",
+  "summary": "Snow cap on beer mug",
+  "visible_pixels": 13924
+}

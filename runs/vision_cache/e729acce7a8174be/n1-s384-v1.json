@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    0,
+    0,
+    384,
+    384
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "face",
+    "body"
+  ],
+  "role": "object",
+  "summary": "Poop emoji",
+  "visible_pixels": 101412
+}

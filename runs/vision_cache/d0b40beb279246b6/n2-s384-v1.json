@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    42,
+    42,
+    300,
+    300
+  ],
+  "confidence": 0.95,
+  "labels": [
+    "circle",
+    "vertical line"
+  ],
+  "role": "object",
+  "summary": "A small circle with a vertical line inside it.",
+  "visible_pixels": 70615
+}

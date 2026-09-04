@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    170,
+    32,
+    97,
+    54
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "speech bubble"
+  ],
+  "role": "speech bubble",
+  "summary": "Green speech bubble",
+  "visible_pixels": 4126
+}

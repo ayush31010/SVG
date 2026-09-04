@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    10,
+    64,
+    347,
+    135
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "tail"
+  ],
+  "role": "part",
+  "summary": "highlighted fish tail",
+  "visible_pixels": 30375
+}

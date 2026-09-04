@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    89,
+    67,
+    206,
+    207
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "sun",
+    "circular object"
+  ],
+  "role": "object",
+  "summary": "Sunset city with circular object",
+  "visible_pixels": 33524
+}

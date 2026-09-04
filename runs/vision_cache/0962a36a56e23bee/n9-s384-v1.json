@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    150,
+    215,
+    85,
+    46
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "mouth"
+  ],
+  "role": "part",
+  "summary": "Path representing a mouth",
+  "visible_pixels": 1584
+}

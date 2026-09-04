@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    181,
+    197,
+    170,
+    38
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "starburst",
+    "dots"
+  ],
+  "role": "object",
+  "summary": "Yellow starburst with white dots",
+  "visible_pixels": 3714
+}

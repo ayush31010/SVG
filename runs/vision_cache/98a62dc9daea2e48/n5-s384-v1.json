@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    53,
+    138,
+    86,
+    86
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "small circle",
+    "heart"
+  ],
+  "role": "object",
+  "summary": "Small circle within a larger heart",
+  "visible_pixels": 5862
+}

@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    83,
+    54,
+    152,
+    189
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "trunk"
+  ],
+  "role": "part",
+  "summary": "Elephant trunk",
+  "visible_pixels": 4404
+}

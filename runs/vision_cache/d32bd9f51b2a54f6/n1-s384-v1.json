@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    0,
+    0,
+    384,
+    384
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "face",
+    "sunglasses"
+  ],
+  "role": "object",
+  "summary": "Smiley face with sunglasses",
+  "visible_pixels": 116509
+}

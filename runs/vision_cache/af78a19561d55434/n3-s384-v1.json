@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    70,
+    9,
+    247,
+    247
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "eye",
+    "roof"
+  ],
+  "role": "background",
+  "summary": "Orange circular shape",
+  "visible_pixels": 49426
+}

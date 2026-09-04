@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    151,
+    7,
+    77,
+    71
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "hair"
+  ],
+  "role": "part",
+  "summary": "Hair of the character",
+  "visible_pixels": 3309
+}

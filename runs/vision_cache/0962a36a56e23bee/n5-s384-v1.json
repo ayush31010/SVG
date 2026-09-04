@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    145,
+    259,
+    94,
+    83
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "hat"
+  ],
+  "role": "outline",
+  "summary": "Yellow hat",
+  "visible_pixels": 7089
+}

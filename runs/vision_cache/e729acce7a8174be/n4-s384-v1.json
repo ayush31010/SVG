@@ -1,0 +1,17 @@
+{
+  "bbox": [
+    128,
+    138,
+    43,
+    54
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "face",
+    "eyes",
+    "mouth"
+  ],
+  "role": "object",
+  "summary": "Smiley face with eyes and mouth",
+  "visible_pixels": 1872
+}

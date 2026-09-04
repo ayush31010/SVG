@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    106,
+    0,
+    172,
+    171
+  ],
+  "confidence": 0.95,
+  "labels": [
+    "circle",
+    "cone"
+  ],
+  "role": "object",
+  "summary": "Red circle with a gray cone",
+  "visible_pixels": 23199
+}

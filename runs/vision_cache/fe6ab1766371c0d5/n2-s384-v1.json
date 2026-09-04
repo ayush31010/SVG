@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    160,
+    287,
+    139,
+    97
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "body",
+    "feet"
+  ],
+  "role": "object",
+  "summary": "Yellow chick with orange feet",
+  "visible_pixels": 5712
+}

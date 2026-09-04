@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    56,
+    225,
+    271,
+    118
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "band",
+    "cylinder"
+  ],
+  "role": "background",
+  "summary": "Purple band on cylinder",
+  "visible_pixels": 24790
+}

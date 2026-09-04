@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    0,
+    0,
+    384,
+    384
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "background"
+  ],
+  "role": "background",
+  "summary": "blue square with white letters",
+  "visible_pixels": 146034
+}

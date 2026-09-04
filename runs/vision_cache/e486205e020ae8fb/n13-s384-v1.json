@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    245,
+    277,
+    129,
+    43
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "window",
+    "eye"
+  ],
+  "role": "background",
+  "summary": "Red rectangular shape with white number '24'",
+  "visible_pixels": 5547
+}

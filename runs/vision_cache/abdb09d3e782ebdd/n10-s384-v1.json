@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    64,
+    64,
+    256,
+    64
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "eye"
+  ],
+  "role": "outline",
+  "summary": "Eyebrow",
+  "visible_pixels": 5181
+}

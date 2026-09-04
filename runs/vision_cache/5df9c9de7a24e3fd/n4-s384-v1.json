@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    170,
+    149,
+    108,
+    107
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "circle",
+    "star"
+  ],
+  "role": "object",
+  "summary": "Blue circle with white star",
+  "visible_pixels": 9123
+}

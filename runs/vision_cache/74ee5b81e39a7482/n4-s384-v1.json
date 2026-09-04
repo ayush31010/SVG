@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    138,
+    138,
+    65,
+    65
+  ],
+  "confidence": 0.95,
+  "labels": [
+    "circle",
+    "dots"
+  ],
+  "role": "object",
+  "summary": "Yellow circle with dots",
+  "visible_pixels": 3341
+}

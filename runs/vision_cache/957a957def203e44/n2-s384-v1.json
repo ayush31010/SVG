@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    64,
+    84,
+    256,
+    220
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "eyes",
+    "mouth"
+  ],
+  "role": "object",
+  "summary": "Closed eyes and smiling mouth",
+  "visible_pixels": 14393
+}

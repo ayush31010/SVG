@@ -1,0 +1,18 @@
+{
+  "bbox": [
+    53,
+    32,
+    329,
+    298
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "body",
+    "head",
+    "beak",
+    "feet"
+  ],
+  "role": "object",
+  "summary": "Yellow chick with orange beak and feet",
+  "visible_pixels": 57293
+}

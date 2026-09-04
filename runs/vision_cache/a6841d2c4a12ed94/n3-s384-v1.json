@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    160,
+    96,
+    43,
+    43
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "eye"
+  ],
+  "role": "part",
+  "summary": "Small circle representing part of a camera lens",
+  "visible_pixels": 1505
+}

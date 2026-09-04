@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    85,
+    213,
+    139,
+    150
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "faucet"
+  ],
+  "role": "object",
+  "summary": "faucet icon",
+  "visible_pixels": 14524
+}

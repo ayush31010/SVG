@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    244,
+    257,
+    112,
+    121
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "leg"
+  ],
+  "role": "part",
+  "summary": "Path representing a character's leg",
+  "visible_pixels": 6163
+}

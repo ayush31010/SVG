@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    53,
+    93,
+    30,
+    291
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "arm"
+  ],
+  "role": "part",
+  "summary": "Path representing monkey's arm",
+  "visible_pixels": 4716
+}

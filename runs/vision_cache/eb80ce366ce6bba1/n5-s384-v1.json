@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    0,
+    224,
+    384,
+    160
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "building"
+  ],
+  "role": "outline",
+  "summary": "Building outline",
+  "visible_pixels": 32192
+}

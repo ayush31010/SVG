@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    2,
+    256,
+    123,
+    96
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "seat"
+  ],
+  "role": "part",
+  "summary": "green car seat",
+  "visible_pixels": 6628
+}

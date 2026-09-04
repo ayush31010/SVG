@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    85,
+    266,
+    214,
+    44
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "mouth",
+    "eye"
+  ],
+  "role": "object",
+  "summary": "Smiling cat face",
+  "visible_pixels": 4161
+}

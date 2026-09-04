@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    0,
+    0,
+    384,
+    384
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "face",
+    "expression"
+  ],
+  "role": "object",
+  "summary": "Yellow face with raised eyebrows and open mouth",
+  "visible_pixels": 116509
+}

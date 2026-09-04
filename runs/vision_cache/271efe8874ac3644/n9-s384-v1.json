@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    53,
+    74,
+    331,
+    129
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "roof"
+  ],
+  "role": "background",
+  "summary": "highlighted part of a vehicle",
+  "visible_pixels": 22554
+}

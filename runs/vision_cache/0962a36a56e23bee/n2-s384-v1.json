@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    96,
+    298,
+    192,
+    86
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "line"
+  ],
+  "role": "line",
+  "summary": "Yellow vertical line",
+  "visible_pixels": 5430
+}

@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    179,
+    163,
+    114,
+    187
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "foot"
+  ],
+  "role": "part",
+  "summary": "Foot",
+  "visible_pixels": 8362
+}

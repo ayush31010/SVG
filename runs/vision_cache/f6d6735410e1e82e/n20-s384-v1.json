@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    231,
+    156,
+    15,
+    15
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "cactus",
+    "pattern"
+  ],
+  "role": "background",
+  "summary": "Green cactus with circular pattern",
+  "visible_pixels": 174
+}

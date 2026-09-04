@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    191,
+    183,
+    184,
+    98
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "torso"
+  ],
+  "role": "object",
+  "summary": "Path representing a character's torso",
+  "visible_pixels": 5229
+}

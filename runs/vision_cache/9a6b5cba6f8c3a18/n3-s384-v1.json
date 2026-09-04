@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    106,
+    181,
+    172,
+    22
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "eyebrow"
+  ],
+  "role": "part",
+  "summary": "Eyebrows",
+  "visible_pixels": 2201
+}

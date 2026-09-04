@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    18,
+    31,
+    359,
+    332
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "path",
+    "end cap"
+  ],
+  "role": "object",
+  "summary": "Red path with blue circular ends",
+  "visible_pixels": 42027
+}

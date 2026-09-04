@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    128,
+    21,
+    235,
+    182
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "handle",
+    "window"
+  ],
+  "role": "object",
+  "summary": "Water faucet icon",
+  "visible_pixels": 15955
+}

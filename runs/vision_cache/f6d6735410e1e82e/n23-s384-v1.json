@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    137,
+    288,
+    46,
+    7
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "sun",
+    "cactus"
+  ],
+  "role": "background",
+  "summary": "Sun and cactus",
+  "visible_pixels": 189
+}

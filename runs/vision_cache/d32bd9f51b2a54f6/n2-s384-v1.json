@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    11,
+    96,
+    363,
+    112
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "frame"
+  ],
+  "role": "outline",
+  "summary": "Sunglasses",
+  "visible_pixels": 30061
+}

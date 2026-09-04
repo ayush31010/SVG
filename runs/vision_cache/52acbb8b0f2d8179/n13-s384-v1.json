@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    74,
+    53,
+    236,
+    44
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "left ear"
+  ],
+  "role": "outline",
+  "summary": "ear",
+  "visible_pixels": 1562
+}

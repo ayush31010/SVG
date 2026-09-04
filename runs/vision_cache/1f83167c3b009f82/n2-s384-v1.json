@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    64,
+    32,
+    256,
+    39
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "brim"
+  ],
+  "role": "outline",
+  "summary": "top hat brim",
+  "visible_pixels": 5749
+}

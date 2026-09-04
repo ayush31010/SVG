@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    11,
+    4,
+    362,
+    380
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "tank top",
+    "yellow stripe"
+  ],
+  "role": "background",
+  "summary": "blue tank top with yellow diagonal stripe",
+  "visible_pixels": 94930
+}

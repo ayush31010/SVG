@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    63,
+    25,
+    258,
+    330
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "letter"
+  ],
+  "role": "letter",
+  "summary": "Letter 'b' within a blue square",
+  "visible_pixels": 33479
+}

@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    245,
+    53,
+    78,
+    278
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "arrow",
+    "rectangle"
+  ],
+  "role": "part",
+  "summary": "arrow within rounded rectangle",
+  "visible_pixels": 10192
+}

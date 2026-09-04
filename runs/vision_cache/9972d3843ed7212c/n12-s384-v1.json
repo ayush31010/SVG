@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    181,
+    74,
+    106,
+    161
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "path",
+    "circles"
+  ],
+  "role": "object",
+  "summary": "Yellow path with white circles and spokes",
+  "visible_pixels": 4059
+}

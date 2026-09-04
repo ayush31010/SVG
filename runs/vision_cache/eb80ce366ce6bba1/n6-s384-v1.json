@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    64,
+    181,
+    267,
+    193
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "building",
+    "window"
+  ],
+  "role": "object",
+  "summary": "Building with yellow windows",
+  "visible_pixels": 4377
+}

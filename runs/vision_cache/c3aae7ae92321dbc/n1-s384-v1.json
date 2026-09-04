@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    0,
+    0,
+    384,
+    384
+  ],
+  "confidence": 0.95,
+  "labels": [
+    "number",
+    "circle"
+  ],
+  "role": "object",
+  "summary": "Circle with number 8",
+  "visible_pixels": 116509
+}

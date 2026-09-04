@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    42,
+    298,
+    300,
+    86
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "roof"
+  ],
+  "role": "outline",
+  "summary": "Yellow helmet",
+  "visible_pixels": 23259
+}

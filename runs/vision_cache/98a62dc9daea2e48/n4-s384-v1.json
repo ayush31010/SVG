@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    0,
+    96,
+    191,
+    173
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "bow",
+    "heart"
+  ],
+  "role": "background",
+  "summary": "Yellow bow on red heart",
+  "visible_pixels": 22977
+}

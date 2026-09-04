@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    170,
+    277,
+    44,
+    22
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "rectangle"
+  ],
+  "role": "background",
+  "summary": "A small rectangular shape",
+  "visible_pixels": 869
+}

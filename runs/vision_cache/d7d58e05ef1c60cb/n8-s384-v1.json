@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    128,
+    282,
+    128,
+    54
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "path"
+  ],
+  "role": "part",
+  "summary": "A small, dark brown path",
+  "visible_pixels": 5641
+}

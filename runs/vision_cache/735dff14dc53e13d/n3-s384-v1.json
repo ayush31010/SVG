@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    202,
+    60,
+    122,
+    122
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "arrowhead"
+  ],
+  "role": "part",
+  "summary": "arrowhead",
+  "visible_pixels": 7564
+}

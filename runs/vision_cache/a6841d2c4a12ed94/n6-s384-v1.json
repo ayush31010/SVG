@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    181,
+    213,
+    107,
+    107
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "window"
+  ],
+  "role": "window",
+  "summary": "Square window",
+  "visible_pixels": 11449
+}

@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    85,
+    85,
+    214,
+    214
+  ],
+  "confidence": 0.95,
+  "labels": [
+    "sun"
+  ],
+  "role": "object",
+  "summary": "Yellow circle with orange rays",
+  "visible_pixels": 36157
+}

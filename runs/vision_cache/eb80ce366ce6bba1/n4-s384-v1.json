@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    106,
+    117,
+    246,
+    267
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "building"
+  ],
+  "role": "object",
+  "summary": "Building",
+  "visible_pixels": 45611
+}

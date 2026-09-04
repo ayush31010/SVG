@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    213,
+    169,
+    131,
+    129
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "wing"
+  ],
+  "role": "part",
+  "summary": "yellow chick wing",
+  "visible_pixels": 4599
+}

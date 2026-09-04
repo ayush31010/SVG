@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    106,
+    117,
+    76,
+    97
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "eye"
+  ],
+  "role": "part",
+  "summary": "Smiley face with eyes",
+  "visible_pixels": 5790
+}

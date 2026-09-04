@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    139,
+    0,
+    106,
+    86
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "hair"
+  ],
+  "role": "background",
+  "summary": "hair",
+  "visible_pixels": 7229
+}

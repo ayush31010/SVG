@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    71,
+    101,
+    212,
+    212
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "pushpin"
+  ],
+  "role": "object",
+  "summary": "Red pushpin",
+  "visible_pixels": 23059
+}

@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    14,
+    129,
+    38,
+    39
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "circle"
+  ],
+  "role": "object",
+  "summary": "Small white circle",
+  "visible_pixels": 1164
+}

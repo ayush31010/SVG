@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    0,
+    188,
+    32,
+    26
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "body"
+  ],
+  "role": "part",
+  "summary": "Part of the fish's body",
+  "visible_pixels": 625
+}

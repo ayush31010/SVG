@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    221,
+    72,
+    72,
+    46
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "eye"
+  ],
+  "role": "eye",
+  "summary": "Eye of the fish",
+  "visible_pixels": 2267
+}

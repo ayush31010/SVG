@@ -1,0 +1,17 @@
+{
+  "bbox": [
+    44,
+    22,
+    296,
+    352
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "face",
+    "eye",
+    "hand"
+  ],
+  "role": "object",
+  "summary": "Monkey face",
+  "visible_pixels": 84559
+}

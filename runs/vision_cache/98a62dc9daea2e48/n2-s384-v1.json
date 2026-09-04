@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    0,
+    160,
+    384,
+    86
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "ribbon",
+    "bow"
+  ],
+  "role": "background",
+  "summary": "Yellow ribbon bow",
+  "visible_pixels": 30261
+}

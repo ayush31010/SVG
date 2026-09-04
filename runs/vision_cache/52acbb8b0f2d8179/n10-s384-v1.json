@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    106,
+    288,
+    12,
+    11
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "eye"
+  ],
+  "role": "part",
+  "summary": "Small circle representing a part of the dog's face",
+  "visible_pixels": 112
+}

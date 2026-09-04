@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    266,
+    288,
+    12,
+    11
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "nose"
+  ],
+  "role": "part",
+  "summary": "Dog's nose",
+  "visible_pixels": 112
+}

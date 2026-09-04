@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    6,
+    318,
+    60,
+    60
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "body",
+    "bell"
+  ],
+  "role": "object",
+  "summary": "Trumpet",
+  "visible_pixels": 2373
+}

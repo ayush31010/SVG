@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    53,
+    181,
+    43,
+    22
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "highlight"
+  ],
+  "role": "highlight",
+  "summary": "highlighted part of a vehicle",
+  "visible_pixels": 893
+}

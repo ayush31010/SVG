@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    64,
+    96,
+    54,
+    97
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "sky"
+  ],
+  "role": "background",
+  "summary": "sky element",
+  "visible_pixels": 3911
+}

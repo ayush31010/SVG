@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    53,
+    42,
+    118,
+    140
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "highlight"
+  ],
+  "role": "highlight",
+  "summary": "Star-shaped highlight",
+  "visible_pixels": 7696
+}

@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    133,
+    181,
+    70,
+    105
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "handle"
+  ],
+  "role": "handle",
+  "summary": "Vertical line within a circular shape",
+  "visible_pixels": 2564
+}

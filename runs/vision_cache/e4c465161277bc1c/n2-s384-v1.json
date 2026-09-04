@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    160,
+    7,
+    141,
+    377
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "symbol"
+  ],
+  "role": "symbol",
+  "summary": "Treble clef symbol",
+  "visible_pixels": 24697
+}

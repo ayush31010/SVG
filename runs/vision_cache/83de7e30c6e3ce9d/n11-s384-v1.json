@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    73,
+    225,
+    152,
+    159
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "hat"
+  ],
+  "role": "object",
+  "summary": "hat",
+  "visible_pixels": 17024
+}

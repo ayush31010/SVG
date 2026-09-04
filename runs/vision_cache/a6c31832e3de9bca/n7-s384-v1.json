@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    164,
+    164,
+    163,
+    220
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "mug",
+    "foam"
+  ],
+  "role": "object",
+  "summary": "mug with foam",
+  "visible_pixels": 35680
+}

@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    85,
+    213,
+    299,
+    171
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "sun",
+    "cloud"
+  ],
+  "role": "object",
+  "summary": "Sun with cloud",
+  "visible_pixels": 37918
+}

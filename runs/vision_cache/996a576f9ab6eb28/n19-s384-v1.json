@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    258,
+    133,
+    49,
+    33
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "mouth"
+  ],
+  "role": "part",
+  "summary": "mouth",
+  "visible_pixels": 590
+}

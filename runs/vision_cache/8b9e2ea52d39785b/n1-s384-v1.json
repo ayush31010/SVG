@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    1,
+    20,
+    382,
+    343
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "heart"
+  ],
+  "role": "object",
+  "summary": "Lavender heart shape",
+  "visible_pixels": 95710
+}

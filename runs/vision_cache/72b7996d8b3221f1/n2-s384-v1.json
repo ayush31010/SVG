@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    205,
+    116,
+    63,
+    111
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "body"
+  ],
+  "role": "part",
+  "summary": "Path representing part of a character's body",
+  "visible_pixels": 2251
+}

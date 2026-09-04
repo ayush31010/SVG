@@ -1,0 +1,16 @@
+{
+  "bbox": [
+    202,
+    106,
+    22,
+    22
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "eye",
+    "handle"
+  ],
+  "role": "part",
+  "summary": "Small circle representing a part of the fish's body",
+  "visible_pixels": 394
+}

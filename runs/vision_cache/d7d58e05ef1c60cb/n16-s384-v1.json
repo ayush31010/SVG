@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    310,
+    101,
+    58,
+    148
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "ear"
+  ],
+  "role": "part",
+  "summary": "Monkey's ear",
+  "visible_pixels": 6139
+}

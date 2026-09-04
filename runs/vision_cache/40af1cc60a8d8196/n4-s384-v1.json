@@ -1,0 +1,15 @@
+{
+  "bbox": [
+    24,
+    202,
+    337,
+    182
+  ],
+  "confidence": 0.9,
+  "labels": [
+    "track"
+  ],
+  "role": "object",
+  "summary": "Path representing train tracks",
+  "visible_pixels": 39712
+}
