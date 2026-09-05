@@ -50,10 +50,13 @@ def render_svg_array(svg: str, size: int = 72, background: str = "white"):
     return np.asarray(Image.open(io.BytesIO(png)).convert("RGB"), dtype=np.float32) / 255.0
 
 
-def render_svg_data_url(svg: str, size: int = 512) -> str:
-    png = render_svg_png(svg, size=size, background="white")
+def png_data_url(png: bytes) -> str:
     encoded = base64.b64encode(png).decode("ascii")
     return f"data:image/png;base64,{encoded}"
+
+
+def render_svg_data_url(svg: str, size: int = 512) -> str:
+    return png_data_url(render_svg_png(svg, size=size, background="white"))
 
 
 def image_mse(candidate_svg: str, answer_svg: str, size: int = 72) -> float:
