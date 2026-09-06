@@ -48,6 +48,11 @@ Generic SVG edit rules:
   * If the instruction says to change the part with OLD_COLOR to NEW_COLOR,
     find nodes whose direct `fill` or resolved `fill` equals OLD_COLOR.
   * Set only `fill` to NEW_COLOR on those matching nodes.
+  * CRITICAL: use the EXACT color word or value as it appears in the
+    instruction, copied verbatim. If the instruction says "to green", set
+    fill to the literal string "green" -- do NOT convert it to a hex code
+    like #00FF00, even though that hex value renders the same color. Only
+    use a hex code if the instruction itself gives one (e.g. "to #3B88C3").
   * Do not set `fill` to OLD_COLOR. Do not set `opacity`, `stroke`,
     `stroke-width`, `transform`, or `viewBox`.
   * Do not target n0 for a color change unless n0 itself directly has the
@@ -57,6 +62,9 @@ Generic SVG edit rules:
     or resolved `fill` equals the named source color.
   * Set `stroke` and `stroke-width`.
   * If the outline color is not specified, use black.
+  * CRITICAL: always set `stroke-width` to exactly "1" unless the instruction
+    explicitly gives a different width. Do not use "2" or any other default --
+    this benchmark's convention is stroke-width 1 for every outline edit.
   * Preserve existing `fill`; do not recolor the filled interior.
 - Transparency/opacity changes:
   * Target exactly n0 for an entire-image transparency edit.
