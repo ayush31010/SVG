@@ -11,6 +11,7 @@ from svgpatchlab.types import ArchitectureResult, BenchmarkCase, ModelRequest
 
 from .base import Architecture
 from .prompts import patch_prompt
+from .context_router import SKELETON, RoutingDecision, route_context
 from .root_tasks import compile_root_task_patch
 
 
@@ -197,6 +198,53 @@ class RoutedStrictVisualStatsPatchArchitecture(StrictVisualStatsPatchArchitectur
     """Strict visual-stat patching with deterministic whole-canvas routing."""
 
     name = "routed_strict_visual_stats_patch"
+    route_root_tasks = True
+
+
+class ContextRoutedPatchArchitecture(VisualStatsPatchArchitecture):
+    """Pick the skeleton or the visual-stats context per case.
+
+    The fixed arms each lose on the half of the distribution the other one
+    wins: visual stats are noise when the instruction already names the
+    target's fill, and indispensable when it does not. This chooses between
+    them from the instruction alone, before spending a model call.
+    """
+
+    name = "context_routed_patch"
+
+    def scene_for(self, case: BenchmarkCase) -> dict:
+        skeleton = build_scene(case.source_svg)
+        decision = route_context(case.instruction, skeleton)
+        self._last_decision = decision
+        if decision.mode == SKELETON:
+            return skeleton
+        stats = self._cache.get_or_compute(
+            case.source_svg, size=self.render_size
+        )
+        return build_scene(case.source_svg, visual_stats=stats)
+
+    def run(self, case: BenchmarkCase, model: ModelAdapter) -> ArchitectureResult:
+        self._last_decision: RoutingDecision | None = None
+        result = super().run(case, model)
+        if self._last_decision is not None:
+            result.details["context_router"] = self._last_decision.to_dict()
+        return result
+
+
+class StrictContextRoutedPatchArchitecture(ContextRoutedPatchArchitecture):
+    """context_routed_patch under constrained decoding and response repair."""
+
+    name = "strict_context_routed_patch"
+    constrain_output = True
+    repair_output = True
+
+
+class RoutedStrictContextRoutedPatchArchitecture(
+    StrictContextRoutedPatchArchitecture
+):
+    """Context routing plus the deterministic whole-canvas compiler."""
+
+    name = "routed_strict_context_routed_patch"
     route_root_tasks = True
 
 

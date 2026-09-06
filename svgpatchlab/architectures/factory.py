@@ -6,11 +6,14 @@ from .base import Architecture
 from .diagnostic import OraclePatchArchitecture, OracleTargetArchitecture, TwoStagePatchArchitecture
 from .patching import (
     AnalyticStatsPatchArchitecture,
+    ContextRoutedPatchArchitecture,
     FullContextPatchArchitecture,
+    RoutedStrictContextRoutedPatchArchitecture,
     RoutedStrictSkeletonPatchArchitecture,
     RoutedStrictVisualStatsPatchArchitecture,
     SkeletonPatchArchitecture,
     StrictAnalyticStatsPatchArchitecture,
+    StrictContextRoutedPatchArchitecture,
     StrictSkeletonPatchArchitecture,
     StrictVisualStatsPatchArchitecture,
     VisualGNNPatchArchitecture,
@@ -34,6 +37,11 @@ ARCHITECTURES: dict[str, type[Architecture]] = {
     "strict_analytic_stats_patch": StrictAnalyticStatsPatchArchitecture,
     "strict_skeleton_patch": StrictSkeletonPatchArchitecture,
     "strict_visual_stats_patch": StrictVisualStatsPatchArchitecture,
+    "context_routed_patch": ContextRoutedPatchArchitecture,
+    "strict_context_routed_patch": StrictContextRoutedPatchArchitecture,
+    "routed_strict_context_routed_patch": (
+        RoutedStrictContextRoutedPatchArchitecture
+    ),
     "routed_strict_skeleton_patch": RoutedStrictSkeletonPatchArchitecture,
     "routed_strict_visual_stats_patch": RoutedStrictVisualStatsPatchArchitecture,
     "visual_gnn_patch": VisualGNNPatchArchitecture,

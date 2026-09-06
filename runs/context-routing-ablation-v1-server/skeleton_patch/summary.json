@@ -1,0 +1,47 @@
+{
+  "architecture": "skeleton_patch",
+  "by_family": {
+    "color": {
+      "cases": 20,
+      "completion_tokens": 1280,
+      "gold_patch_exact_rate": 1.0,
+      "mean_failure_aware_mse": 0.0,
+      "mean_model_latency_seconds": 0.5631434727925807,
+      "mean_wall_seconds": 0.5636629309970885,
+      "prompt_tokens": 35698,
+      "target_exact_rate": 1.0,
+      "valid_output_rate": 1.0
+    },
+    "position": {
+      "cases": 27,
+      "completion_tokens": 1984,
+      "gold_patch_exact_rate": 0.07407407407407407,
+      "mean_failure_aware_mse": 0.0133484263766419,
+      "mean_model_latency_seconds": 1.240040630861013,
+      "mean_wall_seconds": 1.2407154691647049,
+      "prompt_tokens": 71018,
+      "target_exact_rate": 0.07407407407407407,
+      "valid_output_rate": 1.0
+    },
+    "size": {
+      "cases": 12,
+      "completion_tokens": 840,
+      "gold_patch_exact_rate": 0.08333333333333333,
+      "mean_failure_aware_mse": 0.013082113078174492,
+      "mean_model_latency_seconds": 0.5987731193502744,
+      "mean_wall_seconds": 0.5992813161574304,
+      "prompt_tokens": 21386,
+      "target_exact_rate": 0.08333333333333333,
+      "valid_output_rate": 1.0
+    }
+  },
+  "cases": 59,
+  "completion_tokens": 4104,
+  "gold_patch_exact_rate": 0.3898305084745763,
+  "mean_failure_aware_mse": 0.008769370662837716,
+  "mean_model_latency_seconds": 0.8801566766322417,
+  "mean_wall_seconds": 0.880744950530135,
+  "prompt_tokens": 128102,
+  "target_exact_rate": 0.3898305084745763,
+  "valid_output_rate": 1.0
+}
