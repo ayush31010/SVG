@@ -36,3 +36,9 @@ tmp/remote_smoke_contact_sheet.png
 tmp/node-grounding-eval-bundle.tar.gz
 # Rebuilt on every run of scripts/run_remote_census.py.
 tmp/identifiability-census-bundle.tar.gz
+# Rebuilt by scripts/run_cloud_set_grounding.py and the seed replication driver;
+# the summaries next to them are the tracked record.
+runs/local-set-v4.zip
+runs/local-set-v4/vector-edits-test.parquet
+runs/local-set-v4/*/checkpoint/
+runs/set-v4-seeds*/seed-*/
