@@ -1,8 +1,7 @@
 {
   "dataset": {
     "root": "SVGEditBench",
-    "tasks": ["change_color", "set_contour", "upside_down", "transparency", "crop_to_half"],
-    "limit": 100
+    "tasks": ["change_color", "set_contour", "upside_down", "transparency", "crop_to_half"]
   },
   "architecture": {
     "name": "skeleton_patch",

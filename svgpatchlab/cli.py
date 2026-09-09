@@ -46,8 +46,10 @@ def main(argv: list[str] | None = None) -> int:
             config["architecture"]["name"] = args.architecture
         if args.limit is not None:
             config["dataset"]["limit"] = args.limit
+            config["dataset"].pop("limit_per_task", None)
         if args.limit_per_task is not None:
             config["dataset"]["limit_per_task"] = args.limit_per_task
+            config["dataset"].pop("limit", None)
         if args.output_dir:
             config.setdefault("evaluation", {})["output_dir"] = args.output_dir
         if args.render is not None:
