@@ -68,3 +68,20 @@ class SeedReplicationTests(unittest.TestCase):
 
         result = aggregate([self._seed(0.3, 0.3)])
         self.assertIsNone(result['seed_level_sign_p'])
+
+
+class SignFlipTests(unittest.TestCase):
+    def test_signflip_matches_the_sign_test_when_magnitudes_are_equal(self):
+        from scripts.replicate_set_grounding_seeds import sign_test, signflip_test
+
+        # With identical magnitudes the permutation test reduces to the sign test.
+        self.assertAlmostEqual(signflip_test([0.1] * 5), sign_test(5, 0))
+        self.assertAlmostEqual(signflip_test([0.1] * 4 + [-0.1]), sign_test(4, 1))
+
+    def test_signflip_keeps_magnitude_and_ignores_exact_ties(self):
+        from scripts.replicate_set_grounding_seeds import signflip_test
+
+        # One large reversal outweighs three small wins; the sign test cannot see this.
+        self.assertGreater(signflip_test([0.01, 0.01, 0.01, -0.9]), 0.4)
+        self.assertEqual(signflip_test([0.2, 0.0, 0.2]), signflip_test([0.2, 0.2]))
+        self.assertIsNone(signflip_test([0.0, 0.0]))

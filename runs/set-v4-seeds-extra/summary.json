@@ -1,0 +1,435 @@
+{
+  "aggregate": {
+    "gnn_better_seeds": 1,
+    "mean_natural_set_exact": {
+      "gnn": 0.2875,
+      "mlp": 0.2875
+    },
+    "mean_synthetic_validation_exact": {
+      "gnn": 0.9661490683229814,
+      "mlp": 0.9497372193024367
+    },
+    "mlp_better_seeds": 1,
+    "seed_level_sign_p": 1.0,
+    "seeds": 2,
+    "tied_seeds": 0,
+    "transfer_gap": {
+      "gnn": 0.6786490683229814,
+      "mlp": 0.6622372193024367
+    }
+  },
+  "dataset": {
+    "cases": 80,
+    "filtering": {
+      "accepted": 80,
+      "all_candidates_changed": 50,
+      "no_changed_drawable": 32,
+      "non_drawable_change": 54,
+      "too_few_candidates": 1256,
+      "topology_changed": 528
+    },
+    "sha256": "91786c53ce5e475975fb8b23eab8231acf5408a82cbab21618dc45305ff1fa12"
+  },
+  "device": "cpu",
+  "exploratory": true,
+  "format": "svgpatchlab.set_grounding_replication.v1",
+  "per_seed": [
+    {
+      "gnn": {
+        "group_set_exact_rate": 0.525,
+        "natural": {
+          "attempted": 80,
+          "by_collection": {
+            "hicon-circular-interface-icons": {
+              "attempted": 64,
+              "cardinality_accuracy": 0.453125,
+              "cardinality_exact_rate": 0.40625,
+              "errors": 0,
+              "evaluated": 64,
+              "mean_wall_seconds": 0.0011406438751038195,
+              "oracle_cardinality_exact_rate": 0.625,
+              "single_target_cases": 28,
+              "single_target_top1_rate": 0.8928571428571429,
+              "threshold_exact_rate": 0.328125,
+              "top1_in_gold_rate": 0.796875
+            },
+            "streetmix-vectors": {
+              "attempted": 16,
+              "cardinality_accuracy": 0.1875,
+              "cardinality_exact_rate": 0.0625,
+              "errors": 0,
+              "evaluated": 16,
+              "mean_wall_seconds": 0.004366445499954352,
+              "oracle_cardinality_exact_rate": 0.125,
+              "single_target_cases": 0,
+              "single_target_top1_rate": null,
+              "threshold_exact_rate": 0.0,
+              "top1_in_gold_rate": 0.625
+            }
+          },
+          "by_reference_type": {
+            "attribute": {
+              "attempted": 1,
+              "cardinality_accuracy": 0.0,
+              "cardinality_exact_rate": 0.0,
+              "errors": 0,
+              "evaluated": 1,
+              "mean_wall_seconds": 0.004306124999857275,
+              "oracle_cardinality_exact_rate": 1.0,
+              "single_target_cases": 0,
+              "single_target_top1_rate": null,
+              "threshold_exact_rate": 0.0,
+              "top1_in_gold_rate": 1.0
+            },
+            "semantic": {
+              "attempted": 64,
+              "cardinality_accuracy": 0.5,
+              "cardinality_exact_rate": 0.421875,
+              "errors": 0,
+              "evaluated": 64,
+              "mean_wall_seconds": 0.0019560586250690903,
+              "oracle_cardinality_exact_rate": 0.578125,
+              "single_target_cases": 28,
+              "single_target_top1_rate": 0.8928571428571429,
+              "threshold_exact_rate": 0.328125,
+              "top1_in_gold_rate": 0.8125
+            },
+            "spatial": {
+              "attempted": 15,
+              "cardinality_accuracy": 0.0,
+              "cardinality_exact_rate": 0.0,
+              "errors": 0,
+              "evaluated": 15,
+              "mean_wall_seconds": 0.0008913639334423351,
+              "oracle_cardinality_exact_rate": 0.26666666666666666,
+              "single_target_cases": 0,
+              "single_target_top1_rate": null,
+              "threshold_exact_rate": 0.0,
+              "top1_in_gold_rate": 0.5333333333333333
+            }
+          },
+          "cardinality_accuracy": 0.4,
+          "cardinality_exact_rate": 0.3375,
+          "errors": 0,
+          "evaluated": 80,
+          "mean_wall_seconds": 0.001785804200073926,
+          "oracle_cardinality_exact_rate": 0.525,
+          "selected_experts": {
+            "attribute": 1,
+            "semantic": 64,
+            "spatial": 15
+          },
+          "single_target_cases": 28,
+          "single_target_top1_rate": 0.8928571428571429,
+          "threshold_exact_rate": 0.2625,
+          "top1_in_gold_rate": 0.7625
+        },
+        "set_exact_correct": 27,
+        "set_exact_rate": 0.3375,
+        "validation_exact": 0.9608695652173913
+      },
+      "mlp": {
+        "group_set_exact_rate": 0.475,
+        "natural": {
+          "attempted": 80,
+          "by_collection": {
+            "hicon-circular-interface-icons": {
+              "attempted": 64,
+              "cardinality_accuracy": 0.515625,
+              "cardinality_exact_rate": 0.34375,
+              "errors": 0,
+              "evaluated": 64,
+              "mean_wall_seconds": 0.0010003958125111012,
+              "oracle_cardinality_exact_rate": 0.5,
+              "single_target_cases": 28,
+              "single_target_top1_rate": 0.7857142857142857,
+              "threshold_exact_rate": 0.0,
+              "top1_in_gold_rate": 0.75
+            },
+            "streetmix-vectors": {
+              "attempted": 16,
+              "cardinality_accuracy": 0.0625,
+              "cardinality_exact_rate": 0.0,
+              "errors": 0,
+              "evaluated": 16,
+              "mean_wall_seconds": 0.0042105469374291715,
+              "oracle_cardinality_exact_rate": 0.0625,
+              "single_target_cases": 0,
+              "single_target_top1_rate": null,
+              "threshold_exact_rate": 0.0625,
+              "top1_in_gold_rate": 0.5
+            }
+          },
+          "by_reference_type": {
+            "attribute": {
+              "attempted": 1,
+              "cardinality_accuracy": 0.0,
+              "cardinality_exact_rate": 0.0,
+              "errors": 0,
+              "evaluated": 1,
+              "mean_wall_seconds": 0.004326250000303844,
+              "oracle_cardinality_exact_rate": 1.0,
+              "single_target_cases": 0,
+              "single_target_top1_rate": null,
+              "threshold_exact_rate": 1.0,
+              "top1_in_gold_rate": 1.0
+            },
+            "semantic": {
+              "attempted": 64,
+              "cardinality_accuracy": 0.453125,
+              "cardinality_exact_rate": 0.34375,
+              "errors": 0,
+              "evaluated": 64,
+              "mean_wall_seconds": 0.0018100742187527885,
+              "oracle_cardinality_exact_rate": 0.5,
+              "single_target_cases": 28,
+              "single_target_top1_rate": 0.7857142857142857,
+              "threshold_exact_rate": 0.0,
+              "top1_in_gold_rate": 0.703125
+            },
+            "spatial": {
+              "attempted": 15,
+              "cardinality_accuracy": 0.3333333333333333,
+              "cardinality_exact_rate": 0.0,
+              "errors": 0,
+              "evaluated": 15,
+              "mean_wall_seconds": 0.0007482055332729942,
+              "oracle_cardinality_exact_rate": 0.0,
+              "single_target_cases": 0,
+              "single_target_top1_rate": null,
+              "threshold_exact_rate": 0.0,
+              "top1_in_gold_rate": 0.6666666666666666
+            }
+          },
+          "cardinality_accuracy": 0.425,
+          "cardinality_exact_rate": 0.275,
+          "errors": 0,
+          "evaluated": 80,
+          "mean_wall_seconds": 0.0016424260374947152,
+          "oracle_cardinality_exact_rate": 0.4125,
+          "selected_experts": {
+            "attribute": 1,
+            "semantic": 64,
+            "spatial": 15
+          },
+          "single_target_cases": 28,
+          "single_target_top1_rate": 0.7857142857142857,
+          "threshold_exact_rate": 0.0125,
+          "top1_in_gold_rate": 0.7
+        },
+        "set_exact_correct": 22,
+        "set_exact_rate": 0.275,
+        "validation_exact": 0.9478260869565217
+      },
+      "paired": {
+        "cases": 80,
+        "exact_mcnemar_p": 0.1796875,
+        "left_only_correct": 7,
+        "metric": "deployed_set_exact",
+        "right_only_correct": 2
+      },
+      "seed": 31337
+    },
+    {
+      "gnn": {
+        "group_set_exact_rate": 0.4375,
+        "natural": {
+          "attempted": 80,
+          "by_collection": {
+            "hicon-circular-interface-icons": {
+              "attempted": 64,
+              "cardinality_accuracy": 0.4375,
+              "cardinality_exact_rate": 0.296875,
+              "errors": 0,
+              "evaluated": 64,
+              "mean_wall_seconds": 0.001142376265605094,
+              "oracle_cardinality_exact_rate": 0.515625,
+              "single_target_cases": 28,
+              "single_target_top1_rate": 0.6785714285714286,
+              "threshold_exact_rate": 0.125,
+              "top1_in_gold_rate": 0.734375
+            },
+            "streetmix-vectors": {
+              "attempted": 16,
+              "cardinality_accuracy": 0.125,
+              "cardinality_exact_rate": 0.0,
+              "errors": 0,
+              "evaluated": 16,
+              "mean_wall_seconds": 0.004446239499998228,
+              "oracle_cardinality_exact_rate": 0.0625,
+              "single_target_cases": 0,
+              "single_target_top1_rate": null,
+              "threshold_exact_rate": 0.0625,
+              "top1_in_gold_rate": 0.0625
+            }
+          },
+          "by_reference_type": {
+            "attribute": {
+              "attempted": 1,
+              "cardinality_accuracy": 0.0,
+              "cardinality_exact_rate": 0.0,
+              "errors": 0,
+              "evaluated": 1,
+              "mean_wall_seconds": 0.0043314159993315116,
+              "oracle_cardinality_exact_rate": 1.0,
+              "single_target_cases": 0,
+              "single_target_top1_rate": null,
+              "threshold_exact_rate": 1.0,
+              "top1_in_gold_rate": 1.0
+            },
+            "semantic": {
+              "attempted": 64,
+              "cardinality_accuracy": 0.46875,
+              "cardinality_exact_rate": 0.296875,
+              "errors": 0,
+              "evaluated": 64,
+              "mean_wall_seconds": 0.0019786067656042405,
+              "oracle_cardinality_exact_rate": 0.4375,
+              "single_target_cases": 28,
+              "single_target_top1_rate": 0.6785714285714286,
+              "threshold_exact_rate": 0.125,
+              "top1_in_gold_rate": 0.5
+            },
+            "spatial": {
+              "attempted": 15,
+              "cardinality_accuracy": 0.0,
+              "cardinality_exact_rate": 0.0,
+              "errors": 0,
+              "evaluated": 15,
+              "mean_wall_seconds": 0.0008859776000463171,
+              "oracle_cardinality_exact_rate": 0.3333333333333333,
+              "single_target_cases": 0,
+              "single_target_top1_rate": null,
+              "threshold_exact_rate": 0.0,
+              "top1_in_gold_rate": 1.0
+            }
+          },
+          "cardinality_accuracy": 0.375,
+          "cardinality_exact_rate": 0.2375,
+          "errors": 0,
+          "evaluated": 80,
+          "mean_wall_seconds": 0.0018031489124837208,
+          "oracle_cardinality_exact_rate": 0.425,
+          "selected_experts": {
+            "attribute": 1,
+            "semantic": 64,
+            "spatial": 15
+          },
+          "single_target_cases": 28,
+          "single_target_top1_rate": 0.6785714285714286,
+          "threshold_exact_rate": 0.1125,
+          "top1_in_gold_rate": 0.6
+        },
+        "set_exact_correct": 19,
+        "set_exact_rate": 0.2375,
+        "validation_exact": 0.9714285714285714
+      },
+      "mlp": {
+        "group_set_exact_rate": 0.5,
+        "natural": {
+          "attempted": 80,
+          "by_collection": {
+            "hicon-circular-interface-icons": {
+              "attempted": 64,
+              "cardinality_accuracy": 0.46875,
+              "cardinality_exact_rate": 0.375,
+              "errors": 0,
+              "evaluated": 64,
+              "mean_wall_seconds": 0.0009878021405853588,
+              "oracle_cardinality_exact_rate": 0.546875,
+              "single_target_cases": 28,
+              "single_target_top1_rate": 0.8571428571428571,
+              "threshold_exact_rate": 0.046875,
+              "top1_in_gold_rate": 0.859375
+            },
+            "streetmix-vectors": {
+              "attempted": 16,
+              "cardinality_accuracy": 0.0,
+              "cardinality_exact_rate": 0.0,
+              "errors": 0,
+              "evaluated": 16,
+              "mean_wall_seconds": 0.004180888125006277,
+              "oracle_cardinality_exact_rate": 0.0625,
+              "single_target_cases": 0,
+              "single_target_top1_rate": null,
+              "threshold_exact_rate": 0.0625,
+              "top1_in_gold_rate": 0.3125
+            }
+          },
+          "by_reference_type": {
+            "attribute": {
+              "attempted": 1,
+              "cardinality_accuracy": 0.0,
+              "cardinality_exact_rate": 0.0,
+              "errors": 0,
+              "evaluated": 1,
+              "mean_wall_seconds": 0.00423995900018781,
+              "oracle_cardinality_exact_rate": 1.0,
+              "single_target_cases": 0,
+              "single_target_top1_rate": null,
+              "threshold_exact_rate": 1.0,
+              "top1_in_gold_rate": 1.0
+            },
+            "semantic": {
+              "attempted": 64,
+              "cardinality_accuracy": 0.421875,
+              "cardinality_exact_rate": 0.375,
+              "errors": 0,
+              "evaluated": 64,
+              "mean_wall_seconds": 0.001794815156259233,
+              "oracle_cardinality_exact_rate": 0.53125,
+              "single_target_cases": 28,
+              "single_target_top1_rate": 0.8571428571428571,
+              "threshold_exact_rate": 0.046875,
+              "top1_in_gold_rate": 0.6875
+            },
+            "spatial": {
+              "attempted": 15,
+              "cardinality_accuracy": 0.2,
+              "cardinality_exact_rate": 0.0,
+              "errors": 0,
+              "evaluated": 15,
+              "mean_wall_seconds": 0.0007336945331189781,
+              "oracle_cardinality_exact_rate": 0.06666666666666667,
+              "single_target_cases": 0,
+              "single_target_top1_rate": null,
+              "threshold_exact_rate": 0.0,
+              "top1_in_gold_rate": 1.0
+            }
+          },
+          "cardinality_accuracy": 0.375,
+          "cardinality_exact_rate": 0.3,
+          "errors": 0,
+          "evaluated": 80,
+          "mean_wall_seconds": 0.0016264193374695424,
+          "oracle_cardinality_exact_rate": 0.45,
+          "selected_experts": {
+            "attribute": 1,
+            "semantic": 64,
+            "spatial": 15
+          },
+          "single_target_cases": 28,
+          "single_target_top1_rate": 0.8571428571428571,
+          "threshold_exact_rate": 0.05,
+          "top1_in_gold_rate": 0.75
+        },
+        "set_exact_correct": 24,
+        "set_exact_rate": 0.3,
+        "validation_exact": 0.9516483516483516
+      },
+      "paired": {
+        "cases": 80,
+        "exact_mcnemar_p": 0.125,
+        "left_only_correct": 1,
+        "metric": "deployed_set_exact",
+        "right_only_correct": 6
+      },
+      "seed": 424242
+    }
+  ],
+  "seeds": [
+    31337,
+    424242
+  ],
+  "status": "complete"
+}

@@ -26,6 +26,25 @@ def sign_test(wins: int, losses: int) -> float | None:
     return _exact_mcnemar(wins, losses)
 
 
+def signflip_test(differences) -> float | None:
+    """Exact two-sided paired permutation test over seed-level differences.
+
+    The sign test above discards magnitude and is badly underpowered at these
+    seed counts. Enumerating every sign flip keeps the magnitudes, assumes only
+    that the differences are symmetric under the null, and needs no scipy.
+    """
+    differences = [d for d in differences if d]
+    if not differences:
+        return None
+    observed = abs(sum(differences))
+    extreme = 0
+    for assignment in range(2 ** len(differences)):
+        total = sum(d if assignment >> index & 1 else -d
+                    for index, d in enumerate(differences))
+        extreme += abs(total) >= observed - 1e-12
+    return extreme / 2 ** len(differences)
+
+
 def aggregate(per_seed):
     """Summarise seed-level direction; per-case counts are not pooled.
 
@@ -39,9 +58,12 @@ def aggregate(per_seed):
             for arm in ('gnn', 'mlp')}
     synthetic = {arm: sum(s[arm]['validation_exact'] for s in per_seed) / len(per_seed)
                  for arm in ('gnn', 'mlp')}
+    differences = [s['mlp']['set_exact_rate'] - s['gnn']['set_exact_rate'] for s in per_seed]
     return {'seeds': len(per_seed), 'gnn_better_seeds': gnn_better,
             'mlp_better_seeds': mlp_better, 'tied_seeds': ties,
             'seed_level_sign_p': sign_test(gnn_better, mlp_better),
+            'seed_level_signflip_p': signflip_test(differences),
+            'mean_mlp_minus_gnn': sum(differences) / len(differences),
             'mean_natural_set_exact': mean, 'mean_synthetic_validation_exact': synthetic,
             'transfer_gap': {arm: synthetic[arm] - mean[arm] for arm in ('gnn', 'mlp')}}
 
