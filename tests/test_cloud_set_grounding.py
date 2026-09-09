@@ -3,9 +3,21 @@ import unittest
 from types import SimpleNamespace
 
 from scripts.run_cloud_set_grounding import paired_sets, validate_cached
+from scripts.analyze_cloud_cardinality_fusion import transfer_cardinality
 
 
 class CloudSetGroundingTests(unittest.TestCase):
+    def test_visual_fusion_uses_predicted_count_without_gold_labels(self):
+        visual = [dict(case_id='one', ranking=['n3', 'n1', 'n2'])]
+        scalar = [dict(case_id='one', predicted_cardinality=2)]
+        result = transfer_cardinality(visual, scalar)
+        self.assertEqual(result[0]['cardinality_targets'], ['n3', 'n1'])
+        scalar[0]['gold_targets'] = ['n2']
+        self.assertEqual(transfer_cardinality(visual, scalar), result)
+        scalar[0]['predicted_cardinality'] = 0
+        with self.assertRaises(ValueError):
+            transfer_cardinality(visual, scalar)
+
     def test_cached_visual_scores_reject_stale_or_duplicate_cases(self):
         case = SimpleNamespace(case_id='one', instruction='the red shape',
                                candidate_ids=('n1', 'n2'), gold_target_ids=('n1',))
