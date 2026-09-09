@@ -43,3 +43,28 @@ class CloudSetGroundingTests(unittest.TestCase):
         self.assertEqual(result['exact_mcnemar_p'], 0.03125)
         with self.assertRaises(ValueError):
             paired_sets(left, right[:-1])
+
+
+class SeedReplicationTests(unittest.TestCase):
+    def _seed(self, gnn, mlp, gnn_val=0.95, mlp_val=0.94):
+        return {'gnn': dict(set_exact_rate=gnn, validation_exact=gnn_val),
+                'mlp': dict(set_exact_rate=mlp, validation_exact=mlp_val)}
+
+    def test_aggregate_counts_seed_level_direction_and_transfer_gap(self):
+        from scripts.replicate_set_grounding_seeds import aggregate
+
+        result = aggregate([self._seed(0.1, 0.3), self._seed(0.2, 0.4),
+                            self._seed(0.25, 0.25)])
+        self.assertEqual(result['mlp_better_seeds'], 2)
+        self.assertEqual(result['gnn_better_seeds'], 0)
+        self.assertEqual(result['tied_seeds'], 1)
+        self.assertEqual(result['seed_level_sign_p'], 0.5)
+        # A tie must not count for either arm, and the gap uses signed means.
+        self.assertAlmostEqual(result['mean_natural_set_exact']['mlp'], 0.31666666, places=6)
+        self.assertAlmostEqual(result['transfer_gap']['gnn'], 0.95 - 0.18333333, places=6)
+
+    def test_aggregate_reports_no_significance_when_every_seed_ties(self):
+        from scripts.replicate_set_grounding_seeds import aggregate
+
+        result = aggregate([self._seed(0.3, 0.3)])
+        self.assertIsNone(result['seed_level_sign_p'])

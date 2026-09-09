@@ -1,0 +1,42 @@
+{
+  "cardinality_loss_weight": 1.0,
+  "device": "cpu",
+  "epochs": 8,
+  "expert_loss_weight": 0.5,
+  "instruction_encoder": {
+    "dim": 256,
+    "structured_dim": 32,
+    "type": "hash"
+  },
+  "learning_rate": 0.0005,
+  "model": {
+    "dropout": 0.1,
+    "hidden_dim": 128,
+    "inductive_biases": true,
+    "max_cardinality": 6,
+    "num_layers": 0,
+    "structured_text_dim": 32,
+    "top_k": 1,
+    "visual_dim": 0
+  },
+  "output_dir": "/Users/ayushdebnath/SVG-colab/runs/local-set-v4/mlp/checkpoint",
+  "router_loss_weight": 0.5,
+  "seed": 20260909,
+  "selection_strategy": "cardinality",
+  "synthetic_attribute_scenes": 120,
+  "synthetic_context_scenes": 100,
+  "synthetic_set_scenes": 180,
+  "synthetic_spatial_scenes": 200,
+  "threshold_candidates": [
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.65
+  ],
+  "use_target_reference": true,
+  "validation_fraction": 0.2,
+  "weight_decay": 0.0001
+}

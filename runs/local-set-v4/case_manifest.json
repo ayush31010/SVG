@@ -1,0 +1,562 @@
+[
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/0902/438078-438077",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "2264ab883857d8c93be472a6fec5b9ec93bae73815f8f3f7123b7159af04a6e1"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/0909/437700-437703",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 2,
+    "source_sha256": "60c62fb66736de93608d1204fe2fa752aebe65e42f9a263bca404e492ce0374d"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/0910/437700-437701",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 2,
+    "source_sha256": "60c62fb66736de93608d1204fe2fa752aebe65e42f9a263bca404e492ce0374d"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/0911/437700-437704",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 2,
+    "source_sha256": "60c62fb66736de93608d1204fe2fa752aebe65e42f9a263bca404e492ce0374d"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/0915/437703-437700",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 2,
+    "source_sha256": "61e1d8e3dcacd3ba9d74d1e7633c06bd8faa17d1455870ff1f7236f6da7a1441"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/0916/437703-437701",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 2,
+    "source_sha256": "61e1d8e3dcacd3ba9d74d1e7633c06bd8faa17d1455870ff1f7236f6da7a1441"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/0917/437703-437704",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 2,
+    "source_sha256": "61e1d8e3dcacd3ba9d74d1e7633c06bd8faa17d1455870ff1f7236f6da7a1441"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/0924/437974-437975",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 3,
+    "source_sha256": "f530011220563342dcace83346229b9bcbe541b72e967bc3dd6c0618a0978de8"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/0927/437715-437710",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "cd16da1380edb60cd6c38a90e003f4bcde206964565cd705599344f07c4398d7"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/0928/437712-437717",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 3,
+    "source_sha256": "4188bb50de3ddb6c5a9c45f509807dafad2a47f03c2f0f334bcbc09a83206534"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/0929/437718-437723",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 3,
+    "source_sha256": "c9f3793e89638d61aae1aad4da2af6c85d379ec3783843cdaa25a859c17d070b"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/0930/437721-437728",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 3,
+    "source_sha256": "c897cc6ea678f32d085ff848bb27155fc275a6612956587fab74818d746755bf"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/0931/437721-437720",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 3,
+    "source_sha256": "c897cc6ea678f32d085ff848bb27155fc275a6612956587fab74818d746755bf"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/0939/437730-437731",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 3,
+    "source_sha256": "fc36787b9ca53ef4c77d8f85e9833760d3c51f0364cd0455c3dcf5cb5057c2da"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/0963/437885-437880",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 2,
+    "source_sha256": "84f7e6a8b219e1bf33fdfd96da7f42c5731f64aea301baf0a3e563dea2e0e4de"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/0991/437796-437797",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "5cce501edf45b01048f54d74934f2242dfa89de582c16c9754ab130f598f204e"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/0993/437927-437926",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 3,
+    "source_sha256": "a04e59d94e002ce796af4a4ed4aa5b92f6706a3eaa917548a21e152d3e8e2cc2"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/0995/437799-437794",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "b41c7737b112ca0413fa709a663e520757df203cdea510df2faa801a33c39eda"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/0996/437799-437797",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "b41c7737b112ca0413fa709a663e520757df203cdea510df2faa801a33c39eda"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/0997/437799-437795",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "b41c7737b112ca0413fa709a663e520757df203cdea510df2faa801a33c39eda"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/0998/437799-437798",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "b41c7737b112ca0413fa709a663e520757df203cdea510df2faa801a33c39eda"
+  },
+  {
+    "candidates": 9,
+    "case_id": "hicon-circular-interface-icons/1000/437802-437804",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 5,
+    "source_sha256": "1253f1801689873672d4a1cd388d6effef5d1a2ec610e6510fc9ebc9430f8ace"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/1006/438079-438077",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "d31a4512dfb8579c7cfa5c6b39d464d70f5c7475d1af1af9ab7f19687821bbdc"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/1016/437701-437700",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 2,
+    "source_sha256": "7f633093924758d93de16249f16915adaad25cd59f4157c651e9269bfea7a4bd"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/1017/437701-437703",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 2,
+    "source_sha256": "7f633093924758d93de16249f16915adaad25cd59f4157c651e9269bfea7a4bd"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/1018/437701-437704",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 2,
+    "source_sha256": "7f633093924758d93de16249f16915adaad25cd59f4157c651e9269bfea7a4bd"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/1020/437704-437700",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 2,
+    "source_sha256": "2901cfb7f156eb6cf0fc120a7febd146c9eafac79b1a5bf4fdd1f608a9f08dc3"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/1021/437704-437703",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 2,
+    "source_sha256": "2901cfb7f156eb6cf0fc120a7febd146c9eafac79b1a5bf4fdd1f608a9f08dc3"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/1022/437704-437701",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 2,
+    "source_sha256": "2901cfb7f156eb6cf0fc120a7febd146c9eafac79b1a5bf4fdd1f608a9f08dc3"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/1024/437710-437715",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "8796c4a69ec19ac2a1bad91fba9029877b54c37cda97fb98c4be7336c71582c8"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/1029/437975-437974",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 3,
+    "source_sha256": "6807b0bb0744c74b758a09061cec22a42d8b439d0af0cc5f8ef2e44731a6c542"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/1034/437731-437730",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 3,
+    "source_sha256": "c6eaeafbb9d5f5c5e223d938663e8844e1bec884745863b354bfd4914c49cfba"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/1035/437728-437721",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 3,
+    "source_sha256": "c86f4e0208b19697c5fd672928ca8453184af9a0f55e2111d98d4c369c69a746"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/1059/437880-437885",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 2,
+    "source_sha256": "d6730697b2d1118e1fe98fb31c976682eb8630b57fa08d6820fba883b337af39"
+  },
+  {
+    "candidates": 6,
+    "case_id": "hicon-circular-interface-icons/1063/438020-438021",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 5,
+    "source_sha256": "3e3619870b7059ec5d9cbf394c369144bbc26d770ec9fc3dc9855c35b21cc428"
+  },
+  {
+    "candidates": 7,
+    "case_id": "hicon-circular-interface-icons/1065/437898-437928",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 2,
+    "source_sha256": "b6519f17b23a7a71952235ca656043ffd84e215cdc5d93d581c10abe8f664db6"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/1090/437794-437799",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "d541beaf6e5f2dd30d214dac006ba3be0cf5f57797ab77a2479e6c46a8040c1e"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/1092/437794-437797",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "d541beaf6e5f2dd30d214dac006ba3be0cf5f57797ab77a2479e6c46a8040c1e"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/1093/437794-437795",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "d541beaf6e5f2dd30d214dac006ba3be0cf5f57797ab77a2479e6c46a8040c1e"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/1094/437794-437798",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "d541beaf6e5f2dd30d214dac006ba3be0cf5f57797ab77a2479e6c46a8040c1e"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/1096/437797-437796",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "236a1ab8cfa57e1cd3e56301fe01ebbad87bd613cbff1611f6a7d2578565bd86"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/1097/437797-437799",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "236a1ab8cfa57e1cd3e56301fe01ebbad87bd613cbff1611f6a7d2578565bd86"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/1099/437797-437794",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "236a1ab8cfa57e1cd3e56301fe01ebbad87bd613cbff1611f6a7d2578565bd86"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/1100/437797-437795",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "236a1ab8cfa57e1cd3e56301fe01ebbad87bd613cbff1611f6a7d2578565bd86"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/1101/437797-437798",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "236a1ab8cfa57e1cd3e56301fe01ebbad87bd613cbff1611f6a7d2578565bd86"
+  },
+  {
+    "candidates": 7,
+    "case_id": "hicon-circular-interface-icons/1102/437928-437898",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 2,
+    "source_sha256": "f512d7ba475e2a9d16b147c9c0833653b556e58d7ca330f33cf2da5f77fdb3de"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/1116/438077-438078",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "d03633c2b51bfecf47cd47136a043ee6dd63f9d9c0d83dc8dfbbf23d7ca47f68"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/1117/438077-438079",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "d03633c2b51bfecf47cd47136a043ee6dd63f9d9c0d83dc8dfbbf23d7ca47f68"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/1132/437711-437714",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 3,
+    "source_sha256": "5531da5ffa75ccca1fda035644fc7f32cc1d064b729c49138f57d7da93907ad2"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/1137/437714-437711",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 3,
+    "source_sha256": "bd3f61277d4be429e56c37b0e8b839d8ed49571e660ca5e8846b0d3848812042"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/1138/437717-437712",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 3,
+    "source_sha256": "8dededc183851bbac1d14d534393c76e39ce4130a905a233da65819d5f003155"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/1140/437720-437721",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 3,
+    "source_sha256": "b3acb131b744fb67fef8cf0ed0591e0e8ecd799bb504f506b06f6df8423fab99"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/1141/437723-437718",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 3,
+    "source_sha256": "d6596ad34b8c38637d610020bb7bb9596129997f91b225e4d4424e1535b76f7f"
+  },
+  {
+    "candidates": 6,
+    "case_id": "hicon-circular-interface-icons/1158/438021-438020",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 5,
+    "source_sha256": "1ef123e7cd072574e5b6b009a38d9274d616a8626c70aa3c0b49c2c788671ffd"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/1175/437795-437799",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "fee168264fab6dd84804c53f515d9870ec427513a5bd704e37adf7ca16e4f685"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/1177/437795-437794",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "fee168264fab6dd84804c53f515d9870ec427513a5bd704e37adf7ca16e4f685"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/1178/437795-437797",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "fee168264fab6dd84804c53f515d9870ec427513a5bd704e37adf7ca16e4f685"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/1179/437795-437798",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "fee168264fab6dd84804c53f515d9870ec427513a5bd704e37adf7ca16e4f685"
+  },
+  {
+    "candidates": 4,
+    "case_id": "hicon-circular-interface-icons/1181/437926-437927",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 3,
+    "source_sha256": "2b65ea9533a5b475ba9435ae4e8cd0504fce7a836ffd588b045ba9a228918647"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/1183/437798-437799",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "bbdda18c7a5248f128911606bab17338143974188867052f265b083541bc4f2d"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/1184/437798-437794",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "bbdda18c7a5248f128911606bab17338143974188867052f265b083541bc4f2d"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/1185/437798-437797",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "bbdda18c7a5248f128911606bab17338143974188867052f265b083541bc4f2d"
+  },
+  {
+    "candidates": 3,
+    "case_id": "hicon-circular-interface-icons/1186/437798-437795",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 1,
+    "source_sha256": "bbdda18c7a5248f128911606bab17338143974188867052f265b083541bc4f2d"
+  },
+  {
+    "candidates": 9,
+    "case_id": "hicon-circular-interface-icons/1191/437804-437802",
+    "collection": "hicon-circular-interface-icons",
+    "gold_cardinality": 5,
+    "source_sha256": "b25a064a7eea974ffa454af1ab80f4d399d7d979e9d36c705db5ed24479eb341"
+  },
+  {
+    "candidates": 10,
+    "case_id": "streetmix-vectors/1238/436420-436418",
+    "collection": "streetmix-vectors",
+    "gold_cardinality": 3,
+    "source_sha256": "f9d31bffcf5574275ccce5042d6523f6c14f4d973f2d1a0edf141469681a84cb"
+  },
+  {
+    "candidates": 10,
+    "case_id": "streetmix-vectors/1239/436420-436419",
+    "collection": "streetmix-vectors",
+    "gold_cardinality": 3,
+    "source_sha256": "f9d31bffcf5574275ccce5042d6523f6c14f4d973f2d1a0edf141469681a84cb"
+  },
+  {
+    "candidates": 10,
+    "case_id": "streetmix-vectors/1240/436420-436422",
+    "collection": "streetmix-vectors",
+    "gold_cardinality": 3,
+    "source_sha256": "f9d31bffcf5574275ccce5042d6523f6c14f4d973f2d1a0edf141469681a84cb"
+  },
+  {
+    "candidates": 10,
+    "case_id": "streetmix-vectors/1332/436418-436420",
+    "collection": "streetmix-vectors",
+    "gold_cardinality": 3,
+    "source_sha256": "ca5d19afded1487adc38207b6ced9eddfa07ff34e2f0ac7fbca71c504c6726d1"
+  },
+  {
+    "candidates": 10,
+    "case_id": "streetmix-vectors/1333/436418-436421",
+    "collection": "streetmix-vectors",
+    "gold_cardinality": 3,
+    "source_sha256": "ca5d19afded1487adc38207b6ced9eddfa07ff34e2f0ac7fbca71c504c6726d1"
+  },
+  {
+    "candidates": 10,
+    "case_id": "streetmix-vectors/1334/436418-436419",
+    "collection": "streetmix-vectors",
+    "gold_cardinality": 3,
+    "source_sha256": "ca5d19afded1487adc38207b6ced9eddfa07ff34e2f0ac7fbca71c504c6726d1"
+  },
+  {
+    "candidates": 10,
+    "case_id": "streetmix-vectors/1335/436418-436422",
+    "collection": "streetmix-vectors",
+    "gold_cardinality": 3,
+    "source_sha256": "ca5d19afded1487adc38207b6ced9eddfa07ff34e2f0ac7fbca71c504c6726d1"
+  },
+  {
+    "candidates": 10,
+    "case_id": "streetmix-vectors/1336/436421-436418",
+    "collection": "streetmix-vectors",
+    "gold_cardinality": 3,
+    "source_sha256": "838ea739399c9e761d485c1336e53b3a561a0bd07b4b1331872038e803a24f05"
+  },
+  {
+    "candidates": 10,
+    "case_id": "streetmix-vectors/1352/436445-436446",
+    "collection": "streetmix-vectors",
+    "gold_cardinality": 6,
+    "source_sha256": "61b9dd0acea24765f7528f0015e3106cd0a59f29d05cc21b5d0f76d74b99085d"
+  },
+  {
+    "candidates": 10,
+    "case_id": "streetmix-vectors/1435/436419-436420",
+    "collection": "streetmix-vectors",
+    "gold_cardinality": 3,
+    "source_sha256": "225acf280dc80a18a72bde9fd12bc7017a13cc009f3239ac5787fe15a7621340"
+  },
+  {
+    "candidates": 10,
+    "case_id": "streetmix-vectors/1436/436419-436418",
+    "collection": "streetmix-vectors",
+    "gold_cardinality": 3,
+    "source_sha256": "225acf280dc80a18a72bde9fd12bc7017a13cc009f3239ac5787fe15a7621340"
+  },
+  {
+    "candidates": 10,
+    "case_id": "streetmix-vectors/1437/436419-436422",
+    "collection": "streetmix-vectors",
+    "gold_cardinality": 3,
+    "source_sha256": "225acf280dc80a18a72bde9fd12bc7017a13cc009f3239ac5787fe15a7621340"
+  },
+  {
+    "candidates": 10,
+    "case_id": "streetmix-vectors/1455/436446-436445",
+    "collection": "streetmix-vectors",
+    "gold_cardinality": 6,
+    "source_sha256": "c5e31d368e1cf77cc400e72e12f520104cc08aacfd7cf58417ecc5ce1a9d29eb"
+  },
+  {
+    "candidates": 10,
+    "case_id": "streetmix-vectors/1489/436422-436420",
+    "collection": "streetmix-vectors",
+    "gold_cardinality": 3,
+    "source_sha256": "8d5b4ecf0b393a64d5eed59cb52f49340acc725ddbc34cf5bce1c7af88463553"
+  },
+  {
+    "candidates": 10,
+    "case_id": "streetmix-vectors/1490/436422-436418",
+    "collection": "streetmix-vectors",
+    "gold_cardinality": 3,
+    "source_sha256": "8d5b4ecf0b393a64d5eed59cb52f49340acc725ddbc34cf5bce1c7af88463553"
+  },
+  {
+    "candidates": 10,
+    "case_id": "streetmix-vectors/1491/436422-436419",
+    "collection": "streetmix-vectors",
+    "gold_cardinality": 3,
+    "source_sha256": "8d5b4ecf0b393a64d5eed59cb52f49340acc725ddbc34cf5bce1c7af88463553"
+  }
+]

@@ -1,0 +1,5308 @@
+[
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999998807907104,
+      6.829873910874085e-08,
+      4.162007890280577e-17,
+      9.325412494551272e-28,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n1"
+    ],
+    "case_id": "hicon-circular-interface-icons/0902/438078-438077",
+    "changed_attributes": [
+      "d",
+      "stroke-linejoin"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the straight line",
+    "instruction": "change the straight line to an arrow pointing left",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n1",
+      "n3",
+      "n2"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 2.472538108122535e-05,
+      "n2": 5.763409660630714e-08,
+      "n3": 1.662842623773031e-05
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.003914500000064436
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999611377716064,
+      3.888209903379902e-05,
+      1.0279810856717031e-11,
+      1.1142383412982237e-18,
+      4.686990235953503e-39,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n1"
+    ],
+    "case_id": "hicon-circular-interface-icons/0909/437700-437703",
+    "changed_attributes": [
+      "x2"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n2",
+      "n4"
+    ],
+    "grounding_text": "the third bar from the top",
+    "instruction": "shorten the third bar from the top",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "reference_type": "spatial",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 0.0,
+      "spatial": 1.0
+    },
+    "scores": {
+      "n1": 0.0007086964906193316,
+      "n2": 0.0003663411480374634,
+      "n3": 0.00018778094090521336,
+      "n4": 9.598106407793239e-05
+    },
+    "selected_expert": "spatial",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0006784999995943508
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999337196350098,
+      6.627752009080723e-05,
+      1.7605944480081348e-11,
+      2.434526546002794e-18,
+      1.9040442761884817e-38,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n1"
+    ],
+    "case_id": "hicon-circular-interface-icons/0910/437700-437701",
+    "changed_attributes": [
+      "x1",
+      "x2"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n2",
+      "n4"
+    ],
+    "grounding_text": "the second bar from the top and the third bar from the bottom",
+    "instruction": "shorten the second bar from the top and the third bar from the bottom",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "reference_type": "spatial",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 0.0,
+      "spatial": 1.0
+    },
+    "scores": {
+      "n1": 8.391799042328785e-07,
+      "n2": 5.550928108277731e-07,
+      "n3": 3.6793676372326445e-07,
+      "n4": 2.446704456815496e-07
+    },
+    "selected_expert": "spatial",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0004749160007122555
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      4.754831390884043e-30,
+      7.82733551399224e-26,
+      5.346046413716443e-13,
+      3.118867664131386e-10,
+      0.19867897033691406,
+      0.8013209700584412
+    ],
+    "cardinality_targets": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "case_id": "hicon-circular-interface-icons/0911/437700-437704",
+    "changed_attributes": [
+      "x1"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n2",
+      "n4"
+    ],
+    "grounding_text": "the second bar from the top",
+    "instruction": "shorten the second bar from the top",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 6,
+    "ranking": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "reference_type": "spatial",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 0.0,
+      "spatial": 1.0
+    },
+    "scores": {
+      "n1": 0.9147719740867615,
+      "n2": 0.8799254894256592,
+      "n3": 0.8294685482978821,
+      "n4": 0.7581833004951477
+    },
+    "selected_expert": "spatial",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "top1_in_gold": false,
+    "wall_seconds": 0.00043699999969248893
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999971389770508,
+      2.8719755391648505e-06,
+      1.054972840856816e-12,
+      1.9204794453311426e-20,
+      1.2093345876969604e-40,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n1"
+    ],
+    "case_id": "hicon-circular-interface-icons/0915/437703-437700",
+    "changed_attributes": [
+      "x2"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n2",
+      "n4"
+    ],
+    "grounding_text": "the second bar",
+    "instruction": "Move the second bar to align with the third bar",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 2.3141506972024217e-05,
+      "n2": 2.1939027647022158e-05,
+      "n3": 2.0837447664234787e-05,
+      "n4": 1.9828979930025525e-05
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.00041104199954133946
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999977350234985,
+      2.212529579992406e-06,
+      7.48885155277268e-12,
+      6.870687537427038e-20,
+      1.3439763888237604e-38,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n1"
+    ],
+    "case_id": "hicon-circular-interface-icons/0916/437703-437701",
+    "changed_attributes": [
+      "x1",
+      "x2"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n2",
+      "n4"
+    ],
+    "grounding_text": "the white space between the bars",
+    "instruction": "Remove the white space between the bars",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "reference_type": "spatial",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 0.0,
+      "spatial": 1.0
+    },
+    "scores": {
+      "n1": 1.3391554603003897e-05,
+      "n2": 8.94291133590741e-06,
+      "n3": 5.979011348244967e-06,
+      "n4": 4.006347353424644e-06
+    },
+    "selected_expert": "spatial",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0004656250002881279
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999977350234985,
+      2.212529579992406e-06,
+      7.48885155277268e-12,
+      6.870687537427038e-20,
+      1.3439763888237604e-38,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n1"
+    ],
+    "case_id": "hicon-circular-interface-icons/0917/437703-437704",
+    "changed_attributes": [
+      "x1",
+      "x2"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n2",
+      "n4"
+    ],
+    "grounding_text": "the white space between the bars",
+    "instruction": "Remove the white space between the bars",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "reference_type": "spatial",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 0.0,
+      "spatial": 1.0
+    },
+    "scores": {
+      "n1": 1.3391554603003897e-05,
+      "n2": 8.94291133590741e-06,
+      "n3": 5.979011348244967e-06,
+      "n4": 4.006347353424644e-06
+    },
+    "selected_expert": "spatial",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.00044304199946054723
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      3.050503138979366e-08,
+      1.5010109392637886e-16,
+      3.4480925277935765e-27,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n4"
+    ],
+    "case_id": "hicon-circular-interface-icons/0924/437974-437975",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "grounding_text": "the phone icon",
+    "instruction": "Make the phone icon larger and more detailed",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n4",
+      "n3",
+      "n2",
+      "n1"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 3.191185626860715e-08,
+      "n2": 8.759910087974276e-06,
+      "n3": 0.0014947548042982817,
+      "n4": 0.015482171438634396
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0031978749993868405
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      7.843146576647086e-09,
+      4.059243669362868e-16,
+      6.392387974782696e-27,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n2"
+    ],
+    "case_id": "hicon-circular-interface-icons/0927/437715-437710",
+    "changed_attributes": [
+      "rx"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n4"
+    ],
+    "grounding_text": "the square shape",
+    "instruction": "change the square shape to a circle and remove the document icon",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n2",
+      "n3",
+      "n1",
+      "n4"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 1.1052943591494113e-05,
+      "n2": 3.5274246329208836e-05,
+      "n3": 1.8156411897507496e-05,
+      "n4": 1.3361335504669114e-06
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0009124580001298455
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      6.139811011962593e-05,
+      4.10195643780753e-05,
+      0.9979079961776733,
+      0.001988827483728528,
+      7.841255182938767e-07,
+      3.6676746167051133e-13
+    ],
+    "cardinality_targets": [
+      "n2",
+      "n1",
+      "n4"
+    ],
+    "case_id": "hicon-circular-interface-icons/0928/437712-437717",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "grounding_text": "the check mark inside the square",
+    "instruction": "rotate the check mark inside the square to the right by 90 degrees",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 3,
+    "ranking": [
+      "n2",
+      "n1",
+      "n4",
+      "n3"
+    ],
+    "reference_type": "spatial",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 0.0,
+      "spatial": 1.0
+    },
+    "scores": {
+      "n1": 0.6295993328094482,
+      "n2": 0.9033172726631165,
+      "n3": 0.010293769650161266,
+      "n4": 0.03498663380742073
+    },
+    "selected_expert": "spatial",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [
+      "n1",
+      "n2"
+    ],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0010591249993012752
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      3.1281719437004085e-09,
+      2.5478848660721635e-17,
+      1.401453840806277e-28,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n4"
+    ],
+    "case_id": "hicon-circular-interface-icons/0929/437718-437723",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "grounding_text": "the arrow direction",
+    "instruction": "change the arrow direction from left to right",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n4",
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 9.06979403225705e-05,
+      "n2": 8.650720815239765e-07,
+      "n3": 7.876504355408542e-07,
+      "n4": 0.0005463472916744649
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0009197500003210735
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9996644258499146,
+      1.7552501958562061e-06,
+      0.0003337687812745571,
+      1.017891066573684e-11,
+      1.9594840808285723e-20,
+      4.757809153173546e-31
+    ],
+    "cardinality_targets": [
+      "n2"
+    ],
+    "case_id": "hicon-circular-interface-icons/0930/437721-437728",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "grounding_text": "the arrow inside the circle",
+    "instruction": "rotate the arrow inside the circle to point upwards",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n2",
+      "n3",
+      "n4",
+      "n1"
+    ],
+    "reference_type": "spatial",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 0.0,
+      "spatial": 1.0
+    },
+    "scores": {
+      "n1": 0.0002929290058091283,
+      "n2": 0.7678601741790771,
+      "n3": 0.4663950800895691,
+      "n4": 0.006384420674294233
+    },
+    "selected_expert": "spatial",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [
+      "n2"
+    ],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0009472500005358597
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      6.133591412549322e-10,
+      1.4530334578840881e-15,
+      6.0816757709247586e-27,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n3"
+    ],
+    "case_id": "hicon-circular-interface-icons/0931/437721-437720",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "grounding_text": "the arrow in the circle",
+    "instruction": "rotate the arrow in the circle to point left",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n3",
+      "n2",
+      "n1",
+      "n4"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 6.870750439702533e-07,
+      "n2": 0.05972518026828766,
+      "n3": 0.2650715708732605,
+      "n4": 7.795306089519727e-08
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0009080830004677409
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      5.0363702541744715e-08,
+      2.4942073095611398e-15,
+      3.0378890479022093e-25,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n2"
+    ],
+    "case_id": "hicon-circular-interface-icons/0939/437730-437731",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "grounding_text": "the arrow",
+    "instruction": "rotate the arrow 45 degrees clockwise",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n2",
+      "n3",
+      "n1",
+      "n4"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 2.5171884772134945e-06,
+      "n2": 0.15621232986450195,
+      "n3": 9.286984095524531e-06,
+      "n4": 2.103869576330908e-07
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.000916957999834267
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999915361404419,
+      8.426664862781763e-06,
+      8.329814647527395e-16,
+      1.0851153502016603e-24,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n2"
+    ],
+    "case_id": "hicon-circular-interface-icons/0963/437885-437880",
+    "changed_attributes": [
+      "d",
+      "stroke-linejoin"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n2",
+      "n3"
+    ],
+    "grounding_text": "the checkmark",
+    "instruction": "Replace the checkmark with a plus sign",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n2",
+      "n3",
+      "n1"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 6.815156439188286e-08,
+      "n2": 0.00768914632499218,
+      "n3": 1.3383294572122395e-05
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.002409458000329323
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999998807907104,
+      1.4904591694175906e-07,
+      2.5238488040338304e-15,
+      5.753080244419857e-25,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n1"
+    ],
+    "case_id": "hicon-circular-interface-icons/0991/437796-437797",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the clock hand",
+    "instruction": "rotate the clock hand to point at two o clock",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 0.00011246293433941901,
+      "n2": 4.749399522552267e-05,
+      "n3": 7.507413101848215e-06
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0009461669997108402
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      1.3627213801825633e-09,
+      7.379837418679646e-17,
+      2.6596341419309416e-28,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n2"
+    ],
+    "case_id": "hicon-circular-interface-icons/0993/437927-437926",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "grounding_text": "the direction of the arrow",
+    "instruction": "change the direction of the arrow to point left",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n2",
+      "n3",
+      "n1",
+      "n4"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 6.318721261777682e-07,
+      "n2": 0.0667419284582138,
+      "n3": 0.014181816019117832,
+      "n4": 1.8773937071614455e-08
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.001751082999362552
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      6.7003891324191045e-09,
+      7.08211394039813e-16,
+      1.3303784795442597e-26,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n2"
+    ],
+    "case_id": "hicon-circular-interface-icons/0995/437799-437794",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the clock hands",
+    "instruction": "rotate the clock hands 90 degrees clockwise",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n2",
+      "n1",
+      "n3"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 0.0002027401642408222,
+      "n2": 0.0005286511732265353,
+      "n3": 1.1554693628568202e-05
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0008035830005610478
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      6.7003891324191045e-09,
+      7.08211394039813e-16,
+      1.3303784795442597e-26,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n2"
+    ],
+    "case_id": "hicon-circular-interface-icons/0996/437799-437797",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the clock hands",
+    "instruction": "move the clock hands forward by one hour",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n2",
+      "n1",
+      "n3"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 0.0002027401642408222,
+      "n2": 0.0005286511732265353,
+      "n3": 1.1554693628568202e-05
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0007990000003701425
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999998807907104,
+      1.4067472875467502e-07,
+      2.1453644135309815e-15,
+      4.294073618566477e-25,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n1"
+    ],
+    "case_id": "hicon-circular-interface-icons/0997/437799-437795",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the clock hand",
+    "instruction": "rotate the clock hand 90 degrees counterclockwise",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 0.00011249553790548816,
+      "n2": 6.983432831475511e-05,
+      "n3": 3.4679110285651404e-06
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0008359580006072065
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      6.7003891324191045e-09,
+      7.08211394039813e-16,
+      1.3303784795442597e-26,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n2"
+    ],
+    "case_id": "hicon-circular-interface-icons/0998/437799-437798",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the clock hands",
+    "instruction": "rotate the clock hands to show a different time",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n2",
+      "n1",
+      "n3"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 0.0002027401642408222,
+      "n2": 0.0005286511732265353,
+      "n3": 1.1554693628568202e-05
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0009900420000121812
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8",
+      "n9"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.999997615814209,
+      2.423031901344075e-06,
+      7.675526338644933e-13,
+      1.3088446520683879e-20,
+      3.8234428599102634e-41,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n1"
+    ],
+    "case_id": "hicon-circular-interface-icons/1000/437802-437804",
+    "changed_attributes": [
+      "y1",
+      "y2"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3",
+      "n5",
+      "n6",
+      "n8",
+      "n9"
+    ],
+    "grounding_text": "the raindrops on the cloud icon",
+    "instruction": "shorten the raindrops on the cloud icon",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n1",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8",
+      "n9",
+      "n2"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 0.014223502017557621,
+      "n2": 1.4525904816764523e-06,
+      "n3": 1.1731437552953139e-05,
+      "n4": 1.0934555575659033e-05,
+      "n5": 1.0210979780822527e-05,
+      "n6": 9.55414361669682e-06,
+      "n7": 8.958181751950178e-06,
+      "n8": 8.417676326644141e-06,
+      "n9": 7.927704245958012e-06
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0021087499999339343
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      7.489476816502361e-10,
+      9.660835107089535e-18,
+      1.038698179979808e-29,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n1"
+    ],
+    "case_id": "hicon-circular-interface-icons/1006/438079-438077",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the direction of the arrow",
+    "instruction": "change the direction of the arrow to point left",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n1",
+      "n3",
+      "n2"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 0.0036906187888234854,
+      "n2": 4.450323487503738e-08,
+      "n3": 3.7885863548581256e-06
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.003155459000481642
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999904632568359,
+      9.490783668297809e-06,
+      7.934190414046749e-13,
+      4.044590077957527e-20,
+      3.1695969964563037e-41,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n1"
+    ],
+    "case_id": "hicon-circular-interface-icons/1016/437701-437700",
+    "changed_attributes": [
+      "x1",
+      "x2"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n2",
+      "n4"
+    ],
+    "grounding_text": "the third bar",
+    "instruction": "Move the third bar to align with the other bars",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 3.0540126317646354e-05,
+      "n2": 2.8104701414122246e-05,
+      "n3": 2.5908117095241323e-05,
+      "n4": 2.3927617803565226e-05
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0004174169998805155
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999954700469971,
+      4.537901077128481e-06,
+      8.937628415139898e-12,
+      1.460977383883668e-19,
+      1.7980167094435017e-38,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n1"
+    ],
+    "case_id": "hicon-circular-interface-icons/1017/437701-437703",
+    "changed_attributes": [
+      "x1",
+      "x2"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n2",
+      "n4"
+    ],
+    "grounding_text": "the lines between the bars",
+    "instruction": "Remove the lines between the bars",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "reference_type": "spatial",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 0.0,
+      "spatial": 1.0
+    },
+    "scores": {
+      "n1": 0.00018705132242757827,
+      "n2": 0.00012658907508011907,
+      "n3": 8.519241964677349e-05,
+      "n4": 5.7110861234832555e-05
+    },
+    "selected_expert": "spatial",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0004332090002208133
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999992847442627,
+      7.26059283806535e-07,
+      6.447998602068794e-13,
+      3.859068168404801e-21,
+      4.592755716824588e-41,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n1"
+    ],
+    "case_id": "hicon-circular-interface-icons/1018/437701-437704",
+    "changed_attributes": [
+      "x1",
+      "x2"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n2",
+      "n4"
+    ],
+    "grounding_text": "the white lines",
+    "instruction": "Remove the white lines from the image",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 2.8788266718038358e-05,
+      "n2": 2.6850177164305933e-05,
+      "n3": 2.5088933398365043e-05,
+      "n4": 2.3488893930334598e-05
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0004125420000491431
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999401569366455,
+      5.9850757679669186e-05,
+      2.454383701486207e-12,
+      5.189592610405093e-19,
+      3.7249736168221585e-40,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n1"
+    ],
+    "case_id": "hicon-circular-interface-icons/1020/437704-437700",
+    "changed_attributes": [
+      "x1"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n2",
+      "n4"
+    ],
+    "grounding_text": "all the bars the same length",
+    "instruction": "make all the bars the same length",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 0.00042206706712022424,
+      "n2": 0.00041789456736296415,
+      "n3": 0.00041454704478383064,
+      "n4": 0.0004120196681469679
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0003952079996452085
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999995231628418,
+      4.660582533233537e-07,
+      6.689569146019203e-13,
+      2.7108061727587352e-21,
+      5.672876573126157e-41,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n1"
+    ],
+    "case_id": "hicon-circular-interface-icons/1021/437704-437703",
+    "changed_attributes": [
+      "x1",
+      "x2"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n2",
+      "n4"
+    ],
+    "grounding_text": "the background color",
+    "instruction": "change the background color to blue",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 4.7203570829879027e-07,
+      "n2": 4.585977819715481e-07,
+      "n3": 4.465216250082449e-07,
+      "n4": 4.3572649133238883e-07
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.00041037499977392145
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999977350234985,
+      2.212529579992406e-06,
+      7.48885155277268e-12,
+      6.870687537427038e-20,
+      1.3439763888237604e-38,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n1"
+    ],
+    "case_id": "hicon-circular-interface-icons/1022/437704-437701",
+    "changed_attributes": [
+      "x1",
+      "x2"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n2",
+      "n4"
+    ],
+    "grounding_text": "the white space between the bars",
+    "instruction": "Remove the white space between the bars",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "reference_type": "spatial",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 0.0,
+      "spatial": 1.0
+    },
+    "scores": {
+      "n1": 1.3391554603003897e-05,
+      "n2": 8.94291133590741e-06,
+      "n3": 5.979011348244967e-06,
+      "n4": 4.006347353424644e-06
+    },
+    "selected_expert": "spatial",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0004457500008356874
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      4.2999812044364205e-11,
+      7.496167467817673e-17,
+      1.964362177354037e-29,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n2"
+    ],
+    "case_id": "hicon-circular-interface-icons/1024/437710-437715",
+    "changed_attributes": [
+      "rx"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n4"
+    ],
+    "grounding_text": "the circle",
+    "instruction": "change the circle to a square and keep the arrow inside the same",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n2",
+      "n3",
+      "n1",
+      "n4"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 6.725334060320165e-06,
+      "n2": 9.192329889629036e-05,
+      "n3": 3.275476410635747e-05,
+      "n4": 1.1101918744316208e-06
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0009383749993503443
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      7.530296102231659e-07,
+      2.1228530044936633e-09,
+      0.9980790615081787,
+      0.0002953923831228167,
+      0.0016247231978923082,
+      5.123262369899351e-10
+    ],
+    "cardinality_targets": [
+      "n3",
+      "n4",
+      "n1"
+    ],
+    "case_id": "hicon-circular-interface-icons/1029/437975-437974",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "grounding_text": "Add a dot to the center of the telephone receiver",
+    "instruction": "Add a dot to the center of the telephone receiver",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 3,
+    "ranking": [
+      "n3",
+      "n4",
+      "n1",
+      "n2"
+    ],
+    "reference_type": "spatial",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 0.0,
+      "spatial": 1.0
+    },
+    "scores": {
+      "n1": 0.01986832730472088,
+      "n2": 1.818673878162258e-09,
+      "n3": 0.999797523021698,
+      "n4": 0.8624629378318787
+    },
+    "selected_expert": "spatial",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [
+      "n3",
+      "n4"
+    ],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0033548339997651055
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9998749494552612,
+      0.00012504956976044923,
+      2.397667842046758e-09,
+      9.095808246948733e-16,
+      1.0673736734774394e-31,
+      2.7218821371045247e-41
+    ],
+    "cardinality_targets": [
+      "n1"
+    ],
+    "case_id": "hicon-circular-interface-icons/1034/437731-437730",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "grounding_text": "the arrow inside the square",
+    "instruction": "rotate the arrow inside the square 90 degrees clockwise",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n1",
+      "n3",
+      "n2",
+      "n4"
+    ],
+    "reference_type": "spatial",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 0.0,
+      "spatial": 1.0
+    },
+    "scores": {
+      "n1": 0.40478965640068054,
+      "n2": 0.1557692289352417,
+      "n3": 0.27870070934295654,
+      "n4": 0.011713884770870209
+    },
+    "selected_expert": "spatial",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0009415840004294296
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      5.0363702541744715e-08,
+      2.4942073095611398e-15,
+      3.0378890479022093e-25,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n2"
+    ],
+    "case_id": "hicon-circular-interface-icons/1035/437728-437721",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "grounding_text": "the arrow",
+    "instruction": "rotate the arrow 90 degrees clockwise",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n2",
+      "n3",
+      "n1",
+      "n4"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 2.5171884772134945e-06,
+      "n2": 0.15621232986450195,
+      "n3": 9.286984095524531e-06,
+      "n4": 2.103869576330908e-07
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0009191669996653218
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      1.646828806656231e-08,
+      1.4531816357102984e-17,
+      2.9012916461503883e-28,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n3"
+    ],
+    "case_id": "hicon-circular-interface-icons/1059/437880-437885",
+    "changed_attributes": [
+      "d",
+      "stroke-linejoin"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n2",
+      "n3"
+    ],
+    "grounding_text": "the plus sign",
+    "instruction": "Replace the plus sign with a check mark",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n3",
+      "n2",
+      "n1"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 1.0501958414010915e-08,
+      "n2": 1.5300008726626402e-06,
+      "n3": 0.0022548360284417868
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.002426041000035184
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.999998927116394,
+      1.1105721569037996e-06,
+      1.804161529374293e-12,
+      3.178297070245239e-20,
+      1.2073933689343312e-38,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n5"
+    ],
+    "case_id": "hicon-circular-interface-icons/1063/438020-438021",
+    "changed_attributes": [
+      "d",
+      "x1",
+      "x2",
+      "y1",
+      "y2"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "grounding_text": "the third shape",
+    "instruction": "Move the third shape to the right side of the image",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n5",
+      "n4",
+      "n1",
+      "n2",
+      "n3",
+      "n6"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 8.844094736559782e-06,
+      "n2": 8.327037903654855e-06,
+      "n3": 7.854871000745334e-06,
+      "n4": 1.7972564819501713e-05,
+      "n5": 0.1358344554901123,
+      "n6": 1.0097885905224757e-07
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0009092910004255828
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.999996542930603,
+      3.4680763292271877e-06,
+      1.739075734547707e-13,
+      1.703020084249809e-21,
+      3.783505853677006e-44,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n1"
+    ],
+    "case_id": "hicon-circular-interface-icons/1065/437898-437928",
+    "changed_attributes": [
+      "d",
+      "transform",
+      "x1",
+      "x2",
+      "y1",
+      "y2"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n2",
+      "n5"
+    ],
+    "grounding_text": "the needle on the gauge",
+    "instruction": "Move the needle on the gauge to the right",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n6",
+      "n7",
+      "n5"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 5.275903095025569e-05,
+      "n2": 4.1195660742232576e-05,
+      "n3": 3.7851728848181665e-05,
+      "n4": 3.483352338662371e-05,
+      "n5": 3.2758994166215416e-06,
+      "n6": 2.9652603188878857e-05,
+      "n7": 2.7435535230324604e-05
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0012713750002149027
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": true,
+    "cardinality_probabilities": [
+      1.0,
+      2.5515474177950637e-09,
+      1.0773335955511091e-16,
+      4.878752253612135e-28,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n3"
+    ],
+    "case_id": "hicon-circular-interface-icons/1090/437794-437799",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the clock hands",
+    "instruction": "change the clock hands to show a different time",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n3",
+      "n2",
+      "n1"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 1.1527858845283845e-07,
+      "n2": 1.481978983974841e-07,
+      "n3": 1.5016439647297375e-05
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": true,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0008357079996130778
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": true,
+    "cardinality_probabilities": [
+      1.0,
+      2.5515474177950637e-09,
+      1.0773335955511091e-16,
+      4.878752253612135e-28,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n3"
+    ],
+    "case_id": "hicon-circular-interface-icons/1092/437794-437797",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the clock hands",
+    "instruction": "change the clock hands to show a different time",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n3",
+      "n2",
+      "n1"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 1.1527858845283845e-07,
+      "n2": 1.481978983974841e-07,
+      "n3": 1.5016439647297375e-05
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": true,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0007978749999892898
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": true,
+    "cardinality_probabilities": [
+      1.0,
+      1.4140557169639578e-08,
+      2.422701899884675e-16,
+      4.028953384206756e-27,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n3"
+    ],
+    "case_id": "hicon-circular-interface-icons/1093/437794-437795",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the clock hands ninety degrees",
+    "instruction": "rotate the clock hands ninety degrees clockwise",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n3",
+      "n2",
+      "n1"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 4.616289857040101e-07,
+      "n2": 2.0713025605800794e-06,
+      "n3": 6.730955192324473e-06
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": true,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0007862920001571183
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": true,
+    "cardinality_probabilities": [
+      0.9999998807907104,
+      1.4178156959587795e-07,
+      2.93143571135712e-16,
+      3.5978636254768165e-26,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n3"
+    ],
+    "case_id": "hicon-circular-interface-icons/1094/437794-437798",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the hour hand from the clock",
+    "instruction": "Remove the hour hand from the clock",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n3",
+      "n1",
+      "n2"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 5.3494918716978646e-08,
+      "n2": 3.5136132225943584e-08,
+      "n3": 3.492336327326484e-05
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": true,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0007802499994795653
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": true,
+    "cardinality_probabilities": [
+      0.9999994039535522,
+      6.494366289189202e-07,
+      4.384269216526097e-15,
+      4.396592009656737e-24,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n3"
+    ],
+    "case_id": "hicon-circular-interface-icons/1096/437797-437796",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the small hand from the clock",
+    "instruction": "Remove the small hand from the clock",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n3",
+      "n1",
+      "n2"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 1.3484954308751185e-07,
+      "n2": 5.572648831275728e-08,
+      "n3": 0.039562806487083435
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": true,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0007869580003898591
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      1.7231087667823886e-08,
+      4.984296027295374e-16,
+      2.2490908201453077e-26,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n2"
+    ],
+    "case_id": "hicon-circular-interface-icons/1097/437797-437799",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the short hand from the clock and extend the long hand to the bottom of the clock face",
+    "instruction": "Remove the short hand from the clock and extend the long hand to the bottom of the clock face",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n2",
+      "n1",
+      "n3"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 1.3499767419489217e-06,
+      "n2": 0.00863805040717125,
+      "n3": 5.102579621052428e-07
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0008152909995260416
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": true,
+    "cardinality_probabilities": [
+      1.0,
+      7.135534385582787e-09,
+      8.102170837183658e-16,
+      1.7162017201217057e-26,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n3"
+    ],
+    "case_id": "hicon-circular-interface-icons/1099/437797-437794",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the clock hands",
+    "instruction": "change the clock hands to point at nine oclock",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n3",
+      "n2",
+      "n1"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 2.8970529797334166e-07,
+      "n2": 5.47294803254772e-07,
+      "n3": 0.004572757054120302
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": true,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.000832125000670203
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": true,
+    "cardinality_probabilities": [
+      1.0,
+      7.135534385582787e-09,
+      8.102170837183658e-16,
+      1.7162017201217057e-26,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n3"
+    ],
+    "case_id": "hicon-circular-interface-icons/1100/437797-437795",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the clock hands",
+    "instruction": "change the clock hands to be straight and pointing at nine and twelve",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n3",
+      "n2",
+      "n1"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 2.8970529797334166e-07,
+      "n2": 5.47294803254772e-07,
+      "n3": 0.004572757054120302
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": true,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0007943339996927534
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": true,
+    "cardinality_probabilities": [
+      0.9999887943267822,
+      1.1201258530491032e-05,
+      5.874666038867401e-15,
+      5.840476862210322e-23,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n3"
+    ],
+    "case_id": "hicon-circular-interface-icons/1101/437797-437798",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the minute hand from the clock",
+    "instruction": "Remove the minute hand from the clock",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n3",
+      "n1",
+      "n2"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 1.04824152913352e-06,
+      "n2": 3.622538713443646e-07,
+      "n3": 0.0016285566380247474
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": true,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0008029169994188123
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999992847442627,
+      7.177058591878449e-07,
+      1.1692949668414e-13,
+      3.154920826984939e-22,
+      2.1019476964872256e-44,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n1"
+    ],
+    "case_id": "hicon-circular-interface-icons/1102/437928-437898",
+    "changed_attributes": [
+      "d",
+      "transform",
+      "x1",
+      "x2",
+      "y1",
+      "y2"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n2",
+      "n5"
+    ],
+    "grounding_text": "the needle",
+    "instruction": "rotate the needle to the right",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n6",
+      "n7",
+      "n5"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 4.8114758101291955e-05,
+      "n2": 9.892992238746956e-06,
+      "n3": 9.2057107394794e-06,
+      "n4": 8.582373084209394e-06,
+      "n5": 1.650908416195307e-06,
+      "n6": 7.5043790275231e-06,
+      "n7": 7.039563115540659e-06
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0012039590001222678
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": true,
+    "cardinality_probabilities": [
+      1.0,
+      1.2985067243675985e-08,
+      3.9516495739356865e-17,
+      3.94083375960403e-28,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n3"
+    ],
+    "case_id": "hicon-circular-interface-icons/1116/438077-438078",
+    "changed_attributes": [
+      "d",
+      "stroke-linejoin"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the arrow",
+    "instruction": "change the arrow to a dash",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n3",
+      "n1",
+      "n2"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 2.4552304239477962e-05,
+      "n2": 1.1486705631114091e-07,
+      "n3": 6.306612340267748e-05
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": true,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0031060830006026663
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": true,
+    "cardinality_probabilities": [
+      1.0,
+      2.4140569543362744e-09,
+      1.0327306934332698e-17,
+      3.262916831238485e-29,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n3"
+    ],
+    "case_id": "hicon-circular-interface-icons/1117/438077-438079",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the arrow direction",
+    "instruction": "change the arrow direction to point right",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n3",
+      "n1",
+      "n2"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 1.0349989679525606e-05,
+      "n2": 6.914206096553244e-08,
+      "n3": 0.00025570954312570393
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": true,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.003081709000070987
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9994128942489624,
+      2.6900534066953696e-06,
+      0.000584375869948417,
+      3.585342092660149e-11,
+      4.43401533661407e-19,
+      3.073423079377456e-29
+    ],
+    "cardinality_targets": [
+      "n2"
+    ],
+    "case_id": "hicon-circular-interface-icons/1132/437711-437714",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "grounding_text": "the arrow inside the circle",
+    "instruction": "rotate the arrow inside the circle clockwise by 90 degrees",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n2",
+      "n3",
+      "n4",
+      "n1"
+    ],
+    "reference_type": "spatial",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 0.0,
+      "spatial": 1.0
+    },
+    "scores": {
+      "n1": 0.010003842413425446,
+      "n2": 0.885619580745697,
+      "n3": 0.24911998212337494,
+      "n4": 0.013392060995101929
+    },
+    "selected_expert": "spatial",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [
+      "n2"
+    ],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0009337920000689337
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9953643083572388,
+      0.004634686280041933,
+      9.396555356033787e-07,
+      9.830989494696851e-11,
+      5.116134228021781e-25,
+      5.819986553873175e-32
+    ],
+    "cardinality_targets": [
+      "n2"
+    ],
+    "case_id": "hicon-circular-interface-icons/1137/437714-437711",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "grounding_text": "the right arrow from the circle",
+    "instruction": "Remove the right arrow from the circle",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n2",
+      "n3",
+      "n4",
+      "n1"
+    ],
+    "reference_type": "spatial",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 0.0,
+      "spatial": 1.0
+    },
+    "scores": {
+      "n1": 1.56675525886385e-08,
+      "n2": 0.9677479863166809,
+      "n3": 0.01436955202370882,
+      "n4": 0.00040209770668298006
+    },
+    "selected_expert": "spatial",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [
+      "n2"
+    ],
+    "top1_in_gold": true,
+    "wall_seconds": 0.000946582999858947
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9976776242256165,
+      0.0023223625030368567,
+      2.3834639151232295e-08,
+      4.280891301709257e-14,
+      6.625765126771447e-31,
+      2.5944900937127556e-40
+    ],
+    "cardinality_targets": [
+      "n2"
+    ],
+    "case_id": "hicon-circular-interface-icons/1138/437717-437712",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "grounding_text": "the squiggly line inside the square",
+    "instruction": "change the squiggly line inside the square to a straight check mark",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n2",
+      "n4",
+      "n1",
+      "n3"
+    ],
+    "reference_type": "spatial",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 0.0,
+      "spatial": 1.0
+    },
+    "scores": {
+      "n1": 0.0007351856329478323,
+      "n2": 0.6652767658233643,
+      "n3": 0.00011452671606093645,
+      "n4": 0.027825068682432175
+    },
+    "selected_expert": "spatial",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [
+      "n2"
+    ],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0009095420000448939
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      9.71234870306148e-10,
+      2.228425397398469e-17,
+      4.103933423986272e-29,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n3"
+    ],
+    "case_id": "hicon-circular-interface-icons/1140/437720-437721",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "grounding_text": "the direction of the arrow",
+    "instruction": "change the direction of the arrow to point right",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n3",
+      "n2",
+      "n4",
+      "n1"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 1.7857826151157496e-06,
+      "n2": 1.2233989764354192e-05,
+      "n3": 2.407860301900655e-05,
+      "n4": 1.0061430657515302e-05
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0008956670008046785
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999998807907104,
+      9.656774579980265e-08,
+      6.928455747491624e-14,
+      3.9866423753439086e-23,
+      9.80908925027372e-45,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n3"
+    ],
+    "case_id": "hicon-circular-interface-icons/1141/437723-437718",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "grounding_text": "the arrow",
+    "instruction": "rotate the arrow 180 degrees",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n3",
+      "n2",
+      "n1",
+      "n4"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 9.444235047340044e-07,
+      "n2": 0.09134241938591003,
+      "n3": 0.4235285520553589,
+      "n4": 8.121698868990279e-08
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0008829999997033156
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9984398484230042,
+      0.001560149248689413,
+      5.704770857095642e-12,
+      4.908099656512786e-17,
+      3.348758610314089e-39,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n6"
+    ],
+    "case_id": "hicon-circular-interface-icons/1158/438021-438020",
+    "changed_attributes": [
+      "d",
+      "x1",
+      "x2",
+      "y1",
+      "y2"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "grounding_text": "the bottom right shape",
+    "instruction": "Remove the bottom right shape from the image",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n6",
+      "n4",
+      "n5",
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "reference_type": "spatial",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 0.0,
+      "spatial": 1.0
+    },
+    "scores": {
+      "n1": 2.2020467995700552e-14,
+      "n2": 1.8692590742419232e-14,
+      "n3": 1.5942212082246422e-14,
+      "n4": 1.591854564830797e-10,
+      "n5": 5.828206027600619e-14,
+      "n6": 1.9381786842131987e-06
+    },
+    "selected_expert": "spatial",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0009381669997310382
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      2.6903952399237596e-09,
+      1.2439973202651923e-16,
+      6.180626969979464e-28,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n2"
+    ],
+    "case_id": "hicon-circular-interface-icons/1175/437795-437799",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the clock hands",
+    "instruction": "change the clock hands to point at ten past ten",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n2",
+      "n1",
+      "n3"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 0.0008601995068602264,
+      "n2": 0.0009011555812321603,
+      "n3": 8.698432793607935e-06
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0007970420001583989
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      2.6903952399237596e-09,
+      1.2439973202651923e-16,
+      6.180626969979464e-28,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n2"
+    ],
+    "case_id": "hicon-circular-interface-icons/1177/437795-437794",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the clock hands",
+    "instruction": "rotate the clock hands 90 degrees clockwise",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n2",
+      "n1",
+      "n3"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 0.0008601995068602264,
+      "n2": 0.0009011555812321603,
+      "n3": 8.698432793607935e-06
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0007882919999246951
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      2.6903952399237596e-09,
+      1.2439973202651923e-16,
+      6.180626969979464e-28,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n2"
+    ],
+    "case_id": "hicon-circular-interface-icons/1178/437795-437797",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the clock hands",
+    "instruction": "change the clock hands to point at ten past ten",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n2",
+      "n1",
+      "n3"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 0.0008601995068602264,
+      "n2": 0.0009011555812321603,
+      "n3": 8.698432793607935e-06
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.000841459000184841
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      2.6903952399237596e-09,
+      1.2439973202651923e-16,
+      6.180626969979464e-28,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n2"
+    ],
+    "case_id": "hicon-circular-interface-icons/1179/437795-437798",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the clock hands",
+    "instruction": "change the clock hands to be thinner and more curved",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n2",
+      "n1",
+      "n3"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 0.0008601995068602264,
+      "n2": 0.0009011555812321603,
+      "n3": 8.698432793607935e-06
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0007708330003879382
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      3.4348777155912558e-09,
+      3.55588236288173e-17,
+      2.4039893307491396e-28,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n2"
+    ],
+    "case_id": "hicon-circular-interface-icons/1181/437926-437927",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "grounding_text": "the arrow direction",
+    "instruction": "change the arrow direction from left to right",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n2",
+      "n3",
+      "n1",
+      "n4"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 5.65495174669195e-05,
+      "n2": 0.00294094136916101,
+      "n3": 0.00035709963412955403,
+      "n4": 1.2992773079645303e-08
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0017185830001835711
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": true,
+    "cardinality_probabilities": [
+      1.0,
+      6.414577757851703e-09,
+      6.414676859554567e-16,
+      1.1258045830702942e-26,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n3"
+    ],
+    "case_id": "hicon-circular-interface-icons/1183/437798-437799",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the clock hands",
+    "instruction": "rotate the clock hands clockwise by 90 degrees",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n3",
+      "n2",
+      "n1"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 1.5311655943150981e-07,
+      "n2": 2.5700612127366185e-07,
+      "n3": 0.0010204837890341878
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": true,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.000803042000370624
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": true,
+    "cardinality_probabilities": [
+      1.0,
+      6.414577757851703e-09,
+      6.414676859554567e-16,
+      1.1258045830702942e-26,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n3"
+    ],
+    "case_id": "hicon-circular-interface-icons/1184/437798-437794",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the clock hands",
+    "instruction": "change the clock hands to point at three o clock",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n3",
+      "n2",
+      "n1"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 1.5311655943150981e-07,
+      "n2": 2.5700612127366185e-07,
+      "n3": 0.0010204837890341878
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": true,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.000833709000289673
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": true,
+    "cardinality_probabilities": [
+      1.0,
+      6.414577757851703e-09,
+      6.414676859554567e-16,
+      1.1258045830702942e-26,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n3"
+    ],
+    "case_id": "hicon-circular-interface-icons/1185/437798-437797",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the clock hands",
+    "instruction": "rotate the clock hands to the right",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n3",
+      "n2",
+      "n1"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 1.5311655943150981e-07,
+      "n2": 2.5700612127366185e-07,
+      "n3": 0.0010204837890341878
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": true,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0007803749995218823
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "cardinality_exact": true,
+    "cardinality_probabilities": [
+      1.0,
+      6.414577757851703e-09,
+      6.414676859554567e-16,
+      1.1258045830702942e-26,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n3"
+    ],
+    "case_id": "hicon-circular-interface-icons/1186/437798-437795",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3"
+    ],
+    "grounding_text": "the clock hands",
+    "instruction": "change the clock hands to show three o clock",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n3",
+      "n2",
+      "n1"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 1.5311655943150981e-07,
+      "n2": 2.5700612127366185e-07,
+      "n3": 0.0010204837890341878
+    },
+    "selected_expert": "semantic",
+    "single_target": true,
+    "single_target_top1": true,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.0007847500000934815
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8",
+      "n9"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999992847442627,
+      7.618997983627196e-07,
+      7.771469015191435e-13,
+      4.562209655372521e-21,
+      4.716210111531604e-41,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n1"
+    ],
+    "case_id": "hicon-circular-interface-icons/1191/437804-437802",
+    "changed_attributes": [
+      "y1",
+      "y2"
+    ],
+    "collection": "hicon-circular-interface-icons",
+    "error": null,
+    "gold_targets": [
+      "n3",
+      "n5",
+      "n6",
+      "n8",
+      "n9"
+    ],
+    "grounding_text": "the raindrops",
+    "instruction": "change the raindrops from short to long",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n1",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8",
+      "n9",
+      "n2"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n1": 0.002547049894928932,
+      "n2": 7.761093456792878e-07,
+      "n3": 2.0987599782529287e-05,
+      "n4": 1.9371811504242942e-05,
+      "n5": 1.7916194337885827e-05,
+      "n6": 1.660494126554113e-05,
+      "n7": 1.542403879284393e-05,
+      "n8": 1.4360712157213129e-05,
+      "n9": 1.3403475350060035e-05
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.001945500000147149
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n3",
+      "n5",
+      "n7",
+      "n9",
+      "n11",
+      "n13",
+      "n15",
+      "n17",
+      "n19",
+      "n21"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      2.1722639687027367e-08,
+      4.833950947857879e-12,
+      1.0122638094195448e-20,
+      8.285993286546104e-38,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n7"
+    ],
+    "case_id": "streetmix-vectors/1238/436420-436418",
+    "changed_attributes": [
+      "style"
+    ],
+    "collection": "streetmix-vectors",
+    "error": null,
+    "gold_targets": [
+      "n9",
+      "n11",
+      "n13"
+    ],
+    "grounding_text": "the color of the red shapes",
+    "instruction": "change the color of the red shapes to blue",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n7",
+      "n3",
+      "n19",
+      "n15",
+      "n5",
+      "n13",
+      "n17",
+      "n9",
+      "n11",
+      "n21"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n11": 1.0225071491731796e-06,
+      "n13": 4.329575858719181e-06,
+      "n15": 9.913155736285262e-06,
+      "n17": 3.7164497825870058e-06,
+      "n19": 2.7544489057618193e-05,
+      "n21": 3.1173547654361755e-07,
+      "n3": 0.0002287671813974157,
+      "n5": 6.585068149433937e-06,
+      "n7": 0.10472516715526581,
+      "n9": 2.0141935692663537e-06
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.004525500000454485
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n3",
+      "n5",
+      "n7",
+      "n9",
+      "n11",
+      "n13",
+      "n15",
+      "n17",
+      "n19",
+      "n21"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      2.1600797595056065e-08,
+      3.581018402816494e-13,
+      3.109745224188956e-22,
+      1.3051693896721346e-41,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n7"
+    ],
+    "case_id": "streetmix-vectors/1239/436420-436419",
+    "changed_attributes": [
+      "style"
+    ],
+    "collection": "streetmix-vectors",
+    "error": null,
+    "gold_targets": [
+      "n9",
+      "n11",
+      "n13"
+    ],
+    "grounding_text": "the color of the red parts",
+    "instruction": "change the color of the red parts to orange",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n7",
+      "n15",
+      "n3",
+      "n19",
+      "n13",
+      "n17",
+      "n9",
+      "n5",
+      "n11",
+      "n21"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n11": 4.934721005156462e-07,
+      "n13": 1.3063753613096196e-05,
+      "n15": 3.3420623367419466e-05,
+      "n17": 1.2840546332881786e-05,
+      "n19": 3.14848221023567e-05,
+      "n21": 9.070541295841394e-08,
+      "n3": 3.2862550142453983e-05,
+      "n5": 1.1600142215684173e-06,
+      "n7": 0.00528072752058506,
+      "n9": 4.598482064466225e-06
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.004466666000553232
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n3",
+      "n5",
+      "n7",
+      "n9",
+      "n11",
+      "n13",
+      "n15",
+      "n17",
+      "n19",
+      "n21"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999998807907104,
+      1.6285407866689638e-07,
+      2.1805147477124004e-13,
+      8.132366819487921e-22,
+      1.3200231533939777e-42,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n17"
+    ],
+    "case_id": "streetmix-vectors/1240/436420-436422",
+    "changed_attributes": [
+      "style"
+    ],
+    "collection": "streetmix-vectors",
+    "error": null,
+    "gold_targets": [
+      "n9",
+      "n11",
+      "n13"
+    ],
+    "grounding_text": "the red parts",
+    "instruction": "change the red parts to yellow",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n17",
+      "n15",
+      "n9",
+      "n13",
+      "n19",
+      "n7",
+      "n3",
+      "n11",
+      "n5",
+      "n21"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n11": 2.6529935581720565e-08,
+      "n13": 2.570941978774499e-05,
+      "n15": 0.0003015576221514493,
+      "n17": 0.002261632587760687,
+      "n19": 1.6483141962453374e-06,
+      "n21": 3.875928022978314e-09,
+      "n3": 1.2830696505261585e-07,
+      "n5": 1.6047268402985537e-08,
+      "n7": 6.903676990077656e-07,
+      "n9": 2.6649389837984927e-05
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0044730420004270854
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n3",
+      "n5",
+      "n7",
+      "n9",
+      "n11",
+      "n13",
+      "n15",
+      "n17",
+      "n19",
+      "n21"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999997615814209,
+      2.0208609896599228e-07,
+      2.4000361160264605e-12,
+      1.1994680298547929e-20,
+      1.4680254945990362e-39,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n7"
+    ],
+    "case_id": "streetmix-vectors/1332/436418-436420",
+    "changed_attributes": [
+      "style"
+    ],
+    "collection": "streetmix-vectors",
+    "error": null,
+    "gold_targets": [
+      "n9",
+      "n11",
+      "n13"
+    ],
+    "grounding_text": "the blue color",
+    "instruction": "change the blue color to red",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n7",
+      "n3",
+      "n13",
+      "n19",
+      "n15",
+      "n17",
+      "n9",
+      "n11",
+      "n5",
+      "n21"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n11": 1.9963645172538236e-06,
+      "n13": 0.00014229651424102485,
+      "n15": 4.84988559037447e-05,
+      "n17": 4.161233300692402e-05,
+      "n19": 9.106435754802078e-05,
+      "n21": 1.266133438093675e-07,
+      "n3": 0.0001501506194472313,
+      "n5": 9.091696142604633e-07,
+      "n7": 0.001506791915744543,
+      "n9": 1.6652580598019995e-05
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.004483374999836087
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n3",
+      "n5",
+      "n7",
+      "n9",
+      "n11",
+      "n13",
+      "n15",
+      "n17",
+      "n19",
+      "n21"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999997615814209,
+      2.595792238935246e-07,
+      1.8378285004949646e-12,
+      7.509573731346867e-21,
+      2.720887215194854e-40,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n7"
+    ],
+    "case_id": "streetmix-vectors/1333/436418-436421",
+    "changed_attributes": [
+      "style"
+    ],
+    "collection": "streetmix-vectors",
+    "error": null,
+    "gold_targets": [
+      "n9",
+      "n11",
+      "n13"
+    ],
+    "grounding_text": "the blue squares",
+    "instruction": "change the blue squares to white squares",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n7",
+      "n13",
+      "n17",
+      "n15",
+      "n3",
+      "n19",
+      "n9",
+      "n5",
+      "n11",
+      "n21"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n11": 1.5973084543929872e-07,
+      "n13": 7.025547529337928e-05,
+      "n15": 1.654588595556561e-05,
+      "n17": 2.4614055291749537e-05,
+      "n19": 8.047648407227825e-06,
+      "n21": 3.6231977418310635e-08,
+      "n3": 1.1229462870687712e-05,
+      "n5": 1.922632151263315e-07,
+      "n7": 7.04369304003194e-05,
+      "n9": 7.528205514972797e-06
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.004462667000552756
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n3",
+      "n5",
+      "n7",
+      "n9",
+      "n11",
+      "n13",
+      "n15",
+      "n17",
+      "n19",
+      "n21"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999997615814209,
+      2.595792238935246e-07,
+      1.8378285004949646e-12,
+      7.509573731346867e-21,
+      2.720887215194854e-40,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n7"
+    ],
+    "case_id": "streetmix-vectors/1334/436418-436419",
+    "changed_attributes": [
+      "style"
+    ],
+    "collection": "streetmix-vectors",
+    "error": null,
+    "gold_targets": [
+      "n9",
+      "n11",
+      "n13"
+    ],
+    "grounding_text": "the blue squares",
+    "instruction": "change the blue squares to orange squares",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n7",
+      "n13",
+      "n17",
+      "n15",
+      "n3",
+      "n19",
+      "n9",
+      "n5",
+      "n11",
+      "n21"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n11": 1.5973084543929872e-07,
+      "n13": 7.025547529337928e-05,
+      "n15": 1.654588595556561e-05,
+      "n17": 2.4614055291749537e-05,
+      "n19": 8.047648407227825e-06,
+      "n21": 3.6231977418310635e-08,
+      "n3": 1.1229462870687712e-05,
+      "n5": 1.922632151263315e-07,
+      "n7": 7.04369304003194e-05,
+      "n9": 7.528205514972797e-06
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.004391666000628902
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n3",
+      "n5",
+      "n7",
+      "n9",
+      "n11",
+      "n13",
+      "n15",
+      "n17",
+      "n19",
+      "n21"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999997615814209,
+      2.595792238935246e-07,
+      1.8378285004949646e-12,
+      7.509573731346867e-21,
+      2.720887215194854e-40,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n7"
+    ],
+    "case_id": "streetmix-vectors/1335/436418-436422",
+    "changed_attributes": [
+      "style"
+    ],
+    "collection": "streetmix-vectors",
+    "error": null,
+    "gold_targets": [
+      "n9",
+      "n11",
+      "n13"
+    ],
+    "grounding_text": "the blue squares",
+    "instruction": "change the blue squares to yellow squares",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n7",
+      "n13",
+      "n17",
+      "n15",
+      "n3",
+      "n19",
+      "n9",
+      "n5",
+      "n11",
+      "n21"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n11": 1.5973084543929872e-07,
+      "n13": 7.025547529337928e-05,
+      "n15": 1.654588595556561e-05,
+      "n17": 2.4614055291749537e-05,
+      "n19": 8.047648407227825e-06,
+      "n21": 3.6231977418310635e-08,
+      "n3": 1.1229462870687712e-05,
+      "n5": 1.922632151263315e-07,
+      "n7": 7.04369304003194e-05,
+      "n9": 7.528205514972797e-06
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.004483999999138177
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n3",
+      "n5",
+      "n7",
+      "n9",
+      "n11",
+      "n13",
+      "n15",
+      "n17",
+      "n19",
+      "n21"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      3.0458603439984314e-14,
+      5.069510387290464e-17,
+      4.044422790557814e-30,
+      0.0,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n9"
+    ],
+    "case_id": "streetmix-vectors/1336/436421-436418",
+    "changed_attributes": [
+      "style"
+    ],
+    "collection": "streetmix-vectors",
+    "error": null,
+    "gold_targets": [
+      "n9",
+      "n11",
+      "n13"
+    ],
+    "grounding_text": "the cups with white color and the stems with green color",
+    "instruction": "change the color of the cups from white to blue and the color of the stems from green to olive green",
+    "oracle_cardinality_exact": true,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n9",
+      "n11",
+      "n13",
+      "n3",
+      "n5",
+      "n7",
+      "n15",
+      "n17",
+      "n19",
+      "n21"
+    ],
+    "reference_type": "attribute",
+    "router_weights": {
+      "attribute": 1.0,
+      "semantic": 0.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n11": 0.059978511184453964,
+      "n13": 0.059978511184453964,
+      "n15": 5.6633748357626246e-08,
+      "n17": 5.6633748357626246e-08,
+      "n19": 5.6633748357626246e-08,
+      "n21": 5.6633748357626246e-08,
+      "n3": 5.6633748357626246e-08,
+      "n5": 5.6633748357626246e-08,
+      "n7": 5.6633748357626246e-08,
+      "n9": 0.059978511184453964
+    },
+    "selected_expert": "attribute",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.004262958000254002
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n8",
+      "n9",
+      "n10",
+      "n11",
+      "n12",
+      "n13"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      7.018225112176424e-09,
+      1.1592832813503429e-12,
+      5.80589155929475e-22,
+      2.4109199948862045e-38,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n12"
+    ],
+    "case_id": "streetmix-vectors/1352/436445-436446",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "streetmix-vectors",
+    "error": null,
+    "gold_targets": [
+      "n8",
+      "n9",
+      "n10",
+      "n11",
+      "n12",
+      "n13"
+    ],
+    "grounding_text": "the lamp post",
+    "instruction": "rotate the lamp post 180 degrees",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n12",
+      "n5",
+      "n11",
+      "n13",
+      "n6",
+      "n10",
+      "n9",
+      "n8",
+      "n3",
+      "n4"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n10": 6.61412050249055e-05,
+      "n11": 0.0014136448735371232,
+      "n12": 0.003831214737147093,
+      "n13": 0.0002547638723626733,
+      "n3": 9.207958100887481e-06,
+      "n4": 9.396378004566941e-07,
+      "n5": 0.0018040506402030587,
+      "n6": 0.00011774875019909814,
+      "n8": 9.706412129162345e-06,
+      "n9": 5.839007280883379e-05
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.003784874999837484
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n3",
+      "n5",
+      "n7",
+      "n9",
+      "n11",
+      "n13",
+      "n15",
+      "n17",
+      "n19",
+      "n21"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999995231628418,
+      5.019587661081459e-07,
+      6.269065266906182e-09,
+      2.873463717655852e-16,
+      6.807789204482154e-30,
+      1.5304687554678144e-39
+    ],
+    "cardinality_targets": [
+      "n7"
+    ],
+    "case_id": "streetmix-vectors/1435/436419-436420",
+    "changed_attributes": [
+      "style"
+    ],
+    "collection": "streetmix-vectors",
+    "error": null,
+    "gold_targets": [
+      "n9",
+      "n11",
+      "n13"
+    ],
+    "grounding_text": "the color of the orange parts",
+    "instruction": "change the color of the orange parts to dark red",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n7",
+      "n3",
+      "n19",
+      "n5",
+      "n15",
+      "n13",
+      "n17",
+      "n11",
+      "n9",
+      "n21"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n11": 4.660934337152867e-06,
+      "n13": 5.592881279881112e-06,
+      "n15": 1.1390711733838543e-05,
+      "n17": 5.357694135454949e-06,
+      "n19": 3.9129346987465397e-05,
+      "n21": 6.475682425843843e-07,
+      "n3": 0.004267130047082901,
+      "n5": 1.4705314242746681e-05,
+      "n7": 0.30684593319892883,
+      "n9": 2.352443971176399e-06
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.004439166999873123
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n3",
+      "n5",
+      "n7",
+      "n9",
+      "n11",
+      "n13",
+      "n15",
+      "n17",
+      "n19",
+      "n21"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999995231628418,
+      5.019587661081459e-07,
+      6.269065266906182e-09,
+      2.873463717655852e-16,
+      6.807789204482154e-30,
+      1.5304687554678144e-39
+    ],
+    "cardinality_targets": [
+      "n7"
+    ],
+    "case_id": "streetmix-vectors/1436/436419-436418",
+    "changed_attributes": [
+      "style"
+    ],
+    "collection": "streetmix-vectors",
+    "error": null,
+    "gold_targets": [
+      "n9",
+      "n11",
+      "n13"
+    ],
+    "grounding_text": "the color of the orange parts",
+    "instruction": "change the color of the orange parts to blue",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n7",
+      "n3",
+      "n19",
+      "n5",
+      "n15",
+      "n13",
+      "n17",
+      "n11",
+      "n9",
+      "n21"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n11": 4.660934337152867e-06,
+      "n13": 5.592881279881112e-06,
+      "n15": 1.1390711733838543e-05,
+      "n17": 5.357694135454949e-06,
+      "n19": 3.9129346987465397e-05,
+      "n21": 6.475682425843843e-07,
+      "n3": 0.004267130047082901,
+      "n5": 1.4705314242746681e-05,
+      "n7": 0.30684593319892883,
+      "n9": 2.352443971176399e-06
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.0044200000002092565
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n3",
+      "n5",
+      "n7",
+      "n9",
+      "n11",
+      "n13",
+      "n15",
+      "n17",
+      "n19",
+      "n21"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999972581863403,
+      2.736165242822608e-06,
+      3.60685309744313e-12,
+      8.547052413061857e-20,
+      7.699182178509129e-40,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n17"
+    ],
+    "case_id": "streetmix-vectors/1437/436419-436422",
+    "changed_attributes": [
+      "style"
+    ],
+    "collection": "streetmix-vectors",
+    "error": null,
+    "gold_targets": [
+      "n9",
+      "n11",
+      "n13"
+    ],
+    "grounding_text": "the orange parts",
+    "instruction": "change the orange parts to yellow",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n17",
+      "n15",
+      "n19",
+      "n7",
+      "n13",
+      "n9",
+      "n3",
+      "n11",
+      "n5",
+      "n21"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n11": 2.0003838017146336e-06,
+      "n13": 6.410877540474758e-05,
+      "n15": 0.00034343390143476427,
+      "n17": 0.00044123001862317324,
+      "n19": 0.00023542632698081434,
+      "n21": 2.98037825530173e-08,
+      "n3": 1.4674787962576374e-05,
+      "n5": 1.8674001012186636e-07,
+      "n7": 0.00013654344365932047,
+      "n9": 2.211005994467996e-05
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.00437512499956938
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n8",
+      "n9",
+      "n10",
+      "n11",
+      "n12",
+      "n13"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      1.0440085240759345e-08,
+      6.826009896210294e-11,
+      1.6962457739166193e-19,
+      2.3170984648263992e-32,
+      7.258726045202552e-43
+    ],
+    "cardinality_targets": [
+      "n8"
+    ],
+    "case_id": "streetmix-vectors/1455/436446-436445",
+    "changed_attributes": [
+      "d"
+    ],
+    "collection": "streetmix-vectors",
+    "error": null,
+    "gold_targets": [
+      "n8",
+      "n9",
+      "n10",
+      "n11",
+      "n12",
+      "n13"
+    ],
+    "grounding_text": "the lamp post",
+    "instruction": "rotate the lamp post 90 degrees to the right",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n8",
+      "n11",
+      "n12",
+      "n9",
+      "n5",
+      "n13",
+      "n10",
+      "n6",
+      "n3",
+      "n4"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n10": 0.0001688224874669686,
+      "n11": 0.010575108230113983,
+      "n12": 0.009486761875450611,
+      "n13": 0.00035529545857571065,
+      "n3": 5.824883828609018e-06,
+      "n4": 4.3947196104454633e-07,
+      "n5": 0.0033486373722553253,
+      "n6": 8.283344504889101e-05,
+      "n8": 0.12309899926185608,
+      "n9": 0.0040366933681070805
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": true,
+    "wall_seconds": 0.003832415999568184
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n3",
+      "n5",
+      "n7",
+      "n9",
+      "n11",
+      "n13",
+      "n15",
+      "n17",
+      "n19",
+      "n21"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      4.916585805148088e-09,
+      1.6455600987744234e-12,
+      4.084565509666293e-22,
+      9.712231500419588e-40,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n15"
+    ],
+    "case_id": "streetmix-vectors/1489/436422-436420",
+    "changed_attributes": [
+      "style"
+    ],
+    "collection": "streetmix-vectors",
+    "error": null,
+    "gold_targets": [
+      "n9",
+      "n11",
+      "n13"
+    ],
+    "grounding_text": "the yellow flowers",
+    "instruction": "change the yellow flowers to red",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n15",
+      "n11",
+      "n13",
+      "n9",
+      "n17",
+      "n19",
+      "n7",
+      "n3",
+      "n5",
+      "n21"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n11": 0.017022499814629555,
+      "n13": 0.016261877492070198,
+      "n15": 0.1838817000389099,
+      "n17": 0.00382948643527925,
+      "n19": 0.000461387011455372,
+      "n21": 2.0641957476641437e-08,
+      "n3": 3.176129723669874e-07,
+      "n5": 1.083952696490087e-07,
+      "n7": 1.4784776794840582e-05,
+      "n9": 0.00881077628582716
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.004343499999777123
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n3",
+      "n5",
+      "n7",
+      "n9",
+      "n11",
+      "n13",
+      "n15",
+      "n17",
+      "n19",
+      "n21"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      1.0,
+      1.3125883491227341e-08,
+      2.0975378552112733e-12,
+      1.2025739961197015e-21,
+      1.846605892914886e-39,
+      0.0
+    ],
+    "cardinality_targets": [
+      "n15"
+    ],
+    "case_id": "streetmix-vectors/1490/436422-436418",
+    "changed_attributes": [
+      "style"
+    ],
+    "collection": "streetmix-vectors",
+    "error": null,
+    "gold_targets": [
+      "n9",
+      "n11",
+      "n13"
+    ],
+    "grounding_text": "the yellow color",
+    "instruction": "change the yellow color to blue",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n15",
+      "n11",
+      "n13",
+      "n9",
+      "n17",
+      "n19",
+      "n7",
+      "n3",
+      "n5",
+      "n21"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n11": 0.032821301370859146,
+      "n13": 0.021320657804608345,
+      "n15": 0.20337249338626862,
+      "n17": 0.003751459065824747,
+      "n19": 0.0029780836775898933,
+      "n21": 3.030010375937309e-08,
+      "n3": 6.979028626119543e-07,
+      "n5": 1.571379613096724e-07,
+      "n7": 3.2069463486550376e-05,
+      "n9": 0.008674141019582748
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [],
+    "top1_in_gold": false,
+    "wall_seconds": 0.004494249999879685
+  },
+  {
+    "arm": "gnn",
+    "by_view": null,
+    "candidate_ids": [
+      "n3",
+      "n5",
+      "n7",
+      "n9",
+      "n11",
+      "n13",
+      "n15",
+      "n17",
+      "n19",
+      "n21"
+    ],
+    "cardinality_exact": false,
+    "cardinality_probabilities": [
+      0.9999998807907104,
+      6.496658500054764e-08,
+      2.7465038576757195e-10,
+      1.6312518667428551e-18,
+      3.197115045496227e-33,
+      1.0229478789571165e-43
+    ],
+    "cardinality_targets": [
+      "n15"
+    ],
+    "case_id": "streetmix-vectors/1491/436422-436419",
+    "changed_attributes": [
+      "style"
+    ],
+    "collection": "streetmix-vectors",
+    "error": null,
+    "gold_targets": [
+      "n9",
+      "n11",
+      "n13"
+    ],
+    "grounding_text": "the yellow parts",
+    "instruction": "change the yellow parts to orange",
+    "oracle_cardinality_exact": false,
+    "predicted_cardinality": 1,
+    "ranking": [
+      "n15",
+      "n13",
+      "n17",
+      "n9",
+      "n11",
+      "n19",
+      "n7",
+      "n3",
+      "n5",
+      "n21"
+    ],
+    "reference_type": "semantic",
+    "router_weights": {
+      "attribute": 0.0,
+      "semantic": 1.0,
+      "spatial": 0.0
+    },
+    "scores": {
+      "n11": 0.018572326749563217,
+      "n13": 0.12655971944332123,
+      "n15": 0.7201979756355286,
+      "n17": 0.03657209873199463,
+      "n19": 0.0032397706527262926,
+      "n21": 1.738562005471067e-08,
+      "n3": 4.608192512023379e-07,
+      "n5": 7.706178450916923e-08,
+      "n7": 1.11261915662908e-05,
+      "n9": 0.02561570517718792
+    },
+    "selected_expert": "semantic",
+    "single_target": false,
+    "single_target_top1": false,
+    "threshold": 0.5,
+    "threshold_exact": false,
+    "threshold_targets": [
+      "n15"
+    ],
+    "top1_in_gold": false,
+    "wall_seconds": 0.004339957999945909
+  }
+]

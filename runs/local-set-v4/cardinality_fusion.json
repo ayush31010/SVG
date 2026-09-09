@@ -1,0 +1,162 @@
+{
+  "gnn": {
+    "complexity_fallback_baseline": {
+      "by_collection": {
+        "hicon-circular-interface-icons": {
+          "cases": 64,
+          "mean_precision": 0.5130208333333334,
+          "mean_recall": 0.34479166666666666,
+          "set_exact_correct": 14,
+          "set_exact_rate": 0.21875
+        },
+        "streetmix-vectors": {
+          "cases": 16,
+          "mean_precision": 0.875,
+          "mean_recall": 0.29166666666666663,
+          "set_exact_correct": 0,
+          "set_exact_rate": 0.0
+        }
+      },
+      "cases": 80,
+      "mean_precision": 0.5854166666666667,
+      "mean_recall": 0.33416666666666667,
+      "selection_sources": {
+        "structural_fallback": 64,
+        "visual_fallback": 16
+      },
+      "set_exact_correct": 14,
+      "set_exact_rate": 0.175
+    },
+    "complexity_threshold": 10,
+    "count_source": "learned scalar head; never gold cardinality",
+    "exploratory_post_hoc": true,
+    "format": "svgpatchlab.vector_edits_set_grounding.v1",
+    "group_expert": {
+      "abstained_cases": 64,
+      "conditional_exact_rate": 1.0,
+      "fired_cases": 16
+    },
+    "metrics": {
+      "by_collection": {
+        "hicon-circular-interface-icons": {
+          "cases": 64,
+          "mean_precision": 0.5182291666666666,
+          "mean_recall": 0.37083333333333335,
+          "set_exact_correct": 17,
+          "set_exact_rate": 0.265625
+        },
+        "streetmix-vectors": {
+          "cases": 16,
+          "mean_precision": 0.875,
+          "mean_recall": 0.8333333333333334,
+          "set_exact_correct": 13,
+          "set_exact_rate": 0.8125
+        }
+      },
+      "cases": 80,
+      "mean_precision": 0.5895833333333333,
+      "mean_recall": 0.46333333333333326,
+      "selection_sources": {
+        "inside_container_set": 3,
+        "source_paint_set": 13,
+        "structural_fallback": 61,
+        "visual_fallback": 3
+      },
+      "set_exact_correct": 30,
+      "set_exact_rate": 0.375
+    },
+    "must_confirm_on_independent_collections": true,
+    "paired_vs_complexity_fallback": {
+      "cases": 80,
+      "left_only_correct": 16,
+      "right_only_correct": 0
+    },
+    "paired_vs_visual_top1": {
+      "cases": 80,
+      "exact_mcnemar_p": null,
+      "left_only_correct": 0,
+      "metric": "deployed_set_exact",
+      "right_only_correct": 0
+    }
+  },
+  "mlp": {
+    "complexity_fallback_baseline": {
+      "by_collection": {
+        "hicon-circular-interface-icons": {
+          "cases": 64,
+          "mean_precision": 0.8427083333333333,
+          "mean_recall": 0.634375,
+          "set_exact_correct": 25,
+          "set_exact_rate": 0.390625
+        },
+        "streetmix-vectors": {
+          "cases": 16,
+          "mean_precision": 0.825,
+          "mean_recall": 0.5416666666666666,
+          "set_exact_correct": 1,
+          "set_exact_rate": 0.0625
+        }
+      },
+      "cases": 80,
+      "mean_precision": 0.8391666666666667,
+      "mean_recall": 0.6158333333333333,
+      "selection_sources": {
+        "structural_fallback": 64,
+        "visual_fallback": 16
+      },
+      "set_exact_correct": 26,
+      "set_exact_rate": 0.325
+    },
+    "complexity_threshold": 10,
+    "count_source": "learned scalar head; never gold cardinality",
+    "exploratory_post_hoc": true,
+    "format": "svgpatchlab.vector_edits_set_grounding.v1",
+    "group_expert": {
+      "abstained_cases": 64,
+      "conditional_exact_rate": 1.0,
+      "fired_cases": 16
+    },
+    "metrics": {
+      "by_collection": {
+        "hicon-circular-interface-icons": {
+          "cases": 64,
+          "mean_precision": 0.8505208333333333,
+          "mean_recall": 0.665625,
+          "set_exact_correct": 28,
+          "set_exact_rate": 0.4375
+        },
+        "streetmix-vectors": {
+          "cases": 16,
+          "mean_precision": 0.925,
+          "mean_recall": 0.875,
+          "set_exact_correct": 13,
+          "set_exact_rate": 0.8125
+        }
+      },
+      "cases": 80,
+      "mean_precision": 0.8654166666666667,
+      "mean_recall": 0.7075,
+      "selection_sources": {
+        "inside_container_set": 3,
+        "source_paint_set": 13,
+        "structural_fallback": 61,
+        "visual_fallback": 3
+      },
+      "set_exact_correct": 41,
+      "set_exact_rate": 0.5125
+    },
+    "must_confirm_on_independent_collections": true,
+    "paired_vs_complexity_fallback": {
+      "cases": 80,
+      "left_only_correct": 15,
+      "right_only_correct": 0
+    },
+    "paired_vs_visual_top1": {
+      "cases": 80,
+      "exact_mcnemar_p": null,
+      "left_only_correct": 0,
+      "metric": "deployed_set_exact",
+      "right_only_correct": 0
+    }
+  }
+}
