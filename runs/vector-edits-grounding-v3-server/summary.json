@@ -1,0 +1,427 @@
+{
+  "arms": {
+    "gnn_full": {
+      "attempted": 80,
+      "by_collection": {
+        "hicon-circular-interface-icons": {
+          "attempted": 64,
+          "errors": 0,
+          "evaluated": 64,
+          "mean_wall_seconds": 0.04088006803067401,
+          "oracle_cardinality_exact_rate": 0.21875,
+          "single_target_cases": 28,
+          "single_target_top1_rate": 0.2857142857142857,
+          "threshold_exact_rate": 0.0625,
+          "top1_in_gold_rate": 0.375
+        },
+        "streetmix-vectors": {
+          "attempted": 16,
+          "errors": 0,
+          "evaluated": 16,
+          "mean_wall_seconds": 0.041763910092413425,
+          "oracle_cardinality_exact_rate": 0.0,
+          "single_target_cases": 0,
+          "single_target_top1_rate": null,
+          "threshold_exact_rate": 0.0,
+          "top1_in_gold_rate": 0.5
+        }
+      },
+      "by_reference_type": {
+        "semantic": {
+          "attempted": 51,
+          "errors": 0,
+          "evaluated": 51,
+          "mean_wall_seconds": 0.03423757117022486,
+          "oracle_cardinality_exact_rate": 0.2549019607843137,
+          "single_target_cases": 23,
+          "single_target_top1_rate": 0.30434782608695654,
+          "threshold_exact_rate": 0.0784313725490196,
+          "top1_in_gold_rate": 0.5098039215686274
+        },
+        "spatial": {
+          "attempted": 29,
+          "errors": 0,
+          "evaluated": 29,
+          "mean_wall_seconds": 0.053049337440009774,
+          "oracle_cardinality_exact_rate": 0.034482758620689655,
+          "single_target_cases": 5,
+          "single_target_top1_rate": 0.2,
+          "threshold_exact_rate": 0.0,
+          "top1_in_gold_rate": 0.20689655172413793
+        }
+      },
+      "errors": 0,
+      "evaluated": 80,
+      "mean_wall_seconds": 0.041056836443021896,
+      "oracle_cardinality_exact_rate": 0.175,
+      "selected_experts": {
+        "semantic": 51,
+        "spatial": 29
+      },
+      "single_target_cases": 28,
+      "single_target_top1_rate": 0.2857142857142857,
+      "threshold_exact_rate": 0.05,
+      "top1_in_gold_rate": 0.4
+    },
+    "gnn_target": {
+      "attempted": 80,
+      "by_collection": {
+        "hicon-circular-interface-icons": {
+          "attempted": 64,
+          "errors": 0,
+          "evaluated": 64,
+          "mean_wall_seconds": 0.030551500953151844,
+          "oracle_cardinality_exact_rate": 0.296875,
+          "single_target_cases": 28,
+          "single_target_top1_rate": 0.2857142857142857,
+          "threshold_exact_rate": 0.03125,
+          "top1_in_gold_rate": 0.4375
+        },
+        "streetmix-vectors": {
+          "attempted": 16,
+          "errors": 0,
+          "evaluated": 16,
+          "mean_wall_seconds": 0.03649103525094688,
+          "oracle_cardinality_exact_rate": 0.0,
+          "single_target_cases": 0,
+          "single_target_top1_rate": null,
+          "threshold_exact_rate": 0.0,
+          "top1_in_gold_rate": 0.4375
+        }
+      },
+      "by_reference_type": {
+        "semantic": {
+          "attempted": 65,
+          "errors": 0,
+          "evaluated": 65,
+          "mean_wall_seconds": 0.031161915295972273,
+          "oracle_cardinality_exact_rate": 0.2923076923076923,
+          "single_target_cases": 28,
+          "single_target_top1_rate": 0.2857142857142857,
+          "threshold_exact_rate": 0.03076923076923077,
+          "top1_in_gold_rate": 0.49230769230769234
+        },
+        "spatial": {
+          "attempted": 15,
+          "errors": 0,
+          "evaluated": 15,
+          "mean_wall_seconds": 0.03424187538524469,
+          "oracle_cardinality_exact_rate": 0.0,
+          "single_target_cases": 0,
+          "single_target_top1_rate": null,
+          "threshold_exact_rate": 0.0,
+          "top1_in_gold_rate": 0.2
+        }
+      },
+      "errors": 0,
+      "evaluated": 80,
+      "mean_wall_seconds": 0.031739407812710854,
+      "oracle_cardinality_exact_rate": 0.2375,
+      "selected_experts": {
+        "semantic": 65,
+        "spatial": 15
+      },
+      "single_target_cases": 28,
+      "single_target_top1_rate": 0.2857142857142857,
+      "threshold_exact_rate": 0.025,
+      "top1_in_gold_rate": 0.4375
+    },
+    "mlp_full": {
+      "attempted": 80,
+      "by_collection": {
+        "hicon-circular-interface-icons": {
+          "attempted": 64,
+          "errors": 0,
+          "evaluated": 64,
+          "mean_wall_seconds": 0.034088300497387536,
+          "oracle_cardinality_exact_rate": 0.1875,
+          "single_target_cases": 28,
+          "single_target_top1_rate": 0.17857142857142858,
+          "threshold_exact_rate": 0.0625,
+          "top1_in_gold_rate": 0.53125
+        },
+        "streetmix-vectors": {
+          "attempted": 16,
+          "errors": 0,
+          "evaluated": 16,
+          "mean_wall_seconds": 0.03676581458421424,
+          "oracle_cardinality_exact_rate": 0.0,
+          "single_target_cases": 0,
+          "single_target_top1_rate": null,
+          "threshold_exact_rate": 0.0,
+          "top1_in_gold_rate": 0.375
+        }
+      },
+      "by_reference_type": {
+        "semantic": {
+          "attempted": 51,
+          "errors": 0,
+          "evaluated": 51,
+          "mean_wall_seconds": 0.03272500128357434,
+          "oracle_cardinality_exact_rate": 0.19607843137254902,
+          "single_target_cases": 23,
+          "single_target_top1_rate": 0.17391304347826086,
+          "threshold_exact_rate": 0.058823529411764705,
+          "top1_in_gold_rate": 0.43137254901960786
+        },
+        "spatial": {
+          "attempted": 29,
+          "errors": 0,
+          "evaluated": 29,
+          "mean_wall_seconds": 0.03796307585234272,
+          "oracle_cardinality_exact_rate": 0.06896551724137931,
+          "single_target_cases": 5,
+          "single_target_top1_rate": 0.2,
+          "threshold_exact_rate": 0.034482758620689655,
+          "top1_in_gold_rate": 0.6206896551724138
+        }
+      },
+      "errors": 0,
+      "evaluated": 80,
+      "mean_wall_seconds": 0.03462380331475288,
+      "oracle_cardinality_exact_rate": 0.15,
+      "selected_experts": {
+        "semantic": 51,
+        "spatial": 29
+      },
+      "single_target_cases": 28,
+      "single_target_top1_rate": 0.17857142857142858,
+      "threshold_exact_rate": 0.05,
+      "top1_in_gold_rate": 0.5
+    },
+    "mlp_target": {
+      "attempted": 80,
+      "by_collection": {
+        "hicon-circular-interface-icons": {
+          "attempted": 64,
+          "errors": 0,
+          "evaluated": 64,
+          "mean_wall_seconds": 0.03262073340010829,
+          "oracle_cardinality_exact_rate": 0.46875,
+          "single_target_cases": 28,
+          "single_target_top1_rate": 0.6785714285714286,
+          "threshold_exact_rate": 0.015625,
+          "top1_in_gold_rate": 0.8125
+        },
+        "streetmix-vectors": {
+          "attempted": 16,
+          "errors": 0,
+          "evaluated": 16,
+          "mean_wall_seconds": 0.03581733733881265,
+          "oracle_cardinality_exact_rate": 0.0,
+          "single_target_cases": 0,
+          "single_target_top1_rate": null,
+          "threshold_exact_rate": 0.0,
+          "top1_in_gold_rate": 0.3125
+        }
+      },
+      "by_reference_type": {
+        "semantic": {
+          "attempted": 65,
+          "errors": 0,
+          "evaluated": 65,
+          "mean_wall_seconds": 0.03246319991751359,
+          "oracle_cardinality_exact_rate": 0.4461538461538462,
+          "single_target_cases": 28,
+          "single_target_top1_rate": 0.6785714285714286,
+          "threshold_exact_rate": 0.015384615384615385,
+          "top1_in_gold_rate": 0.6615384615384615
+        },
+        "spatial": {
+          "attempted": 15,
+          "errors": 0,
+          "evaluated": 15,
+          "mean_wall_seconds": 0.036713089359303314,
+          "oracle_cardinality_exact_rate": 0.06666666666666667,
+          "single_target_cases": 0,
+          "single_target_top1_rate": null,
+          "threshold_exact_rate": 0.0,
+          "top1_in_gold_rate": 0.9333333333333333
+        }
+      },
+      "errors": 0,
+      "evaluated": 80,
+      "mean_wall_seconds": 0.033260054187849164,
+      "oracle_cardinality_exact_rate": 0.375,
+      "selected_experts": {
+        "semantic": 65,
+        "spatial": 15
+      },
+      "single_target_cases": 28,
+      "single_target_top1_rate": 0.6785714285714286,
+      "threshold_exact_rate": 0.0125,
+      "top1_in_gold_rate": 0.7125
+    },
+    "siglip_target": {
+      "attempted": 80,
+      "by_collection": {
+        "hicon-circular-interface-icons": {
+          "attempted": 64,
+          "errors": 0,
+          "evaluated": 64,
+          "mean_wall_seconds": 0.33312429665238596,
+          "oracle_cardinality_exact_rate": 0.21875,
+          "single_target_cases": 28,
+          "single_target_top1_rate": 0.25,
+          "threshold_exact_rate": null,
+          "top1_in_gold_rate": 0.421875
+        },
+        "streetmix-vectors": {
+          "attempted": 16,
+          "errors": 0,
+          "evaluated": 16,
+          "mean_wall_seconds": 0.2642439967021346,
+          "oracle_cardinality_exact_rate": 0.875,
+          "single_target_cases": 0,
+          "single_target_top1_rate": null,
+          "threshold_exact_rate": null,
+          "top1_in_gold_rate": 0.875
+        }
+      },
+      "by_reference_type": {
+        "semantic": {
+          "attempted": 65,
+          "errors": 0,
+          "evaluated": 65,
+          "mean_wall_seconds": 0.36871671918779614,
+          "oracle_cardinality_exact_rate": 0.38461538461538464,
+          "single_target_cases": 28,
+          "single_target_top1_rate": 0.25,
+          "threshold_exact_rate": null,
+          "top1_in_gold_rate": 0.5384615384615384
+        },
+        "spatial": {
+          "attempted": 15,
+          "errors": 0,
+          "evaluated": 15,
+          "mean_wall_seconds": 0.10541814571867386,
+          "oracle_cardinality_exact_rate": 0.2,
+          "single_target_cases": 0,
+          "single_target_top1_rate": null,
+          "threshold_exact_rate": null,
+          "top1_in_gold_rate": 0.4
+        }
+      },
+      "errors": 0,
+      "evaluated": 80,
+      "mean_wall_seconds": 0.3193482366623357,
+      "oracle_cardinality_exact_rate": 0.35,
+      "selected_experts": {
+        "frozen_siglip": 80
+      },
+      "single_target_cases": 28,
+      "single_target_top1_rate": 0.25,
+      "threshold_exact_rate": null,
+      "top1_in_gold_rate": 0.5125
+    }
+  },
+  "dataset": {
+    "accepted_cases": 80,
+    "filtering": {
+      "accepted": 80,
+      "all_candidates_changed": 50,
+      "no_changed_drawable": 32,
+      "non_drawable_change": 54,
+      "too_few_candidates": 1256,
+      "topology_changed": 528
+    },
+    "known_svg_doctype_stripped": true,
+    "label_provenance": "aligned source/target DOM attribute differences",
+    "parquet": "tmp/vector-edits-test.parquet",
+    "sha256": "91786c53ce5e475975fb8b23eab8231acf5408a82cbab21618dc45305ff1fa12",
+    "source": "https://huggingface.co/datasets/mikronai/VectorEdits/resolve/main/data/test-00000-of-00001.parquet"
+  },
+  "format": "svgpatchlab.vector_edits_grounding.v1",
+  "paired": [
+    {
+      "cases": 80,
+      "exact_mcnemar_p": 0.2265625,
+      "left": "gnn_full",
+      "left_only_correct": 3,
+      "metric": "oracle_cardinality_exact",
+      "right": "gnn_target",
+      "right_only_correct": 8
+    },
+    {
+      "cases": 80,
+      "exact_mcnemar_p": 0.7265625,
+      "left": "gnn_full",
+      "left_only_correct": 5,
+      "metric": "oracle_cardinality_exact",
+      "right": "mlp_full",
+      "right_only_correct": 3
+    },
+    {
+      "cases": 80,
+      "exact_mcnemar_p": 0.001543879508972168,
+      "left": "gnn_full",
+      "left_only_correct": 4,
+      "metric": "oracle_cardinality_exact",
+      "right": "mlp_target",
+      "right_only_correct": 20
+    },
+    {
+      "cases": 80,
+      "exact_mcnemar_p": 0.024306510109454393,
+      "left": "gnn_full",
+      "left_only_correct": 10,
+      "metric": "oracle_cardinality_exact",
+      "right": "siglip_target",
+      "right_only_correct": 24
+    },
+    {
+      "cases": 80,
+      "exact_mcnemar_p": 0.11846923828125,
+      "left": "gnn_target",
+      "left_only_correct": 11,
+      "metric": "oracle_cardinality_exact",
+      "right": "mlp_full",
+      "right_only_correct": 4
+    },
+    {
+      "cases": 80,
+      "exact_mcnemar_p": 0.03468966484069824,
+      "left": "gnn_target",
+      "left_only_correct": 6,
+      "metric": "oracle_cardinality_exact",
+      "right": "mlp_target",
+      "right_only_correct": 17
+    },
+    {
+      "cases": 80,
+      "exact_mcnemar_p": 0.18774155899882317,
+      "left": "gnn_target",
+      "left_only_correct": 14,
+      "metric": "oracle_cardinality_exact",
+      "right": "siglip_target",
+      "right_only_correct": 23
+    },
+    {
+      "cases": 80,
+      "exact_mcnemar_p": 0.00012111663818359375,
+      "left": "mlp_full",
+      "left_only_correct": 2,
+      "metric": "oracle_cardinality_exact",
+      "right": "mlp_target",
+      "right_only_correct": 20
+    },
+    {
+      "cases": 80,
+      "exact_mcnemar_p": 0.0070003666914999485,
+      "left": "mlp_full",
+      "left_only_correct": 8,
+      "metric": "oracle_cardinality_exact",
+      "right": "siglip_target",
+      "right_only_correct": 24
+    },
+    {
+      "cases": 80,
+      "exact_mcnemar_p": 0.8898839652765371,
+      "left": "mlp_target",
+      "left_only_correct": 27,
+      "metric": "oracle_cardinality_exact",
+      "right": "siglip_target",
+      "right_only_correct": 25
+    }
+  ]
+}

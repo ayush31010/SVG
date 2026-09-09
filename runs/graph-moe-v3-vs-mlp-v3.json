@@ -1,0 +1,31 @@
+{
+  "comparison": "matched graph-message-passing ablation",
+  "dataset": "frozen 59-case mixed holdout",
+  "gnn": {
+    "checkpoint": "checkpoints/graph-moe-v3/graph_moe.pt",
+    "layers": 2,
+    "exact": 58,
+    "cases": 59,
+    "by_family": {
+      "color": [20, 20],
+      "position": [27, 27],
+      "size": [11, 12]
+    }
+  },
+  "no_edge_mlp": {
+    "checkpoint": "checkpoints/graph-moe-mlp-v3/graph_moe.pt",
+    "layers": 0,
+    "exact": 51,
+    "cases": 59,
+    "by_family": {
+      "color": [20, 20],
+      "position": [19, 27],
+      "size": [12, 12]
+    }
+  },
+  "paired": {
+    "gnn_only_correct": 8,
+    "mlp_only_correct": 1,
+    "two_sided_exact_mcnemar_p": 0.0390625
+  }
+}

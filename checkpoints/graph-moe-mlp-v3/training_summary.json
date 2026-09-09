@@ -1,0 +1,313 @@
+{
+  "best_epoch": 9,
+  "checkpoint": "checkpoints/graph-moe-mlp-v3/graph_moe.pt",
+  "device": "cuda",
+  "elapsed_seconds": 107.39671226311475,
+  "examples": {
+    "train": 1287,
+    "validation": 373
+  },
+  "format": "svgpatchlab.graph_moe_training.v1",
+  "history": [
+    {
+      "epoch": 1,
+      "mean_train_loss": 0.8726281000485046,
+      "threshold": 0.65,
+      "validation": {
+        "by_reference_type": {
+          "attribute": {
+            "cases": 66,
+            "target_exact_rate": 1.0
+          },
+          "semantic": {
+            "cases": 54,
+            "target_exact_rate": 0.14814814814814814
+          },
+          "spatial": {
+            "cases": 253,
+            "target_exact_rate": 0.5849802371541502
+          }
+        },
+        "cases": 373,
+        "router_accuracy": 1.0,
+        "target_exact_rate": 0.5951742627345844
+      }
+    },
+    {
+      "epoch": 2,
+      "mean_train_loss": 0.6935568415106107,
+      "threshold": 0.65,
+      "validation": {
+        "by_reference_type": {
+          "attribute": {
+            "cases": 66,
+            "target_exact_rate": 1.0
+          },
+          "semantic": {
+            "cases": 54,
+            "target_exact_rate": 0.9074074074074074
+          },
+          "spatial": {
+            "cases": 253,
+            "target_exact_rate": 0.6363636363636364
+          }
+        },
+        "cases": 373,
+        "router_accuracy": 1.0,
+        "target_exact_rate": 0.739946380697051
+      }
+    },
+    {
+      "epoch": 3,
+      "mean_train_loss": 0.5602782052885448,
+      "threshold": 0.65,
+      "validation": {
+        "by_reference_type": {
+          "attribute": {
+            "cases": 66,
+            "target_exact_rate": 1.0
+          },
+          "semantic": {
+            "cases": 54,
+            "target_exact_rate": 0.5925925925925926
+          },
+          "spatial": {
+            "cases": 253,
+            "target_exact_rate": 0.83399209486166
+          }
+        },
+        "cases": 373,
+        "router_accuracy": 1.0,
+        "target_exact_rate": 0.8284182305630027
+      }
+    },
+    {
+      "epoch": 4,
+      "mean_train_loss": 0.49624545457926234,
+      "threshold": 0.65,
+      "validation": {
+        "by_reference_type": {
+          "attribute": {
+            "cases": 66,
+            "target_exact_rate": 1.0
+          },
+          "semantic": {
+            "cases": 54,
+            "target_exact_rate": 0.7407407407407407
+          },
+          "spatial": {
+            "cases": 253,
+            "target_exact_rate": 0.616600790513834
+          }
+        },
+        "cases": 373,
+        "router_accuracy": 1.0,
+        "target_exact_rate": 0.7024128686327078
+      }
+    },
+    {
+      "epoch": 5,
+      "mean_train_loss": 0.4357256732970184,
+      "threshold": 0.65,
+      "validation": {
+        "by_reference_type": {
+          "attribute": {
+            "cases": 66,
+            "target_exact_rate": 1.0
+          },
+          "semantic": {
+            "cases": 54,
+            "target_exact_rate": 0.6666666666666666
+          },
+          "spatial": {
+            "cases": 253,
+            "target_exact_rate": 0.8656126482213439
+          }
+        },
+        "cases": 373,
+        "router_accuracy": 1.0,
+        "target_exact_rate": 0.8605898123324397
+      }
+    },
+    {
+      "epoch": 6,
+      "mean_train_loss": 0.38579510715272775,
+      "threshold": 0.65,
+      "validation": {
+        "by_reference_type": {
+          "attribute": {
+            "cases": 66,
+            "target_exact_rate": 1.0
+          },
+          "semantic": {
+            "cases": 54,
+            "target_exact_rate": 0.7037037037037037
+          },
+          "spatial": {
+            "cases": 253,
+            "target_exact_rate": 0.8932806324110671
+          }
+        },
+        "cases": 373,
+        "router_accuracy": 1.0,
+        "target_exact_rate": 0.8847184986595175
+      }
+    },
+    {
+      "epoch": 7,
+      "mean_train_loss": 0.36391320852237596,
+      "threshold": 0.65,
+      "validation": {
+        "by_reference_type": {
+          "attribute": {
+            "cases": 66,
+            "target_exact_rate": 1.0
+          },
+          "semantic": {
+            "cases": 54,
+            "target_exact_rate": 0.7592592592592593
+          },
+          "spatial": {
+            "cases": 253,
+            "target_exact_rate": 0.932806324110672
+          }
+        },
+        "cases": 373,
+        "router_accuracy": 1.0,
+        "target_exact_rate": 0.9195710455764075
+      }
+    },
+    {
+      "epoch": 8,
+      "mean_train_loss": 0.3173227168021707,
+      "threshold": 0.65,
+      "validation": {
+        "by_reference_type": {
+          "attribute": {
+            "cases": 66,
+            "target_exact_rate": 1.0
+          },
+          "semantic": {
+            "cases": 54,
+            "target_exact_rate": 1.0
+          },
+          "spatial": {
+            "cases": 253,
+            "target_exact_rate": 0.841897233201581
+          }
+        },
+        "cases": 373,
+        "router_accuracy": 1.0,
+        "target_exact_rate": 0.8927613941018767
+      }
+    },
+    {
+      "epoch": 9,
+      "mean_train_loss": 0.27532151839486074,
+      "threshold": 0.65,
+      "validation": {
+        "by_reference_type": {
+          "attribute": {
+            "cases": 66,
+            "target_exact_rate": 1.0
+          },
+          "semantic": {
+            "cases": 54,
+            "target_exact_rate": 1.0
+          },
+          "spatial": {
+            "cases": 253,
+            "target_exact_rate": 0.924901185770751
+          }
+        },
+        "cases": 373,
+        "router_accuracy": 1.0,
+        "target_exact_rate": 0.9490616621983914
+      }
+    },
+    {
+      "epoch": 10,
+      "mean_train_loss": 0.25342176652646153,
+      "threshold": 0.65,
+      "validation": {
+        "by_reference_type": {
+          "attribute": {
+            "cases": 66,
+            "target_exact_rate": 1.0
+          },
+          "semantic": {
+            "cases": 54,
+            "target_exact_rate": 1.0
+          },
+          "spatial": {
+            "cases": 253,
+            "target_exact_rate": 0.9090909090909091
+          }
+        },
+        "cases": 373,
+        "router_accuracy": 1.0,
+        "target_exact_rate": 0.938337801608579
+      }
+    }
+  ],
+  "identity_groups": {
+    "train": 327,
+    "validation": 93
+  },
+  "instruction_encoder": {
+    "dim": 256,
+    "structured_dim": 32,
+    "type": "hash"
+  },
+  "model": {
+    "dropout": 0.1,
+    "hidden_dim": 128,
+    "inductive_biases": true,
+    "node_feature_dim": 33,
+    "num_layers": 0,
+    "structured_text_dim": 32,
+    "text_dim": 256,
+    "top_k": 1,
+    "visual_dim": 0
+  },
+  "recommended_threshold": 0.65,
+  "seed": 20260908,
+  "train": {
+    "by_reference_type": {
+      "attribute": {
+        "cases": 294,
+        "target_exact_rate": 1.0
+      },
+      "semantic": {
+        "cases": 171,
+        "target_exact_rate": 1.0
+      },
+      "spatial": {
+        "cases": 822,
+        "target_exact_rate": 0.9221411192214112
+      }
+    },
+    "cases": 1287,
+    "router_accuracy": 1.0,
+    "target_exact_rate": 0.9502719502719502
+  },
+  "validation": {
+    "by_reference_type": {
+      "attribute": {
+        "cases": 66,
+        "target_exact_rate": 1.0
+      },
+      "semantic": {
+        "cases": 54,
+        "target_exact_rate": 1.0
+      },
+      "spatial": {
+        "cases": 253,
+        "target_exact_rate": 0.924901185770751
+      }
+    },
+    "cases": 373,
+    "router_accuracy": 1.0,
+    "target_exact_rate": 0.9490616621983914
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "architecture": "graph_moe_patch",
+  "by_task": {
+    "change_color": {
+      "cases": 100,
+      "completion_tokens": 0,
+      "gold_patch_exact_rate": 1.0,
+      "mean_failure_aware_mse": 0.0,
+      "mean_model_latency_seconds": null,
+      "mean_mse_on_rendered": 0.0,
+      "model_calls": 0,
+      "prompt_tokens": 0,
+      "protected_geometry_rate": 1.0,
+      "reference_structure_match_rate": 1.0,
+      "valid_output_rate": 1.0
+    },
+    "crop_to_half": {
+      "cases": 100,
+      "completion_tokens": 0,
+      "gold_patch_exact_rate": 1.0,
+      "mean_failure_aware_mse": 0.0,
+      "mean_model_latency_seconds": null,
+      "mean_mse_on_rendered": 0.0,
+      "model_calls": 0,
+      "prompt_tokens": 0,
+      "protected_geometry_rate": 1.0,
+      "reference_structure_match_rate": 1.0,
+      "valid_output_rate": 1.0
+    },
+    "set_contour": {
+      "cases": 100,
+      "completion_tokens": 0,
+      "gold_patch_exact_rate": 1.0,
+      "mean_failure_aware_mse": 0.0,
+      "mean_model_latency_seconds": null,
+      "mean_mse_on_rendered": 0.0,
+      "model_calls": 0,
+      "prompt_tokens": 0,
+      "protected_geometry_rate": 1.0,
+      "reference_structure_match_rate": 1.0,
+      "valid_output_rate": 1.0
+    },
+    "transparency": {
+      "cases": 100,
+      "completion_tokens": 0,
+      "gold_patch_exact_rate": 1.0,
+      "mean_failure_aware_mse": 0.0,
+      "mean_model_latency_seconds": null,
+      "mean_mse_on_rendered": 0.0,
+      "model_calls": 0,
+      "prompt_tokens": 0,
+      "protected_geometry_rate": 1.0,
+      "reference_structure_match_rate": 1.0,
+      "valid_output_rate": 1.0
+    },
+    "upside_down": {
+      "cases": 100,
+      "completion_tokens": 0,
+      "gold_patch_exact_rate": 1.0,
+      "mean_failure_aware_mse": 0.0,
+      "mean_model_latency_seconds": null,
+      "mean_mse_on_rendered": 0.0,
+      "model_calls": 0,
+      "prompt_tokens": 0,
+      "protected_geometry_rate": 1.0,
+      "reference_structure_match_rate": 1.0,
+      "valid_output_rate": 1.0
+    }
+  },
+  "dataset": {
+    "root": "SVGEditBench",
+    "tasks": {
+      "change_color": 100,
+      "compression": 100,
+      "crop_to_half": 100,
+      "set_contour": 100,
+      "transparency": 100,
+      "upside_down": 100
+    },
+    "total_cases": 600,
+    "unique_emojis": 100
+  },
+  "errors": {},
+  "evaluation": {
+    "render": true,
+    "render_size": 72,
+    "results": "runs/graph-moe-v3/results.jsonl"
+  },
+  "model": {
+    "adapter": "none"
+  },
+  "overall": {
+    "cases": 500,
+    "completion_tokens": 0,
+    "gold_patch_exact_rate": 1.0,
+    "mean_failure_aware_mse": 0.0,
+    "mean_model_latency_seconds": null,
+    "mean_mse_on_rendered": 0.0,
+    "model_calls": 0,
+    "prompt_tokens": 0,
+    "protected_geometry_rate": 1.0,
+    "reference_structure_match_rate": 1.0,
+    "valid_output_rate": 1.0
+  }
+}

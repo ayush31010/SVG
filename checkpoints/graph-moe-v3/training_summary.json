@@ -1,0 +1,313 @@
+{
+  "best_epoch": 9,
+  "checkpoint": "checkpoints/graph-moe-v3/graph_moe.pt",
+  "device": "cuda",
+  "elapsed_seconds": 164.0952260484919,
+  "examples": {
+    "train": 1287,
+    "validation": 373
+  },
+  "format": "svgpatchlab.graph_moe_training.v1",
+  "history": [
+    {
+      "epoch": 1,
+      "mean_train_loss": 0.8713119288164002,
+      "threshold": 0.65,
+      "validation": {
+        "by_reference_type": {
+          "attribute": {
+            "cases": 66,
+            "target_exact_rate": 1.0
+          },
+          "semantic": {
+            "cases": 54,
+            "target_exact_rate": 0.8148148148148148
+          },
+          "spatial": {
+            "cases": 253,
+            "target_exact_rate": 0.5335968379446641
+          }
+        },
+        "cases": 373,
+        "router_accuracy": 1.0,
+        "target_exact_rate": 0.6568364611260054
+      }
+    },
+    {
+      "epoch": 2,
+      "mean_train_loss": 0.46175415415842774,
+      "threshold": 0.65,
+      "validation": {
+        "by_reference_type": {
+          "attribute": {
+            "cases": 66,
+            "target_exact_rate": 1.0
+          },
+          "semantic": {
+            "cases": 54,
+            "target_exact_rate": 1.0
+          },
+          "spatial": {
+            "cases": 253,
+            "target_exact_rate": 0.8616600790513834
+          }
+        },
+        "cases": 373,
+        "router_accuracy": 1.0,
+        "target_exact_rate": 0.9061662198391421
+      }
+    },
+    {
+      "epoch": 3,
+      "mean_train_loss": 0.3676508468400147,
+      "threshold": 0.65,
+      "validation": {
+        "by_reference_type": {
+          "attribute": {
+            "cases": 66,
+            "target_exact_rate": 1.0
+          },
+          "semantic": {
+            "cases": 54,
+            "target_exact_rate": 1.0
+          },
+          "spatial": {
+            "cases": 253,
+            "target_exact_rate": 0.8458498023715415
+          }
+        },
+        "cases": 373,
+        "router_accuracy": 1.0,
+        "target_exact_rate": 0.8954423592493298
+      }
+    },
+    {
+      "epoch": 4,
+      "mean_train_loss": 0.3060840682254027,
+      "threshold": 0.65,
+      "validation": {
+        "by_reference_type": {
+          "attribute": {
+            "cases": 66,
+            "target_exact_rate": 1.0
+          },
+          "semantic": {
+            "cases": 54,
+            "target_exact_rate": 1.0
+          },
+          "spatial": {
+            "cases": 253,
+            "target_exact_rate": 0.849802371541502
+          }
+        },
+        "cases": 373,
+        "router_accuracy": 1.0,
+        "target_exact_rate": 0.8981233243967829
+      }
+    },
+    {
+      "epoch": 5,
+      "mean_train_loss": 0.29778500944377634,
+      "threshold": 0.65,
+      "validation": {
+        "by_reference_type": {
+          "attribute": {
+            "cases": 66,
+            "target_exact_rate": 1.0
+          },
+          "semantic": {
+            "cases": 54,
+            "target_exact_rate": 1.0
+          },
+          "spatial": {
+            "cases": 253,
+            "target_exact_rate": 0.8735177865612648
+          }
+        },
+        "cases": 373,
+        "router_accuracy": 1.0,
+        "target_exact_rate": 0.9142091152815014
+      }
+    },
+    {
+      "epoch": 6,
+      "mean_train_loss": 0.25783468279592525,
+      "threshold": 0.65,
+      "validation": {
+        "by_reference_type": {
+          "attribute": {
+            "cases": 66,
+            "target_exact_rate": 1.0
+          },
+          "semantic": {
+            "cases": 54,
+            "target_exact_rate": 1.0
+          },
+          "spatial": {
+            "cases": 253,
+            "target_exact_rate": 0.8774703557312253
+          }
+        },
+        "cases": 373,
+        "router_accuracy": 1.0,
+        "target_exact_rate": 0.9168900804289544
+      }
+    },
+    {
+      "epoch": 7,
+      "mean_train_loss": 0.23335166271382576,
+      "threshold": 0.65,
+      "validation": {
+        "by_reference_type": {
+          "attribute": {
+            "cases": 66,
+            "target_exact_rate": 1.0
+          },
+          "semantic": {
+            "cases": 54,
+            "target_exact_rate": 1.0
+          },
+          "spatial": {
+            "cases": 253,
+            "target_exact_rate": 0.8774703557312253
+          }
+        },
+        "cases": 373,
+        "router_accuracy": 1.0,
+        "target_exact_rate": 0.9168900804289544
+      }
+    },
+    {
+      "epoch": 8,
+      "mean_train_loss": 0.19973335338147177,
+      "threshold": 0.6,
+      "validation": {
+        "by_reference_type": {
+          "attribute": {
+            "cases": 66,
+            "target_exact_rate": 1.0
+          },
+          "semantic": {
+            "cases": 54,
+            "target_exact_rate": 1.0
+          },
+          "spatial": {
+            "cases": 253,
+            "target_exact_rate": 0.9130434782608695
+          }
+        },
+        "cases": 373,
+        "router_accuracy": 1.0,
+        "target_exact_rate": 0.9410187667560321
+      }
+    },
+    {
+      "epoch": 9,
+      "mean_train_loss": 0.2108475516542769,
+      "threshold": 0.65,
+      "validation": {
+        "by_reference_type": {
+          "attribute": {
+            "cases": 66,
+            "target_exact_rate": 1.0
+          },
+          "semantic": {
+            "cases": 54,
+            "target_exact_rate": 1.0
+          },
+          "spatial": {
+            "cases": 253,
+            "target_exact_rate": 0.932806324110672
+          }
+        },
+        "cases": 373,
+        "router_accuracy": 1.0,
+        "target_exact_rate": 0.9544235924932976
+      }
+    },
+    {
+      "epoch": 10,
+      "mean_train_loss": 0.20628794871283826,
+      "threshold": 0.65,
+      "validation": {
+        "by_reference_type": {
+          "attribute": {
+            "cases": 66,
+            "target_exact_rate": 1.0
+          },
+          "semantic": {
+            "cases": 54,
+            "target_exact_rate": 1.0
+          },
+          "spatial": {
+            "cases": 253,
+            "target_exact_rate": 0.9090909090909091
+          }
+        },
+        "cases": 373,
+        "router_accuracy": 1.0,
+        "target_exact_rate": 0.938337801608579
+      }
+    }
+  ],
+  "identity_groups": {
+    "train": 327,
+    "validation": 93
+  },
+  "instruction_encoder": {
+    "dim": 256,
+    "structured_dim": 32,
+    "type": "hash"
+  },
+  "model": {
+    "dropout": 0.1,
+    "hidden_dim": 128,
+    "inductive_biases": true,
+    "node_feature_dim": 33,
+    "num_layers": 2,
+    "structured_text_dim": 32,
+    "text_dim": 256,
+    "top_k": 1,
+    "visual_dim": 0
+  },
+  "recommended_threshold": 0.65,
+  "seed": 20260908,
+  "train": {
+    "by_reference_type": {
+      "attribute": {
+        "cases": 294,
+        "target_exact_rate": 1.0
+      },
+      "semantic": {
+        "cases": 171,
+        "target_exact_rate": 1.0
+      },
+      "spatial": {
+        "cases": 822,
+        "target_exact_rate": 0.9282238442822385
+      }
+    },
+    "cases": 1287,
+    "router_accuracy": 1.0,
+    "target_exact_rate": 0.9541569541569541
+  },
+  "validation": {
+    "by_reference_type": {
+      "attribute": {
+        "cases": 66,
+        "target_exact_rate": 1.0
+      },
+      "semantic": {
+        "cases": 54,
+        "target_exact_rate": 1.0
+      },
+      "spatial": {
+        "cases": 253,
+        "target_exact_rate": 0.932806324110672
+      }
+    },
+    "cases": 373,
+    "router_accuracy": 1.0,
+    "target_exact_rate": 0.9544235924932976
+  }
+}

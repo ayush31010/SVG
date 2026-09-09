@@ -23,6 +23,7 @@ from .patching import (
 from .rewrite import FullRewriteArchitecture
 from .rules import RuleBasedPatchArchitecture
 from .semantic import SemanticIdPatchArchitecture
+from .graph_moe import GraphMoEPatchArchitecture
 
 
 ARCHITECTURES: dict[str, type[Architecture]] = {
@@ -45,6 +46,7 @@ ARCHITECTURES: dict[str, type[Architecture]] = {
     "routed_strict_skeleton_patch": RoutedStrictSkeletonPatchArchitecture,
     "routed_strict_visual_stats_patch": RoutedStrictVisualStatsPatchArchitecture,
     "visual_gnn_patch": VisualGNNPatchArchitecture,
+    "graph_moe_patch": GraphMoEPatchArchitecture,
     "semantic_id_patch": SemanticIdPatchArchitecture,
     "oracle_target_patch": OracleTargetArchitecture,
     "two_stage_patch": TwoStagePatchArchitecture,

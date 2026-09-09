@@ -1,0 +1,211 @@
+{
+  "arms": {
+    "attribute_only": {
+      "arm": "attribute_only",
+      "by_family": {
+        "color": {
+          "cases": 20,
+          "gold_patch_exact_rate": 1.0,
+          "target_exact_rate": 1.0,
+          "valid_output_rate": 1.0
+        },
+        "position": {
+          "cases": 27,
+          "gold_patch_exact_rate": 0.1111111111111111,
+          "target_exact_rate": 0.1111111111111111,
+          "valid_output_rate": 1.0
+        },
+        "size": {
+          "cases": 12,
+          "gold_patch_exact_rate": 0.25,
+          "target_exact_rate": 0.25,
+          "valid_output_rate": 1.0
+        }
+      },
+      "cases": 59,
+      "feature_sources": {
+        "analytic": 59
+      },
+      "gold_patch_exact_rate": 0.4406779661016949,
+      "mean_wall_seconds": 0.01438294240605023,
+      "model_calls": 0,
+      "selected_experts": {
+        "attribute": 59
+      },
+      "target_exact_rate": 0.4406779661016949,
+      "valid_output_rate": 1.0
+    },
+    "learned_router": {
+      "arm": "learned_router",
+      "by_family": {
+        "color": {
+          "cases": 20,
+          "gold_patch_exact_rate": 1.0,
+          "target_exact_rate": 1.0,
+          "valid_output_rate": 1.0
+        },
+        "position": {
+          "cases": 27,
+          "gold_patch_exact_rate": 1.0,
+          "target_exact_rate": 1.0,
+          "valid_output_rate": 1.0
+        },
+        "size": {
+          "cases": 12,
+          "gold_patch_exact_rate": 0.9166666666666666,
+          "target_exact_rate": 0.9166666666666666,
+          "valid_output_rate": 1.0
+        }
+      },
+      "cases": 59,
+      "feature_sources": {
+        "analytic": 20,
+        "rendered": 39
+      },
+      "gold_patch_exact_rate": 0.9830508474576272,
+      "mean_wall_seconds": 0.02448104552419509,
+      "model_calls": 0,
+      "selected_experts": {
+        "attribute": 20,
+        "spatial": 39
+      },
+      "target_exact_rate": 0.9830508474576272,
+      "valid_output_rate": 1.0
+    },
+    "oracle_router": {
+      "arm": "oracle_router",
+      "by_family": {
+        "color": {
+          "cases": 20,
+          "gold_patch_exact_rate": 1.0,
+          "target_exact_rate": 1.0,
+          "valid_output_rate": 1.0
+        },
+        "position": {
+          "cases": 27,
+          "gold_patch_exact_rate": 1.0,
+          "target_exact_rate": 1.0,
+          "valid_output_rate": 1.0
+        },
+        "size": {
+          "cases": 12,
+          "gold_patch_exact_rate": 0.9166666666666666,
+          "target_exact_rate": 0.9166666666666666,
+          "valid_output_rate": 1.0
+        }
+      },
+      "cases": 59,
+      "feature_sources": {
+        "analytic": 20,
+        "rendered": 39
+      },
+      "gold_patch_exact_rate": 0.9830508474576272,
+      "mean_wall_seconds": 0.010504568153518742,
+      "model_calls": 0,
+      "selected_experts": {
+        "attribute": 20,
+        "spatial": 39
+      },
+      "target_exact_rate": 0.9830508474576272,
+      "valid_output_rate": 1.0
+    },
+    "semantic_only": {
+      "arm": "semantic_only",
+      "by_family": {
+        "color": {
+          "cases": 20,
+          "gold_patch_exact_rate": 0.15,
+          "target_exact_rate": 0.15,
+          "valid_output_rate": 1.0
+        },
+        "position": {
+          "cases": 27,
+          "gold_patch_exact_rate": 0.1111111111111111,
+          "target_exact_rate": 0.1111111111111111,
+          "valid_output_rate": 1.0
+        },
+        "size": {
+          "cases": 12,
+          "gold_patch_exact_rate": 0.25,
+          "target_exact_rate": 0.25,
+          "valid_output_rate": 1.0
+        }
+      },
+      "cases": 59,
+      "feature_sources": {
+        "rendered": 59
+      },
+      "gold_patch_exact_rate": 0.15254237288135594,
+      "mean_wall_seconds": 0.0076732293434314805,
+      "model_calls": 0,
+      "selected_experts": {
+        "semantic": 59
+      },
+      "target_exact_rate": 0.15254237288135594,
+      "valid_output_rate": 1.0
+    },
+    "spatial_only": {
+      "arm": "spatial_only",
+      "by_family": {
+        "color": {
+          "cases": 20,
+          "gold_patch_exact_rate": 0.15,
+          "target_exact_rate": 0.15,
+          "valid_output_rate": 1.0
+        },
+        "position": {
+          "cases": 27,
+          "gold_patch_exact_rate": 1.0,
+          "target_exact_rate": 1.0,
+          "valid_output_rate": 1.0
+        },
+        "size": {
+          "cases": 12,
+          "gold_patch_exact_rate": 0.9166666666666666,
+          "target_exact_rate": 0.9166666666666666,
+          "valid_output_rate": 1.0
+        }
+      },
+      "cases": 59,
+      "feature_sources": {
+        "rendered": 59
+      },
+      "gold_patch_exact_rate": 0.6949152542372882,
+      "mean_wall_seconds": 0.011429483812870615,
+      "model_calls": 0,
+      "selected_experts": {
+        "spatial": 59
+      },
+      "target_exact_rate": 0.6949152542372882,
+      "valid_output_rate": 1.0
+    }
+  },
+  "checkpoint": "checkpoints/graph-moe-v3/graph_moe.pt",
+  "format": "svgpatchlab.graph_moe_ablation.v1",
+  "paired": [
+    {
+      "cases": 59,
+      "exact_mcnemar_p": null,
+      "left": "learned_router",
+      "left_only_correct": 0,
+      "right": "oracle_router",
+      "right_only_correct": 0
+    }
+  ],
+  "seed": 20260725,
+  "stats_mode": "visual",
+  "suite_verification": {
+    "cases": 59,
+    "families": {
+      "color": 20,
+      "position": 27,
+      "size": 12
+    },
+    "router_agrees_with_family_design": true,
+    "router_choices": {
+      "skeleton": 20,
+      "visual": 39
+    }
+  },
+  "threshold_override": null
+}

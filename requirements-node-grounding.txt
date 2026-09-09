@@ -10,3 +10,5 @@ peft>=0.19.1,<1
 # Required only when the config keeps the default `"qlora": true`.
 bitsandbytes>=0.45,<1
 safetensors>=0.4
+# Used by the reproducible VectorEdits natural-transfer audit.
+pyarrow>=14,<22

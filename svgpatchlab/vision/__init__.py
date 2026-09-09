@@ -13,6 +13,26 @@ from .candidate_views import (
 )
 from .embedder import NodeEmbedder
 from .gnn import NodeGNN
+from .graph_features import (
+    EDGE_NAMES,
+    EXPERT_NAMES,
+    NODE_FEATURE_DIM,
+    SVGGraph,
+    build_svg_graph,
+    infer_reference_type,
+)
+from .graph_moe import GraphMoEGrounder, GraphMoEPrediction
+from .instruction_encoder import (
+    HashingInstructionEncoder,
+    create_instruction_encoder,
+    extract_reference_color,
+    extract_target_reference,
+)
+from .siglip_grounder import (
+    SiglipCandidateGrounder,
+    SiglipCandidateScores,
+    SiglipGrounderUnavailable,
+)
 
 __all__ = [
     "CandidateContactSheet",
@@ -21,6 +41,21 @@ __all__ = [
     "CandidateView",
     "NodeEmbedder",
     "NodeGNN",
+    "EDGE_NAMES",
+    "EXPERT_NAMES",
+    "NODE_FEATURE_DIM",
+    "SVGGraph",
+    "GraphMoEGrounder",
+    "GraphMoEPrediction",
+    "HashingInstructionEncoder",
+    "SiglipCandidateGrounder",
+    "SiglipCandidateScores",
+    "SiglipGrounderUnavailable",
+    "build_svg_graph",
+    "create_instruction_encoder",
+    "extract_reference_color",
+    "extract_target_reference",
+    "infer_reference_type",
     "isolate_svg_subtree",
     "render_candidate_contact_sheet",
     "render_candidate_evidence",

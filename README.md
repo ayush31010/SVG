@@ -14,7 +14,7 @@ official `SVGEditBench/` clone is treated as read-only evaluation data.
 - Deterministic patch executor.
 - Gold-patch derivation from SVGEditBench references.
 - Full-rewrite, full-context patch, skeleton patch, visual skeleton, two-stage,
-  semantic ID patch, oracle-target, rule-based, and deterministic oracle
+  semantic ID patch, sparse Graph-MoE patch, oracle-target, rule-based, and deterministic oracle
   architectures.
 - Interchangeable local Transformers, OpenAI-compatible server, and replay
   model adapters.
@@ -404,6 +404,15 @@ The executor supports validated `remove_element` patches, but the bundled
 SVGEditBench clone does not yet contain a delete-task directory. Deletion
 grounding is therefore covered by the frozen occlusion/deletion suite and
 synthetic regression tests until such an official split is added.
+
+## Ground without a generative VLM
+
+`graph_moe_patch` learns a sparse instruction router over attribute, spatial,
+and semantic/visual graph experts. It scores every editable SVG node and sends
+the selected IDs to a deterministic patch compiler, so inference emits no free-
+form SVG or JSON and makes zero generative-model calls. Training, the frozen
+mixed-holdout ablation, and interpretation constraints are documented in
+[`docs/GRAPH_MOE.md`](docs/GRAPH_MOE.md).
 
 ## Evaluation protocol
 

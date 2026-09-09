@@ -1,0 +1,36 @@
+{
+  "seed": 20260907,
+  "synthetic_context_scenes": 100,
+  "synthetic_attribute_scenes": 120,
+  "synthetic_spatial_scenes": 200,
+  "validation_fraction": 0.2,
+  "instruction_encoder": {
+    "type": "hash",
+    "dim": 256,
+    "structured_dim": 32
+  },
+  "model": {
+    "hidden_dim": 128,
+    "num_layers": 0,
+    "dropout": 0.1,
+    "top_k": 1,
+    "visual_dim": 0,
+    "structured_text_dim": 32,
+    "inductive_biases": true
+  },
+  "epochs": 15,
+  "learning_rate": 0.0005,
+  "weight_decay": 0.0001,
+  "router_loss_weight": 0.5,
+  "expert_loss_weight": 0.5,
+  "threshold_candidates": [
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.65
+  ],
+  "output_dir": "checkpoints/graph-moe-mlp-v2"
+}

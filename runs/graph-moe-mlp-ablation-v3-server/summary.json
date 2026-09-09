@@ -1,0 +1,106 @@
+{
+  "arms": {
+    "learned_router": {
+      "arm": "learned_router",
+      "by_family": {
+        "color": {
+          "cases": 20,
+          "gold_patch_exact_rate": 1.0,
+          "target_exact_rate": 1.0,
+          "valid_output_rate": 1.0
+        },
+        "position": {
+          "cases": 27,
+          "gold_patch_exact_rate": 0.7037037037037037,
+          "target_exact_rate": 0.7037037037037037,
+          "valid_output_rate": 1.0
+        },
+        "size": {
+          "cases": 12,
+          "gold_patch_exact_rate": 1.0,
+          "target_exact_rate": 1.0,
+          "valid_output_rate": 1.0
+        }
+      },
+      "cases": 59,
+      "feature_sources": {
+        "analytic": 20,
+        "rendered": 39
+      },
+      "gold_patch_exact_rate": 0.864406779661017,
+      "mean_wall_seconds": 0.020779100862347473,
+      "model_calls": 0,
+      "selected_experts": {
+        "attribute": 20,
+        "spatial": 39
+      },
+      "target_exact_rate": 0.864406779661017,
+      "valid_output_rate": 1.0
+    },
+    "oracle_router": {
+      "arm": "oracle_router",
+      "by_family": {
+        "color": {
+          "cases": 20,
+          "gold_patch_exact_rate": 1.0,
+          "target_exact_rate": 1.0,
+          "valid_output_rate": 1.0
+        },
+        "position": {
+          "cases": 27,
+          "gold_patch_exact_rate": 0.7037037037037037,
+          "target_exact_rate": 0.7037037037037037,
+          "valid_output_rate": 1.0
+        },
+        "size": {
+          "cases": 12,
+          "gold_patch_exact_rate": 1.0,
+          "target_exact_rate": 1.0,
+          "valid_output_rate": 1.0
+        }
+      },
+      "cases": 59,
+      "feature_sources": {
+        "analytic": 20,
+        "rendered": 39
+      },
+      "gold_patch_exact_rate": 0.864406779661017,
+      "mean_wall_seconds": 0.007469316171008652,
+      "model_calls": 0,
+      "selected_experts": {
+        "attribute": 20,
+        "spatial": 39
+      },
+      "target_exact_rate": 0.864406779661017,
+      "valid_output_rate": 1.0
+    }
+  },
+  "checkpoint": "checkpoints/graph-moe-mlp-v3/graph_moe.pt",
+  "format": "svgpatchlab.graph_moe_ablation.v1",
+  "paired": [
+    {
+      "cases": 59,
+      "exact_mcnemar_p": null,
+      "left": "learned_router",
+      "left_only_correct": 0,
+      "right": "oracle_router",
+      "right_only_correct": 0
+    }
+  ],
+  "seed": 20260725,
+  "stats_mode": "visual",
+  "suite_verification": {
+    "cases": 59,
+    "families": {
+      "color": 20,
+      "position": 27,
+      "size": 12
+    },
+    "router_agrees_with_family_design": true,
+    "router_choices": {
+      "skeleton": 20,
+      "visual": 39
+    }
+  },
+  "threshold_override": null
+}

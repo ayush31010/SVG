@@ -1,0 +1,29 @@
+{
+  "dataset": {
+    "root": "SVGEditBench",
+    "tasks": [
+      "change_color",
+      "set_contour",
+      "upside_down",
+      "transparency",
+      "crop_to_half"
+    ]
+  },
+  "architecture": {
+    "name": "graph_moe_patch",
+    "checkpoint_path": "checkpoints/graph-moe-v2/graph_moe.pt",
+    "stats_mode": "visual",
+    "render_size": 64,
+    "max_targets": 32
+  },
+  "model": {
+    "adapter": "none"
+  },
+  "evaluation": {
+    "render": true,
+    "render_size": 72,
+    "save_outputs": true,
+    "progress": true,
+    "output_dir": "runs/graph-moe-svg-edit-bench-v2"
+  }
+}

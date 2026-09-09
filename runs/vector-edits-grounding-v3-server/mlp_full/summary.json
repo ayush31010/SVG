@@ -1,0 +1,63 @@
+{
+  "attempted": 80,
+  "by_collection": {
+    "hicon-circular-interface-icons": {
+      "attempted": 64,
+      "errors": 0,
+      "evaluated": 64,
+      "mean_wall_seconds": 0.034088300497387536,
+      "oracle_cardinality_exact_rate": 0.1875,
+      "single_target_cases": 28,
+      "single_target_top1_rate": 0.17857142857142858,
+      "threshold_exact_rate": 0.0625,
+      "top1_in_gold_rate": 0.53125
+    },
+    "streetmix-vectors": {
+      "attempted": 16,
+      "errors": 0,
+      "evaluated": 16,
+      "mean_wall_seconds": 0.03676581458421424,
+      "oracle_cardinality_exact_rate": 0.0,
+      "single_target_cases": 0,
+      "single_target_top1_rate": null,
+      "threshold_exact_rate": 0.0,
+      "top1_in_gold_rate": 0.375
+    }
+  },
+  "by_reference_type": {
+    "semantic": {
+      "attempted": 51,
+      "errors": 0,
+      "evaluated": 51,
+      "mean_wall_seconds": 0.03272500128357434,
+      "oracle_cardinality_exact_rate": 0.19607843137254902,
+      "single_target_cases": 23,
+      "single_target_top1_rate": 0.17391304347826086,
+      "threshold_exact_rate": 0.058823529411764705,
+      "top1_in_gold_rate": 0.43137254901960786
+    },
+    "spatial": {
+      "attempted": 29,
+      "errors": 0,
+      "evaluated": 29,
+      "mean_wall_seconds": 0.03796307585234272,
+      "oracle_cardinality_exact_rate": 0.06896551724137931,
+      "single_target_cases": 5,
+      "single_target_top1_rate": 0.2,
+      "threshold_exact_rate": 0.034482758620689655,
+      "top1_in_gold_rate": 0.6206896551724138
+    }
+  },
+  "errors": 0,
+  "evaluated": 80,
+  "mean_wall_seconds": 0.03462380331475288,
+  "oracle_cardinality_exact_rate": 0.15,
+  "selected_experts": {
+    "semantic": 51,
+    "spatial": 29
+  },
+  "single_target_cases": 28,
+  "single_target_top1_rate": 0.17857142857142858,
+  "threshold_exact_rate": 0.05,
+  "top1_in_gold_rate": 0.5
+}
