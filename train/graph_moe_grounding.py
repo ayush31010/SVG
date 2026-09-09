@@ -20,6 +20,7 @@ from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Sequence
+from xml.sax.saxutils import quoteattr
 
 from svgpatchlab.core import build_scene
 from svgpatchlab.core.geometry import node_analytic_stats
@@ -29,6 +30,7 @@ from svgpatchlab.vision import (
     SVGGraph,
     build_svg_graph,
     create_instruction_encoder,
+    extract_target_reference,
     infer_reference_type,
 )
 from train.node_grounding_sft import (
@@ -241,15 +243,109 @@ def _spatial_cases(scene_count: int, seed: int) -> list[SyntheticGroundingCase]:
     return cases
 
 
+def _serialize_set_scene(groups, *, selected_group: int | None, task: str) -> str:
+    parts = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">']
+    for group_index, elements in enumerate(groups):
+        parts.append(f'<g data-cluster="{group_index}">')
+        for tag, attributes in elements:
+            updated = dict(attributes)
+            if group_index == selected_group:
+                if task == "set_contour":
+                    updated.update({"stroke": "#000000", "stroke-width": "2"})
+                else:
+                    updated["fill"] = "#E63946"
+            serialized = " ".join(
+                f"{name}={quoteattr(str(value))}" for name, value in updated.items()
+            )
+            parts.append(f"<{tag} {serialized}/>")
+        parts.append("</g>")
+    parts.append("</svg>")
+    return "".join(parts)
+
+
+def _set_cases(scene_count: int, seed: int) -> list[SyntheticGroundingCase]:
+    """Balanced 1--6 primitive clusters for learned set cardinality."""
+
+    locations = (
+        ("top-left", 22.0, 22.0),
+        ("top-right", 78.0, 22.0),
+        ("bottom-left", 22.0, 78.0),
+        ("bottom-right", 78.0, 78.0),
+    )
+    offsets = ((-5, -4), (5, -4), (-5, 4), (5, 4), (0, -8), (0, 8))
+    cases = []
+    for scene_index in range(scene_count):
+        rng = random.Random(f"{seed}:graph-moe-set:{scene_index}")
+        groups = []
+        for location_index, (_, center_x, center_y) in enumerate(locations):
+            cardinality = 1 + ((scene_index * len(locations) + location_index) % 6)
+            elements = []
+            for element_index, (offset_x, offset_y) in enumerate(offsets[:cardinality]):
+                x = center_x + offset_x + rng.uniform(-0.6, 0.6)
+                y = center_y + offset_y + rng.uniform(-0.6, 0.6)
+                if (scene_index + location_index + element_index) % 2:
+                    elements.append(
+                        ("circle", {"cx": x, "cy": y, "r": 2.4, "fill": "#64748B"})
+                    )
+                else:
+                    elements.append(
+                        (
+                            "rect",
+                            {
+                                "x": x - 2.4,
+                                "y": y - 2.4,
+                                "width": 4.8,
+                                "height": 4.8,
+                                "fill": "#64748B",
+                            },
+                        )
+                    )
+            groups.append(elements)
+        source = _serialize_set_scene(groups, selected_group=None, task="change_color")
+        for location_index, (location, _, _) in enumerate(locations):
+            task = (
+                "set_contour"
+                if (scene_index + location_index) % 2
+                else "change_color"
+            )
+            reference = rng.choice(
+                (
+                    f"all shapes in the {location} cluster",
+                    f"every part of the {location} group",
+                    f"the complete object at the {location}",
+                )
+            )
+            instruction = (
+                f"Add a black outline around {reference}."
+                if task == "set_contour"
+                else f"Change {reference} to bright red."
+            )
+            cases.append(
+                SyntheticGroundingCase(
+                    case_id=f"synthetic_set/{scene_index:04d}-{location_index}",
+                    emoji_id=f"set-scene-{scene_index:04d}",
+                    task=task,
+                    instruction=instruction,
+                    source_svg=source,
+                    answer_svg=_serialize_set_scene(
+                        groups, selected_group=location_index, task=task
+                    ),
+                )
+            )
+    return cases
+
+
 def generate_cases(config: dict[str, Any]) -> list[SyntheticGroundingCase]:
     seed = int(config.get("seed", 20260906))
     context_count = int(config.get("synthetic_context_scenes", 200))
     attribute_count = int(config.get("synthetic_attribute_scenes", 100))
     spatial_count = int(config.get("synthetic_spatial_scenes", 0))
+    set_count = int(config.get("synthetic_set_scenes", 0))
     return (
         generate_synthetic_context_cases(context_count, seed)
         + _attribute_cases(attribute_count, seed)
         + _spatial_cases(spatial_count, seed)
+        + _set_cases(set_count, seed)
     )
 
 
@@ -264,6 +360,7 @@ def build_examples(
     *,
     seed: int,
     validation_fraction: float,
+    use_target_reference: bool = False,
 ) -> dict[str, list[TrainingExample]]:
     examples: dict[str, list[TrainingExample]] = {"train": [], "validation": []}
     group_splits: dict[str, str] = {}
@@ -280,12 +377,17 @@ def build_examples(
         missing = sorted(set(targets) - set(graph.node_ids))
         if missing:
             raise ValueError(f"{case.case_id}: graph omits gold targets {missing}")
+        instruction = (
+            extract_target_reference(case.instruction)
+            if use_target_reference
+            else case.instruction
+        )
         examples[split].append(
             TrainingExample(
                 case_id=case.case_id,
                 group_id=case.emoji_id,
-                reference_type=infer_reference_type(case.instruction),
-                instruction=case.instruction,
+                reference_type=infer_reference_type(instruction),
+                instruction=instruction,
                 graph=graph,
                 targets=targets,
             )
@@ -318,6 +420,9 @@ def _threshold_metrics(
 ) -> dict[str, Any]:
     exact = 0
     router_exact = 0
+    cardinality_exact = 0
+    cardinality_target_exact = 0
+    cardinality_cases = 0
     by_type: dict[str, list[bool]] = defaultdict(list)
     for example in examples:
         prediction = grounder.predict(
@@ -332,11 +437,33 @@ def _threshold_metrics(
         exact += int(hit)
         router_exact += int(prediction.selected_expert == example.reference_type)
         by_type[example.reference_type].append(hit)
+        if prediction.predicted_cardinality is not None:
+            cardinality_cases += 1
+            cardinality_exact += int(
+                prediction.predicted_cardinality == len(example.targets)
+            )
+            cardinality_selected = set(
+                grounder.select_targets(
+                    prediction,
+                    threshold=threshold,
+                    max_targets=int(grounder.config["max_cardinality"]),
+                    use_predicted_cardinality=True,
+                )
+            )
+            cardinality_target_exact += int(
+                cardinality_selected == set(example.targets)
+            )
     total = len(examples)
     return {
         "cases": total,
         "target_exact_rate": exact / total if total else 0.0,
         "router_accuracy": router_exact / total if total else 0.0,
+        "cardinality_accuracy": (
+            cardinality_exact / cardinality_cases if cardinality_cases else None
+        ),
+        "cardinality_target_exact_rate": (
+            cardinality_target_exact / cardinality_cases if cardinality_cases else None
+        ),
         "by_reference_type": {
             name: {
                 "cases": len(values),
@@ -352,16 +479,23 @@ def _best_threshold(
     examples: Sequence[TrainingExample],
     encoder: Any,
     candidates: Sequence[float],
+    selection_strategy: str,
 ) -> tuple[float, dict[str, Any]]:
+    measured_candidates = (0.5,) if selection_strategy == "cardinality" else candidates
     measured = [
         (threshold, _threshold_metrics(grounder, examples, encoder, threshold))
-        for threshold in candidates
+        for threshold in measured_candidates
     ]
     # Prefer the conventional 0.5 cutoff when validation accuracy ties.
+    metric = (
+        "cardinality_target_exact_rate"
+        if selection_strategy == "cardinality"
+        else "target_exact_rate"
+    )
     return max(
         measured,
         key=lambda item: (
-            item[1]["target_exact_rate"],
+            item[1][metric] if item[1][metric] is not None else -1.0,
             -abs(item[0] - 0.5),
         ),
     )
@@ -386,6 +520,7 @@ def train(config: dict[str, Any]) -> dict[str, Any]:
         generate_cases(config),
         seed=seed,
         validation_fraction=validation_fraction,
+        use_target_reference=bool(config.get("use_target_reference", False)),
     )
     model_config = dict(config.get("model", {}))
     grounder = GraphMoEGrounder(
@@ -397,6 +532,7 @@ def train(config: dict[str, Any]) -> dict[str, Any]:
         top_k=int(model_config.get("top_k", 1)),
         structured_text_dim=int(model_config.get("structured_text_dim", 32)),
         inductive_biases=bool(model_config.get("inductive_biases", False)),
+        max_cardinality=int(model_config.get("max_cardinality", 0)),
         device=device,
     )
     optimizer = torch.optim.AdamW(
@@ -407,6 +543,12 @@ def train(config: dict[str, Any]) -> dict[str, Any]:
     epochs = int(config.get("epochs", 30))
     router_loss_weight = float(config.get("router_loss_weight", 0.5))
     expert_loss_weight = float(config.get("expert_loss_weight", 0.5))
+    cardinality_loss_weight = float(config.get("cardinality_loss_weight", 1.0))
+    selection_strategy = str(config.get("selection_strategy", "threshold"))
+    if selection_strategy not in {"threshold", "cardinality"}:
+        raise ValueError("selection_strategy must be 'threshold' or 'cardinality'")
+    if selection_strategy == "cardinality" and not grounder.config["max_cardinality"]:
+        raise ValueError("cardinality selection requires model.max_cardinality")
     threshold_candidates = tuple(
         float(value)
         for value in config.get(
@@ -457,6 +599,22 @@ def train(config: dict[str, Any]) -> dict[str, Any]:
                 + expert_loss_weight * specialized_loss
                 + router_loss_weight * router_loss
             )
+            if output["cardinality_logits"] is not None:
+                cardinality_target = torch.tensor(
+                    [
+                        min(
+                            len(example.targets),
+                            int(grounder.config["max_cardinality"]),
+                        )
+                        - 1
+                    ],
+                    device=device,
+                )
+                cardinality_loss = torch.nn.functional.cross_entropy(
+                    output["cardinality_logits"].unsqueeze(0),
+                    cardinality_target,
+                )
+                loss = loss + cardinality_loss_weight * cardinality_loss
             loss.backward()
             torch.nn.utils.clip_grad_norm_(grounder.network.parameters(), 1.0)
             optimizer.step()
@@ -467,6 +625,7 @@ def train(config: dict[str, Any]) -> dict[str, Any]:
             examples["validation"],
             encoder,
             threshold_candidates,
+            selection_strategy,
         )
         record = {
             "epoch": epoch,
@@ -475,7 +634,12 @@ def train(config: dict[str, Any]) -> dict[str, Any]:
             "validation": validation,
         }
         history.append(record)
-        rate = float(validation["target_exact_rate"])
+        selection_metric = (
+            "cardinality_target_exact_rate"
+            if selection_strategy == "cardinality"
+            else "target_exact_rate"
+        )
+        rate = float(validation[selection_metric] or 0.0)
         if rate > best_rate:
             best_rate = rate
             best_epoch = epoch
@@ -487,6 +651,10 @@ def train(config: dict[str, Any]) -> dict[str, Any]:
                     "recommended_threshold": threshold,
                     "best_epoch": epoch,
                     "validation": validation,
+                    "selection_strategy": selection_strategy,
+                    "use_target_reference": bool(
+                        config.get("use_target_reference", False)
+                    ),
                 },
             )
         print(
@@ -519,6 +687,8 @@ def train(config: dict[str, Any]) -> dict[str, Any]:
         "identity_groups": groups,
         "instruction_encoder": encoder.to_dict(),
         "model": dict(best.config),
+        "selection_strategy": selection_strategy,
+        "use_target_reference": bool(config.get("use_target_reference", False)),
         "train": train_metrics,
         "validation": validation_metrics,
         "history": history,

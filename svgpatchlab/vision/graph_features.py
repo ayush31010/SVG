@@ -127,6 +127,22 @@ def parse_color(value: object) -> tuple[float, float, float] | None:
         return None
     if normalized in _NAMED_RGB:
         return _NAMED_RGB[normalized]
+    functional = re.fullmatch(
+        r"rgba?\(\s*([+-]?(?:\d+(?:\.\d*)?|\.\d+)%?)\s*[, ]+"
+        r"([+-]?(?:\d+(?:\.\d*)?|\.\d+)%?)\s*[, ]+"
+        r"([+-]?(?:\d+(?:\.\d*)?|\.\d+)%?)"
+        r"(?:\s*[,/]\s*[+-]?(?:\d+(?:\.\d*)?|\.\d+)%?)?\s*\)",
+        normalized,
+    )
+    if functional is not None:
+        channels = []
+        for raw in functional.groups():
+            if raw.endswith("%"):
+                channel = float(raw[:-1]) / 100.0
+            else:
+                channel = float(raw) / 255.0
+            channels.append(max(0.0, min(1.0, channel)))
+        return tuple(channels)  # type: ignore[return-value]
     match = re.fullmatch(r"#([0-9a-f]{3}|[0-9a-f]{4}|[0-9a-f]{6}|[0-9a-f]{8})", normalized)
     if match is None:
         return None

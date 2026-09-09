@@ -186,3 +186,29 @@ grounder, not a larger runtime VLM:
 This preserves the benefit seen in the original visual-context experiment:
 extra appearance evidence is available where it helps, without forcing it
 into basic color and transparency cases where it created information overload.
+
+## Set-grounding follow-up
+
+The first follow-up tests whether multi-node edits can be recovered from
+source-only structure. DOM subtrees, sibling groups, shared paint/tag groups,
+and geometric containment cover `34/52` multi-target natural cases: `18/36`
+Hicon and `16/16` Streetmix. This is an oracle coverage audit; it shows which
+sets are representable, not which one a deployed model can choose.
+
+An abstaining structural-group expert now handles two unambiguous source-side
+cues before the learned fallback: all nodes nearest to an explicitly named
+source paint, and all drawable nodes inside a named container. It also parses
+CSS `rgb(...)` paint and coordinated source clauses. On the same exploratory
+80-case subset, the group-plus-complexity system obtains `35/80` deployable
+exact sets versus `19/80` for the previous threshold/top-1 fallback. The group
+expert fires on 16 cases, is exact on all 16, and breaks no previously correct
+case. Because the rules were designed after inspecting this subset, these
+numbers require independent collection-held-out confirmation.
+
+Version 4 adds a learned 1--6 target-cardinality head. Its training data adds
+balanced, source-disjoint synthetic clusters containing one to six primitives;
+the head consumes the instruction, pooled SVG features, and node-score
+statistics, then selects the predicted top-k nodes. The best GNN checkpoint
+reaches `379/400` (`94.75%`) exact sets and `400/400` correct cardinalities on
+the synthetic identity-held-out validation split. This remains a mechanism
+check until the frozen checkpoint is evaluated on new natural collections.

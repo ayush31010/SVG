@@ -2,12 +2,14 @@ from __future__ import annotations
 
 import unittest
 
+from scripts.analyze_vector_edits_groups import structural_candidate_groups
 from scripts.analyze_vector_edits_routing import complexity_hybrid
 from scripts.run_vector_edits_grounding import (
     derive_natural_grounding_case,
     strip_known_svg_doctype,
 )
-from svgpatchlab.vision import extract_target_reference
+from svgpatchlab.vision import StructuralGroupGrounder, extract_target_reference
+from svgpatchlab.vision.graph_features import parse_color
 from svgpatchlab.vision.siglip_grounder import _pooled_tensor
 
 
@@ -29,6 +31,15 @@ class InstructionDecompositionTests(unittest.TestCase):
         self.assertEqual(
             extract_target_reference("Move the needle on the gauge to the right"),
             "the needle on the gauge",
+        )
+
+    def test_multiple_source_color_clauses_are_retained(self):
+        self.assertEqual(
+            extract_target_reference(
+                "change the color of the cups from white to blue and "
+                "the color of the stems from green to olive green"
+            ),
+            "the cups with white color and the stems with green color",
         )
 
     def test_source_spatial_description_is_preserved(self):
@@ -117,6 +128,68 @@ class ComplexityRoutingTests(unittest.TestCase):
                 [self._result("b", 3, "visual")],
                 threshold=3,
             )
+
+
+class StructuralGroupTests(unittest.TestCase):
+    def test_css_rgb_color_is_available_to_graph_and_group_features(self):
+        self.assertEqual(parse_color("rgb(174,32,37)"), (174 / 255, 32 / 255, 37 / 255))
+        self.assertEqual(parse_color("rgb(50% 0% 100%)"), (0.5, 0.0, 1.0))
+
+    def test_dom_and_paint_groups_are_derived_without_a_target_svg(self):
+        source = (
+            '<svg xmlns="http://www.w3.org/2000/svg">'
+            '<g><path fill="red"/><path fill="red"/></g>'
+            '<circle fill="blue"/></svg>'
+        )
+        groups = structural_candidate_groups(source, ("n2", "n3", "n4"))
+        self.assertIn(("n2", "n3"), groups)
+        self.assertIn("dom_subtree", groups[("n2", "n3")])
+        self.assertIn("shared_paint", groups[("n2", "n3")])
+
+    def test_whole_canvas_candidate_set_is_not_a_group(self):
+        source = '<svg><g><path/><path/></g></svg>'
+        self.assertEqual(
+            structural_candidate_groups(source, ("n2", "n3")),
+            {},
+        )
+
+    def test_group_grounder_selects_source_paint_set(self):
+        source = (
+            '<svg viewBox="0 0 100 100">'
+            '<path fill="red" d="M0 0h10v10z"/>'
+            '<path fill="blue" d="M20 0h10v10z"/>'
+            '<path fill="red" d="M40 0h10v10z"/></svg>'
+        )
+        prediction = StructuralGroupGrounder().predict(
+            source, "the red shapes", ("n1", "n2", "n3")
+        )
+        self.assertEqual(prediction.selected_ids, ("n1", "n3"))
+        self.assertEqual(prediction.rule, "source_paint_set")
+
+    def test_group_grounder_maps_color_name_to_nearest_source_palette(self):
+        source = (
+            '<svg viewBox="0 0 100 100">'
+            '<path style="fill:rgb(174,32,37)" d="M0 0h10v10z"/>'
+            '<path style="fill:rgb(103,154,69)" d="M20 0h10v10z"/>'
+            '<path style="fill:rgb(174,32,37)" d="M40 0h10v10z"/></svg>'
+        )
+        prediction = StructuralGroupGrounder().predict(
+            source, "the red shapes", ("n1", "n2", "n3")
+        )
+        self.assertEqual(prediction.selected_ids, ("n1", "n3"))
+
+    def test_group_grounder_selects_nodes_inside_named_container(self):
+        source = (
+            '<svg viewBox="0 0 100 100">'
+            '<circle cx="50" cy="50" r="40" fill="none" stroke="black"/>'
+            '<path d="M40 40h10"/><path d="M50 40v10"/>'
+            '<path d="M95 95h2"/></svg>'
+        )
+        prediction = StructuralGroupGrounder().predict(
+            source, "the arrow inside the circle", ("n1", "n2", "n3", "n4")
+        )
+        self.assertEqual(prediction.selected_ids, ("n2", "n3"))
+        self.assertEqual(prediction.rule, "inside_container_set")
 
 
 if __name__ == "__main__":

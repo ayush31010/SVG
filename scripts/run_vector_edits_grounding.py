@@ -219,12 +219,19 @@ def _ranking_record(
     router_weights: Mapping[str, float] | None,
     elapsed: float,
     by_view: Mapping[str, Mapping[str, float]] | None = None,
+    predicted_cardinality: int | None = None,
+    cardinality_probabilities: Sequence[float] = (),
 ) -> dict[str, Any]:
     ranking = sorted(case.candidate_ids, key=lambda item: scores.get(item, -1e9), reverse=True)
     gold = set(case.gold_target_ids)
     selected = (
         [node_id for node_id in case.candidate_ids if scores.get(node_id, -1e9) >= threshold]
         if threshold is not None
+        else None
+    )
+    cardinality_targets = (
+        ranking[: min(predicted_cardinality, len(ranking))]
+        if predicted_cardinality is not None
         else None
     )
     return {
@@ -246,6 +253,14 @@ def _ranking_record(
         "threshold": threshold,
         "threshold_targets": selected,
         "threshold_exact": set(selected) == gold if selected is not None else None,
+        "predicted_cardinality": predicted_cardinality,
+        "cardinality_probabilities": list(cardinality_probabilities),
+        "cardinality_targets": cardinality_targets,
+        "cardinality_exact": (
+            set(cardinality_targets) == gold
+            if cardinality_targets is not None
+            else None
+        ),
         "selected_expert": selected_expert,
         "router_weights": dict(router_weights) if router_weights is not None else None,
         "by_view": by_view,
@@ -298,6 +313,8 @@ def _run_graph_arm(
                     selected_expert=prediction.selected_expert,
                     router_weights=prediction.router_weights,
                     elapsed=time.perf_counter() - started,
+                    predicted_cardinality=prediction.predicted_cardinality,
+                    cardinality_probabilities=prediction.cardinality_probabilities,
                 )
             )
         except Exception as exc:
@@ -350,6 +367,7 @@ def _group_metrics(records: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
     valid = [record for record in records if not record.get("error")]
     singles = [record for record in valid if record["single_target"]]
     threshold = [record for record in valid if record["threshold_exact"] is not None]
+    cardinality = [record for record in valid if record.get("cardinality_exact") is not None]
 
     def rate(items, key):
         return sum(bool(item[key]) for item in items) / len(items) if items else None
@@ -363,6 +381,16 @@ def _group_metrics(records: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
         "single_target_cases": len(singles),
         "single_target_top1_rate": rate(singles, "single_target_top1"),
         "threshold_exact_rate": rate(threshold, "threshold_exact"),
+        "cardinality_accuracy": (
+            sum(
+                int(item["predicted_cardinality"] == len(item["gold_targets"]))
+                for item in cardinality
+            )
+            / len(cardinality)
+            if cardinality
+            else None
+        ),
+        "cardinality_exact_rate": rate(cardinality, "cardinality_exact"),
         "mean_wall_seconds": (
             statistics.fmean(float(item["wall_seconds"]) for item in valid)
             if valid

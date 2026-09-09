@@ -43,6 +43,8 @@ class GraphMoEPrediction:
     router_weights: dict[str, float]
     node_scores: dict[str, float]
     expert_node_scores: dict[str, dict[str, float]]
+    predicted_cardinality: int | None = None
+    cardinality_probabilities: tuple[float, ...] = ()
 
 
 def _feature_mask(node_feature_dim: int, visual_dim: int, expert: str) -> list[float]:
@@ -79,6 +81,7 @@ def _make_network(config: Mapping[str, Any]):
     top_k = int(config["top_k"])
     structured_text_dim = int(config.get("structured_text_dim", 32))
     inductive_biases = bool(config.get("inductive_biases", False))
+    max_cardinality = int(config.get("max_cardinality", 0))
     relation_count = len(EDGE_NAMES)
 
     class RelationalLayer(nn.Module):
@@ -249,6 +252,17 @@ def _make_network(config: Mapping[str, Any]):
                     Expert("semantic", relational=True),
                 )
             )
+            if max_cardinality:
+                input_dim = node_feature_dim + visual_dim
+                self.cardinality_node_projection = nn.Linear(input_dim, hidden_dim)
+                self.cardinality_query_projection = nn.Linear(text_dim, hidden_dim)
+                self.cardinality_score_projection = nn.Linear(3, hidden_dim)
+                self.cardinality_head = nn.Sequential(
+                    nn.Linear(hidden_dim * 4, hidden_dim),
+                    nn.GELU(),
+                    nn.Dropout(dropout),
+                    nn.Linear(hidden_dim, max_cardinality),
+                )
 
         def route(self, text_features, sparse: bool, forced_expert: int | None = None):
             logits = self.router(text_features)
@@ -301,11 +315,43 @@ def _make_network(config: Mapping[str, Any]):
                     dim=0,
                 )
             combined = (expert_logits * router_weights.unsqueeze(1)).sum(dim=0)
+            cardinality_logits = None
+            if max_cardinality:
+                node_summary = torch.nn.functional.gelu(
+                    self.cardinality_node_projection(node_features)
+                ).mean(dim=0)
+                query_summary = torch.nn.functional.gelu(
+                    self.cardinality_query_projection(text_features)
+                )
+                probabilities = torch.sigmoid(combined)
+                score_statistics = torch.stack(
+                    (
+                        node_features.new_tensor(
+                            min(node_features.shape[0], 32) / 32.0
+                        ),
+                        probabilities.mean(),
+                        probabilities.std(unbiased=False),
+                    )
+                )
+                score_summary = torch.nn.functional.gelu(
+                    self.cardinality_score_projection(score_statistics)
+                )
+                cardinality_logits = self.cardinality_head(
+                    torch.cat(
+                        (
+                            node_summary,
+                            query_summary,
+                            node_summary * query_summary,
+                            score_summary,
+                        )
+                    )
+                )
             return {
                 "combined_logits": combined,
                 "expert_logits": expert_logits,
                 "router_logits": router_logits,
                 "router_weights": router_weights,
+                "cardinality_logits": cardinality_logits,
             }
 
     return Network()
@@ -326,6 +372,7 @@ class GraphMoEGrounder:
         top_k: int = 1,
         structured_text_dim: int = 32,
         inductive_biases: bool = False,
+        max_cardinality: int = 0,
         device: str = "cpu",
         metadata: Mapping[str, Any] | None = None,
     ):
@@ -339,6 +386,8 @@ class GraphMoEGrounder:
             raise ValueError("top_k must fit the number of graph experts")
         if not 28 <= structured_text_dim < text_dim:
             raise ValueError("structured_text_dim must fit the instruction embedding")
+        if max_cardinality not in {0} and not 2 <= max_cardinality <= 16:
+            raise ValueError("max_cardinality must be zero or between 2 and 16")
         self.config = {
             "node_feature_dim": node_feature_dim,
             "visual_dim": visual_dim,
@@ -349,6 +398,7 @@ class GraphMoEGrounder:
             "top_k": top_k,
             "structured_text_dim": structured_text_dim,
             "inductive_biases": inductive_biases,
+            "max_cardinality": max_cardinality,
         }
         self.device = device
         self.metadata = dict(metadata or {})
@@ -442,6 +492,12 @@ class GraphMoEGrounder:
             scores = torch.sigmoid(output["combined_logits"]).detach().cpu().tolist()
             expert_scores = torch.sigmoid(output["expert_logits"]).detach().cpu().tolist()
             weights = output["router_weights"].detach().cpu().tolist()
+            cardinality_logits = output["cardinality_logits"]
+            cardinality_probabilities = (
+                torch.softmax(cardinality_logits, dim=-1).detach().cpu().tolist()
+                if cardinality_logits is not None
+                else []
+            )
         selected = max(range(len(weights)), key=weights.__getitem__)
         return GraphMoEPrediction(
             selected_expert=EXPERT_NAMES[selected],
@@ -454,6 +510,15 @@ class GraphMoEGrounder:
                 }
                 for expert, name in enumerate(EXPERT_NAMES)
             },
+            predicted_cardinality=(
+                max(range(len(cardinality_probabilities)), key=cardinality_probabilities.__getitem__)
+                + 1
+                if cardinality_probabilities
+                else None
+            ),
+            cardinality_probabilities=tuple(
+                float(value) for value in cardinality_probabilities
+            ),
         )
 
     @staticmethod
@@ -462,6 +527,7 @@ class GraphMoEGrounder:
         *,
         threshold: float = 0.5,
         max_targets: int = 4,
+        use_predicted_cardinality: bool = False,
     ) -> tuple[str, ...]:
         if not 0.0 <= threshold <= 1.0:
             raise ValueError("target threshold must be between zero and one")
@@ -471,6 +537,8 @@ class GraphMoEGrounder:
             prediction.node_scores,
             key=lambda node_id: (-prediction.node_scores[node_id], node_id),
         )
+        if use_predicted_cardinality and prediction.predicted_cardinality is not None:
+            return tuple(ranked[: min(prediction.predicted_cardinality, max_targets)])
         selected = [
             node_id
             for node_id in ranked

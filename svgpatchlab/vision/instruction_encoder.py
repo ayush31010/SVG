@@ -27,6 +27,12 @@ _LEADING_REQUEST = re.compile(
     r"^(?:please\s+|kindly\s+|could\s+you\s+|can\s+you\s+|i\s+want\s+you\s+to\s+)+",
     re.IGNORECASE,
 )
+_COLOR_NAME = r"(?:black|white|red|green|blue|yellow|cyan|magenta|gray|grey|orange|purple)"
+_COLOR_FROM_CLAUSE = re.compile(
+    rf"(?:change\s+)?(?:the\s+)?color of\s+(.+?)\s+from\s+({_COLOR_NAME})\s+to\s+"
+    rf".+?(?=\s+and\s+(?:the\s+)?color of\s+|$)",
+    re.IGNORECASE,
+)
 
 
 def extract_target_reference(instruction: str) -> str:
@@ -43,6 +49,12 @@ def extract_target_reference(instruction: str) -> str:
     if not text:
         return text
     text = _LEADING_REQUEST.sub("", text)
+    color_clauses = _COLOR_FROM_CLAUSE.findall(text)
+    if color_clauses:
+        return " and ".join(
+            f"{reference.strip()} with {color.lower()} color"
+            for reference, color in color_clauses
+        )
     patterns = (
         r"^(?:replace|swap)\s+(.+?)\s+(?:with|for)\s+.+$",
         r"^(?:change|convert|turn)\s+(.+?)\s+(?:to|into|from)\s+.+$",

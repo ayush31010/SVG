@@ -13,9 +13,11 @@ from svgpatchlab.vision import (
     EXPERT_NAMES,
     GraphMoEGrounder,
     NodeEmbedder,
+    StructuralGroupGrounder,
     build_svg_graph,
     create_instruction_encoder,
     extract_reference_color,
+    extract_target_reference,
 )
 from svgpatchlab.vision.graph_features import parse_color
 
@@ -48,6 +50,8 @@ class GraphMoEPatchArchitecture(Architecture):
         score_threshold: float | None = None,
         max_targets: int = 32,
         force_expert: str | None = None,
+        use_target_reference: bool | None = None,
+        use_structural_group_expert: bool = False,
         device: str = "cpu",
         node_embedder_model: str = NodeEmbedder.MODEL_NAME,
         policy: PatchPolicy | None = None,
@@ -84,6 +88,17 @@ class GraphMoEPatchArchitecture(Architecture):
         )
         self.max_targets = max_targets
         self.force_expert = force_expert
+        metadata = getattr(grounder, "metadata", {})
+        self.selection_strategy = str(
+            metadata.get("selection_strategy", "threshold")
+        )
+        self.use_target_reference = (
+            bool(metadata.get("use_target_reference", False))
+            if use_target_reference is None
+            else use_target_reference
+        )
+        self.use_structural_group_expert = use_structural_group_expert
+        self._group_grounder = StructuralGroupGrounder()
         self.policy = policy or PatchPolicy()
         self._cache = None
         self.node_embedder_model = node_embedder_model
@@ -147,7 +162,12 @@ class GraphMoEPatchArchitecture(Architecture):
                 }
                 return result
 
-            text_embedding = self.instruction_encoder.encode(case.instruction)
+            grounding_text = (
+                extract_target_reference(case.instruction)
+                if self.use_target_reference
+                else case.instruction
+            )
+            text_embedding = self.instruction_encoder.encode(grounding_text)
             route_weights = self.grounder.route(text_embedding)
             selected_expert = self.force_expert or max(
                 route_weights, key=route_weights.__getitem__
@@ -172,12 +192,29 @@ class GraphMoEPatchArchitecture(Architecture):
                 )
                 if targets:
                     selection_method = "exact_source_paint"
-            if not targets:
-                targets = self.grounder.select_targets(
-                    prediction,
-                    threshold=self.score_threshold,
-                    max_targets=self.max_targets,
+            if not targets and self.use_structural_group_expert:
+                drawable_ids = tuple(
+                    node_id
+                    for node_id, metadata in zip(graph.node_ids, graph.metadata)
+                    if metadata.get("tag") != "g"
                 )
+                group_prediction = self._group_grounder.predict(
+                    case.source_svg,
+                    grounding_text,
+                    drawable_ids,
+                )
+                targets = group_prediction.selected_ids
+                if targets:
+                    selection_method = group_prediction.rule or "structural_group"
+            if not targets:
+                selection_options = {
+                    "threshold": self.score_threshold,
+                    "max_targets": self.max_targets,
+                }
+                if self.selection_strategy == "cardinality":
+                    selection_options["use_predicted_cardinality"] = True
+                    selection_method = "learned_cardinality_top_k"
+                targets = self.grounder.select_targets(prediction, **selection_options)
             patch = compile_grounded_patch(case, targets)
             validate_patch(patch, scene, self.policy, task=case.task)
             result.patch = patch
@@ -191,6 +228,11 @@ class GraphMoEPatchArchitecture(Architecture):
                 "selected_targets": list(targets),
                 "selection_method": selection_method,
                 "node_scores": prediction.node_scores,
+                "grounding_text": grounding_text,
+                "predicted_cardinality": prediction.predicted_cardinality,
+                "cardinality_probabilities": list(
+                    prediction.cardinality_probabilities
+                ),
                 "expert_node_scores": prediction.expert_node_scores,
                 "visual_embedding_dim": int(self.grounder.config.get("visual_dim", 0)),
             }

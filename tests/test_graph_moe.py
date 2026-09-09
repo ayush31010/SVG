@@ -19,6 +19,8 @@ from svgpatchlab.vision import (
     build_svg_graph,
     infer_reference_type,
 )
+from train.graph_moe_grounding import _set_cases
+from train.node_grounding_sft import gold_target_ids
 
 
 SOURCE = (
@@ -89,6 +91,27 @@ class GraphFeatureTests(unittest.TestCase):
 
 
 class GraphModelTests(unittest.TestCase):
+    def test_cardinality_head_selects_its_predicted_top_k(self):
+        encoder = HashingInstructionEncoder(dim=64, structured_dim=32)
+        graph = build_svg_graph(
+            build_scene(SOURCE, visual_stats=node_analytic_stats(SOURCE))
+        )
+        grounder = GraphMoEGrounder(
+            text_dim=64,
+            hidden_dim=16,
+            num_layers=0,
+            dropout=0.0,
+            max_cardinality=6,
+        )
+        prediction = grounder.predict(graph, encoder.encode("the shapes"))
+        self.assertIn(prediction.predicted_cardinality, range(1, 7))
+        selected = grounder.select_targets(
+            prediction,
+            max_targets=6,
+            use_predicted_cardinality=True,
+        )
+        self.assertEqual(len(selected), min(prediction.predicted_cardinality, 2))
+
     def test_inductive_experts_generalize_color_and_absolute_position(self):
         encoder = HashingInstructionEncoder(dim=64, structured_dim=32)
         graph = build_svg_graph(
@@ -188,6 +211,17 @@ class GraphModelTests(unittest.TestCase):
                 prediction.node_scores[node_id], observed.node_scores[node_id]
             )
 
+    def test_grouped_set_generator_balances_one_to_six_targets(self):
+        cases = _set_cases(3, 20260909)
+        counts = [
+            len(gold_target_ids(case.source_svg, case.answer_svg)) for case in cases
+        ]
+        self.assertEqual(len(cases), 12)
+        self.assertEqual(
+            {count: counts.count(count) for count in range(1, 7)},
+            {count: 2 for count in range(1, 7)},
+        )
+
 
 class CompilerTests(unittest.TestCase):
     def test_compiles_benchmark_color_and_contour_intents(self):
@@ -254,7 +288,63 @@ class _FakeAttributeGrounder(_FakeGrounder):
         )
 
 
+class _FakeCardinalityGrounder(_FakeGrounder):
+    config = {"text_dim": 64, "visual_dim": 0, "max_cardinality": 6}
+    metadata = {
+        "instruction_encoder": {
+            "type": "hash",
+            "dim": 64,
+            "structured_dim": 32,
+        },
+        "selection_strategy": "cardinality",
+        "use_target_reference": True,
+    }
+
+    def predict(self, graph, text_embedding, **kwargs):
+        scores = {"n1": 0.9, "n2": 0.8}
+        return GraphMoEPrediction(
+            selected_expert="spatial",
+            router_weights=self.route(text_embedding),
+            node_scores=scores,
+            expert_node_scores={name: dict(scores) for name in EXPERT_NAMES},
+            predicted_cardinality=2,
+            cardinality_probabilities=(0.0, 1.0, 0.0, 0.0, 0.0, 0.0),
+        )
+
+    @staticmethod
+    def select_targets(
+        prediction,
+        *,
+        threshold,
+        max_targets,
+        use_predicted_cardinality=False,
+    ):
+        del threshold
+        ranked = sorted(
+            prediction.node_scores,
+            key=prediction.node_scores.__getitem__,
+            reverse=True,
+        )
+        count = prediction.predicted_cardinality if use_predicted_cardinality else 1
+        return tuple(ranked[: min(count, max_targets)])
+
+
 class ArchitectureTests(unittest.TestCase):
+    def test_checkpoint_metadata_enables_cardinality_top_k(self):
+        architecture = GraphMoEPatchArchitecture(
+            grounder=_FakeCardinalityGrounder(), stats_mode="analytic"
+        )
+        result = architecture.run(
+            _case("set_contour", "Add a black outline around the shapes."),
+            None,
+        )
+        self.assertIsNone(result.error)
+        self.assertEqual(result.patch.operations[0].targets, ("n1", "n2"))
+        self.assertEqual(
+            result.details["graph_moe"]["selection_method"],
+            "learned_cardinality_top_k",
+        )
+
     def test_attribute_route_uses_exact_source_paint_before_learned_scores(self):
         architecture = GraphMoEPatchArchitecture(
             grounder=_FakeAttributeGrounder(), stats_mode="analytic"

@@ -22,6 +22,7 @@ from .graph_features import (
     infer_reference_type,
 )
 from .graph_moe import GraphMoEGrounder, GraphMoEPrediction
+from .group_grounder import StructuralGroupGrounder, StructuralGroupPrediction
 from .instruction_encoder import (
     HashingInstructionEncoder,
     create_instruction_encoder,
@@ -47,6 +48,8 @@ __all__ = [
     "SVGGraph",
     "GraphMoEGrounder",
     "GraphMoEPrediction",
+    "StructuralGroupGrounder",
+    "StructuralGroupPrediction",
     "HashingInstructionEncoder",
     "SiglipCandidateGrounder",
     "SiglipCandidateScores",
