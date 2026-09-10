@@ -4,6 +4,6 @@
   "model": "Qwen/Qwen3.5-4B",
   "temperature": 0.0,
   "json_mode": false,
-  "max_tokens": 512,
-  "timeout": 120
+  "max_tokens": 4096,
+  "timeout": 900
 }
