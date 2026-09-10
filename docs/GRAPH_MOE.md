@@ -1,5 +1,10 @@
 # Sparse Graph-MoE grounding
 
+The [completed Colab experiment and 15-seed follow-up](CLOUD_SET_GROUNDING.md)
+now compare the set-aware GNN and no-edge MLP. On the T4 run, the MLP plus
+grouping rules reaches 42/80 exact natural target sets; the graph model's
+synthetic advantage does not transfer to this exploratory subset.
+
 `graph_moe_patch` is the no-generative-VLM experiment motivated by the
 visual-context ablations. The corrected full run showed that adding visual
 statistics to every request increased prompt tokens and reduced change-color

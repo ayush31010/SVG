@@ -1,0 +1,22 @@
+{
+  "checkpoint_recovered": false,
+  "files": {
+    "console_output.txt": "9b2dcb60ab55875d234ed6a107f836d084b04ba7138e2fd25f007579c818aa61",
+    "console_summary.json": "09edda89f47e7d2037463e291849117e6640cd223ad07a6affdfb47e48d8e153",
+    "executed_notebook.ipynb": "cb3d214060706c2ce5e5e367e5433b082c36dd6990d0146cf3009c3469f2cfee"
+  },
+  "format": "svgpatchlab.recovered_colab_console.v1",
+  "hardware": {
+    "device": "cuda",
+    "gpu": "Tesla T4",
+    "torch": "2.11.0+cu128"
+  },
+  "limitation": "Original runtime artifact path was absent on reconnection. Console summary and training log survive; local CPU checkpoints are separate models.",
+  "notebook_url": "https://colab.research.google.com/drive/1JPkh4QMIrcBE4S6PBqXuDW5ubqNViT69",
+  "per_case_gpu_predictions_recovered": false,
+  "recovered_date": "2026-09-10",
+  "recovery_method": "Downloaded saved Colab notebook using File > Download .ipynb; extracted saved stdout without rerunning training.",
+  "run_date": "2026-09-09",
+  "source_commit": "075687cfca3588de11c757f7898ed7fedcb9acd1",
+  "status": "complete_console_recovered"
+}

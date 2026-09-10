@@ -1,0 +1,567 @@
+{
+  "natural": {
+    "gnn": {
+      "attempted": 80,
+      "by_collection": {
+        "hicon-circular-interface-icons": {
+          "attempted": 64,
+          "cardinality_accuracy": 0.453125,
+          "cardinality_exact_rate": 0.265625,
+          "errors": 0,
+          "evaluated": 64,
+          "mean_wall_seconds": 0.007147088562497572,
+          "oracle_cardinality_exact_rate": 0.4375,
+          "single_target_cases": 28,
+          "single_target_top1_rate": 0.5714285714285714,
+          "threshold_exact_rate": 0.015625,
+          "top1_in_gold_rate": 0.5625
+        },
+        "streetmix-vectors": {
+          "attempted": 16,
+          "cardinality_accuracy": 0.0,
+          "cardinality_exact_rate": 0.0,
+          "errors": 0,
+          "evaluated": 16,
+          "mean_wall_seconds": 0.01921433293751562,
+          "oracle_cardinality_exact_rate": 0.0625,
+          "single_target_cases": 0,
+          "single_target_top1_rate": null,
+          "threshold_exact_rate": 0.0,
+          "top1_in_gold_rate": 0.25
+        }
+      },
+      "by_reference_type": {
+        "attribute": {
+          "attempted": 1,
+          "cardinality_accuracy": 0.0,
+          "cardinality_exact_rate": 0.0,
+          "errors": 0,
+          "evaluated": 1,
+          "mean_wall_seconds": 0.017718753999929504,
+          "oracle_cardinality_exact_rate": 1.0,
+          "single_target_cases": 0,
+          "single_target_top1_rate": null,
+          "threshold_exact_rate": 0.0,
+          "top1_in_gold_rate": 1.0
+        },
+        "semantic": {
+          "attempted": 64,
+          "cardinality_accuracy": 0.4375,
+          "cardinality_exact_rate": 0.25,
+          "errors": 0,
+          "evaluated": 64,
+          "mean_wall_seconds": 0.01018871360938256,
+          "oracle_cardinality_exact_rate": 0.390625,
+          "single_target_cases": 28,
+          "single_target_top1_rate": 0.5714285714285714,
+          "threshold_exact_rate": 0.0,
+          "top1_in_gold_rate": 0.484375
+        },
+        "spatial": {
+          "attempted": 15,
+          "cardinality_accuracy": 0.06666666666666667,
+          "cardinality_exact_rate": 0.06666666666666667,
+          "errors": 0,
+          "evaluated": 15,
+          "mean_wall_seconds": 0.006336437999978747,
+          "oracle_cardinality_exact_rate": 0.2,
+          "single_target_cases": 0,
+          "single_target_top1_rate": null,
+          "threshold_exact_rate": 0.06666666666666667,
+          "top1_in_gold_rate": 0.5333333333333333
+        }
+      },
+      "cardinality_accuracy": 0.3625,
+      "cardinality_exact_rate": 0.2125,
+      "errors": 0,
+      "evaluated": 80,
+      "mean_wall_seconds": 0.009560537437501182,
+      "oracle_cardinality_exact_rate": 0.3625,
+      "selected_experts": {
+        "attribute": 1,
+        "semantic": 64,
+        "spatial": 15
+      },
+      "single_target_cases": 28,
+      "single_target_top1_rate": 0.5714285714285714,
+      "threshold_exact_rate": 0.0125,
+      "top1_in_gold_rate": 0.5
+    },
+    "mlp": {
+      "attempted": 80,
+      "by_collection": {
+        "hicon-circular-interface-icons": {
+          "attempted": 64,
+          "cardinality_accuracy": 0.484375,
+          "cardinality_exact_rate": 0.40625,
+          "errors": 0,
+          "evaluated": 64,
+          "mean_wall_seconds": 0.007238308421850803,
+          "oracle_cardinality_exact_rate": 0.609375,
+          "single_target_cases": 28,
+          "single_target_top1_rate": 0.9285714285714286,
+          "threshold_exact_rate": 0.234375,
+          "top1_in_gold_rate": 0.90625
+        },
+        "streetmix-vectors": {
+          "attempted": 16,
+          "cardinality_accuracy": 0.4375,
+          "cardinality_exact_rate": 0.0625,
+          "errors": 0,
+          "evaluated": 16,
+          "mean_wall_seconds": 0.02101377918745584,
+          "oracle_cardinality_exact_rate": 0.125,
+          "single_target_cases": 0,
+          "single_target_top1_rate": null,
+          "threshold_exact_rate": 0.0625,
+          "top1_in_gold_rate": 0.8125
+        }
+      },
+      "by_reference_type": {
+        "attribute": {
+          "attempted": 1,
+          "cardinality_accuracy": 0.0,
+          "cardinality_exact_rate": 0.0,
+          "errors": 0,
+          "evaluated": 1,
+          "mean_wall_seconds": 0.021367926999801057,
+          "oracle_cardinality_exact_rate": 1.0,
+          "single_target_cases": 0,
+          "single_target_top1_rate": null,
+          "threshold_exact_rate": 1.0,
+          "top1_in_gold_rate": 1.0
+        },
+        "semantic": {
+          "attempted": 64,
+          "cardinality_accuracy": 0.5625,
+          "cardinality_exact_rate": 0.421875,
+          "errors": 0,
+          "evaluated": 64,
+          "mean_wall_seconds": 0.010638049546855655,
+          "oracle_cardinality_exact_rate": 0.59375,
+          "single_target_cases": 28,
+          "single_target_top1_rate": 0.9285714285714286,
+          "threshold_exact_rate": 0.234375,
+          "top1_in_gold_rate": 0.859375
+        },
+        "spatial": {
+          "attempted": 15,
+          "cardinality_accuracy": 0.13333333333333333,
+          "cardinality_exact_rate": 0.0,
+          "errors": 0,
+          "evaluated": 15,
+          "mean_wall_seconds": 0.006484607199945458,
+          "oracle_cardinality_exact_rate": 0.13333333333333333,
+          "single_target_cases": 0,
+          "single_target_top1_rate": null,
+          "threshold_exact_rate": 0.0,
+          "top1_in_gold_rate": 1.0
+        }
+      },
+      "cardinality_accuracy": 0.475,
+      "cardinality_exact_rate": 0.3375,
+      "errors": 0,
+      "evaluated": 80,
+      "mean_wall_seconds": 0.00999340257497181,
+      "oracle_cardinality_exact_rate": 0.5125,
+      "selected_experts": {
+        "attribute": 1,
+        "semantic": 64,
+        "spatial": 15
+      },
+      "single_target_cases": 28,
+      "single_target_top1_rate": 0.9285714285714286,
+      "threshold_exact_rate": 0.2,
+      "top1_in_gold_rate": 0.8875
+    }
+  },
+  "paired": {
+    "cases": 80,
+    "exact_mcnemar_p": 0.00634765625,
+    "left_only_correct": 1,
+    "metric": "deployed_set_exact",
+    "right_only_correct": 11
+  },
+  "sets": {
+    "gnn": {
+      "by_collection": {
+        "hicon-circular-interface-icons": {
+          "cases": 64,
+          "mean_precision": 0.5625,
+          "mean_recall": 0.41041666666666665,
+          "set_exact_correct": 17,
+          "set_exact_rate": 0.265625
+        },
+        "streetmix-vectors": {
+          "cases": 16,
+          "mean_precision": 0.25,
+          "mean_recall": 0.0625,
+          "set_exact_correct": 0,
+          "set_exact_rate": 0.0
+        }
+      },
+      "cases": 80,
+      "mean_precision": 0.5,
+      "mean_recall": 0.3408333333333333,
+      "selection_sources": {
+        "learned_cardinality": 80
+      },
+      "set_exact_correct": 17,
+      "set_exact_rate": 0.2125
+    },
+    "gnn_group": {
+      "complexity_fallback_baseline": {
+        "by_collection": {
+          "hicon-circular-interface-icons": {
+            "cases": 64,
+            "mean_precision": 0.5625,
+            "mean_recall": 0.41041666666666665,
+            "set_exact_correct": 17,
+            "set_exact_rate": 0.265625
+          },
+          "streetmix-vectors": {
+            "cases": 16,
+            "mean_precision": 0.25,
+            "mean_recall": 0.0625,
+            "set_exact_correct": 0,
+            "set_exact_rate": 0.0
+          }
+        },
+        "cases": 80,
+        "mean_precision": 0.5,
+        "mean_recall": 0.3408333333333333,
+        "selection_sources": {
+          "structural_fallback": 80
+        },
+        "set_exact_correct": 17,
+        "set_exact_rate": 0.2125
+      },
+      "complexity_threshold": 1000000000,
+      "exploratory_post_hoc": true,
+      "format": "svgpatchlab.vector_edits_set_grounding.v1",
+      "group_expert": {
+        "abstained_cases": 64,
+        "conditional_exact_rate": 1.0,
+        "fired_cases": 16
+      },
+      "metrics": {
+        "by_collection": {
+          "hicon-circular-interface-icons": {
+            "cases": 64,
+            "mean_precision": 0.5625,
+            "mean_recall": 0.43125,
+            "set_exact_correct": 19,
+            "set_exact_rate": 0.296875
+          },
+          "streetmix-vectors": {
+            "cases": 16,
+            "mean_precision": 1.0,
+            "mean_recall": 0.8541666666666666,
+            "set_exact_correct": 13,
+            "set_exact_rate": 0.8125
+          }
+        },
+        "cases": 80,
+        "mean_precision": 0.65,
+        "mean_recall": 0.5158333333333334,
+        "selection_sources": {
+          "inside_container_set": 3,
+          "source_paint_set": 13,
+          "structural_fallback": 64
+        },
+        "set_exact_correct": 32,
+        "set_exact_rate": 0.4
+      },
+      "must_confirm_on_independent_collections": true,
+      "paired_vs_complexity_fallback": {
+        "cases": 80,
+        "left_only_correct": 15,
+        "right_only_correct": 0
+      }
+    },
+    "gnn_group_visual": {
+      "complexity_fallback_baseline": {
+        "by_collection": {
+          "hicon-circular-interface-icons": {
+            "cases": 64,
+            "mean_precision": 0.5625,
+            "mean_recall": 0.41041666666666665,
+            "set_exact_correct": 17,
+            "set_exact_rate": 0.265625
+          },
+          "streetmix-vectors": {
+            "cases": 16,
+            "mean_precision": 0.875,
+            "mean_recall": 0.29166666666666663,
+            "set_exact_correct": 0,
+            "set_exact_rate": 0.0
+          }
+        },
+        "cases": 80,
+        "mean_precision": 0.625,
+        "mean_recall": 0.38666666666666666,
+        "selection_sources": {
+          "structural_fallback": 64,
+          "visual_fallback": 16
+        },
+        "set_exact_correct": 17,
+        "set_exact_rate": 0.2125
+      },
+      "complexity_threshold": 10,
+      "exploratory_post_hoc": true,
+      "format": "svgpatchlab.vector_edits_set_grounding.v1",
+      "group_expert": {
+        "abstained_cases": 64,
+        "conditional_exact_rate": 1.0,
+        "fired_cases": 16
+      },
+      "metrics": {
+        "by_collection": {
+          "hicon-circular-interface-icons": {
+            "cases": 64,
+            "mean_precision": 0.5625,
+            "mean_recall": 0.43125,
+            "set_exact_correct": 19,
+            "set_exact_rate": 0.296875
+          },
+          "streetmix-vectors": {
+            "cases": 16,
+            "mean_precision": 0.875,
+            "mean_recall": 0.8333333333333334,
+            "set_exact_correct": 13,
+            "set_exact_rate": 0.8125
+          }
+        },
+        "cases": 80,
+        "mean_precision": 0.625,
+        "mean_recall": 0.5116666666666666,
+        "selection_sources": {
+          "inside_container_set": 3,
+          "source_paint_set": 13,
+          "structural_fallback": 61,
+          "visual_fallback": 3
+        },
+        "set_exact_correct": 32,
+        "set_exact_rate": 0.4
+      },
+      "must_confirm_on_independent_collections": true,
+      "paired_vs_complexity_fallback": {
+        "cases": 80,
+        "left_only_correct": 15,
+        "right_only_correct": 0
+      }
+    },
+    "mlp": {
+      "by_collection": {
+        "hicon-circular-interface-icons": {
+          "cases": 64,
+          "mean_precision": 0.85703125,
+          "mean_recall": 0.66875,
+          "set_exact_correct": 26,
+          "set_exact_rate": 0.40625
+        },
+        "streetmix-vectors": {
+          "cases": 16,
+          "mean_precision": 0.6666666666666666,
+          "mean_recall": 0.6458333333333333,
+          "set_exact_correct": 1,
+          "set_exact_rate": 0.0625
+        }
+      },
+      "cases": 80,
+      "mean_precision": 0.8189583333333333,
+      "mean_recall": 0.6641666666666667,
+      "selection_sources": {
+        "learned_cardinality": 80
+      },
+      "set_exact_correct": 27,
+      "set_exact_rate": 0.3375
+    },
+    "mlp_group": {
+      "complexity_fallback_baseline": {
+        "by_collection": {
+          "hicon-circular-interface-icons": {
+            "cases": 64,
+            "mean_precision": 0.85703125,
+            "mean_recall": 0.66875,
+            "set_exact_correct": 26,
+            "set_exact_rate": 0.40625
+          },
+          "streetmix-vectors": {
+            "cases": 16,
+            "mean_precision": 0.6666666666666666,
+            "mean_recall": 0.6458333333333333,
+            "set_exact_correct": 1,
+            "set_exact_rate": 0.0625
+          }
+        },
+        "cases": 80,
+        "mean_precision": 0.8189583333333333,
+        "mean_recall": 0.6641666666666667,
+        "selection_sources": {
+          "structural_fallback": 80
+        },
+        "set_exact_correct": 27,
+        "set_exact_rate": 0.3375
+      },
+      "complexity_threshold": 1000000000,
+      "exploratory_post_hoc": true,
+      "format": "svgpatchlab.vector_edits_set_grounding.v1",
+      "group_expert": {
+        "abstained_cases": 64,
+        "conditional_exact_rate": 1.0,
+        "fired_cases": 16
+      },
+      "metrics": {
+        "by_collection": {
+          "hicon-circular-interface-icons": {
+            "cases": 64,
+            "mean_precision": 0.85703125,
+            "mean_recall": 0.6947916666666667,
+            "set_exact_correct": 29,
+            "set_exact_rate": 0.453125
+          },
+          "streetmix-vectors": {
+            "cases": 16,
+            "mean_precision": 1.0,
+            "mean_recall": 0.9375,
+            "set_exact_correct": 13,
+            "set_exact_rate": 0.8125
+          }
+        },
+        "cases": 80,
+        "mean_precision": 0.8856249999999999,
+        "mean_recall": 0.7433333333333334,
+        "selection_sources": {
+          "inside_container_set": 3,
+          "source_paint_set": 13,
+          "structural_fallback": 64
+        },
+        "set_exact_correct": 42,
+        "set_exact_rate": 0.525
+      },
+      "must_confirm_on_independent_collections": true,
+      "paired_vs_complexity_fallback": {
+        "cases": 80,
+        "left_only_correct": 15,
+        "right_only_correct": 0
+      }
+    },
+    "mlp_group_visual": {
+      "complexity_fallback_baseline": {
+        "by_collection": {
+          "hicon-circular-interface-icons": {
+            "cases": 64,
+            "mean_precision": 0.85703125,
+            "mean_recall": 0.66875,
+            "set_exact_correct": 26,
+            "set_exact_rate": 0.40625
+          },
+          "streetmix-vectors": {
+            "cases": 16,
+            "mean_precision": 0.875,
+            "mean_recall": 0.29166666666666663,
+            "set_exact_correct": 0,
+            "set_exact_rate": 0.0
+          }
+        },
+        "cases": 80,
+        "mean_precision": 0.860625,
+        "mean_recall": 0.5933333333333334,
+        "selection_sources": {
+          "structural_fallback": 64,
+          "visual_fallback": 16
+        },
+        "set_exact_correct": 26,
+        "set_exact_rate": 0.325
+      },
+      "complexity_threshold": 10,
+      "exploratory_post_hoc": true,
+      "format": "svgpatchlab.vector_edits_set_grounding.v1",
+      "group_expert": {
+        "abstained_cases": 64,
+        "conditional_exact_rate": 1.0,
+        "fired_cases": 16
+      },
+      "metrics": {
+        "by_collection": {
+          "hicon-circular-interface-icons": {
+            "cases": 64,
+            "mean_precision": 0.85703125,
+            "mean_recall": 0.6947916666666667,
+            "set_exact_correct": 29,
+            "set_exact_rate": 0.453125
+          },
+          "streetmix-vectors": {
+            "cases": 16,
+            "mean_precision": 0.875,
+            "mean_recall": 0.8333333333333334,
+            "set_exact_correct": 13,
+            "set_exact_rate": 0.8125
+          }
+        },
+        "cases": 80,
+        "mean_precision": 0.860625,
+        "mean_recall": 0.7224999999999999,
+        "selection_sources": {
+          "inside_container_set": 3,
+          "source_paint_set": 13,
+          "structural_fallback": 61,
+          "visual_fallback": 3
+        },
+        "set_exact_correct": 42,
+        "set_exact_rate": 0.525
+      },
+      "must_confirm_on_independent_collections": true,
+      "paired_vs_complexity_fallback": {
+        "cases": 80,
+        "left_only_correct": 16,
+        "right_only_correct": 0
+      }
+    }
+  },
+  "training": {
+    "gnn": {
+      "by_reference_type": {
+        "attribute": {
+          "cases": 33,
+          "target_exact_rate": 1.0
+        },
+        "semantic": {
+          "cases": 30,
+          "target_exact_rate": 1.0
+        },
+        "spatial": {
+          "cases": 337,
+          "target_exact_rate": 0.8071216617210683
+        }
+      },
+      "cardinality_accuracy": 1.0,
+      "cardinality_target_exact_rate": 0.9575,
+      "cases": 400,
+      "router_accuracy": 1.0,
+      "target_exact_rate": 0.8375
+    },
+    "mlp": {
+      "by_reference_type": {
+        "attribute": {
+          "cases": 33,
+          "target_exact_rate": 1.0
+        },
+        "semantic": {
+          "cases": 30,
+          "target_exact_rate": 0.7666666666666667
+        },
+        "spatial": {
+          "cases": 337,
+          "target_exact_rate": 0.744807121661721
+        }
+      },
+      "cardinality_accuracy": 1.0,
+      "cardinality_target_exact_rate": 0.9475,
+      "cases": 400,
+      "router_accuracy": 1.0,
+      "target_exact_rate": 0.7675
+    }
+  }
+}
