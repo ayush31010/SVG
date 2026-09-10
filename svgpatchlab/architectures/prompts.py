@@ -29,3 +29,17 @@ def patch_prompt(
         context_name=context_name,
         context=context,
     )
+
+
+def gnn_patch_prompt(
+    instruction: str,
+    context_name: str,
+    context: str,
+    predicted_target_id: str,
+) -> str:
+    return _load_template("gnn_patch.txt").substitute(
+        instruction=instruction,
+        context_name=context_name,
+        context=context,
+        predicted_target_id=predicted_target_id,
+    )
