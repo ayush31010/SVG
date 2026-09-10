@@ -410,9 +410,14 @@ def _trim_ancestor_text(
 
 
 def _hide_element(element: Any) -> None:
-    original = element.attrib.get("style", "").strip().rstrip(";")
-    hidden = "display:none!important"
-    element.attrib["style"] = f"{original};{hidden}" if original else hidden
+    # Drop existing display declarations instead of out-ordering them: resvg
+    # resolves duplicate !important declarations first-wins, browsers last-wins.
+    kept = [
+        declaration
+        for declaration in element.attrib.get("style", "").split(";")
+        if declaration.strip() and declaration.split(":", 1)[0].strip().lower() != "display"
+    ]
+    element.attrib["style"] = ";".join(kept + ["display:none!important"])
 
 
 def isolate_svg_subtree(svg: str, node_id: str) -> str:

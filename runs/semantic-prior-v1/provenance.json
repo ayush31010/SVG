@@ -1,0 +1,21 @@
+{
+  "config": "configs/eval/semantic_prior_v1.json",
+  "config_sha256": "f9faae3c456b79b86101a260507a9baa8e416fa5818d5fe6a4f4f3215386cb20",
+  "device": "mps",
+  "files": {
+    "dev_cardinality_exploration.json": "6626747b6b52564412b9f8d2ffa2dc829f67c6f8961c42feb1fb1f291dc64934",
+    "dev_sweep.json": "2eb339c0beb65f60b8834711be10da089ce11c61d5baeb0b08faca857cd0997c",
+    "records.json": "efabc1718357c1391a66037fcd7f00e59ff6cf08024607a77ce5121e7987099a",
+    "summary.json": "0ac3ea9fd4165f201b84aa315b69e395d6733ce902236636a6d3be75559a5d29"
+  },
+  "holdout_looks_before_this_run": 2,
+  "machine": "arm64",
+  "renderer": "resvg-py 0.5.0 fallback (no native Cairo on this machine)",
+  "run_date": "2026-09-10",
+  "siglip_model": "google/siglip2-base-patch16-224",
+  "source_commit": "a032c364d9b337f30244b4942cc64cf179b472ca",
+  "stage": "holdout",
+  "torch": "2.14.0",
+  "training": "none; frozen MLP v4 and frozen SigLIP 2 only",
+  "transformers": "5.17.0"
+}

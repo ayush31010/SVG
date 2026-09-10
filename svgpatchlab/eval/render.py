@@ -854,11 +854,19 @@ def _stats_from_id_map(
 
 
 def _hide_element(element) -> str | None:
-    """Append display:none to the element's style; return the prior style."""
+    """Force display:none in the element's style; return the prior style.
+
+    Existing ``display`` declarations are dropped rather than overridden by
+    order: resvg resolves duplicate ``!important`` declarations first-wins,
+    while browsers and Cairo resolve them last-wins.
+    """
     original = element.attrib.get("style")
-    element.attrib["style"] = (
-        (f"{original};" if original else "") + "display:none!important"
-    )
+    kept = [
+        declaration
+        for declaration in (original or "").split(";")
+        if declaration.strip() and declaration.split(":", 1)[0].strip().lower() != "display"
+    ]
+    element.attrib["style"] = ";".join(kept + ["display:none!important"])
     return original
 
 

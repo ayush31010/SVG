@@ -75,3 +75,17 @@ def test_resvg_fallback_centres_non_square_documents():
     solid = renderer.svg2png(bytestring=b'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"/>',
                              output_width=8, output_height=8, background_color='white')
     assert Image.open(io.BytesIO(solid)).convert('RGB').getpixel((0, 0)) == (255, 255, 255)
+
+
+def test_hidden_elements_drop_existing_important_display_declarations():
+    import xml.etree.ElementTree as ET
+    from svgpatchlab.eval.render import _hide_element as hide_for_stats
+    from svgpatchlab.vision.candidate_views import _hide_element as hide_for_views
+    for hide in (hide_for_stats, hide_for_views):
+        element = ET.Element('rect', {'style': 'fill:red; display:block!important ;opacity:0.5'})
+        hide(element)
+        declarations = [d.strip() for d in element.attrib['style'].split(';')]
+        assert declarations == ['fill:red', 'opacity:0.5', 'display:none!important']
+        bare = ET.Element('rect')
+        hide(bare)
+        assert bare.attrib['style'] == 'display:none!important'

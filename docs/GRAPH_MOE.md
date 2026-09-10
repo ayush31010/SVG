@@ -1,5 +1,12 @@
 # Sparse Graph-MoE grounding
 
+The [frozen SigLIP semantic prior](SEMANTIC_PRIOR_RESULTS.md) is the first
+arm to beat the frozen baseline on unseen collections: fusing the frozen MLP
+with SigLIP 2 similarities scores 39/100 exact sets on the Feather/Tabler
+holdout against 22/100 for the baseline (+10 to +24 points) and 27/100 for
+the trained control head, with no training. Multi-node targets remain at
+4/45; the frozen count head is now the bottleneck.
+
 The [new-collection candidate-group experiment](GROUP_CANDIDATE_RESULTS.md)
 is complete after a drawable-only correction: the group-candidate head scores
 23/100 against 27/100 for the matched control and 22/100 for the frozen

@@ -78,10 +78,10 @@ any additional complete object.
 
 The old CPU run had 25 missing-part failures and seven wrong-object failures,
 which motivated this experiment. On the new semantic part references,
-wrong-object selection dominates instead. The next model experiment should
-address semantic grounding with richer training references and visual/text
-features, retaining this frozen baseline and avoiding tuning on these 100
-labels. Merely making more groups available did not resolve the bottleneck.
+wrong-object selection dominates instead. Merely making more groups available
+did not resolve the bottleneck. The follow-up
+[semantic-prior experiment](SEMANTIC_PRIOR_RESULTS.md) addresses it with a
+frozen SigLIP fusion and reaches 39/100 without training.
 
 ## First run (superseded)
 

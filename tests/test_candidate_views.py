@@ -72,6 +72,9 @@ class IsolateSubtreeTests(unittest.TestCase):
         self.assertIn("display:none!important", by_id["n7"].attrib["style"])
 
     def test_existing_style_is_preserved_before_force_hide(self):
+        # Non-display declarations survive; a conflicting display declaration
+        # is dropped rather than out-ordered, because resvg resolves duplicate
+        # !important declarations first-wins while browsers resolve last-wins.
         svg = (
             '<svg xmlns="http://www.w3.org/2000/svg">'
             '<rect style="display:block!important;fill:red"/>'
@@ -80,10 +83,7 @@ class IsolateSubtreeTests(unittest.TestCase):
         )
         isolated = parse_svg(isolate_svg_subtree(svg, "n2"))
         hidden = index_tree(isolated)[1].element.attrib["style"]
-        self.assertEqual(
-            hidden,
-            "display:block!important;fill:red;display:none!important",
-        )
+        self.assertEqual(hidden, "fill:red;display:none!important")
 
     def test_nested_tspan_keeps_only_text_inside_selected_subtree(self):
         svg = (
