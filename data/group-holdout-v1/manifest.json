@@ -1,0 +1,2150 @@
+[
+  {
+    "case_id": "feather/battery/1",
+    "source_id": "feather/battery",
+    "collection": "feather",
+    "source_path": "sources/feather/battery.svg",
+    "source_sha256": "1c25c92e12d68bd74f13b782c3ed9b5f87f797535a26009e8055afe4cc54f8b8",
+    "instruction": "Change the battery casing to red.",
+    "candidate_ids": [
+      "n1",
+      "n2"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/battery/2",
+    "source_id": "feather/battery",
+    "collection": "feather",
+    "source_path": "sources/feather/battery.svg",
+    "source_sha256": "1c25c92e12d68bd74f13b782c3ed9b5f87f797535a26009e8055afe4cc54f8b8",
+    "instruction": "Change the short terminal at the right to red.",
+    "candidate_ids": [
+      "n1",
+      "n2"
+    ],
+    "gold_target_ids": [
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/battery-charging/1",
+    "source_id": "feather/battery-charging",
+    "collection": "feather",
+    "source_path": "sources/feather/battery-charging.svg",
+    "source_sha256": "aaa841c3179274dd7a3cba28922c4020ad8a3f0dd1b4cb79c57e7bcbd752c19b",
+    "instruction": "Change the lightning bolt to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "gold_target_ids": [
+      "n3"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/battery-charging/2",
+    "source_id": "feather/battery-charging",
+    "collection": "feather",
+    "source_path": "sources/feather/battery-charging.svg",
+    "source_sha256": "aaa841c3179274dd7a3cba28922c4020ad8a3f0dd1b4cb79c57e7bcbd752c19b",
+    "instruction": "Change the battery casing and its right terminal to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "gold_target_ids": [
+      "n1",
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/bell/1",
+    "source_id": "feather/bell",
+    "collection": "feather",
+    "source_path": "sources/feather/bell.svg",
+    "source_sha256": "8051ddb74439c1b1814a2d2307e95ae6a43786df1b6d46797d11974328f33ff1",
+    "instruction": "Change the bell body to red.",
+    "candidate_ids": [
+      "n1",
+      "n2"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/bell/2",
+    "source_id": "feather/bell",
+    "collection": "feather",
+    "source_path": "sources/feather/bell.svg",
+    "source_sha256": "8051ddb74439c1b1814a2d2307e95ae6a43786df1b6d46797d11974328f33ff1",
+    "instruction": "Change the clapper below the bell to red.",
+    "candidate_ids": [
+      "n1",
+      "n2"
+    ],
+    "gold_target_ids": [
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/camera/1",
+    "source_id": "feather/camera",
+    "collection": "feather",
+    "source_path": "sources/feather/camera.svg",
+    "source_sha256": "f969592e01193efeed652846132585aa38ed6717d3dbc518466c4d811267fe7e",
+    "instruction": "Change the camera lens to red.",
+    "candidate_ids": [
+      "n1",
+      "n2"
+    ],
+    "gold_target_ids": [
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/camera/2",
+    "source_id": "feather/camera",
+    "collection": "feather",
+    "source_path": "sources/feather/camera.svg",
+    "source_sha256": "f969592e01193efeed652846132585aa38ed6717d3dbc518466c4d811267fe7e",
+    "instruction": "Change the camera body outline to red.",
+    "candidate_ids": [
+      "n1",
+      "n2"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/clock/1",
+    "source_id": "feather/clock",
+    "collection": "feather",
+    "source_path": "sources/feather/clock.svg",
+    "source_sha256": "1c9bbf4c26cdb34f1eea393f6b151c2d962b7c252ce451ae58ae83621aeebcfc",
+    "instruction": "Change the clock hands to red.",
+    "candidate_ids": [
+      "n1",
+      "n2"
+    ],
+    "gold_target_ids": [
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/clock/2",
+    "source_id": "feather/clock",
+    "collection": "feather",
+    "source_path": "sources/feather/clock.svg",
+    "source_sha256": "1c9bbf4c26cdb34f1eea393f6b151c2d962b7c252ce451ae58ae83621aeebcfc",
+    "instruction": "Change the outer clock face circle to red.",
+    "candidate_ids": [
+      "n1",
+      "n2"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/cloud-lightning/1",
+    "source_id": "feather/cloud-lightning",
+    "collection": "feather",
+    "source_path": "sources/feather/cloud-lightning.svg",
+    "source_sha256": "51232f1fdb0c2dbfc9accf274b5d20dc1eae3454b1abc0fc545f5d0bcc3c9995",
+    "instruction": "Change the lightning bolt to red.",
+    "candidate_ids": [
+      "n1",
+      "n2"
+    ],
+    "gold_target_ids": [
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/cloud-lightning/2",
+    "source_id": "feather/cloud-lightning",
+    "collection": "feather",
+    "source_path": "sources/feather/cloud-lightning.svg",
+    "source_sha256": "51232f1fdb0c2dbfc9accf274b5d20dc1eae3454b1abc0fc545f5d0bcc3c9995",
+    "instruction": "Change the cloud outline to red.",
+    "candidate_ids": [
+      "n1",
+      "n2"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/cloud-rain/1",
+    "source_id": "feather/cloud-rain",
+    "collection": "feather",
+    "source_path": "sources/feather/cloud-rain.svg",
+    "source_sha256": "95ebeda8ccac3d9411f3049a887ae2753e27eba7b50795e1fbc2e8a1b410d1ea",
+    "instruction": "Change all three rain streaks to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/cloud-rain/2",
+    "source_id": "feather/cloud-rain",
+    "collection": "feather",
+    "source_path": "sources/feather/cloud-rain.svg",
+    "source_sha256": "95ebeda8ccac3d9411f3049a887ae2753e27eba7b50795e1fbc2e8a1b410d1ea",
+    "instruction": "Change the cloud outline to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n4"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/cloud-snow/1",
+    "source_id": "feather/cloud-snow",
+    "collection": "feather",
+    "source_path": "sources/feather/cloud-snow.svg",
+    "source_sha256": "d4f296750eccc435013b463e35964eec0f5f5239b1bb1d6b2ab0e4efd2db41b4",
+    "instruction": "Change all six snow dots to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7"
+    ],
+    "gold_target_ids": [
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/cloud-snow/2",
+    "source_id": "feather/cloud-snow",
+    "collection": "feather",
+    "source_path": "sources/feather/cloud-snow.svg",
+    "source_sha256": "d4f296750eccc435013b463e35964eec0f5f5239b1bb1d6b2ab0e4efd2db41b4",
+    "instruction": "Change the cloud outline to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/coffee/1",
+    "source_id": "feather/coffee",
+    "collection": "feather",
+    "source_path": "sources/feather/coffee.svg",
+    "source_sha256": "7c0cfa9dceaf1bc3dfcca17cfd4fba18853d981ff2c783d7c54e9da8e98a2b8a",
+    "instruction": "Change the three steam strokes to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5"
+    ],
+    "gold_target_ids": [
+      "n3",
+      "n4",
+      "n5"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/coffee/2",
+    "source_id": "feather/coffee",
+    "collection": "feather",
+    "source_path": "sources/feather/coffee.svg",
+    "source_sha256": "7c0cfa9dceaf1bc3dfcca17cfd4fba18853d981ff2c783d7c54e9da8e98a2b8a",
+    "instruction": "Change the cup handle to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/film/1",
+    "source_id": "feather/film",
+    "collection": "feather",
+    "source_path": "sources/feather/film.svg",
+    "source_sha256": "cdc70078f11b09013e4e7c4cce6e4c672c6e712939f2b3b66477e7d3b481001a",
+    "instruction": "Change the two long vertical lines to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8"
+    ],
+    "gold_target_ids": [
+      "n2",
+      "n3"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/film/2",
+    "source_id": "feather/film",
+    "collection": "feather",
+    "source_path": "sources/feather/film.svg",
+    "source_sha256": "cdc70078f11b09013e4e7c4cce6e4c672c6e712939f2b3b66477e7d3b481001a",
+    "instruction": "Change all four short horizontal perforation dividers to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8"
+    ],
+    "gold_target_ids": [
+      "n5",
+      "n6",
+      "n7",
+      "n8"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/headphones/1",
+    "source_id": "feather/headphones",
+    "collection": "feather",
+    "source_path": "sources/feather/headphones.svg",
+    "source_sha256": "9d4399c09662c80e4bb1d9e29d65dcbbaf18cca54a7aef071263ce506a784bce",
+    "instruction": "Change both ear cushions to red.",
+    "candidate_ids": [
+      "n1",
+      "n2"
+    ],
+    "gold_target_ids": [
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/headphones/2",
+    "source_id": "feather/headphones",
+    "collection": "feather",
+    "source_path": "sources/feather/headphones.svg",
+    "source_sha256": "9d4399c09662c80e4bb1d9e29d65dcbbaf18cca54a7aef071263ce506a784bce",
+    "instruction": "Change the curved headband to red.",
+    "candidate_ids": [
+      "n1",
+      "n2"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/monitor/1",
+    "source_id": "feather/monitor",
+    "collection": "feather",
+    "source_path": "sources/feather/monitor.svg",
+    "source_sha256": "090983067d10480735aff75a22dd85314ca97cc266e6ca70db6d6676863acaac",
+    "instruction": "Change the complete monitor stand to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "gold_target_ids": [
+      "n2",
+      "n3"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/monitor/2",
+    "source_id": "feather/monitor",
+    "collection": "feather",
+    "source_path": "sources/feather/monitor.svg",
+    "source_sha256": "090983067d10480735aff75a22dd85314ca97cc266e6ca70db6d6676863acaac",
+    "instruction": "Change the screen outline to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/music/1",
+    "source_id": "feather/music",
+    "collection": "feather",
+    "source_path": "sources/feather/music.svg",
+    "source_sha256": "3c53d3e342c7251d0b5ac3630b799f4ab6461062271072cf070aadcb59ae49c0",
+    "instruction": "Change both circular note heads to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "gold_target_ids": [
+      "n2",
+      "n3"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/music/2",
+    "source_id": "feather/music",
+    "collection": "feather",
+    "source_path": "sources/feather/music.svg",
+    "source_sha256": "3c53d3e342c7251d0b5ac3630b799f4ab6461062271072cf070aadcb59ae49c0",
+    "instruction": "Change the connected note stems and beam to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/printer/1",
+    "source_id": "feather/printer",
+    "collection": "feather",
+    "source_path": "sources/feather/printer.svg",
+    "source_sha256": "365e9fabd32528c013d510691dabed50b33e8506043c6893b852fcfe433620d5",
+    "instruction": "Change the sheet coming out below the printer to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "gold_target_ids": [
+      "n3"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/printer/2",
+    "source_id": "feather/printer",
+    "collection": "feather",
+    "source_path": "sources/feather/printer.svg",
+    "source_sha256": "365e9fabd32528c013d510691dabed50b33e8506043c6893b852fcfe433620d5",
+    "instruction": "Change the upper paper outline to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/radio/1",
+    "source_id": "feather/radio",
+    "collection": "feather",
+    "source_path": "sources/feather/radio.svg",
+    "source_sha256": "43b35ecb9d0eacd8388515ebae9d6f15ae81e15e2f396b70d944fa9e49ddb6b4",
+    "instruction": "Change all the radiating curved waves to red.",
+    "candidate_ids": [
+      "n1",
+      "n2"
+    ],
+    "gold_target_ids": [
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/radio/2",
+    "source_id": "feather/radio",
+    "collection": "feather",
+    "source_path": "sources/feather/radio.svg",
+    "source_sha256": "43b35ecb9d0eacd8388515ebae9d6f15ae81e15e2f396b70d944fa9e49ddb6b4",
+    "instruction": "Change the small central circle to red.",
+    "candidate_ids": [
+      "n1",
+      "n2"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/save/1",
+    "source_id": "feather/save",
+    "collection": "feather",
+    "source_path": "sources/feather/save.svg",
+    "source_sha256": "dd18a10ef788fadb8e504b773c6e52acbefa817ba7ae922d8f931367ea174336",
+    "instruction": "Change the two interior panels of the floppy disk to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "gold_target_ids": [
+      "n2",
+      "n3"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/save/2",
+    "source_id": "feather/save",
+    "collection": "feather",
+    "source_path": "sources/feather/save.svg",
+    "source_sha256": "dd18a10ef788fadb8e504b773c6e52acbefa817ba7ae922d8f931367ea174336",
+    "instruction": "Change the outer floppy disk boundary to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/server/1",
+    "source_id": "feather/server",
+    "collection": "feather",
+    "source_path": "sources/feather/server.svg",
+    "source_sha256": "a7ea7f2453972787495fe8f0901891dceb6f9f94187f0d67999dca06ca39f413",
+    "instruction": "Change both status indicator dots to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n3",
+      "n4"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/server/2",
+    "source_id": "feather/server",
+    "collection": "feather",
+    "source_path": "sources/feather/server.svg",
+    "source_sha256": "a7ea7f2453972787495fe8f0901891dceb6f9f94187f0d67999dca06ca39f413",
+    "instruction": "Change both rectangular server unit outlines to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n1",
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/shopping-cart/1",
+    "source_id": "feather/shopping-cart",
+    "collection": "feather",
+    "source_path": "sources/feather/shopping-cart.svg",
+    "source_sha256": "725e392facdf1f466d46d1a5a36fd7d092795deb59c84a900f5e6bc4205581b9",
+    "instruction": "Change both cart wheels to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "gold_target_ids": [
+      "n1",
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/shopping-cart/2",
+    "source_id": "feather/shopping-cart",
+    "collection": "feather",
+    "source_path": "sources/feather/shopping-cart.svg",
+    "source_sha256": "725e392facdf1f466d46d1a5a36fd7d092795deb59c84a900f5e6bc4205581b9",
+    "instruction": "Change the cart frame and handle to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "gold_target_ids": [
+      "n3"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/speaker/1",
+    "source_id": "feather/speaker",
+    "collection": "feather",
+    "source_path": "sources/feather/speaker.svg",
+    "source_sha256": "98c2e398aede48e7cb0bafa1b7c4c686d7f7f732734b7f6e1296cda3fd38050b",
+    "instruction": "Change the circular loudspeaker cone to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "gold_target_ids": [
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/speaker/2",
+    "source_id": "feather/speaker",
+    "collection": "feather",
+    "source_path": "sources/feather/speaker.svg",
+    "source_sha256": "98c2e398aede48e7cb0bafa1b7c4c686d7f7f732734b7f6e1296cda3fd38050b",
+    "instruction": "Change the small indicator dot above the cone to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "gold_target_ids": [
+      "n3"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/sun/1",
+    "source_id": "feather/sun",
+    "collection": "feather",
+    "source_path": "sources/feather/sun.svg",
+    "source_sha256": "6c346fdb49a8af368b91a07fb43a8b8d9419af84ca005a06ac075679a9ee2380",
+    "instruction": "Change all eight sun rays to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8",
+      "n9"
+    ],
+    "gold_target_ids": [
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8",
+      "n9"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/sun/2",
+    "source_id": "feather/sun",
+    "collection": "feather",
+    "source_path": "sources/feather/sun.svg",
+    "source_sha256": "6c346fdb49a8af368b91a07fb43a8b8d9419af84ca005a06ac075679a9ee2380",
+    "instruction": "Change the central sun circle to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8",
+      "n9"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/truck/1",
+    "source_id": "feather/truck",
+    "collection": "feather",
+    "source_path": "sources/feather/truck.svg",
+    "source_sha256": "405fc8f5fb2fa11a639b291ffe384dc0464659b70a1a0631284925b0e6b8626e",
+    "instruction": "Change both truck wheels to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n3",
+      "n4"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/truck/2",
+    "source_id": "feather/truck",
+    "collection": "feather",
+    "source_path": "sources/feather/truck.svg",
+    "source_sha256": "405fc8f5fb2fa11a639b291ffe384dc0464659b70a1a0631284925b0e6b8626e",
+    "instruction": "Change the cargo box and cab outlines to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n1",
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/video/1",
+    "source_id": "feather/video",
+    "collection": "feather",
+    "source_path": "sources/feather/video.svg",
+    "source_sha256": "34394850a913a2714fe58c1d56f2bdb1cc72fa288cfad6764e9a6b79087f5c17",
+    "instruction": "Change the triangular video camera attachment to red.",
+    "candidate_ids": [
+      "n1",
+      "n2"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/video/2",
+    "source_id": "feather/video",
+    "collection": "feather",
+    "source_path": "sources/feather/video.svg",
+    "source_sha256": "34394850a913a2714fe58c1d56f2bdb1cc72fa288cfad6764e9a6b79087f5c17",
+    "instruction": "Change the rectangular video camera body to red.",
+    "candidate_ids": [
+      "n1",
+      "n2"
+    ],
+    "gold_target_ids": [
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/volume-2/1",
+    "source_id": "feather/volume-2",
+    "collection": "feather",
+    "source_path": "sources/feather/volume-2.svg",
+    "source_sha256": "a030d363dfadf5d28639fefa2fad279b3098c30ca065b6c6388ba32922b682be",
+    "instruction": "Change both sound wave arcs to red.",
+    "candidate_ids": [
+      "n1",
+      "n2"
+    ],
+    "gold_target_ids": [
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/volume-2/2",
+    "source_id": "feather/volume-2",
+    "collection": "feather",
+    "source_path": "sources/feather/volume-2.svg",
+    "source_sha256": "a030d363dfadf5d28639fefa2fad279b3098c30ca065b6c6388ba32922b682be",
+    "instruction": "Change the speaker silhouette to red.",
+    "candidate_ids": [
+      "n1",
+      "n2"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/watch/1",
+    "source_id": "feather/watch",
+    "collection": "feather",
+    "source_path": "sources/feather/watch.svg",
+    "source_sha256": "e578a55bdd6bde5589c54353afc9d48c931291b51803ef26ab35dae5de56fdff",
+    "instruction": "Change the watch hands to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "gold_target_ids": [
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/watch/2",
+    "source_id": "feather/watch",
+    "collection": "feather",
+    "source_path": "sources/feather/watch.svg",
+    "source_sha256": "e578a55bdd6bde5589c54353afc9d48c931291b51803ef26ab35dae5de56fdff",
+    "instruction": "Change both watch strap segments to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "gold_target_ids": [
+      "n3"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/wifi/1",
+    "source_id": "feather/wifi",
+    "collection": "feather",
+    "source_path": "sources/feather/wifi.svg",
+    "source_sha256": "a98729d0f3bf26a516674f27727560884bea5756c61b762e7b56ad7f8a807571",
+    "instruction": "Change all three wireless signal arcs to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "feather/wifi/2",
+    "source_id": "feather/wifi",
+    "collection": "feather",
+    "source_path": "sources/feather/wifi.svg",
+    "source_sha256": "a98729d0f3bf26a516674f27727560884bea5756c61b762e7b56ad7f8a807571",
+    "instruction": "Change the small dot below the arcs to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n4"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/abacus/1",
+    "source_id": "tabler/abacus",
+    "collection": "tabler",
+    "source_path": "sources/tabler/abacus.svg",
+    "source_sha256": "1a29572cacb59348fe0a071217a6bb5f69449ab667f477d7813499853d1eb5f1",
+    "instruction": "Change all six abacus beads to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8",
+      "n9",
+      "n10",
+      "n11"
+    ],
+    "gold_target_ids": [
+      "n5",
+      "n6",
+      "n7",
+      "n8",
+      "n9",
+      "n10"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/abacus/2",
+    "source_id": "tabler/abacus",
+    "collection": "tabler",
+    "source_path": "sources/tabler/abacus.svg",
+    "source_sha256": "1a29572cacb59348fe0a071217a6bb5f69449ab667f477d7813499853d1eb5f1",
+    "instruction": "Change the two upright side supports to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8",
+      "n9",
+      "n10",
+      "n11"
+    ],
+    "gold_target_ids": [
+      "n1",
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/bike/1",
+    "source_id": "tabler/bike",
+    "collection": "tabler",
+    "source_path": "sources/tabler/bike.svg",
+    "source_sha256": "dcfc30feb6fd377d489cdd3c2c50f5fbb55ac4e36b36c49463314299504c74a5",
+    "instruction": "Change both bicycle wheels to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n1",
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/bike/2",
+    "source_id": "tabler/bike",
+    "collection": "tabler",
+    "source_path": "sources/tabler/bike.svg",
+    "source_sha256": "dcfc30feb6fd377d489cdd3c2c50f5fbb55ac4e36b36c49463314299504c74a5",
+    "instruction": "Change the circular rider head to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n4"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/building-bank/1",
+    "source_id": "tabler/building-bank",
+    "collection": "tabler",
+    "source_path": "sources/tabler/building-bank.svg",
+    "source_sha256": "ba532c2d12e97465ee586d59cb824fd2ecfa351cbfc055d87df4ef775a1e17e4",
+    "instruction": "Change the three short interior columns to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8"
+    ],
+    "gold_target_ids": [
+      "n6",
+      "n7",
+      "n8"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/building-bank/2",
+    "source_id": "tabler/building-bank",
+    "collection": "tabler",
+    "source_path": "sources/tabler/building-bank.svg",
+    "source_sha256": "ba532c2d12e97465ee586d59cb824fd2ecfa351cbfc055d87df4ef775a1e17e4",
+    "instruction": "Change the angled roof to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8"
+    ],
+    "gold_target_ids": [
+      "n3"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/building-store/1",
+    "source_id": "tabler/building-store",
+    "collection": "tabler",
+    "source_path": "sources/tabler/building-store.svg",
+    "source_sha256": "4e2e995d57305c30c667794560e1baedda6705ce2559ca71e6628ea335dd4430",
+    "instruction": "Change both vertical side walls to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5"
+    ],
+    "gold_target_ids": [
+      "n3",
+      "n4"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/building-store/2",
+    "source_id": "tabler/building-store",
+    "collection": "tabler",
+    "source_path": "sources/tabler/building-store.svg",
+    "source_sha256": "4e2e995d57305c30c667794560e1baedda6705ce2559ca71e6628ea335dd4430",
+    "instruction": "Change the arched doorway to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5"
+    ],
+    "gold_target_ids": [
+      "n5"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/bus/1",
+    "source_id": "tabler/bus",
+    "collection": "tabler",
+    "source_path": "sources/tabler/bus.svg",
+    "source_sha256": "74c239694000ff4f5a8213eb9ac9bc358b346a71f2eb2c69ef995847d4d37143",
+    "instruction": "Change both bus wheels to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7"
+    ],
+    "gold_target_ids": [
+      "n1",
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/bus/2",
+    "source_id": "tabler/bus",
+    "collection": "tabler",
+    "source_path": "sources/tabler/bus.svg",
+    "source_sha256": "74c239694000ff4f5a8213eb9ac9bc358b346a71f2eb2c69ef995847d4d37143",
+    "instruction": "Change the two short vertical window dividers to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7"
+    ],
+    "gold_target_ids": [
+      "n6",
+      "n7"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/calculator/1",
+    "source_id": "tabler/calculator",
+    "collection": "tabler",
+    "source_path": "sources/tabler/calculator.svg",
+    "source_sha256": "8579ecd4981afe130e70240b3776534f1b76faefa3cf09d116409078d87115dc",
+    "instruction": "Change all six calculator button dots to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8"
+    ],
+    "gold_target_ids": [
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/calculator/2",
+    "source_id": "tabler/calculator",
+    "collection": "tabler",
+    "source_path": "sources/tabler/calculator.svg",
+    "source_sha256": "8579ecd4981afe130e70240b3776534f1b76faefa3cf09d116409078d87115dc",
+    "instruction": "Change the calculator display to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8"
+    ],
+    "gold_target_ids": [
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/car/1",
+    "source_id": "tabler/car",
+    "collection": "tabler",
+    "source_path": "sources/tabler/car.svg",
+    "source_sha256": "c95af3091f703f3badf544aa54def72eb60238780932451669fa91d566beb186",
+    "instruction": "Change both car wheels to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "gold_target_ids": [
+      "n1",
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/car/2",
+    "source_id": "tabler/car",
+    "collection": "tabler",
+    "source_path": "sources/tabler/car.svg",
+    "source_sha256": "c95af3091f703f3badf544aa54def72eb60238780932451669fa91d566beb186",
+    "instruction": "Change the car body outline to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "gold_target_ids": [
+      "n3"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/device-gamepad/1",
+    "source_id": "tabler/device-gamepad",
+    "collection": "tabler",
+    "source_path": "sources/tabler/device-gamepad.svg",
+    "source_sha256": "a2591eec1e15bbe8740ad349260c838abe55994e358030b3e5fec09b9a111682",
+    "instruction": "Change both small action buttons to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n3",
+      "n4"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/device-gamepad/2",
+    "source_id": "tabler/device-gamepad",
+    "collection": "tabler",
+    "source_path": "sources/tabler/device-gamepad.svg",
+    "source_sha256": "a2591eec1e15bbe8740ad349260c838abe55994e358030b3e5fec09b9a111682",
+    "instruction": "Change the cross-shaped directional control to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/drone/1",
+    "source_id": "tabler/drone",
+    "collection": "tabler",
+    "source_path": "sources/tabler/drone.svg",
+    "source_sha256": "dad4dc8ccfe06a066ddafa9cdc67a1cc8fe6fd8d1e3c7f1120deb78cce9b6183",
+    "instruction": "Change all four curved rotor outlines to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8",
+      "n9"
+    ],
+    "gold_target_ids": [
+      "n3",
+      "n5",
+      "n7",
+      "n9"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/drone/2",
+    "source_id": "tabler/drone",
+    "collection": "tabler",
+    "source_path": "sources/tabler/drone.svg",
+    "source_sha256": "dad4dc8ccfe06a066ddafa9cdc67a1cc8fe6fd8d1e3c7f1120deb78cce9b6183",
+    "instruction": "Change all four diagonal arms to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8",
+      "n9"
+    ],
+    "gold_target_ids": [
+      "n2",
+      "n4",
+      "n6",
+      "n8"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/face-id/1",
+    "source_id": "tabler/face-id",
+    "collection": "tabler",
+    "source_path": "sources/tabler/face-id.svg",
+    "source_sha256": "3fc5a83803813fe1d487dca933cb94302cd4e10f51898ba4900004bf9ff6c127",
+    "instruction": "Change both eyes to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7"
+    ],
+    "gold_target_ids": [
+      "n5",
+      "n6"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/face-id/2",
+    "source_id": "tabler/face-id",
+    "collection": "tabler",
+    "source_path": "sources/tabler/face-id.svg",
+    "source_sha256": "3fc5a83803813fe1d487dca933cb94302cd4e10f51898ba4900004bf9ff6c127",
+    "instruction": "Change all four face-scanning corner brackets to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7"
+    ],
+    "gold_target_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/first-aid-kit/1",
+    "source_id": "tabler/first-aid-kit",
+    "collection": "tabler",
+    "source_path": "sources/tabler/first-aid-kit.svg",
+    "source_sha256": "be04acda03eaf4e465222125c61e0295685d585c76b09bb5ce16b2f73c530a0d",
+    "instruction": "Change the complete medical cross to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n3",
+      "n4"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/first-aid-kit/2",
+    "source_id": "tabler/first-aid-kit",
+    "collection": "tabler",
+    "source_path": "sources/tabler/first-aid-kit.svg",
+    "source_sha256": "be04acda03eaf4e465222125c61e0295685d585c76b09bb5ce16b2f73c530a0d",
+    "instruction": "Change the carrying handle to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/flask/1",
+    "source_id": "tabler/flask",
+    "collection": "tabler",
+    "source_path": "sources/tabler/flask.svg",
+    "source_sha256": "f126c4fd5c9935e03f808bdfeec2a3ac3a505f0d26c4fa4a821adfaeb6b0d825",
+    "instruction": "Change the horizontal lip at the very top to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/flask/2",
+    "source_id": "tabler/flask",
+    "collection": "tabler",
+    "source_path": "sources/tabler/flask.svg",
+    "source_sha256": "f126c4fd5c9935e03f808bdfeec2a3ac3a505f0d26c4fa4a821adfaeb6b0d825",
+    "instruction": "Change the horizontal line across the neck to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "gold_target_ids": [
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/helicopter/1",
+    "source_id": "tabler/helicopter",
+    "collection": "tabler",
+    "source_path": "sources/tabler/helicopter.svg",
+    "source_sha256": "0725974fd9e4a48632ce32b9886cda86a7c1e454fc04bab4bd862d6d3c96f566",
+    "instruction": "Change the main rotor blade and its vertical mast to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7"
+    ],
+    "gold_target_ids": [
+      "n3",
+      "n4"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/helicopter/2",
+    "source_id": "tabler/helicopter",
+    "collection": "tabler",
+    "source_path": "sources/tabler/helicopter.svg",
+    "source_sha256": "0725974fd9e4a48632ce32b9886cda86a7c1e454fc04bab4bd862d6d3c96f566",
+    "instruction": "Change the landing skid and its vertical support to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7"
+    ],
+    "gold_target_ids": [
+      "n6",
+      "n7"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/keyboard/1",
+    "source_id": "tabler/keyboard",
+    "collection": "tabler",
+    "source_path": "sources/tabler/keyboard.svg",
+    "source_sha256": "8dcb52240a7f121651455a0a71322cb306c7e4695c70b4a9c14c453dc231c5da",
+    "instruction": "Change all six small key dots to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8"
+    ],
+    "gold_target_ids": [
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/keyboard/2",
+    "source_id": "tabler/keyboard",
+    "collection": "tabler",
+    "source_path": "sources/tabler/keyboard.svg",
+    "source_sha256": "8dcb52240a7f121651455a0a71322cb306c7e4695c70b4a9c14c453dc231c5da",
+    "instruction": "Change the long space bar to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8"
+    ],
+    "gold_target_ids": [
+      "n8"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/lifebuoy/1",
+    "source_id": "tabler/lifebuoy",
+    "collection": "tabler",
+    "source_path": "sources/tabler/lifebuoy.svg",
+    "source_sha256": "261a3415d3938412813be3b409823d22928aca9fb15a0722449da27c923a5157",
+    "instruction": "Change all four diagonal band dividers to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "gold_target_ids": [
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/lifebuoy/2",
+    "source_id": "tabler/lifebuoy",
+    "collection": "tabler",
+    "source_path": "sources/tabler/lifebuoy.svg",
+    "source_sha256": "261a3415d3938412813be3b409823d22928aca9fb15a0722449da27c923a5157",
+    "instruction": "Change the outer circular rim to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "gold_target_ids": [
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/microscope/1",
+    "source_id": "tabler/microscope",
+    "collection": "tabler",
+    "source_path": "sources/tabler/microscope.svg",
+    "source_sha256": "903bbf67012608457a62887c7a2b1b818e997ebbc734e12d15a0fadeeb06d026",
+    "instruction": "Change the bottom horizontal base line to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/microscope/2",
+    "source_id": "tabler/microscope",
+    "collection": "tabler",
+    "source_path": "sources/tabler/microscope.svg",
+    "source_sha256": "903bbf67012608457a62887c7a2b1b818e997ebbc734e12d15a0fadeeb06d026",
+    "instruction": "Change the diagonal optical tube, its lower tip, and the eyepiece bar to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7"
+    ],
+    "gold_target_ids": [
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/motorbike/1",
+    "source_id": "tabler/motorbike",
+    "collection": "tabler",
+    "source_path": "sources/tabler/motorbike.svg",
+    "source_sha256": "4c67f3ad45e7845b0f730388deca0e8090d53d1c8b5ff502dc2f2e02ed764496",
+    "instruction": "Change both motorcycle wheels to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n1",
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/motorbike/2",
+    "source_id": "tabler/motorbike",
+    "collection": "tabler",
+    "source_path": "sources/tabler/motorbike.svg",
+    "source_sha256": "4c67f3ad45e7845b0f730388deca0e8090d53d1c8b5ff502dc2f2e02ed764496",
+    "instruction": "Change the handlebar and front fork line to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n4"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/mouse/1",
+    "source_id": "tabler/mouse",
+    "collection": "tabler",
+    "source_path": "sources/tabler/mouse.svg",
+    "source_sha256": "9f06455266fcf653314bfb1890631ebeebf64d0a0da07685dc340fc14c746d4e",
+    "instruction": "Change the scroll wheel line to red.",
+    "candidate_ids": [
+      "n1",
+      "n2"
+    ],
+    "gold_target_ids": [
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/mouse/2",
+    "source_id": "tabler/mouse",
+    "collection": "tabler",
+    "source_path": "sources/tabler/mouse.svg",
+    "source_sha256": "9f06455266fcf653314bfb1890631ebeebf64d0a0da07685dc340fc14c746d4e",
+    "instruction": "Change the mouse body outline to red.",
+    "candidate_ids": [
+      "n1",
+      "n2"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/palette/1",
+    "source_id": "tabler/palette",
+    "collection": "tabler",
+    "source_path": "sources/tabler/palette.svg",
+    "source_sha256": "27a5a19ae4b0f73ff4089b7f5a6c8fdf17f19ecc853e19fa04494f083943e778",
+    "instruction": "Change all three circular paint wells to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/palette/2",
+    "source_id": "tabler/palette",
+    "collection": "tabler",
+    "source_path": "sources/tabler/palette.svg",
+    "source_sha256": "27a5a19ae4b0f73ff4089b7f5a6c8fdf17f19ecc853e19fa04494f083943e778",
+    "instruction": "Change the palette outline to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/robot/1",
+    "source_id": "tabler/robot",
+    "collection": "tabler",
+    "source_path": "sources/tabler/robot.svg",
+    "source_sha256": "d1dbd329f869a168699a632f5469a42d4d1dca5b972e2c1fbf9572faefb9a991",
+    "instruction": "Change both robot eyes to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8",
+      "n9"
+    ],
+    "gold_target_ids": [
+      "n8",
+      "n9"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/robot/2",
+    "source_id": "tabler/robot",
+    "collection": "tabler",
+    "source_path": "sources/tabler/robot.svg",
+    "source_sha256": "d1dbd329f869a168699a632f5469a42d4d1dca5b972e2c1fbf9572faefb9a991",
+    "instruction": "Change both short diagonal arms to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8",
+      "n9"
+    ],
+    "gold_target_ids": [
+      "n5",
+      "n6"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/sailboat/1",
+    "source_id": "tabler/sailboat",
+    "collection": "tabler",
+    "source_path": "sources/tabler/sailboat.svg",
+    "source_sha256": "393517cc9601c3493622d4ba7ad9a1771f4c0cf7c57b6ed98afa1459108386af",
+    "instruction": "Change the wavy water line to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n1"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/sailboat/2",
+    "source_id": "tabler/sailboat",
+    "collection": "tabler",
+    "source_path": "sources/tabler/sailboat.svg",
+    "source_sha256": "393517cc9601c3493622d4ba7ad9a1771f4c0cf7c57b6ed98afa1459108386af",
+    "instruction": "Change both sail strokes to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n3",
+      "n4"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/stethoscope/1",
+    "source_id": "tabler/stethoscope",
+    "collection": "tabler",
+    "source_path": "sources/tabler/stethoscope.svg",
+    "source_sha256": "2efbfbc7e8e2426847aacbce6193dc46eb03b1bfd6496176ca3f7b3895fcd1e4",
+    "instruction": "Change both short earpiece tips to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5"
+    ],
+    "gold_target_ids": [
+      "n3",
+      "n4"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/stethoscope/2",
+    "source_id": "tabler/stethoscope",
+    "collection": "tabler",
+    "source_path": "sources/tabler/stethoscope.svg",
+    "source_sha256": "2efbfbc7e8e2426847aacbce6193dc46eb03b1bfd6496176ca3f7b3895fcd1e4",
+    "instruction": "Change the circular chestpiece to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5"
+    ],
+    "gold_target_ids": [
+      "n5"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/telescope/1",
+    "source_id": "tabler/telescope",
+    "collection": "tabler",
+    "source_path": "sources/tabler/telescope.svg",
+    "source_sha256": "0102b0fe0e9eb9087e9af9a513ead59b8e253d7a0c4606619f5b39e6af84a4af",
+    "instruction": "Change the complete tripod support to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n1",
+      "n2"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/telescope/2",
+    "source_id": "tabler/telescope",
+    "collection": "tabler",
+    "source_path": "sources/tabler/telescope.svg",
+    "source_sha256": "0102b0fe0e9eb9087e9af9a513ead59b8e253d7a0c4606619f5b39e6af84a4af",
+    "instruction": "Change the diagonal band across the telescope tube to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "gold_target_ids": [
+      "n4"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/thermometer/1",
+    "source_id": "tabler/thermometer",
+    "collection": "tabler",
+    "source_path": "sources/tabler/thermometer.svg",
+    "source_sha256": "42edf82fc8d0bf5f9c08410f7178eb9c720702e22f09c7efc3afee4a8da16b06",
+    "instruction": "Change all three diagonal measurement ticks to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5"
+    ],
+    "gold_target_ids": [
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/thermometer/2",
+    "source_id": "tabler/thermometer",
+    "collection": "tabler",
+    "source_path": "sources/tabler/thermometer.svg",
+    "source_sha256": "42edf82fc8d0bf5f9c08410f7178eb9c720702e22f09c7efc3afee4a8da16b06",
+    "instruction": "Change the short tip at the lower left to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5"
+    ],
+    "gold_target_ids": [
+      "n5"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/train/1",
+    "source_id": "tabler/train",
+    "collection": "tabler",
+    "source_path": "sources/tabler/train.svg",
+    "source_sha256": "970bb86fa1c65cf5c1547e02977077a8319cc8971c9b86648af11662df983202",
+    "instruction": "Change both short vertical window dividers to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7"
+    ],
+    "gold_target_ids": [
+      "n5",
+      "n6"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  },
+  {
+    "case_id": "tabler/train/2",
+    "source_id": "tabler/train",
+    "collection": "tabler",
+    "source_path": "sources/tabler/train.svg",
+    "source_sha256": "970bb86fa1c65cf5c1547e02977077a8319cc8971c9b86648af11662df983202",
+    "instruction": "Change the horizontal track below the train to red.",
+    "candidate_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7"
+    ],
+    "gold_target_ids": [
+      "n7"
+    ],
+    "label_provenance": "agent-authored explicit DOM labels, inspected in source and rendered target highlights; not independent human annotations",
+    "review_status": "agent_visual_review_passed",
+    "review_date": "2026-09-10"
+  }
+]

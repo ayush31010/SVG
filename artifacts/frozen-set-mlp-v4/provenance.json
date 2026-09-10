@@ -1,0 +1,7 @@
+{
+  "source": "runs/local-set-v4/mlp/checkpoint/graph_moe.pt",
+  "sha256": "c7013f5cc969d98baf9b4821b4855e367fe1c2aab6421fac8a63b4abbb65985d",
+  "hardware_origin": "CPU base run, not original Colab model",
+  "training_summary": "runs/local-set-v4/summary.json",
+  "frozen_for": "group-candidate-v1"
+}

@@ -1,0 +1,11 @@
+{
+  "seed": 20260910,
+  "baseline_checkpoint": "artifacts/frozen-set-mlp-v4/graph_moe.pt",
+  "baseline_sha256": "c7013f5cc969d98baf9b4821b4855e367fe1c2aab6421fac8a63b4abbb65985d",
+  "synthetic_config": "configs/train/graph_moe_set_mlp_v4.json",
+  "holdout_manifest": "data/group-holdout-v1/manifest.json",
+  "holdout_sha256": "5615e522d514350caa62a0b3c30741c710d5c593c62ec165bff7164278a8a647",
+  "epochs": 8,
+  "hidden_dim": 64,
+  "learning_rate": 0.001
+}

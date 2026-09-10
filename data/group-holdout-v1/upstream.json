@@ -1,0 +1,10 @@
+{
+  "feather": {
+    "repository": "feathericons/feather",
+    "commit": "3dc050d97405062eba78aa57115c0a15c63abdaa"
+  },
+  "tabler": {
+    "repository": "tabler/tabler-icons",
+    "commit": "55f87a73f45cf1d9eaf16d7da705065483a9e4f9"
+  }
+}

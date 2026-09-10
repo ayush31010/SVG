@@ -1,0 +1,18 @@
+{
+  "cases": 100,
+  "sources": 50,
+  "collections": {
+    "feather": 50,
+    "tabler": 50
+  },
+  "cardinalities": {
+    "1": 55,
+    "2": 28,
+    "3": 7,
+    "6": 4,
+    "4": 5,
+    "8": 1
+  },
+  "manifest_sha256": "5615e522d514350caa62a0b3c30741c710d5c593c62ec165bff7164278a8a647",
+  "review": "All 100 explicit gold sets inspected in DOM and ten target-highlight sheets before scoring. Agent-reviewed, not human-reviewed."
+}
