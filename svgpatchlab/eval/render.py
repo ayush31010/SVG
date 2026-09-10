@@ -204,6 +204,49 @@ class SVGVisualContext:
         return self.id_map.data_url if self.id_map is not None else None
 
 
+class _ResvgSVGRenderer:
+    """CairoSVG-compatible adapter over ``resvg-py`` for machines without Cairo.
+
+    resvg preserves the source aspect ratio, so a non-square document is
+    centred on a transparent (or solid) canvas of the requested size instead
+    of being stretched the way CairoSVG stretches it.
+    """
+
+    def __init__(self, resvg_module: Any):
+        self.resvg = resvg_module
+
+    def svg2png(
+        self,
+        *,
+        bytestring: bytes,
+        output_width: int,
+        output_height: int,
+        background_color: str | None,
+    ) -> bytes:
+        from PIL import Image, ImageColor
+
+        width = int(output_width)
+        height = int(output_height)
+        if width <= 0 or height <= 0:
+            raise ValueError("render dimensions must be positive")
+        try:
+            png = self.resvg.svg_to_bytes(
+                svg_string=bytestring.decode("utf-8"), width=width, height=height
+            )
+        except ValueError as exc:
+            raise RendererUnavailable(f"resvg rendering failed: {exc}") from exc
+        rendered = Image.open(io.BytesIO(png)).convert("RGBA")
+        fill = (0, 0, 0, 0) if background_color is None else ImageColor.getcolor(
+            background_color, "RGBA"
+        )
+        canvas = Image.new("RGBA", (width, height), fill)
+        offset = ((width - rendered.width) // 2, (height - rendered.height) // 2)
+        canvas.alpha_composite(rendered, dest=offset)
+        buffer = io.BytesIO()
+        canvas.save(buffer, format="PNG")
+        return buffer.getvalue()
+
+
 def _dependencies():
     # OSError: cairosvg is installed but the native cairo library is missing
     # (the usual state on Windows without a GTK runtime).
@@ -223,12 +266,18 @@ def _dependencies():
         _ = cairosvg.surface
         renderer: Any = cairosvg
     except (ImportError, OSError):
-        chromium = _chromium_executable()
-        if chromium is None:
-            raise RendererUnavailable(
-                "rendering requires native Cairo or an installed Chrome/Chromium browser"
-            )
-        renderer = _ChromiumSVGRenderer(chromium)
+        try:
+            import resvg_py
+
+            renderer = _ResvgSVGRenderer(resvg_py)
+        except ImportError:
+            chromium = _chromium_executable()
+            if chromium is None:
+                raise RendererUnavailable(
+                    "rendering requires native Cairo, resvg-py, or an installed "
+                    "Chrome/Chromium browser"
+                )
+            renderer = _ChromiumSVGRenderer(chromium)
     return renderer, np, Image
 
 

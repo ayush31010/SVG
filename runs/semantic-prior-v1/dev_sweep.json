@@ -1,0 +1,110 @@
+{
+  "cases": 80,
+  "chosen_alpha": 0.7,
+  "config": {
+    "alpha": null,
+    "baseline_checkpoint": "artifacts/frozen-set-mlp-v4/graph_moe.pt",
+    "baseline_sha256": "c7013f5cc969d98baf9b4821b4855e367fe1c2aab6421fac8a63b4abbb65985d",
+    "dev_cases": 80,
+    "dev_parquet": "runs/local-set-v4/vector-edits-test.parquet",
+    "dev_parquet_sha256": "91786c53ce5e475975fb8b23eab8231acf5408a82cbab21618dc45305ff1fa12",
+    "dev_siglip_cache": "runs/vector-edits-grounding-v3-server/siglip_target/results.jsonl",
+    "dev_siglip_cache_sha256": "dc61275d310f5298ee69984ac3c3150e5c44334d74c7043229f9336605aa5e54",
+    "frozen": false,
+    "holdout_manifest": "data/group-holdout-v1/manifest.json",
+    "holdout_sha256": "5615e522d514350caa62a0b3c30741c710d5c593c62ec165bff7164278a8a647",
+    "prior_control_records": "runs/group-candidate-v1-fixed/records.json",
+    "render_size": 224,
+    "seed": 20260910,
+    "siglip_model": "google/siglip2-base-patch16-224",
+    "tau": 112.67,
+    "view_weights": {
+      "context": 0.2,
+      "isolated": 0.5,
+      "local": 0.3
+    }
+  },
+  "rule_overrides": 16,
+  "selection_rule": "Most deployed exact sets; ties to ranking quality, then the smallest weight.",
+  "source_commit": "ca66550347955118ccff41ccc842075c624d3ed9",
+  "stage": "dev",
+  "sweep": [
+    {
+      "alpha": 0.0,
+      "cases": 80,
+      "deployed_exact": 41,
+      "oracle_cardinality_exact": 38,
+      "top1_in_gold": 68
+    },
+    {
+      "alpha": 0.1,
+      "cases": 80,
+      "deployed_exact": 41,
+      "oracle_cardinality_exact": 44,
+      "top1_in_gold": 72
+    },
+    {
+      "alpha": 0.2,
+      "cases": 80,
+      "deployed_exact": 42,
+      "oracle_cardinality_exact": 48,
+      "top1_in_gold": 77
+    },
+    {
+      "alpha": 0.3,
+      "cases": 80,
+      "deployed_exact": 42,
+      "oracle_cardinality_exact": 52,
+      "top1_in_gold": 77
+    },
+    {
+      "alpha": 0.4,
+      "cases": 80,
+      "deployed_exact": 42,
+      "oracle_cardinality_exact": 53,
+      "top1_in_gold": 76
+    },
+    {
+      "alpha": 0.5,
+      "cases": 80,
+      "deployed_exact": 43,
+      "oracle_cardinality_exact": 59,
+      "top1_in_gold": 76
+    },
+    {
+      "alpha": 0.6,
+      "cases": 80,
+      "deployed_exact": 43,
+      "oracle_cardinality_exact": 57,
+      "top1_in_gold": 75
+    },
+    {
+      "alpha": 0.7,
+      "cases": 80,
+      "deployed_exact": 44,
+      "oracle_cardinality_exact": 57,
+      "top1_in_gold": 70
+    },
+    {
+      "alpha": 0.8,
+      "cases": 80,
+      "deployed_exact": 43,
+      "oracle_cardinality_exact": 52,
+      "top1_in_gold": 64
+    },
+    {
+      "alpha": 0.9,
+      "cases": 80,
+      "deployed_exact": 33,
+      "oracle_cardinality_exact": 40,
+      "top1_in_gold": 52
+    },
+    {
+      "alpha": 1.0,
+      "cases": 80,
+      "deployed_exact": 23,
+      "oracle_cardinality_exact": 28,
+      "top1_in_gold": 41
+    }
+  ]
+}

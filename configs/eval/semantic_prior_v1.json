@@ -1,0 +1,23 @@
+{
+  "seed": 20260910,
+  "baseline_checkpoint": "artifacts/frozen-set-mlp-v4/graph_moe.pt",
+  "baseline_sha256": "c7013f5cc969d98baf9b4821b4855e367fe1c2aab6421fac8a63b4abbb65985d",
+  "holdout_manifest": "data/group-holdout-v1/manifest.json",
+  "holdout_sha256": "5615e522d514350caa62a0b3c30741c710d5c593c62ec165bff7164278a8a647",
+  "dev_parquet": "runs/local-set-v4/vector-edits-test.parquet",
+  "dev_parquet_sha256": "91786c53ce5e475975fb8b23eab8231acf5408a82cbab21618dc45305ff1fa12",
+  "dev_cases": 80,
+  "dev_siglip_cache": "runs/vector-edits-grounding-v3-server/siglip_target/results.jsonl",
+  "dev_siglip_cache_sha256": "dc61275d310f5298ee69984ac3c3150e5c44334d74c7043229f9336605aa5e54",
+  "siglip_model": "google/siglip2-base-patch16-224",
+  "view_weights": {
+    "isolated": 0.5,
+    "local": 0.3,
+    "context": 0.2
+  },
+  "render_size": 224,
+  "tau": 112.67,
+  "alpha": 0.7,
+  "frozen": true,
+  "prior_control_records": "runs/group-candidate-v1-fixed/records.json"
+}
