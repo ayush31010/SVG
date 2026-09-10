@@ -10,6 +10,10 @@
 \usepackage{hyperref}
 \usepackage{microtype}
 \usepackage{needspace}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{longtable}
+\usepackage{array}
 \setlength{\parskip}{6pt}
 \setlength{\parindent}{0pt}
 \definecolor{pink}{HTML}{CF1A5C}
@@ -19,7 +23,7 @@
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
 
 \title{\Huge Teaching a Computer to Point at the Right Part of a Drawing\\[6pt]
-\Large The ``semantic prior'' experiment, explained in simple words}
+\Large Every experiment so far, what we kept, what we threw away, and how the latest one does, in simple words}
 \author{SVG Patch Lab}
 \date{10 September 2026}
 
@@ -153,6 +157,7 @@ Version & Right / 100 & One-line / 55 & Many-line / 45 & Wrong part \\
 \midrule
 Old brain (the baseline) & 22 & 18 & 4 & 48 \\
 Trained top-$k$ head (yesterday's best) & 27 & 23 & 4 & 50 \\
+Trained head + group choices & 23 & 19 & 4 & 52 \\
 Helper only ($\alpha = 1$) & 37 & 36 & 1 & 26 \\
 \textbf{Old brain + helper ($\alpha = 0.7$)} & \textbf{39} & 35 & 4 & 28 \\
 \bottomrule
@@ -167,6 +172,109 @@ In plain words:
   \item It fixed 19 drawings and broke 2. The 19 were all about words: bolt, bell, hull, antenna, chestpiece. The 2 it broke were tiny marks described by position (``the small dot below the arcs''), where the old brain had been right.
   \item Helper-only got 37, almost as good, but it loses the many-line answers (1 instead of 4). Mixing keeps them.
 \end{itemize}
+
+\section*{Everything we tried before, and what happened to it}
+
+The latest experiment stands on a pile of older ones. Here is the whole pile, oldest first, with the number each one produced and what we did with it.
+``Kept'' means the idea is still inside today's machine. ``Dropped'' means we stopped using it, and the reason is written next to it.
+
+\subsection*{1. Giving a language model numbers about each line (July--August)}
+
+At first the pointing was done by a large language model (Qwen, 7 billion parameters) that read a text summary of the drawing.
+We tried adding, for every line, about twenty numbers that come from actually drawing the picture: where the line paints, how big it is, its colour.
+To get those numbers we draw the picture once with the line and once without it and look at the difference.
+
+\begin{itemize}[leftmargin=1.6em]
+  \item \textbf{Two small A/B tests.} With the numbers, the model won 6--0 and then 10--0 on the drawings where the two versions disagreed. \textbf{Kept:} the ``what do you look like and where are you'' numbers still feed the old brain today.
+  \item \textbf{The hide-and-seek test} (48 drawings where one shape covers another). Plain geometry got 0 of 24 hidden cases; the drawn numbers got 9 of 24. \textbf{Kept:} drawing the picture is worth it exactly when the raw numbers lie.
+  \item \textbf{Can every line even be seen?} We checked 300 emoji and 300 real clip-art files. 98.9\% of emoji lines have their own pixels; only 58.7\% of clip-art lines do. Two in five clip-art lines cannot be told apart by \emph{any} picture method. \textbf{Kept as a warning:} a pointer that always answers is pretending.
+  \item \textbf{Why we moved on:} sending those numbers for every line made the prompts long and made colour edits \emph{worse}, and a 7-billion-parameter model is expensive. The next question was whether a tiny brain with no language model could point at all.
+\end{itemize}
+
+\subsection*{2. The Graph-MoE brain on made-up drawings (early September)}
+
+We built a tiny brain that reads the instruction with the hashing trick, sends it to a ``colour expert'' or a ``position expert'', and scores each line.
+One version passes messages between neighbouring lines in the drawing (a graph network, ``GNN''); the other does not (the ``no-edge MLP'').
+
+\begin{itemize}[leftmargin=1.6em]
+  \item On 59 made-up test drawings the GNN got 58 right and the MLP got 51. The GNN won 8--1 on ``the one to the left of'' type questions. It looked like the graph helped.
+  \item Glued to simple rules, the brain got 500 of 500 edits exactly right on five tasks of the public SVGEditBench benchmark, with no language model at all. \textbf{But} this is because those instructions name the colour that is already in the file; it proves the plumbing works, not that the brain understands pictures.
+\end{itemize}
+
+\subsection*{3. First real drawings: 80 icons from VectorEdits}
+
+\begin{itemize}[leftmargin=1.6em]
+  \item \textbf{Read the whole sentence, or just the part?} ``Rotate the arrow to point left'' -- the word \emph{left} is where the arrow should go, not where it is. Pulling out just ``the arrow'' before pointing took the MLP from 12 to 30 right answers (when told how many lines to pick). \textbf{Kept:} we always pull out the part's words first.
+  \item \textbf{GNN on real icons:} 19 of 80 versus the MLP's 30. The graph was already falling behind on real drawings.
+  \item \textbf{Picking lines by a score cut-off:} at best 4 of 80. \textbf{Dropped:} a cut-off cannot tell how many lines a part has. This is why the count head was built.
+  \item \textbf{The helper (SigLIP) on its own:} 41 of 80 top picks right. Poor on the dense Hicon icons (14 of 64), very good on Streetmix scenes (14 of 16). The old brain and the helper were right on \emph{different} drawings: together they could cover 55 of 80. \textbf{Kept for later:} this is the seed of today's experiment.
+  \item \textbf{A switch: use the helper only for busy drawings} (ten or more lines). 66 of 80 top picks. \textbf{Dropped:} the switch line fell exactly between the two collections, so it was really learning ``which collection is this'', not ``how busy is this''.
+\end{itemize}
+
+\subsection*{4. The matched GPU run: GNN versus MLP, with counting (9 September)}
+
+Both brains were trained the same way, with a count head, and tested on the same 80 icons, plus a set of hand-written grouping rules (``if the instruction names a colour, take every line with that colour'' and similar) that step in when they are sure and stay quiet otherwise.
+
+\begin{itemize}[leftmargin=1.6em]
+  \item GNN + rules: 32 of 80. MLP + rules: \textbf{42 of 80}. Without rules: 17 versus 27. Over 15 re-runs with different random seeds the MLP won 14 times. \textbf{Dropped: the GNN.} Its advantage on made-up drawings did not carry over, and we never found out why.
+  \item The grouping rules added 7 drawings (35 to 42). \textbf{Kept, but with a warning:} the rules were written while looking at these same 80 drawings. On the 100 new icons later, they never once spoke up.
+  \item The Colab machine was switched off before the trained brains were downloaded. The numbers survived in the saved notebook; the weights did not. Lesson learnt: download first.
+  \item \textbf{Decision:} freeze ``MLP + rules'' as the baseline and stop tuning on the 80. Build a new, sealed test.
+\end{itemize}
+
+\subsection*{5. The sealed test and the ``more choices'' idea (10 September, morning)}
+
+The 100-instruction Feather/Tabler test was built and sealed.
+Then an experiment: instead of picking lines one by one, let a small trained head pick from a list of \emph{ready-made sets} of lines. One version only saw simple sets (the top-1, top-2, \dots\ by score); the other also saw sets that the drawing's own structure suggests (lines inside the same group, lines with the same colour).
+
+\begin{itemize}[leftmargin=1.6em]
+  \item First run: simple sets 25, structure sets 25, old brain 22. Then an audit found a bug: during training the lists had contained invisible ``group'' wrappers that the test never offers. Fixed and re-run.
+  \item Corrected run: simple sets \textbf{27}, structure sets \textbf{23}, old brain \textbf{22}. The structure sets contained the right answer more often (80\% versus 72\%) and still scored lower. \textbf{Dropped: structure sets.} Offering more choices does not help a chooser that cannot tell them apart.
+  \item The corrected numbers were checked line by line today, and the run's console was recovered from Google Drive so the result has a paper trail.
+  \item \textbf{What we learnt:} 48 of the 100 mistakes were ``wrong part''. The words were the problem, not the sets. That is what today's helper is for.
+\end{itemize}
+
+\subsection*{6. Today: the helper, and what we did not do}
+
+\begin{itemize}[leftmargin=1.6em]
+  \item Helper alone: 37 of 100. Old brain + helper: \textbf{39}. \textbf{Kept: the mix}, because the helper alone loses the many-line answers (1 of 45 against 4 of 45).
+  \item Counting fixes tried on the practice exam only: at best 3 more of 80. \textbf{Not applied to the real test.}
+\end{itemize}
+
+\subsection*{All the numbers in one table}
+
+\begin{center}
+\footnotesize
+\begin{tabular}{@{}p{1.5cm}p{4.9cm}p{2.5cm}rp{3.3cm}@{}}
+\toprule
+When & What & Test & Right & What we did \\
+\midrule
+Jul--Aug & Drawn numbers for a 7B language model & two A/Bs & 6--0, 10--0 & kept the numbers \\
+Aug & Drawn numbers vs plain geometry & 24 hidden cases & 0 vs 9 & kept \\
+Aug & Lines you can see at all & 300 + 300 files & 98.9\% vs 58.7\% & kept as a warning \\
+Sep 6--8 & GNN vs MLP, made-up drawings & 59 & 58 vs 51 & GNN looked good \\
+Sep 8 & Rules + brain on SVGEditBench & 500 & 500 & plumbing only \\
+Sep 9 & Part words vs whole sentence (MLP) & 80, told $k$ & 12 $\to$ 30 & kept \\
+Sep 9 & GNN, part words & 80, told $k$ & 19 & falling behind \\
+Sep 9 & Score cut-off & 80 & 4 & dropped \\
+Sep 9 & Helper alone & 80, top pick & 41 & kept for later \\
+Sep 9 & Helper-only-when-busy switch & 80, top pick & 66 & dropped, post-hoc \\
+Sep 9 & GNN + rules vs MLP + rules & 80 & 32 vs 42 & GNN dropped \\
+Sep 9 & 15 seeds & 80 & MLP 14/15 & baseline frozen \\
+Sep 10 & Set-picking heads, run 1 & 100 sealed & 25 / 25 / 22 & bug found \\
+Sep 10 & Set-picking heads, corrected & 100 sealed & 27 / 23 / 22 & structure sets dropped \\
+Sep 10 & Helper alone & 100 sealed & 37 & \\
+Sep 10 & \textbf{Old brain + helper} & 100 sealed & \textbf{39} & \textbf{current best} \\
+Sep 10 & Counting fixes & 80 practice & +3 & not applied \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{Looking at real examples}
+
+Eleven icons from the sealed test. In each row the left picture shows the right answer in pink. The middle picture shows what the old brain picked, the right picture what the mix picked, both in blue. Grey lines were not picked.
+
+\input{img/gallery.tex}
 
 \section*{What is still broken: counting}
 
