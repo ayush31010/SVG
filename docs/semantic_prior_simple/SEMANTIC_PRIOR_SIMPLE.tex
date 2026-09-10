@@ -74,6 +74,28 @@ There are three piles of drawings. Keeping them apart is the most important rule
   \item[3. The real test (100 instructions on 50 icons).] Icons from two collections called Feather and Tabler that nobody in this project had used before. Two instructions were written for each icon, for example ``Change the clock hands to red''. Every right answer was checked by eye in the drawing. 45 of the 100 answers need \emph{more than one line} (for example both wheels of a truck). This pile is \textbf{sealed}: a fingerprint (a hash) of the file is stored, and the program refuses to run if the file changes. Nobody tunes anything on it. Today was the third time it was ever scored.
 \end{description}
 
+\section*{The pictures in the data}
+
+\subsection*{The sealed test}
+Thirty of the 100 instructions. Pink is the right answer; the small text says which lines and how many there were to choose from.
+
+\begin{center}\includegraphics[width=\textwidth]{img/dataset_holdout.png}\end{center}
+
+\subsection*{What the helper saw}
+For every line, three little pictures and the words for the part. This is the whole input to SigLIP.
+
+\begin{center}\includegraphics[height=0.86\textheight]{img/dataset_siglip_views.png}\end{center}
+
+\subsection*{The practice exam}
+Twelve of the 80 VectorEdits icons. They look different from the test (dense filled icons and street scenes), which is one reason a sealed test was needed.
+
+\begin{center}\includegraphics[width=\textwidth]{img/dataset_practice80.png}\end{center}
+
+\subsection*{The made-up training drawings}
+Twelve of the 2{,}380 program-made scenes the old brain learned from. The words are colours, positions and simple parts. ``Lens'' and ``clapper'' never appear.
+
+\begin{center}\includegraphics[width=\textwidth]{img/dataset_synthetic.png}\end{center}
+
 \section*{The pieces of the machine}
 
 \subsection*{The old brain (a small neural network)}
