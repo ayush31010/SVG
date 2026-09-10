@@ -14,7 +14,7 @@ image = (
         "vllm",
         "cairosvg>=2.7",
         "Pillow>=9",
-        "torch==2.4.0",
+        "torch",
         "torch-geometric",
         "sentence-transformers",
         "pydantic",
@@ -23,7 +23,7 @@ image = (
     # Patch flashinfer's JIT build to remove --compress-mode=size,
     # a CUDA 13.x-only flag that crashes on Modal's CUDA 12.1.1 host nvcc.
     # The patch removes the flag so JIT kernels compile cleanly on CUDA 12.x.
-    .add_local_file("patch_flashinfer.py", "/tmp/patch_flashinfer.py")
+    .add_local_file("patch_flashinfer.py", "/tmp/patch_flashinfer.py", copy=True)
     .run_commands("python3 /tmp/patch_flashinfer.py")
     .add_local_dir(".", remote_path="/root/EditSVG-patch-lab")
 )

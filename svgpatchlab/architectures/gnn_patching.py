@@ -13,7 +13,8 @@ from svgpatchlab.vision import VisionContextAnnotator
 from svgpatchlab.gnn import get_text_encoder, scene_to_graph_inputs, VISION_SCALAR_DIM, SceneGNN, AttentionSceneGNN
 
 from .base import Architecture
-from .prompts import gnn_patch_prompt, _correction_prompt
+from .prompts import gnn_patch_prompt
+from .patching import _correction_prompt
 
 class GnnPatchArchitecture(Architecture):
     name = "gnn_patch"

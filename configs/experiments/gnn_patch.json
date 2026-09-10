@@ -8,7 +8,7 @@
     "use_attention": true,
     "gnn_model_path": "gnn_node_targeting.pt",
     "vision_context": {
-      "enabled": true,
+      "enabled": false,
       "max_nodes": 48,
       "image_size": 384,
       "min_visible_pixels": 12,

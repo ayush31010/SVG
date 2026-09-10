@@ -48,11 +48,7 @@ Generic SVG edit rules:
   * If the instruction says to change the part with OLD_COLOR to NEW_COLOR,
     find nodes whose direct `fill` or resolved `fill` equals OLD_COLOR.
   * Set only `fill` to NEW_COLOR on those matching nodes.
-  * CRITICAL: use the EXACT color word or value as it appears in the
-    instruction, copied verbatim. If the instruction says "to green", set
-    fill to the literal string "green" -- do NOT convert it to a hex code
-    like #00FF00, even though that hex value renders the same color. Only
-    use a hex code if the instruction itself gives one (e.g. "to #3B88C3").
+  * EXTREMELY CRITICAL: You MUST use the EXACT color word verbatim. If the instruction says "to green", you MUST output the exact string "green". NEVER EVER convert it to a hex code like "#00FF00" or "#008000". You will fail the task if you output a hex code when a color name was requested.
   * Do not set `fill` to OLD_COLOR. Do not set `opacity`, `stroke`,
     `stroke-width`, `transform`, or `viewBox`.
   * Do not target n0 for a color change unless n0 itself directly has the
@@ -69,7 +65,7 @@ Generic SVG edit rules:
 - Transparency/opacity changes:
   * Target exactly n0 for an entire-image transparency edit.
   * Set `opacity` only.
-  * Do not change `fill`, `stroke`, `stroke-width`, `transform`, or `viewBox`.
+  * EXTREMELY CRITICAL: NEVER modify or output the `viewBox` attribute during a transparency edit. You must leave `viewBox` completely untouched.
 - Crop/trim/keep-half changes:
   * Target exactly n0 and modify only the root `viewBox`.
   * Use the actual root viewBox from the context. If it is `x y w h`, then:
