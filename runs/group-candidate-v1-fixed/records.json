@@ -1,0 +1,7023 @@
+{
+  "baseline": [
+    {
+      "candidate_count": 2,
+      "candidate_coverage": null,
+      "case_id": "feather/battery/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the battery casing",
+      "instruction": "Change the battery casing to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/battery",
+      "wall_seconds": 0.01948485699995217
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": null,
+      "case_id": "feather/battery/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the short terminal at the right",
+      "instruction": "Change the short terminal at the right to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/battery",
+      "wall_seconds": 0.023463156000048002
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": null,
+      "case_id": "feather/battery-charging/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3"
+      ],
+      "grounding_text": "the lightning bolt",
+      "instruction": "Change the lightning bolt to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/battery-charging",
+      "wall_seconds": 0.02040981200002534
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": null,
+      "case_id": "feather/battery-charging/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "the battery casing and its right terminal",
+      "instruction": "Change the battery casing and its right terminal to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/battery-charging",
+      "wall_seconds": 0.02147974100000738
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": null,
+      "case_id": "feather/bell/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the bell body",
+      "instruction": "Change the bell body to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/bell",
+      "wall_seconds": 0.013522220999902856
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": null,
+      "case_id": "feather/bell/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the clapper below the bell",
+      "instruction": "Change the clapper below the bell to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/bell",
+      "wall_seconds": 0.014371632000006684
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": null,
+      "case_id": "feather/camera/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the camera lens",
+      "instruction": "Change the camera lens to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "feather/camera",
+      "wall_seconds": 0.032547517000011794
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": null,
+      "case_id": "feather/camera/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the camera body outline",
+      "instruction": "Change the camera body outline to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/camera",
+      "wall_seconds": 0.03212552800005142
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": null,
+      "case_id": "feather/clock/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the clock hands",
+      "instruction": "Change the clock hands to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "feather/clock",
+      "wall_seconds": 0.021213672000044426
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": null,
+      "case_id": "feather/clock/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the outer clock face circle",
+      "instruction": "Change the outer clock face circle to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/clock",
+      "wall_seconds": 0.01662645099997917
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": null,
+      "case_id": "feather/cloud-lightning/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the lightning bolt",
+      "instruction": "Change the lightning bolt to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "feather/cloud-lightning",
+      "wall_seconds": 0.012124600999982249
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": null,
+      "case_id": "feather/cloud-lightning/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the cloud outline",
+      "instruction": "Change the cloud outline to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/cloud-lightning",
+      "wall_seconds": 0.011656513000048108
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "feather/cloud-rain/1",
+      "collection": "feather",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n1",
+        "n2",
+        "n3"
+      ],
+      "grounding_text": "all three rain streaks",
+      "instruction": "Change all three rain streaks to red.",
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/cloud-rain",
+      "wall_seconds": 0.010223360000054527
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "feather/cloud-rain/2",
+      "collection": "feather",
+      "failure_category": "extra_parts",
+      "gold_targets": [
+        "n4"
+      ],
+      "grounding_text": "the cloud outline",
+      "instruction": "Change the cloud outline to red.",
+      "precision": 0.25,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1",
+        "n2",
+        "n3",
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/cloud-rain",
+      "wall_seconds": 0.010536363999904097
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": null,
+      "case_id": "feather/cloud-snow/1",
+      "collection": "feather",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "grounding_text": "all six snow dots",
+      "instruction": "Change all six snow dots to red.",
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/cloud-snow",
+      "wall_seconds": 0.011367616999905295
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": null,
+      "case_id": "feather/cloud-snow/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the cloud outline",
+      "instruction": "Change the cloud outline to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/cloud-snow",
+      "wall_seconds": 0.011314478000031158
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": null,
+      "case_id": "feather/coffee/1",
+      "collection": "feather",
+      "failure_category": "extra_parts",
+      "gold_targets": [
+        "n3",
+        "n4",
+        "n5"
+      ],
+      "grounding_text": "the three steam strokes",
+      "instruction": "Change the three steam strokes to red.",
+      "precision": 0.6,
+      "recall": 1.0,
+      "selected_targets": [
+        "n3",
+        "n4",
+        "n5",
+        "n1",
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/coffee",
+      "wall_seconds": 0.018506011000113176
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": null,
+      "case_id": "feather/coffee/2",
+      "collection": "feather",
+      "failure_category": "extra_parts",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the cup handle",
+      "instruction": "Change the cup handle to red.",
+      "precision": 0.2,
+      "recall": 1.0,
+      "selected_targets": [
+        "n3",
+        "n4",
+        "n5",
+        "n1",
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/coffee",
+      "wall_seconds": 0.01702994300001137
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": null,
+      "case_id": "feather/film/1",
+      "collection": "feather",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n2",
+        "n3"
+      ],
+      "grounding_text": "the two long vertical lines",
+      "instruction": "Change the two long vertical lines to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/film",
+      "wall_seconds": 0.01759352699991723
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": null,
+      "case_id": "feather/film/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n5",
+        "n6",
+        "n7",
+        "n8"
+      ],
+      "grounding_text": "all four short horizontal perforation dividers",
+      "instruction": "Change all four short horizontal perforation dividers to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/film",
+      "wall_seconds": 0.019572201999949357
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": null,
+      "case_id": "feather/headphones/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "both ear cushions",
+      "instruction": "Change both ear cushions to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "feather/headphones",
+      "wall_seconds": 0.029649015000018153
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": null,
+      "case_id": "feather/headphones/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the curved headband",
+      "instruction": "Change the curved headband to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/headphones",
+      "wall_seconds": 0.029652871000052983
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": null,
+      "case_id": "feather/monitor/1",
+      "collection": "feather",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n2",
+        "n3"
+      ],
+      "grounding_text": "the complete monitor stand",
+      "instruction": "Change the complete monitor stand to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/monitor",
+      "wall_seconds": 0.018591489999948863
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": null,
+      "case_id": "feather/monitor/2",
+      "collection": "feather",
+      "failure_category": "extra_parts",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the screen outline",
+      "instruction": "Change the screen outline to red.",
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2",
+        "n3",
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/monitor",
+      "wall_seconds": 0.01758954399997492
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": null,
+      "case_id": "feather/music/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2",
+        "n3"
+      ],
+      "grounding_text": "both circular note heads",
+      "instruction": "Change both circular note heads to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n3",
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "feather/music",
+      "wall_seconds": 0.030452909000018735
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": null,
+      "case_id": "feather/music/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the connected note stems and beam",
+      "instruction": "Change the connected note stems and beam to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/music",
+      "wall_seconds": 0.04387088999988009
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": null,
+      "case_id": "feather/printer/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n3"
+      ],
+      "grounding_text": "the sheet coming out below the printer",
+      "instruction": "Change the sheet coming out below the printer to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "feather/printer",
+      "wall_seconds": 0.026014222000185327
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": null,
+      "case_id": "feather/printer/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the upper paper outline",
+      "instruction": "Change the upper paper outline to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/printer",
+      "wall_seconds": 0.024803275999943253
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": null,
+      "case_id": "feather/radio/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "all the radiating curved waves",
+      "instruction": "Change all the radiating curved waves to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/radio",
+      "wall_seconds": 0.031409998999947675
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": null,
+      "case_id": "feather/radio/2",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the small central circle",
+      "instruction": "Change the small central circle to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "feather/radio",
+      "wall_seconds": 0.029509057999916877
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": null,
+      "case_id": "feather/save/1",
+      "collection": "feather",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n2",
+        "n3"
+      ],
+      "grounding_text": "the two interior panels of the floppy disk",
+      "instruction": "Change the two interior panels of the floppy disk to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/save",
+      "wall_seconds": 0.01914644800001497
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": null,
+      "case_id": "feather/save/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the outer floppy disk boundary",
+      "instruction": "Change the outer floppy disk boundary to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/save",
+      "wall_seconds": 0.018425148999995145
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "feather/server/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "both status indicator dots",
+      "instruction": "Change both status indicator dots to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/server",
+      "wall_seconds": 0.03161261100001411
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "feather/server/2",
+      "collection": "feather",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "both rectangular server unit outlines",
+      "instruction": "Change both rectangular server unit outlines to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/server",
+      "wall_seconds": 0.031364989999929094
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": null,
+      "case_id": "feather/shopping-cart/1",
+      "collection": "feather",
+      "failure_category": "extra_parts",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "both cart wheels",
+      "instruction": "Change both cart wheels to red.",
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2",
+        "n1",
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/shopping-cart",
+      "wall_seconds": 0.036335885000085
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": null,
+      "case_id": "feather/shopping-cart/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3"
+      ],
+      "grounding_text": "the cart frame and handle",
+      "instruction": "Change the cart frame and handle to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/shopping-cart",
+      "wall_seconds": 0.0380897789999608
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": null,
+      "case_id": "feather/speaker/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the circular loudspeaker cone",
+      "instruction": "Change the circular loudspeaker cone to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/speaker",
+      "wall_seconds": 0.02962299900002563
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": null,
+      "case_id": "feather/speaker/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3"
+      ],
+      "grounding_text": "the small indicator dot above the cone",
+      "instruction": "Change the small indicator dot above the cone to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/speaker",
+      "wall_seconds": 0.03068832700000712
+    },
+    {
+      "candidate_count": 9,
+      "candidate_coverage": null,
+      "case_id": "feather/sun/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9"
+      ],
+      "grounding_text": "all eight sun rays",
+      "instruction": "Change all eight sun rays to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/sun",
+      "wall_seconds": 0.017607594999958565
+    },
+    {
+      "candidate_count": 9,
+      "candidate_coverage": null,
+      "case_id": "feather/sun/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the central sun circle",
+      "instruction": "Change the central sun circle to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/sun",
+      "wall_seconds": 0.01676986899997246
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "feather/truck/1",
+      "collection": "feather",
+      "failure_category": "extra_parts",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "both truck wheels",
+      "instruction": "Change both truck wheels to red.",
+      "precision": 0.5,
+      "recall": 1.0,
+      "selected_targets": [
+        "n4",
+        "n3",
+        "n2",
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/truck",
+      "wall_seconds": 0.03617022499997802
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "feather/truck/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "the cargo box and cab outlines",
+      "instruction": "Change the cargo box and cab outlines to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/truck",
+      "wall_seconds": 0.03809676900004888
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": null,
+      "case_id": "feather/video/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the triangular video camera attachment",
+      "instruction": "Change the triangular video camera attachment to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/video",
+      "wall_seconds": 0.020117329999948197
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": null,
+      "case_id": "feather/video/2",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the rectangular video camera body",
+      "instruction": "Change the rectangular video camera body to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "feather/video",
+      "wall_seconds": 0.019758934000037698
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": null,
+      "case_id": "feather/volume-2/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "both sound wave arcs",
+      "instruction": "Change both sound wave arcs to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "feather/volume-2",
+      "wall_seconds": 0.013180949000002329
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": null,
+      "case_id": "feather/volume-2/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the speaker silhouette",
+      "instruction": "Change the speaker silhouette to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/volume-2",
+      "wall_seconds": 0.014315078000095127
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": null,
+      "case_id": "feather/watch/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the watch hands",
+      "instruction": "Change the watch hands to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "feather/watch",
+      "wall_seconds": 0.03259045899994817
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": null,
+      "case_id": "feather/watch/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3"
+      ],
+      "grounding_text": "both watch strap segments",
+      "instruction": "Change both watch strap segments to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/watch",
+      "wall_seconds": 0.033010756999942714
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "feather/wifi/1",
+      "collection": "feather",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n1",
+        "n2",
+        "n3"
+      ],
+      "grounding_text": "all three wireless signal arcs",
+      "instruction": "Change all three wireless signal arcs to red.",
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "selected_targets": [
+        "n3",
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "feather/wifi",
+      "wall_seconds": 0.014424736000023586
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "feather/wifi/2",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n4"
+      ],
+      "grounding_text": "the small dot below the arcs",
+      "instruction": "Change the small dot below the arcs to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "feather/wifi",
+      "wall_seconds": 0.013670054000044729
+    },
+    {
+      "candidate_count": 11,
+      "candidate_coverage": null,
+      "case_id": "tabler/abacus/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10"
+      ],
+      "grounding_text": "all six abacus beads",
+      "instruction": "Change all six abacus beads to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n11"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/abacus",
+      "wall_seconds": 0.01132224400009818
+    },
+    {
+      "candidate_count": 11,
+      "candidate_coverage": null,
+      "case_id": "tabler/abacus/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "the two upright side supports",
+      "instruction": "Change the two upright side supports to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n7",
+        "n6",
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/abacus",
+      "wall_seconds": 0.020494105000011587
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "tabler/bike/1",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "both bicycle wheels",
+      "instruction": "Change both bicycle wheels to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2",
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "tabler/bike",
+      "wall_seconds": 0.025128294000069218
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "tabler/bike/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n4"
+      ],
+      "grounding_text": "the circular rider head",
+      "instruction": "Change the circular rider head to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "tabler/bike",
+      "wall_seconds": 0.028233802000045216
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": null,
+      "case_id": "tabler/building-bank/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n6",
+        "n7",
+        "n8"
+      ],
+      "grounding_text": "the three short interior columns",
+      "instruction": "Change the three short interior columns to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/building-bank",
+      "wall_seconds": 0.010252844999968147
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": null,
+      "case_id": "tabler/building-bank/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n3"
+      ],
+      "grounding_text": "the angled roof",
+      "instruction": "Change the angled roof to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "tabler/building-bank",
+      "wall_seconds": 0.010200445000009495
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": null,
+      "case_id": "tabler/building-store/1",
+      "collection": "tabler",
+      "failure_category": "extra_parts",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "both vertical side walls",
+      "instruction": "Change both vertical side walls to red.",
+      "precision": 0.4,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1",
+        "n4",
+        "n5",
+        "n3",
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/building-store",
+      "wall_seconds": 0.027998551999985466
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": null,
+      "case_id": "tabler/building-store/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n5"
+      ],
+      "grounding_text": "the arched doorway",
+      "instruction": "Change the arched doorway to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/building-store",
+      "wall_seconds": 0.02875474799998301
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": null,
+      "case_id": "tabler/bus/1",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "both bus wheels",
+      "instruction": "Change both bus wheels to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2",
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "tabler/bus",
+      "wall_seconds": 0.03543988200010517
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": null,
+      "case_id": "tabler/bus/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n6",
+        "n7"
+      ],
+      "grounding_text": "the two short vertical window dividers",
+      "instruction": "Change the two short vertical window dividers to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/bus",
+      "wall_seconds": 0.02920586599998387
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": null,
+      "case_id": "tabler/calculator/1",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8"
+      ],
+      "grounding_text": "all six calculator button dots",
+      "instruction": "Change all six calculator button dots to red.",
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "selected_targets": [
+        "n8"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/calculator",
+      "wall_seconds": 0.035253142000101434
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": null,
+      "case_id": "tabler/calculator/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the calculator display",
+      "instruction": "Change the calculator display to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "tabler/calculator",
+      "wall_seconds": 0.035964652999950886
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": null,
+      "case_id": "tabler/car/1",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "both car wheels",
+      "instruction": "Change both car wheels to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2",
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "tabler/car",
+      "wall_seconds": 0.027389835000008134
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": null,
+      "case_id": "tabler/car/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3"
+      ],
+      "grounding_text": "the car body outline",
+      "instruction": "Change the car body outline to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/car",
+      "wall_seconds": 0.025781794000067748
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "tabler/device-gamepad/1",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "both small action buttons",
+      "instruction": "Change both small action buttons to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/device-gamepad",
+      "wall_seconds": 0.020676586999911706
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "tabler/device-gamepad/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the cross-shaped directional control",
+      "instruction": "Change the cross-shaped directional control to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/device-gamepad",
+      "wall_seconds": 0.02053337500001362
+    },
+    {
+      "candidate_count": 9,
+      "candidate_coverage": null,
+      "case_id": "tabler/drone/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3",
+        "n5",
+        "n7",
+        "n9"
+      ],
+      "grounding_text": "all four curved rotor outlines",
+      "instruction": "Change all four curved rotor outlines to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n6"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/drone",
+      "wall_seconds": 0.024075862000131565
+    },
+    {
+      "candidate_count": 9,
+      "candidate_coverage": null,
+      "case_id": "tabler/drone/2",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n2",
+        "n4",
+        "n6",
+        "n8"
+      ],
+      "grounding_text": "all four diagonal arms",
+      "instruction": "Change all four diagonal arms to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n6",
+        "n8"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/drone",
+      "wall_seconds": 0.0234419619999926
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": null,
+      "case_id": "tabler/face-id/1",
+      "collection": "tabler",
+      "failure_category": "mixed_missing_and_extra",
+      "gold_targets": [
+        "n5",
+        "n6"
+      ],
+      "grounding_text": "both eyes",
+      "instruction": "Change both eyes to red.",
+      "precision": 0.25,
+      "recall": 0.5,
+      "selected_targets": [
+        "n4",
+        "n7",
+        "n2",
+        "n6"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/face-id",
+      "wall_seconds": 0.026651349000076152
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": null,
+      "case_id": "tabler/face-id/2",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n1",
+        "n2",
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "all four face-scanning corner brackets",
+      "instruction": "Change all four face-scanning corner brackets to red.",
+      "precision": 1.0,
+      "recall": 0.25,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/face-id",
+      "wall_seconds": 0.027965409999865187
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "tabler/first-aid-kit/1",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "the complete medical cross",
+      "instruction": "Change the complete medical cross to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/first-aid-kit",
+      "wall_seconds": 0.027793592999955763
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "tabler/first-aid-kit/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the carrying handle",
+      "instruction": "Change the carrying handle to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "tabler/first-aid-kit",
+      "wall_seconds": 0.02904962599995997
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": null,
+      "case_id": "tabler/flask/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the horizontal lip at the very top",
+      "instruction": "Change the horizontal lip at the very top to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/flask",
+      "wall_seconds": 0.01509211600011895
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": null,
+      "case_id": "tabler/flask/2",
+      "collection": "tabler",
+      "failure_category": "extra_parts",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the horizontal line across the neck",
+      "instruction": "Change the horizontal line across the neck to red.",
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1",
+        "n2",
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/flask",
+      "wall_seconds": 0.014610269000058906
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": null,
+      "case_id": "tabler/helicopter/1",
+      "collection": "tabler",
+      "failure_category": "mixed_missing_and_extra",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "the main rotor blade and its vertical mast",
+      "instruction": "Change the main rotor blade and its vertical mast to red.",
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "selected_targets": [
+        "n5",
+        "n4",
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/helicopter",
+      "wall_seconds": 0.02127040699997451
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": null,
+      "case_id": "tabler/helicopter/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n6",
+        "n7"
+      ],
+      "grounding_text": "the landing skid and its vertical support",
+      "instruction": "Change the landing skid and its vertical support to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/helicopter",
+      "wall_seconds": 0.02138317799995093
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": null,
+      "case_id": "tabler/keyboard/1",
+      "collection": "tabler",
+      "failure_category": "mixed_missing_and_extra",
+      "gold_targets": [
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "grounding_text": "all six small key dots",
+      "instruction": "Change all six small key dots to red.",
+      "precision": 0.5,
+      "recall": 0.16666666666666666,
+      "selected_targets": [
+        "n7",
+        "n8"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/keyboard",
+      "wall_seconds": 0.02335660200003531
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": null,
+      "case_id": "tabler/keyboard/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n8"
+      ],
+      "grounding_text": "the long space bar",
+      "instruction": "Change the long space bar to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/keyboard",
+      "wall_seconds": 0.03072341699999015
+    },
+    {
+      "candidate_count": 6,
+      "candidate_coverage": null,
+      "case_id": "tabler/lifebuoy/1",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n3",
+        "n4",
+        "n5",
+        "n6"
+      ],
+      "grounding_text": "all four diagonal band dividers",
+      "instruction": "Change all four diagonal band dividers to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n3",
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/lifebuoy",
+      "wall_seconds": 0.020151241000007758
+    },
+    {
+      "candidate_count": 6,
+      "candidate_coverage": null,
+      "case_id": "tabler/lifebuoy/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the outer circular rim",
+      "instruction": "Change the outer circular rim to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/lifebuoy",
+      "wall_seconds": 0.01963076699996691
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": null,
+      "case_id": "tabler/microscope/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the bottom horizontal base line",
+      "instruction": "Change the bottom horizontal base line to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3",
+        "n7",
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/microscope",
+      "wall_seconds": 0.014032360000101107
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": null,
+      "case_id": "tabler/microscope/2",
+      "collection": "tabler",
+      "failure_category": "mixed_missing_and_extra",
+      "gold_targets": [
+        "n4",
+        "n5",
+        "n6"
+      ],
+      "grounding_text": "the diagonal optical tube, its lower tip, and the eyepiece bar",
+      "instruction": "Change the diagonal optical tube, its lower tip, and the eyepiece bar to red.",
+      "precision": 0.3333333333333333,
+      "recall": 0.3333333333333333,
+      "selected_targets": [
+        "n3",
+        "n7",
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/microscope",
+      "wall_seconds": 0.013728528999990885
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "tabler/motorbike/1",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "both motorcycle wheels",
+      "instruction": "Change both motorcycle wheels to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/motorbike",
+      "wall_seconds": 0.02084472600006393
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "tabler/motorbike/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n4"
+      ],
+      "grounding_text": "the handlebar and front fork line",
+      "instruction": "Change the handlebar and front fork line to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "tabler/motorbike",
+      "wall_seconds": 0.02037773099993956
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": null,
+      "case_id": "tabler/mouse/1",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the scroll wheel line",
+      "instruction": "Change the scroll wheel line to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "tabler/mouse",
+      "wall_seconds": 0.023688812999921538
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": null,
+      "case_id": "tabler/mouse/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the mouse body outline",
+      "instruction": "Change the mouse body outline to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/mouse",
+      "wall_seconds": 0.01787562600009096
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "tabler/palette/1",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n2",
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "all three circular paint wells",
+      "instruction": "Change all three circular paint wells to red.",
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/palette",
+      "wall_seconds": 0.038292862000048444
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "tabler/palette/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the palette outline",
+      "instruction": "Change the palette outline to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/palette",
+      "wall_seconds": 0.038017225999965376
+    },
+    {
+      "candidate_count": 9,
+      "candidate_coverage": null,
+      "case_id": "tabler/robot/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n8",
+        "n9"
+      ],
+      "grounding_text": "both robot eyes",
+      "instruction": "Change both robot eyes to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n7",
+        "n6",
+        "n5",
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/robot",
+      "wall_seconds": 0.025422743000035553
+    },
+    {
+      "candidate_count": 9,
+      "candidate_coverage": null,
+      "case_id": "tabler/robot/2",
+      "collection": "tabler",
+      "failure_category": "extra_parts",
+      "gold_targets": [
+        "n5",
+        "n6"
+      ],
+      "grounding_text": "both short diagonal arms",
+      "instruction": "Change both short diagonal arms to red.",
+      "precision": 0.5,
+      "recall": 1.0,
+      "selected_targets": [
+        "n7",
+        "n6",
+        "n5",
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/robot",
+      "wall_seconds": 0.02554370999996536
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "tabler/sailboat/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the wavy water line",
+      "instruction": "Change the wavy water line to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/sailboat",
+      "wall_seconds": 0.03794200100003309
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "tabler/sailboat/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "both sail strokes",
+      "instruction": "Change both sail strokes to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/sailboat",
+      "wall_seconds": 0.03739874300003976
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": null,
+      "case_id": "tabler/stethoscope/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "both short earpiece tips",
+      "instruction": "Change both short earpiece tips to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n5",
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/stethoscope",
+      "wall_seconds": 0.02866144900008294
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": null,
+      "case_id": "tabler/stethoscope/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n5"
+      ],
+      "grounding_text": "the circular chestpiece",
+      "instruction": "Change the circular chestpiece to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/stethoscope",
+      "wall_seconds": 0.030045079000046826
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "tabler/telescope/1",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "the complete tripod support",
+      "instruction": "Change the complete tripod support to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/telescope",
+      "wall_seconds": 0.01921052000011514
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": null,
+      "case_id": "tabler/telescope/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n4"
+      ],
+      "grounding_text": "the diagonal band across the telescope tube",
+      "instruction": "Change the diagonal band across the telescope tube to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "tabler/telescope",
+      "wall_seconds": 0.020495436000032896
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": null,
+      "case_id": "tabler/thermometer/1",
+      "collection": "tabler",
+      "failure_category": "mixed_missing_and_extra",
+      "gold_targets": [
+        "n2",
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "all three diagonal measurement ticks",
+      "instruction": "Change all three diagonal measurement ticks to red.",
+      "precision": 0.5,
+      "recall": 0.3333333333333333,
+      "selected_targets": [
+        "n5",
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/thermometer",
+      "wall_seconds": 0.015161353000053168
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": null,
+      "case_id": "tabler/thermometer/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n5"
+      ],
+      "grounding_text": "the short tip at the lower left",
+      "instruction": "Change the short tip at the lower left to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": true,
+      "source_id": "tabler/thermometer",
+      "wall_seconds": 0.01566615399985949
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": null,
+      "case_id": "tabler/train/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n5",
+        "n6"
+      ],
+      "grounding_text": "both short vertical window dividers",
+      "instruction": "Change both short vertical window dividers to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n7",
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/train",
+      "wall_seconds": 0.014914551000060783
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": null,
+      "case_id": "tabler/train/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n7"
+      ],
+      "grounding_text": "the horizontal track below the train",
+      "instruction": "Change the horizontal track below the train to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n4",
+        "n5",
+        "n6"
+      ],
+      "selection_evidence": {},
+      "selection_source": "baseline",
+      "set_exact": false,
+      "source_id": "tabler/train",
+      "wall_seconds": 0.0157483590000993
+    }
+  ],
+  "groups": [
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/battery/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the battery casing",
+      "instruction": "Change the battery casing to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "feather/battery",
+      "wall_seconds": 0.028189142999849537
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/battery/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the short terminal at the right",
+      "instruction": "Change the short terminal at the right to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/battery",
+      "wall_seconds": 0.03132453800003532
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/battery-charging/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3"
+      ],
+      "grounding_text": "the lightning bolt",
+      "instruction": "Change the lightning bolt to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/battery-charging",
+      "wall_seconds": 0.029931841999996323
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": false,
+      "case_id": "feather/battery-charging/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "the battery casing and its right terminal",
+      "instruction": "Change the battery casing and its right terminal to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/battery-charging",
+      "wall_seconds": 0.031702312999982496
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/bell/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the bell body",
+      "instruction": "Change the bell body to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/bell",
+      "wall_seconds": 0.020099928999798067
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/bell/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the clapper below the bell",
+      "instruction": "Change the clapper below the bell to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/bell",
+      "wall_seconds": 0.020586731999969743
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/camera/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the camera lens",
+      "instruction": "Change the camera lens to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "feather/camera",
+      "wall_seconds": 0.04781303500010381
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/camera/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the camera body outline",
+      "instruction": "Change the camera body outline to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/camera",
+      "wall_seconds": 0.04957059299999855
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/clock/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the clock hands",
+      "instruction": "Change the clock hands to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/clock",
+      "wall_seconds": 0.028743577000113874
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/clock/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the outer clock face circle",
+      "instruction": "Change the outer clock face circle to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/clock",
+      "wall_seconds": 0.02415107199999511
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/cloud-lightning/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the lightning bolt",
+      "instruction": "Change the lightning bolt to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "feather/cloud-lightning",
+      "wall_seconds": 0.017499301000043488
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/cloud-lightning/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the cloud outline",
+      "instruction": "Change the cloud outline to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/cloud-lightning",
+      "wall_seconds": 0.016916615000127422
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "feather/cloud-rain/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1",
+        "n2",
+        "n3"
+      ],
+      "grounding_text": "all three rain streaks",
+      "instruction": "Change all three rain streaks to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/cloud-rain",
+      "wall_seconds": 0.015629321000005802
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "feather/cloud-rain/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n4"
+      ],
+      "grounding_text": "the cloud outline",
+      "instruction": "Change the cloud outline to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/cloud-rain",
+      "wall_seconds": 0.01548928099987279
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": true,
+      "case_id": "feather/cloud-snow/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "grounding_text": "all six snow dots",
+      "instruction": "Change all six snow dots to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/cloud-snow",
+      "wall_seconds": 0.016633881999950972
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": true,
+      "case_id": "feather/cloud-snow/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the cloud outline",
+      "instruction": "Change the cloud outline to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/cloud-snow",
+      "wall_seconds": 0.016903067000043848
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": true,
+      "case_id": "feather/coffee/1",
+      "collection": "feather",
+      "failure_category": "extra_parts",
+      "gold_targets": [
+        "n3",
+        "n4",
+        "n5"
+      ],
+      "grounding_text": "the three steam strokes",
+      "instruction": "Change the three steam strokes to red.",
+      "precision": 0.6,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/coffee",
+      "wall_seconds": 0.028150012000082825
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": true,
+      "case_id": "feather/coffee/2",
+      "collection": "feather",
+      "failure_category": "extra_parts",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the cup handle",
+      "instruction": "Change the cup handle to red.",
+      "precision": 0.2,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/coffee",
+      "wall_seconds": 0.025602984999977707
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": true,
+      "case_id": "feather/film/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2",
+        "n3"
+      ],
+      "grounding_text": "the two long vertical lines",
+      "instruction": "Change the two long vertical lines to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/film",
+      "wall_seconds": 0.027217574999895078
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": false,
+      "case_id": "feather/film/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n5",
+        "n6",
+        "n7",
+        "n8"
+      ],
+      "grounding_text": "all four short horizontal perforation dividers",
+      "instruction": "Change all four short horizontal perforation dividers to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/film",
+      "wall_seconds": 0.029115927000020747
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/headphones/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "both ear cushions",
+      "instruction": "Change both ear cushions to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "feather/headphones",
+      "wall_seconds": 0.04391258099985862
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/headphones/2",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the curved headband",
+      "instruction": "Change the curved headband to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "feather/headphones",
+      "wall_seconds": 0.04369154599999092
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/monitor/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2",
+        "n3"
+      ],
+      "grounding_text": "the complete monitor stand",
+      "instruction": "Change the complete monitor stand to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/monitor",
+      "wall_seconds": 0.02683460500009005
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/monitor/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the screen outline",
+      "instruction": "Change the screen outline to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/monitor",
+      "wall_seconds": 0.026203478999946128
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/music/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2",
+        "n3"
+      ],
+      "grounding_text": "both circular note heads",
+      "instruction": "Change both circular note heads to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2",
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "feather/music",
+      "wall_seconds": 0.049844001999986176
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/music/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the connected note stems and beam",
+      "instruction": "Change the connected note stems and beam to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/music",
+      "wall_seconds": 0.05913714399980563
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/printer/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n3"
+      ],
+      "grounding_text": "the sheet coming out below the printer",
+      "instruction": "Change the sheet coming out below the printer to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "feather/printer",
+      "wall_seconds": 0.03812891200004742
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/printer/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the upper paper outline",
+      "instruction": "Change the upper paper outline to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/printer",
+      "wall_seconds": 0.03581769100003385
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/radio/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "all the radiating curved waves",
+      "instruction": "Change all the radiating curved waves to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/radio",
+      "wall_seconds": 0.04452999000000091
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/radio/2",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the small central circle",
+      "instruction": "Change the small central circle to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "feather/radio",
+      "wall_seconds": 0.04277408699999796
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/save/1",
+      "collection": "feather",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n2",
+        "n3"
+      ],
+      "grounding_text": "the two interior panels of the floppy disk",
+      "instruction": "Change the two interior panels of the floppy disk to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/save",
+      "wall_seconds": 0.027975202999982685
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/save/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the outer floppy disk boundary",
+      "instruction": "Change the outer floppy disk boundary to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/save",
+      "wall_seconds": 0.027609808000079283
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "feather/server/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "both status indicator dots",
+      "instruction": "Change both status indicator dots to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/server",
+      "wall_seconds": 0.050113559000010355
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "feather/server/2",
+      "collection": "feather",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "both rectangular server unit outlines",
+      "instruction": "Change both rectangular server unit outlines to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/server",
+      "wall_seconds": 0.049638710999943214
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/shopping-cart/1",
+      "collection": "feather",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "both cart wheels",
+      "instruction": "Change both cart wheels to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/shopping-cart",
+      "wall_seconds": 0.05430851699998129
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/shopping-cart/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3"
+      ],
+      "grounding_text": "the cart frame and handle",
+      "instruction": "Change the cart frame and handle to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/shopping-cart",
+      "wall_seconds": 0.05654091899998548
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/speaker/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the circular loudspeaker cone",
+      "instruction": "Change the circular loudspeaker cone to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/speaker",
+      "wall_seconds": 0.04409299199994621
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/speaker/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3"
+      ],
+      "grounding_text": "the small indicator dot above the cone",
+      "instruction": "Change the small indicator dot above the cone to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/speaker",
+      "wall_seconds": 0.045054213999947024
+    },
+    {
+      "candidate_count": 9,
+      "candidate_coverage": true,
+      "case_id": "feather/sun/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9"
+      ],
+      "grounding_text": "all eight sun rays",
+      "instruction": "Change all eight sun rays to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/sun",
+      "wall_seconds": 0.026048356999922362
+    },
+    {
+      "candidate_count": 9,
+      "candidate_coverage": true,
+      "case_id": "feather/sun/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the central sun circle",
+      "instruction": "Change the central sun circle to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/sun",
+      "wall_seconds": 0.025570148000042536
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "feather/truck/1",
+      "collection": "feather",
+      "failure_category": "extra_parts",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "both truck wheels",
+      "instruction": "Change both truck wheels to red.",
+      "precision": 0.5,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1",
+        "n2",
+        "n3",
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/truck",
+      "wall_seconds": 0.05403480600000421
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": false,
+      "case_id": "feather/truck/2",
+      "collection": "feather",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "the cargo box and cab outlines",
+      "instruction": "Change the cargo box and cab outlines to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/truck",
+      "wall_seconds": 0.055172860999959994
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/video/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the triangular video camera attachment",
+      "instruction": "Change the triangular video camera attachment to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/video",
+      "wall_seconds": 0.02982698400001027
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/video/2",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the rectangular video camera body",
+      "instruction": "Change the rectangular video camera body to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "feather/video",
+      "wall_seconds": 0.029225795999877846
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/volume-2/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "both sound wave arcs",
+      "instruction": "Change both sound wave arcs to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "feather/volume-2",
+      "wall_seconds": 0.019364728000027753
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/volume-2/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the speaker silhouette",
+      "instruction": "Change the speaker silhouette to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/volume-2",
+      "wall_seconds": 0.020161248000135856
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/watch/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the watch hands",
+      "instruction": "Change the watch hands to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "feather/watch",
+      "wall_seconds": 0.04856024100001832
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/watch/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3"
+      ],
+      "grounding_text": "both watch strap segments",
+      "instruction": "Change both watch strap segments to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/watch",
+      "wall_seconds": 0.049323647000051096
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "feather/wifi/1",
+      "collection": "feather",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n1",
+        "n2",
+        "n3"
+      ],
+      "grounding_text": "all three wireless signal arcs",
+      "instruction": "Change all three wireless signal arcs to red.",
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "selected_targets": [
+        "n1",
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "feather/wifi",
+      "wall_seconds": 0.02136968499996783
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "feather/wifi/2",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n4"
+      ],
+      "grounding_text": "the small dot below the arcs",
+      "instruction": "Change the small dot below the arcs to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "feather/wifi",
+      "wall_seconds": 0.020232332999967184
+    },
+    {
+      "candidate_count": 11,
+      "candidate_coverage": false,
+      "case_id": "tabler/abacus/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10"
+      ],
+      "grounding_text": "all six abacus beads",
+      "instruction": "Change all six abacus beads to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n11"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/abacus",
+      "wall_seconds": 0.02285321800013662
+    },
+    {
+      "candidate_count": 11,
+      "candidate_coverage": false,
+      "case_id": "tabler/abacus/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "the two upright side supports",
+      "instruction": "Change the two upright side supports to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/abacus",
+      "wall_seconds": 0.027508735999958844
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "tabler/bike/1",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "both bicycle wheels",
+      "instruction": "Change both bicycle wheels to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1",
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "tabler/bike",
+      "wall_seconds": 0.03766751800003476
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "tabler/bike/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n4"
+      ],
+      "grounding_text": "the circular rider head",
+      "instruction": "Change the circular rider head to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "tabler/bike",
+      "wall_seconds": 0.04253698100001202
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": false,
+      "case_id": "tabler/building-bank/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n6",
+        "n7",
+        "n8"
+      ],
+      "grounding_text": "the three short interior columns",
+      "instruction": "Change the three short interior columns to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/building-bank",
+      "wall_seconds": 0.01566590599986739
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": true,
+      "case_id": "tabler/building-bank/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n3"
+      ],
+      "grounding_text": "the angled roof",
+      "instruction": "Change the angled roof to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "tabler/building-bank",
+      "wall_seconds": 0.015759775999981684
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": false,
+      "case_id": "tabler/building-store/1",
+      "collection": "tabler",
+      "failure_category": "mixed_missing_and_extra",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "both vertical side walls",
+      "instruction": "Change both vertical side walls to red.",
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "selected_targets": [
+        "n1",
+        "n4",
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/building-store",
+      "wall_seconds": 0.04184779599995636
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": true,
+      "case_id": "tabler/building-store/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n5"
+      ],
+      "grounding_text": "the arched doorway",
+      "instruction": "Change the arched doorway to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/building-store",
+      "wall_seconds": 0.042950251999968714
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": true,
+      "case_id": "tabler/bus/1",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "both bus wheels",
+      "instruction": "Change both bus wheels to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1",
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "tabler/bus",
+      "wall_seconds": 0.0503244320000249
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": false,
+      "case_id": "tabler/bus/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n6",
+        "n7"
+      ],
+      "grounding_text": "the two short vertical window dividers",
+      "instruction": "Change the two short vertical window dividers to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/bus",
+      "wall_seconds": 0.045718528999941555
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": true,
+      "case_id": "tabler/calculator/1",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8"
+      ],
+      "grounding_text": "all six calculator button dots",
+      "instruction": "Change all six calculator button dots to red.",
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "selected_targets": [
+        "n8"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/calculator",
+      "wall_seconds": 0.05393074100004469
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": true,
+      "case_id": "tabler/calculator/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the calculator display",
+      "instruction": "Change the calculator display to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/calculator",
+      "wall_seconds": 0.055287776999989546
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "tabler/car/1",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "both car wheels",
+      "instruction": "Change both car wheels to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1",
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "tabler/car",
+      "wall_seconds": 0.04035598200016466
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "tabler/car/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3"
+      ],
+      "grounding_text": "the car body outline",
+      "instruction": "Change the car body outline to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/car",
+      "wall_seconds": 0.03886802199997419
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": false,
+      "case_id": "tabler/device-gamepad/1",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "both small action buttons",
+      "instruction": "Change both small action buttons to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/device-gamepad",
+      "wall_seconds": 0.030701278999913484
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "tabler/device-gamepad/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the cross-shaped directional control",
+      "instruction": "Change the cross-shaped directional control to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/device-gamepad",
+      "wall_seconds": 0.03121608499998274
+    },
+    {
+      "candidate_count": 9,
+      "candidate_coverage": false,
+      "case_id": "tabler/drone/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3",
+        "n5",
+        "n7",
+        "n9"
+      ],
+      "grounding_text": "all four curved rotor outlines",
+      "instruction": "Change all four curved rotor outlines to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n6"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/drone",
+      "wall_seconds": 0.03580443200007721
+    },
+    {
+      "candidate_count": 9,
+      "candidate_coverage": false,
+      "case_id": "tabler/drone/2",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n2",
+        "n4",
+        "n6",
+        "n8"
+      ],
+      "grounding_text": "all four diagonal arms",
+      "instruction": "Change all four diagonal arms to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n6",
+        "n8"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/drone",
+      "wall_seconds": 0.03754091499990864
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": false,
+      "case_id": "tabler/face-id/1",
+      "collection": "tabler",
+      "failure_category": "mixed_missing_and_extra",
+      "gold_targets": [
+        "n5",
+        "n6"
+      ],
+      "grounding_text": "both eyes",
+      "instruction": "Change both eyes to red.",
+      "precision": 0.25,
+      "recall": 0.5,
+      "selected_targets": [
+        "n2",
+        "n4",
+        "n6",
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/face-id",
+      "wall_seconds": 0.041375375000029635
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": false,
+      "case_id": "tabler/face-id/2",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n1",
+        "n2",
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "all four face-scanning corner brackets",
+      "instruction": "Change all four face-scanning corner brackets to red.",
+      "precision": 1.0,
+      "recall": 0.25,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/face-id",
+      "wall_seconds": 0.04203300699987267
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "tabler/first-aid-kit/1",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "the complete medical cross",
+      "instruction": "Change the complete medical cross to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/first-aid-kit",
+      "wall_seconds": 0.041782859000022654
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "tabler/first-aid-kit/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the carrying handle",
+      "instruction": "Change the carrying handle to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "tabler/first-aid-kit",
+      "wall_seconds": 0.042900667999902
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "tabler/flask/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the horizontal lip at the very top",
+      "instruction": "Change the horizontal lip at the very top to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/flask",
+      "wall_seconds": 0.02156478600011269
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "tabler/flask/2",
+      "collection": "tabler",
+      "failure_category": "extra_parts",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the horizontal line across the neck",
+      "instruction": "Change the horizontal line across the neck to red.",
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1",
+        "n2",
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/flask",
+      "wall_seconds": 0.021040562000052887
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": false,
+      "case_id": "tabler/helicopter/1",
+      "collection": "tabler",
+      "failure_category": "mixed_missing_and_extra",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "the main rotor blade and its vertical mast",
+      "instruction": "Change the main rotor blade and its vertical mast to red.",
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "selected_targets": [
+        "n4",
+        "n5",
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/helicopter",
+      "wall_seconds": 0.03265674199997193
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": false,
+      "case_id": "tabler/helicopter/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n6",
+        "n7"
+      ],
+      "grounding_text": "the landing skid and its vertical support",
+      "instruction": "Change the landing skid and its vertical support to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/helicopter",
+      "wall_seconds": 0.03216124300001866
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": false,
+      "case_id": "tabler/keyboard/1",
+      "collection": "tabler",
+      "failure_category": "mixed_missing_and_extra",
+      "gold_targets": [
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "grounding_text": "all six small key dots",
+      "instruction": "Change all six small key dots to red.",
+      "precision": 0.5,
+      "recall": 0.16666666666666666,
+      "selected_targets": [
+        "n7",
+        "n8"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/keyboard",
+      "wall_seconds": 0.03604683800006114
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": true,
+      "case_id": "tabler/keyboard/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n8"
+      ],
+      "grounding_text": "the long space bar",
+      "instruction": "Change the long space bar to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/keyboard",
+      "wall_seconds": 0.051501767999980075
+    },
+    {
+      "candidate_count": 6,
+      "candidate_coverage": true,
+      "case_id": "tabler/lifebuoy/1",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n3",
+        "n4",
+        "n5",
+        "n6"
+      ],
+      "grounding_text": "all four diagonal band dividers",
+      "instruction": "Change all four diagonal band dividers to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n3",
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/lifebuoy",
+      "wall_seconds": 0.03054501499991602
+    },
+    {
+      "candidate_count": 6,
+      "candidate_coverage": true,
+      "case_id": "tabler/lifebuoy/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the outer circular rim",
+      "instruction": "Change the outer circular rim to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n6"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/lifebuoy",
+      "wall_seconds": 0.030166528999870934
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": true,
+      "case_id": "tabler/microscope/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the bottom horizontal base line",
+      "instruction": "Change the bottom horizontal base line to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/microscope",
+      "wall_seconds": 0.020473628000104327
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": false,
+      "case_id": "tabler/microscope/2",
+      "collection": "tabler",
+      "failure_category": "mixed_missing_and_extra",
+      "gold_targets": [
+        "n4",
+        "n5",
+        "n6"
+      ],
+      "grounding_text": "the diagonal optical tube, its lower tip, and the eyepiece bar",
+      "instruction": "Change the diagonal optical tube, its lower tip, and the eyepiece bar to red.",
+      "precision": 0.3333333333333333,
+      "recall": 0.3333333333333333,
+      "selected_targets": [
+        "n3",
+        "n5",
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/microscope",
+      "wall_seconds": 0.021689953999953104
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "tabler/motorbike/1",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "both motorcycle wheels",
+      "instruction": "Change both motorcycle wheels to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/motorbike",
+      "wall_seconds": 0.031179711000049792
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "tabler/motorbike/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n4"
+      ],
+      "grounding_text": "the handlebar and front fork line",
+      "instruction": "Change the handlebar and front fork line to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "tabler/motorbike",
+      "wall_seconds": 0.030208301999891773
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "tabler/mouse/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the scroll wheel line",
+      "instruction": "Change the scroll wheel line to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/mouse",
+      "wall_seconds": 0.03209956099999545
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "tabler/mouse/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the mouse body outline",
+      "instruction": "Change the mouse body outline to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "tabler/mouse",
+      "wall_seconds": 0.026700449000031767
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "tabler/palette/1",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n2",
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "all three circular paint wells",
+      "instruction": "Change all three circular paint wells to red.",
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/palette",
+      "wall_seconds": 0.05706951700005902
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "tabler/palette/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the palette outline",
+      "instruction": "Change the palette outline to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/palette",
+      "wall_seconds": 0.05720030600002701
+    },
+    {
+      "candidate_count": 9,
+      "candidate_coverage": true,
+      "case_id": "tabler/robot/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n8",
+        "n9"
+      ],
+      "grounding_text": "both robot eyes",
+      "instruction": "Change both robot eyes to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n4",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/robot",
+      "wall_seconds": 0.038013905000070736
+    },
+    {
+      "candidate_count": 9,
+      "candidate_coverage": false,
+      "case_id": "tabler/robot/2",
+      "collection": "tabler",
+      "failure_category": "extra_parts",
+      "gold_targets": [
+        "n5",
+        "n6"
+      ],
+      "grounding_text": "both short diagonal arms",
+      "instruction": "Change both short diagonal arms to red.",
+      "precision": 0.5,
+      "recall": 1.0,
+      "selected_targets": [
+        "n4",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/robot",
+      "wall_seconds": 0.039204031000053874
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "tabler/sailboat/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the wavy water line",
+      "instruction": "Change the wavy water line to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/sailboat",
+      "wall_seconds": 0.05685271799995917
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": false,
+      "case_id": "tabler/sailboat/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "both sail strokes",
+      "instruction": "Change both sail strokes to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/sailboat",
+      "wall_seconds": 0.05693018700003449
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": true,
+      "case_id": "tabler/stethoscope/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "both short earpiece tips",
+      "instruction": "Change both short earpiece tips to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2",
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/stethoscope",
+      "wall_seconds": 0.04603539000004275
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": true,
+      "case_id": "tabler/stethoscope/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n5"
+      ],
+      "grounding_text": "the circular chestpiece",
+      "instruction": "Change the circular chestpiece to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "tabler/stethoscope",
+      "wall_seconds": 0.04374514000005547
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": false,
+      "case_id": "tabler/telescope/1",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "the complete tripod support",
+      "instruction": "Change the complete tripod support to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/telescope",
+      "wall_seconds": 0.02923657299993465
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "tabler/telescope/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n4"
+      ],
+      "grounding_text": "the diagonal band across the telescope tube",
+      "instruction": "Change the diagonal band across the telescope tube to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "tabler/telescope",
+      "wall_seconds": 0.031219254000006913
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": true,
+      "case_id": "tabler/thermometer/1",
+      "collection": "tabler",
+      "failure_category": "mixed_missing_and_extra",
+      "gold_targets": [
+        "n2",
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "all three diagonal measurement ticks",
+      "instruction": "Change all three diagonal measurement ticks to red.",
+      "precision": 0.5,
+      "recall": 0.3333333333333333,
+      "selected_targets": [
+        "n4",
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/thermometer",
+      "wall_seconds": 0.02286387399999512
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": true,
+      "case_id": "tabler/thermometer/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n5"
+      ],
+      "grounding_text": "the short tip at the lower left",
+      "instruction": "Change the short tip at the lower left to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": true,
+      "source_id": "tabler/thermometer",
+      "wall_seconds": 0.023061622999875908
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": true,
+      "case_id": "tabler/train/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n5",
+        "n6"
+      ],
+      "grounding_text": "both short vertical window dividers",
+      "instruction": "Change both short vertical window dividers to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2",
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/train",
+      "wall_seconds": 0.0232456240000829
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": true,
+      "case_id": "tabler/train/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n7"
+      ],
+      "grounding_text": "the horizontal track below the train",
+      "instruction": "Change the horizontal track below the train to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n4",
+        "n5",
+        "n6"
+      ],
+      "selection_evidence": {},
+      "selection_source": "groups",
+      "set_exact": false,
+      "source_id": "tabler/train",
+      "wall_seconds": 0.02360596800008352
+    }
+  ],
+  "prefix": [
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/battery/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the battery casing",
+      "instruction": "Change the battery casing to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "feather/battery",
+      "wall_seconds": 0.020379215999923872
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/battery/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the short terminal at the right",
+      "instruction": "Change the short terminal at the right to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/battery",
+      "wall_seconds": 0.02425372800007608
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/battery-charging/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3"
+      ],
+      "grounding_text": "the lightning bolt",
+      "instruction": "Change the lightning bolt to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/battery-charging",
+      "wall_seconds": 0.02139587300007406
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": false,
+      "case_id": "feather/battery-charging/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "the battery casing and its right terminal",
+      "instruction": "Change the battery casing and its right terminal to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/battery-charging",
+      "wall_seconds": 0.022369619999949464
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/bell/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the bell body",
+      "instruction": "Change the bell body to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "feather/bell",
+      "wall_seconds": 0.01426970599982269
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/bell/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the clapper below the bell",
+      "instruction": "Change the clapper below the bell to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/bell",
+      "wall_seconds": 0.015144565999889892
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/camera/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the camera lens",
+      "instruction": "Change the camera lens to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/camera",
+      "wall_seconds": 0.03322131800007355
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/camera/2",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the camera body outline",
+      "instruction": "Change the camera body outline to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "feather/camera",
+      "wall_seconds": 0.03286139199997251
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/clock/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the clock hands",
+      "instruction": "Change the clock hands to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/clock",
+      "wall_seconds": 0.02193563700006962
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/clock/2",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the outer clock face circle",
+      "instruction": "Change the outer clock face circle to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "feather/clock",
+      "wall_seconds": 0.017372042000033616
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/cloud-lightning/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the lightning bolt",
+      "instruction": "Change the lightning bolt to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/cloud-lightning",
+      "wall_seconds": 0.012906633999932637
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/cloud-lightning/2",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the cloud outline",
+      "instruction": "Change the cloud outline to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "feather/cloud-lightning",
+      "wall_seconds": 0.012412594000124955
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "feather/cloud-rain/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1",
+        "n2",
+        "n3"
+      ],
+      "grounding_text": "all three rain streaks",
+      "instruction": "Change all three rain streaks to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/cloud-rain",
+      "wall_seconds": 0.011358526000094571
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "feather/cloud-rain/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n4"
+      ],
+      "grounding_text": "the cloud outline",
+      "instruction": "Change the cloud outline to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/cloud-rain",
+      "wall_seconds": 0.011692054999912216
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": true,
+      "case_id": "feather/cloud-snow/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "grounding_text": "all six snow dots",
+      "instruction": "Change all six snow dots to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/cloud-snow",
+      "wall_seconds": 0.013073649000034493
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": true,
+      "case_id": "feather/cloud-snow/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the cloud outline",
+      "instruction": "Change the cloud outline to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/cloud-snow",
+      "wall_seconds": 0.013035822999995617
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": true,
+      "case_id": "feather/coffee/1",
+      "collection": "feather",
+      "failure_category": "extra_parts",
+      "gold_targets": [
+        "n3",
+        "n4",
+        "n5"
+      ],
+      "grounding_text": "the three steam strokes",
+      "instruction": "Change the three steam strokes to red.",
+      "precision": 0.6,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/coffee",
+      "wall_seconds": 0.02072367700009181
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": true,
+      "case_id": "feather/coffee/2",
+      "collection": "feather",
+      "failure_category": "extra_parts",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the cup handle",
+      "instruction": "Change the cup handle to red.",
+      "precision": 0.2,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/coffee",
+      "wall_seconds": 0.018426425000029667
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": true,
+      "case_id": "feather/film/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2",
+        "n3"
+      ],
+      "grounding_text": "the two long vertical lines",
+      "instruction": "Change the two long vertical lines to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/film",
+      "wall_seconds": 0.019303986999943845
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": false,
+      "case_id": "feather/film/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n5",
+        "n6",
+        "n7",
+        "n8"
+      ],
+      "grounding_text": "all four short horizontal perforation dividers",
+      "instruction": "Change all four short horizontal perforation dividers to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/film",
+      "wall_seconds": 0.021516796000014438
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/headphones/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "both ear cushions",
+      "instruction": "Change both ear cushions to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "feather/headphones",
+      "wall_seconds": 0.03045446799990259
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/headphones/2",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the curved headband",
+      "instruction": "Change the curved headband to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "feather/headphones",
+      "wall_seconds": 0.030463678999922195
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/monitor/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2",
+        "n3"
+      ],
+      "grounding_text": "the complete monitor stand",
+      "instruction": "Change the complete monitor stand to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/monitor",
+      "wall_seconds": 0.019475145000001248
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/monitor/2",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the screen outline",
+      "instruction": "Change the screen outline to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "feather/monitor",
+      "wall_seconds": 0.018553542999939054
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/music/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2",
+        "n3"
+      ],
+      "grounding_text": "both circular note heads",
+      "instruction": "Change both circular note heads to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2",
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "feather/music",
+      "wall_seconds": 0.03162964899991039
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/music/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the connected note stems and beam",
+      "instruction": "Change the connected note stems and beam to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/music",
+      "wall_seconds": 0.044972372999950494
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/printer/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n3"
+      ],
+      "grounding_text": "the sheet coming out below the printer",
+      "instruction": "Change the sheet coming out below the printer to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "feather/printer",
+      "wall_seconds": 0.027231586000084462
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/printer/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the upper paper outline",
+      "instruction": "Change the upper paper outline to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/printer",
+      "wall_seconds": 0.025815841999929035
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/radio/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "all the radiating curved waves",
+      "instruction": "Change all the radiating curved waves to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/radio",
+      "wall_seconds": 0.032292736999920635
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/radio/2",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the small central circle",
+      "instruction": "Change the small central circle to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "feather/radio",
+      "wall_seconds": 0.03031793299999208
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/save/1",
+      "collection": "feather",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n2",
+        "n3"
+      ],
+      "grounding_text": "the two interior panels of the floppy disk",
+      "instruction": "Change the two interior panels of the floppy disk to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/save",
+      "wall_seconds": 0.02009906700004649
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/save/2",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the outer floppy disk boundary",
+      "instruction": "Change the outer floppy disk boundary to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "feather/save",
+      "wall_seconds": 0.01935819100003755
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": false,
+      "case_id": "feather/server/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "both status indicator dots",
+      "instruction": "Change both status indicator dots to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/server",
+      "wall_seconds": 0.03280835499992918
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "feather/server/2",
+      "collection": "feather",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "both rectangular server unit outlines",
+      "instruction": "Change both rectangular server unit outlines to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/server",
+      "wall_seconds": 0.032524281999940285
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/shopping-cart/1",
+      "collection": "feather",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "both cart wheels",
+      "instruction": "Change both cart wheels to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/shopping-cart",
+      "wall_seconds": 0.03735172599999714
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/shopping-cart/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3"
+      ],
+      "grounding_text": "the cart frame and handle",
+      "instruction": "Change the cart frame and handle to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/shopping-cart",
+      "wall_seconds": 0.0391310729999077
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/speaker/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the circular loudspeaker cone",
+      "instruction": "Change the circular loudspeaker cone to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/speaker",
+      "wall_seconds": 0.030607579000047735
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/speaker/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3"
+      ],
+      "grounding_text": "the small indicator dot above the cone",
+      "instruction": "Change the small indicator dot above the cone to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/speaker",
+      "wall_seconds": 0.03174357199998212
+    },
+    {
+      "candidate_count": 9,
+      "candidate_coverage": false,
+      "case_id": "feather/sun/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9"
+      ],
+      "grounding_text": "all eight sun rays",
+      "instruction": "Change all eight sun rays to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/sun",
+      "wall_seconds": 0.019613288999948963
+    },
+    {
+      "candidate_count": 9,
+      "candidate_coverage": true,
+      "case_id": "feather/sun/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the central sun circle",
+      "instruction": "Change the central sun circle to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/sun",
+      "wall_seconds": 0.018627076999905512
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "feather/truck/1",
+      "collection": "feather",
+      "failure_category": "extra_parts",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "both truck wheels",
+      "instruction": "Change both truck wheels to red.",
+      "precision": 0.5,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1",
+        "n2",
+        "n3",
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/truck",
+      "wall_seconds": 0.03807696700005181
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": false,
+      "case_id": "feather/truck/2",
+      "collection": "feather",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "the cargo box and cab outlines",
+      "instruction": "Change the cargo box and cab outlines to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/truck",
+      "wall_seconds": 0.03964592099998754
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/video/1",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the triangular video camera attachment",
+      "instruction": "Change the triangular video camera attachment to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/video",
+      "wall_seconds": 0.020888814999921124
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/video/2",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the rectangular video camera body",
+      "instruction": "Change the rectangular video camera body to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "feather/video",
+      "wall_seconds": 0.02048745999991297
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/volume-2/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "both sound wave arcs",
+      "instruction": "Change both sound wave arcs to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "feather/volume-2",
+      "wall_seconds": 0.013979290000065703
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "feather/volume-2/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the speaker silhouette",
+      "instruction": "Change the speaker silhouette to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/volume-2",
+      "wall_seconds": 0.015086223000139398
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/watch/1",
+      "collection": "feather",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the watch hands",
+      "instruction": "Change the watch hands to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "feather/watch",
+      "wall_seconds": 0.03385685499995361
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "feather/watch/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3"
+      ],
+      "grounding_text": "both watch strap segments",
+      "instruction": "Change both watch strap segments to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/watch",
+      "wall_seconds": 0.03437592099999165
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": false,
+      "case_id": "feather/wifi/1",
+      "collection": "feather",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n1",
+        "n2",
+        "n3"
+      ],
+      "grounding_text": "all three wireless signal arcs",
+      "instruction": "Change all three wireless signal arcs to red.",
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "selected_targets": [
+        "n1",
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/wifi",
+      "wall_seconds": 0.01566582300006303
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "feather/wifi/2",
+      "collection": "feather",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n4"
+      ],
+      "grounding_text": "the small dot below the arcs",
+      "instruction": "Change the small dot below the arcs to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "feather/wifi",
+      "wall_seconds": 0.014929164000022865
+    },
+    {
+      "candidate_count": 11,
+      "candidate_coverage": false,
+      "case_id": "tabler/abacus/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10"
+      ],
+      "grounding_text": "all six abacus beads",
+      "instruction": "Change all six abacus beads to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n11"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/abacus",
+      "wall_seconds": 0.014336705000118855
+    },
+    {
+      "candidate_count": 11,
+      "candidate_coverage": false,
+      "case_id": "tabler/abacus/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "the two upright side supports",
+      "instruction": "Change the two upright side supports to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/abacus",
+      "wall_seconds": 0.022776908999958323
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "tabler/bike/1",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "both bicycle wheels",
+      "instruction": "Change both bicycle wheels to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1",
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "tabler/bike",
+      "wall_seconds": 0.02633644299999105
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "tabler/bike/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n4"
+      ],
+      "grounding_text": "the circular rider head",
+      "instruction": "Change the circular rider head to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "tabler/bike",
+      "wall_seconds": 0.02932987500003037
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": false,
+      "case_id": "tabler/building-bank/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n6",
+        "n7",
+        "n8"
+      ],
+      "grounding_text": "the three short interior columns",
+      "instruction": "Change the three short interior columns to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/building-bank",
+      "wall_seconds": 0.012104676000035397
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": true,
+      "case_id": "tabler/building-bank/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n3"
+      ],
+      "grounding_text": "the angled roof",
+      "instruction": "Change the angled roof to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "tabler/building-bank",
+      "wall_seconds": 0.011861940999892795
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": false,
+      "case_id": "tabler/building-store/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "both vertical side walls",
+      "instruction": "Change both vertical side walls to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/building-store",
+      "wall_seconds": 0.02932369200004814
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": true,
+      "case_id": "tabler/building-store/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n5"
+      ],
+      "grounding_text": "the arched doorway",
+      "instruction": "Change the arched doorway to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/building-store",
+      "wall_seconds": 0.030053445000021384
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": true,
+      "case_id": "tabler/bus/1",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "both bus wheels",
+      "instruction": "Change both bus wheels to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1",
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "tabler/bus",
+      "wall_seconds": 0.03708040300000448
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": false,
+      "case_id": "tabler/bus/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n6",
+        "n7"
+      ],
+      "grounding_text": "the two short vertical window dividers",
+      "instruction": "Change the two short vertical window dividers to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/bus",
+      "wall_seconds": 0.03086830999995982
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": true,
+      "case_id": "tabler/calculator/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8"
+      ],
+      "grounding_text": "all six calculator button dots",
+      "instruction": "Change all six calculator button dots to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/calculator",
+      "wall_seconds": 0.03697195899997041
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": true,
+      "case_id": "tabler/calculator/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the calculator display",
+      "instruction": "Change the calculator display to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/calculator",
+      "wall_seconds": 0.037861437000060505
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "tabler/car/1",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "both car wheels",
+      "instruction": "Change both car wheels to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1",
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "tabler/car",
+      "wall_seconds": 0.028477406000092742
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "tabler/car/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n3"
+      ],
+      "grounding_text": "the car body outline",
+      "instruction": "Change the car body outline to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "tabler/car",
+      "wall_seconds": 0.026835410000103366
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": false,
+      "case_id": "tabler/device-gamepad/1",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "both small action buttons",
+      "instruction": "Change both small action buttons to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/device-gamepad",
+      "wall_seconds": 0.021904867999978705
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "tabler/device-gamepad/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the cross-shaped directional control",
+      "instruction": "Change the cross-shaped directional control to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/device-gamepad",
+      "wall_seconds": 0.021726297000100203
+    },
+    {
+      "candidate_count": 9,
+      "candidate_coverage": false,
+      "case_id": "tabler/drone/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3",
+        "n5",
+        "n7",
+        "n9"
+      ],
+      "grounding_text": "all four curved rotor outlines",
+      "instruction": "Change all four curved rotor outlines to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n6"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/drone",
+      "wall_seconds": 0.026182746000131374
+    },
+    {
+      "candidate_count": 9,
+      "candidate_coverage": false,
+      "case_id": "tabler/drone/2",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n2",
+        "n4",
+        "n6",
+        "n8"
+      ],
+      "grounding_text": "all four diagonal arms",
+      "instruction": "Change all four diagonal arms to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n6",
+        "n8"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/drone",
+      "wall_seconds": 0.025329580999937207
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": false,
+      "case_id": "tabler/face-id/1",
+      "collection": "tabler",
+      "failure_category": "mixed_missing_and_extra",
+      "gold_targets": [
+        "n5",
+        "n6"
+      ],
+      "grounding_text": "both eyes",
+      "instruction": "Change both eyes to red.",
+      "precision": 0.25,
+      "recall": 0.5,
+      "selected_targets": [
+        "n2",
+        "n4",
+        "n6",
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/face-id",
+      "wall_seconds": 0.02833750600007079
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": false,
+      "case_id": "tabler/face-id/2",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n1",
+        "n2",
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "all four face-scanning corner brackets",
+      "instruction": "Change all four face-scanning corner brackets to red.",
+      "precision": 1.0,
+      "recall": 0.25,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/face-id",
+      "wall_seconds": 0.02994524099995033
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": false,
+      "case_id": "tabler/first-aid-kit/1",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "the complete medical cross",
+      "instruction": "Change the complete medical cross to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/first-aid-kit",
+      "wall_seconds": 0.029225053000004664
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "tabler/first-aid-kit/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the carrying handle",
+      "instruction": "Change the carrying handle to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "tabler/first-aid-kit",
+      "wall_seconds": 0.03060743299988644
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "tabler/flask/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the horizontal lip at the very top",
+      "instruction": "Change the horizontal lip at the very top to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/flask",
+      "wall_seconds": 0.016075093000040397
+    },
+    {
+      "candidate_count": 3,
+      "candidate_coverage": true,
+      "case_id": "tabler/flask/2",
+      "collection": "tabler",
+      "failure_category": "extra_parts",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the horizontal line across the neck",
+      "instruction": "Change the horizontal line across the neck to red.",
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1",
+        "n2",
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/flask",
+      "wall_seconds": 0.015609518000019307
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": false,
+      "case_id": "tabler/helicopter/1",
+      "collection": "tabler",
+      "failure_category": "mixed_missing_and_extra",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "the main rotor blade and its vertical mast",
+      "instruction": "Change the main rotor blade and its vertical mast to red.",
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "selected_targets": [
+        "n4",
+        "n5",
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/helicopter",
+      "wall_seconds": 0.022988904999920123
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": false,
+      "case_id": "tabler/helicopter/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n6",
+        "n7"
+      ],
+      "grounding_text": "the landing skid and its vertical support",
+      "instruction": "Change the landing skid and its vertical support to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/helicopter",
+      "wall_seconds": 0.023103442999968138
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": false,
+      "case_id": "tabler/keyboard/1",
+      "collection": "tabler",
+      "failure_category": "mixed_missing_and_extra",
+      "gold_targets": [
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "grounding_text": "all six small key dots",
+      "instruction": "Change all six small key dots to red.",
+      "precision": 0.5,
+      "recall": 0.16666666666666666,
+      "selected_targets": [
+        "n7",
+        "n8"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/keyboard",
+      "wall_seconds": 0.02525019700010489
+    },
+    {
+      "candidate_count": 8,
+      "candidate_coverage": true,
+      "case_id": "tabler/keyboard/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n8"
+      ],
+      "grounding_text": "the long space bar",
+      "instruction": "Change the long space bar to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/keyboard",
+      "wall_seconds": 0.03393829699996331
+    },
+    {
+      "candidate_count": 6,
+      "candidate_coverage": true,
+      "case_id": "tabler/lifebuoy/1",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n3",
+        "n4",
+        "n5",
+        "n6"
+      ],
+      "grounding_text": "all four diagonal band dividers",
+      "instruction": "Change all four diagonal band dividers to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n3",
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/lifebuoy",
+      "wall_seconds": 0.021739617999969596
+    },
+    {
+      "candidate_count": 6,
+      "candidate_coverage": true,
+      "case_id": "tabler/lifebuoy/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the outer circular rim",
+      "instruction": "Change the outer circular rim to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n6"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/lifebuoy",
+      "wall_seconds": 0.021966238000004523
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": true,
+      "case_id": "tabler/microscope/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the bottom horizontal base line",
+      "instruction": "Change the bottom horizontal base line to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/microscope",
+      "wall_seconds": 0.01570625700014716
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": false,
+      "case_id": "tabler/microscope/2",
+      "collection": "tabler",
+      "failure_category": "mixed_missing_and_extra",
+      "gold_targets": [
+        "n4",
+        "n5",
+        "n6"
+      ],
+      "grounding_text": "the diagonal optical tube, its lower tip, and the eyepiece bar",
+      "instruction": "Change the diagonal optical tube, its lower tip, and the eyepiece bar to red.",
+      "precision": 0.3333333333333333,
+      "recall": 0.3333333333333333,
+      "selected_targets": [
+        "n3",
+        "n5",
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/microscope",
+      "wall_seconds": 0.01551947799998743
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "tabler/motorbike/1",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "both motorcycle wheels",
+      "instruction": "Change both motorcycle wheels to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n2"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/motorbike",
+      "wall_seconds": 0.021975467000061144
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "tabler/motorbike/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n4"
+      ],
+      "grounding_text": "the handlebar and front fork line",
+      "instruction": "Change the handlebar and front fork line to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "tabler/motorbike",
+      "wall_seconds": 0.021549286999970718
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "tabler/mouse/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n2"
+      ],
+      "grounding_text": "the scroll wheel line",
+      "instruction": "Change the scroll wheel line to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/mouse",
+      "wall_seconds": 0.02451275899989014
+    },
+    {
+      "candidate_count": 2,
+      "candidate_coverage": true,
+      "case_id": "tabler/mouse/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the mouse body outline",
+      "instruction": "Change the mouse body outline to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "tabler/mouse",
+      "wall_seconds": 0.01857246900010523
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "tabler/palette/1",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n2",
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "all three circular paint wells",
+      "instruction": "Change all three circular paint wells to red.",
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/palette",
+      "wall_seconds": 0.03940909699997519
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "tabler/palette/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the palette outline",
+      "instruction": "Change the palette outline to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/palette",
+      "wall_seconds": 0.03958314499993776
+    },
+    {
+      "candidate_count": 9,
+      "candidate_coverage": false,
+      "case_id": "tabler/robot/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n8",
+        "n9"
+      ],
+      "grounding_text": "both robot eyes",
+      "instruction": "Change both robot eyes to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n4",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/robot",
+      "wall_seconds": 0.027434951000032015
+    },
+    {
+      "candidate_count": 9,
+      "candidate_coverage": false,
+      "case_id": "tabler/robot/2",
+      "collection": "tabler",
+      "failure_category": "extra_parts",
+      "gold_targets": [
+        "n5",
+        "n6"
+      ],
+      "grounding_text": "both short diagonal arms",
+      "instruction": "Change both short diagonal arms to red.",
+      "precision": 0.5,
+      "recall": 1.0,
+      "selected_targets": [
+        "n4",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/robot",
+      "wall_seconds": 0.027921472000002723
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "tabler/sailboat/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n1"
+      ],
+      "grounding_text": "the wavy water line",
+      "instruction": "Change the wavy water line to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n3"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/sailboat",
+      "wall_seconds": 0.039202870000053736
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": false,
+      "case_id": "tabler/sailboat/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "both sail strokes",
+      "instruction": "Change both sail strokes to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/sailboat",
+      "wall_seconds": 0.03871609000009357
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": false,
+      "case_id": "tabler/stethoscope/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "both short earpiece tips",
+      "instruction": "Change both short earpiece tips to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2",
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/stethoscope",
+      "wall_seconds": 0.030290445999980875
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": true,
+      "case_id": "tabler/stethoscope/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n5"
+      ],
+      "grounding_text": "the circular chestpiece",
+      "instruction": "Change the circular chestpiece to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "tabler/stethoscope",
+      "wall_seconds": 0.03141577500002768
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": false,
+      "case_id": "tabler/telescope/1",
+      "collection": "tabler",
+      "failure_category": "missing_parts",
+      "gold_targets": [
+        "n1",
+        "n2"
+      ],
+      "grounding_text": "the complete tripod support",
+      "instruction": "Change the complete tripod support to red.",
+      "precision": 1.0,
+      "recall": 0.5,
+      "selected_targets": [
+        "n1"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/telescope",
+      "wall_seconds": 0.020467124000106196
+    },
+    {
+      "candidate_count": 4,
+      "candidate_coverage": true,
+      "case_id": "tabler/telescope/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n4"
+      ],
+      "grounding_text": "the diagonal band across the telescope tube",
+      "instruction": "Change the diagonal band across the telescope tube to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n4"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "tabler/telescope",
+      "wall_seconds": 0.021905085999947005
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": false,
+      "case_id": "tabler/thermometer/1",
+      "collection": "tabler",
+      "failure_category": "mixed_missing_and_extra",
+      "gold_targets": [
+        "n2",
+        "n3",
+        "n4"
+      ],
+      "grounding_text": "all three diagonal measurement ticks",
+      "instruction": "Change all three diagonal measurement ticks to red.",
+      "precision": 0.5,
+      "recall": 0.3333333333333333,
+      "selected_targets": [
+        "n4",
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/thermometer",
+      "wall_seconds": 0.01655753599993659
+    },
+    {
+      "candidate_count": 5,
+      "candidate_coverage": true,
+      "case_id": "tabler/thermometer/2",
+      "collection": "tabler",
+      "failure_category": "exact",
+      "gold_targets": [
+        "n5"
+      ],
+      "grounding_text": "the short tip at the lower left",
+      "instruction": "Change the short tip at the lower left to red.",
+      "precision": 1.0,
+      "recall": 1.0,
+      "selected_targets": [
+        "n5"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": true,
+      "source_id": "tabler/thermometer",
+      "wall_seconds": 0.016976908999822626
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": false,
+      "case_id": "tabler/train/1",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n5",
+        "n6"
+      ],
+      "grounding_text": "both short vertical window dividers",
+      "instruction": "Change both short vertical window dividers to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n2",
+        "n7"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/train",
+      "wall_seconds": 0.016744188000075155
+    },
+    {
+      "candidate_count": 7,
+      "candidate_coverage": true,
+      "case_id": "tabler/train/2",
+      "collection": "tabler",
+      "failure_category": "wrong_object",
+      "gold_targets": [
+        "n7"
+      ],
+      "grounding_text": "the horizontal track below the train",
+      "instruction": "Change the horizontal track below the train to red.",
+      "precision": 0.0,
+      "recall": 0.0,
+      "selected_targets": [
+        "n4",
+        "n5",
+        "n6"
+      ],
+      "selection_evidence": {},
+      "selection_source": "prefix",
+      "set_exact": false,
+      "source_id": "tabler/train",
+      "wall_seconds": 0.017551568000158113
+    }
+  ]
+}

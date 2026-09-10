@@ -1,0 +1,26 @@
+{
+  "run_date": "2026-09-10",
+  "source_commit": "81bf9dfe81066902b68c883a918ccabef409dcae",
+  "pinned_runner_commit": "228e26358013ebe7fb50d64db8f0ff580c523a3c",
+  "notebook_url": "https://colab.research.google.com/drive/1JxCXj97Cm2J6g9OTbhqqrlj-BwWJi5sc",
+  "supersedes": "runs/group-candidate-v1",
+  "correction": "synthetic training candidates restricted to drawable nodes, matching the natural evaluation units",
+  "gpu": "Tesla T4",
+  "torch": "2.11.0+cu128",
+  "cell_elapsed_seconds": {
+    "setup": 14.3,
+    "train_and_evaluate": 282.6
+  },
+  "archive_sha256": "a128efe81754c2043fdc8ea5638a79bc65a9d6c4c1bb4a7b53d707d3eb122425",
+  "checkpoints_downloaded_and_load_verified": true,
+  "console_matches_downloaded_summary": true,
+  "executed_notebook_source": "Drive copy of the executed Colab notebook; Colab/user metadata and download-widget outputs stripped",
+  "files": {
+    "summary.json": "16232df4de31cd69c2fe359ed81b2ab267be69bcead4687082dfe28715258408",
+    "executed_notebook.ipynb": "9dd7d524dd48871a7750c7df6da31d1a01cd405135813b36581047f6be7e0756",
+    "prefix.pt": "7cf0b738a34572d9f2b94510a6830de5332a50dd3077dae9182307613152eb0d",
+    "records.json": "0eb48f4f1b25a7d6583c467ef98d0f480b4b6f4ffb4e6f3c795043d31ab71350",
+    "console_output.txt": "663177e3168dae2eb382f279fac21dcacf9a230d3c5ddf81f6159312329cbb23",
+    "groups.pt": "26968579068c122b8d24f4b5912fdd6e2bc17b83c415158317b8b2dba90acbee"
+  }
+}
