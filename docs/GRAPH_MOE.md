@@ -1,5 +1,9 @@
 # Sparse Graph-MoE grounding
 
+The [new-collection candidate-group experiment](GROUP_CANDIDATE_RESULTS.md)
+is complete: both matched heads score 25/100 versus the frozen baseline's
+22/100, with no demonstrated gain from adding structural group candidates.
+
 The [completed Colab experiment and 15-seed follow-up](CLOUD_SET_GROUNDING.md)
 now compare the set-aware GNN and no-edge MLP. On the T4 run, the MLP plus
 grouping rules reaches 42/80 exact natural target sets; the graph model's

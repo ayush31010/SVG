@@ -29,6 +29,15 @@ ties. The model must tolerate targets absent from its candidate family.
 
 ## Evaluation
 
+Implementation correction after the first run: candidate IDs must be drawable
+nodes in both synthetic training and natural evaluation. The first run used
+all graph nodes during training, inadvertently including `<g>` containers.
+The corrected rerun retains the same manifest, baseline, features, seed,
+hyperparameters and budget, with a regression test requiring synthetic DOM
+groups to match drawable-only gold sets. Both runs are retained. Because this
+repair follows the first scores, report that history rather than describing
+the corrected run as an untouched single-look confirmatory test.
+
 The primary endpoint is exact target-set accuracy on the frozen 100-case,
 50-source Feather/Tabler holdout. Also report precision, recall, per-collection
 results, candidate coverage, missing/extra/wrong-object categories and selection

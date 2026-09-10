@@ -17,11 +17,18 @@ sys.path.insert(0, str(ROOT))
 from scripts.analyze_vector_edits_groups import structural_candidate_groups
 from scripts.run_cloud_set_grounding import digest, paired_sets, write_json
 from scripts.run_vector_edits_set_grounding import _metrics, _selection_record
+from scripts.run_vector_edits_grounding import _candidate_ids
 from svgpatchlab.core import build_scene
 from svgpatchlab.core.geometry import node_analytic_stats
+from svgpatchlab.core.xml import index_tree, parse_svg
 from svgpatchlab.vision import (GraphMoEGrounder, StructuralGroupGrounder,
     build_svg_graph, create_instruction_encoder, extract_target_reference)
 from train.graph_moe_grounding import generate_cases, build_examples
+
+
+def drawable_ids(source):
+    """Use the same editable units for synthetic training and natural scoring."""
+    return _candidate_ids(index_tree(parse_svg(source)))
 
 
 def candidate_sets(source, ids, scores, mode):
@@ -146,7 +153,7 @@ def run(config_path, device='cuda', output_root='runs/group-candidate-v1'):
         for example in items:
             text = encoder.encode(example.instruction)
             pred = model.predict(example.graph, text)
-            ids = example.graph.node_ids
+            ids = drawable_ids(source_by_id[example.case_id])
             for mode in prepared:
                 candidates = candidate_sets(source_by_id[example.case_id], ids, pred.node_scores, mode)
                 x = torch.tensor(features(example.graph, pred, text, candidates), device=device)
@@ -204,6 +211,8 @@ def run(config_path, device='cuda', output_root='runs/group-candidate-v1'):
             raise ValueError('Holdout source changed: '+item['case_id'])
         if hashlib.sha256(source.encode()).hexdigest() in train_hashes:
             raise ValueError('Holdout source overlaps training')
+        if tuple(item['candidate_ids']) != tuple(drawable_ids(source)):
+            raise ValueError('Manifest uses different editable units')
         case = SimpleNamespace(**item, source_svg=source)
         started = time.perf_counter()
         graph = build_svg_graph(build_scene(source, visual_stats=node_analytic_stats(source)))

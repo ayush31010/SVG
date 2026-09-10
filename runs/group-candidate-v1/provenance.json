@@ -1,0 +1,18 @@
+{
+  "run_date": "2026-09-10",
+  "source_commit": "92c8a985c59bf05133b54233cb2c55b6527613c0",
+  "notebook_url": "https://colab.research.google.com/drive/1eNQXwRKMErvSvjt2nNFMa4thLb5Cm81o",
+  "gpu": "Tesla T4",
+  "torch": "2.11.0+cu128",
+  "archive_sha256": "187cc79f8491ebf833b89576f55524acc935b9245becacaa4b1e6cbe74e34d3f",
+  "checkpoints_downloaded_and_load_verified": true,
+  "console_matches_downloaded_summary": true,
+  "files": {
+    "summary.json": "160c02514efbdca7e8cd7a58f3a8f90024f9a9575d786b7ec7822f9c292923b2",
+    "executed_notebook.ipynb": "9d0f29c81b818228ba427ed319b96a750dedc117b9b4329ca67bfdc3168011ae",
+    "prefix.pt": "86c3192c5fe7330eb8b0cf4c1b406bdfe151da6a642a9e01107470eae2f79dd9",
+    "records.json": "887039d2a8adb822d27a099e8eeca8c3c36f0c6db0bf45a76408495bbed1cb64",
+    "console_output.txt": "fb0f0d57131d1dd3a140e68b0cc76c4b624b72aecd9d5555ee6a7d631c251aba",
+    "groups.pt": "76adaa6bb368fa86a9fdbeeff7a45c1db31a781571fbb3a00ebb8796edbdd86b"
+  }
+}
